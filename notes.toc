@@ -1,0 +1,75 @@
+\contentsline {section}{\numberline {1}History}{4}{section.1}
+\contentsline {section}{\numberline {2}Approaches}{4}{section.2}
+\contentsline {subsection}{Galaxy ``archaeology''}{4}{section*.1}
+\contentsline {subsection}{Distant galaxies}{5}{section*.1}
+\contentsline {subsection}{Physics of galaxy formation}{5}{section*.1}
+\contentsline {section}{\numberline {3}Overview of galaxies and galaxy formation}{5}{section.3}
+\contentsline {subsection}{Example}{6}{section*.2}
+\contentsline {subsection}{Questions}{6}{Item.9}
+\contentsline {section}{\numberline {4}Morphological classification}{8}{section.4}
+\contentsline {subsection}{Morphological systems}{8}{section*.3}
+\contentsline {subsection}{Hubble classification}{8}{section*.3}
+\contentsline {subsection}{deVaucouleurs/RC3 classification}{8}{section*.3}
+\contentsline {subsection}{Wavelength dependence}{9}{section*.3}
+\contentsline {subsection}{Classification for ellipticals}{9}{section*.3}
+\contentsline {subsection}{Classification for spirals}{9}{section*.3}
+\contentsline {subsection}{Quantitative classification schemes}{9}{section*.3}
+\contentsline {subsection}{Non-symmetric galaxies}{9}{section*.3}
+\contentsline {subsection}{Mystery section}{10}{section*.3}
+\contentsline {section}{\numberline {5}Basic observational properties of galaxies}{10}{section.5}
+\contentsline {subsection}{Surface Brightness}{10}{section*.4}
+\contentsline {subsubsection}{Sizes of galaxies}{12}{section*.4}
+\contentsline {subsection}{Spectral Energy Distribution}{12}{section*.4}
+\contentsline {subsubsection}{Relevance of internal velocities}{13}{section*.5}
+\contentsline {subsection}{Distances to galaxies}{14}{section*.5}
+\contentsline {subsection}{Integrated brightness}{15}{section*.5}
+\contentsline {section}{\numberline {6}Statistical properties of galaxies}{15}{section.6}
+\contentsline {subsection}{Luminosity Function}{15}{section*.6}
+\contentsline {subsubsection}{Measuring the LF}{16}{section*.6}
+\contentsline {subsubsection}{Observed LF}{16}{section*.6}
+\contentsline {subsubsection}{Functional fits to the observed LF and parameters of the LF}{16}{section*.6}
+\contentsline {subsubsection}{Evolution of the LF}{17}{section*.6}
+\contentsline {subsection}{Colors of galaxies}{17}{section*.6}
+\contentsline {section}{\numberline {7}Elliptical/Spheroidal galaxies}{18}{section.7}
+\contentsline {subsection}{SB profiles}{18}{section*.7}
+\contentsline {subsection}{Intrinsic (3D) shapes of ellipticals}{19}{section*.7}
+\contentsline {subsection}{Non-axisymmetric features in galaxies}{19}{section*.7}
+\contentsline {subsection}{Kinematics}{20}{section*.7}
+\contentsline {subsection}{Relations between different parameters and different families}{20}{section*.7}
+\contentsline {subsubsection}{Photometric parameters}{20}{section*.8}
+\contentsline {subsubsection}{Kinematics vs.\ luminosity}{20}{section*.8}
+\contentsline {subsubsection}{The Fundamental Plane}{20}{section*.8}
+\contentsline {paragraph}{Luminosity (size) --- $\sigma $ plane:}{21}{Item.12}
+\contentsline {paragraph}{SB --- size plane:}{21}{Item.12}
+\contentsline {paragraph}{SB --- $\sigma $ plane:}{22}{Item.12}
+\contentsline {subsubsection}{Isophotal deviations vs.\ luminosity and kinematics}{22}{Item.14}
+\contentsline {subsubsection}{Several types of ellipticals??}{22}{Item.14}
+\contentsline {subsection}{Spectral energy distributions}{23}{Item.14}
+\contentsline {subsection}{Interstellar matter in ellipticals}{23}{Item.14}
+\contentsline {section}{\numberline {8}Spiral/Disk galaxies}{23}{section.8}
+\contentsline {subsection}{SB profiles}{23}{section*.9}
+\contentsline {subsection}{Size-L/SB-L relations}{23}{section*.9}
+\contentsline {subsection}{Vertical distributions in disk galaxies}{23}{section*.9}
+\contentsline {subsection}{Non-axisymmetric features in disk galaxies: bars and spiral arms}{23}{section*.9}
+\contentsline {subsection}{Kinematics}{24}{section*.9}
+\contentsline {subsubsection}{Tully-Fisher relation}{24}{section*.10}
+\contentsline {subsection}{Typical spectra}{24}{section*.10}
+\contentsline {subsection}{Gas and dust}{24}{section*.10}
+\contentsline {section}{\numberline {9}Galaxy parameter (scaling) relations}{24}{section.9}
+\contentsline {section}{\numberline {10}Environments of galaxies: clusters and cluster galaxies}{24}{section.10}
+\contentsline {section}{\numberline {11}Some galaxies to be familiar with}{25}{section.11}
+\contentsline {section}{\numberline {12}The building blocks of galaxies}{25}{section.12}
+\contentsline {subsection}{Stars and Stellar populations}{25}{section*.11}
+\contentsline {subsubsection}{Relating observables to intrinsic population characteristics}{25}{section*.11}
+\contentsline {subsubsection}{Stellar evolution}{25}{section*.11}
+\contentsline {subsubsection}{More information in a CMD than is represented by isochrones}{27}{section*.11}
+\contentsline {subsubsection}{Star Formation Histories (SFHs) from resolved stellar populations}{28}{section*.11}
+\contentsline {subsubsection}{Integrated light from \emph {un}resolved stellar populations}{29}{section*.11}
+\contentsline {subsubsection}{Chemical evolution}{31}{section*.11}
+\contentsline {subsubsection}{Abundances as function of time}{33}{section*.11}
+\contentsline {subsubsection}{Relative abundances of different elements}{33}{section*.11}
+\contentsline {subsection}{Gas}{33}{section*.11}
+\contentsline {subsection}{Dust}{33}{section*.11}
+\contentsline {subsection}{Central black holes}{33}{section*.11}
+\contentsline {subsection}{Galaxy spectral energy distributions}{33}{section*.11}
+\contentsline {subsection}{Dark matter and galaxy masses}{33}{section*.11}

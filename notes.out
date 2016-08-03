@@ -1,8 +1,72 @@
 \BOOKMARK [1][-]{section.1}{History}{}% 1
 \BOOKMARK [1][-]{section.2}{Approaches}{}% 2
-\BOOKMARK [1][-]{section.3}{Overview of galaxies and galaxy formation}{}% 3
-\BOOKMARK [1][-]{section.4}{Spiral/Disk galaxies}{}% 4
-\BOOKMARK [1][-]{section.5}{To sum up: Galaxy parameter \(scaling\) relations}{}% 5
-\BOOKMARK [1][-]{section.6}{Environments of galaxies: clusters and cluster galaxies}{}% 6
-\BOOKMARK [1][-]{section.7}{Some galaxies to be familiar with}{}% 7
-\BOOKMARK [1][-]{section.8}{The building blocks of galaxies}{}% 8
+\BOOKMARK [2][-]{section*.1}{Galaxy ``archaeology''}{section.2}% 3
+\BOOKMARK [2][-]{section*.1}{Distant galaxies}{section.2}% 4
+\BOOKMARK [2][-]{section*.1}{Physics of galaxy formation}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Overview of galaxies and galaxy formation}{}% 6
+\BOOKMARK [2][-]{section*.2}{Example}{section.3}% 7
+\BOOKMARK [2][-]{Item.9}{Questions}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Morphological classification}{}% 9
+\BOOKMARK [2][-]{section*.3}{Morphological systems}{section.4}% 10
+\BOOKMARK [2][-]{section*.3}{Hubble classification}{section.4}% 11
+\BOOKMARK [2][-]{section*.3}{deVaucouleurs/RC3 classification}{section.4}% 12
+\BOOKMARK [2][-]{section*.3}{Wavelength dependence}{section.4}% 13
+\BOOKMARK [2][-]{section*.3}{Classification for ellipticals}{section.4}% 14
+\BOOKMARK [2][-]{section*.3}{Classification for spirals}{section.4}% 15
+\BOOKMARK [2][-]{section*.3}{Quantitative classification schemes}{section.4}% 16
+\BOOKMARK [2][-]{section*.3}{Non-symmetric galaxies}{section.4}% 17
+\BOOKMARK [2][-]{section*.3}{Mystery section}{section.4}% 18
+\BOOKMARK [1][-]{section.5}{Basic observational properties of galaxies}{}% 19
+\BOOKMARK [2][-]{section*.4}{Surface Brightness}{section.5}% 20
+\BOOKMARK [3][-]{section*.4}{Sizes of galaxies}{section.5}% 21
+\BOOKMARK [2][-]{section*.4}{Spectral Energy Distribution}{section.5}% 22
+\BOOKMARK [3][-]{section*.5}{Relevance of internal velocities}{section*.4}% 23
+\BOOKMARK [2][-]{section*.5}{Distances to galaxies}{section.5}% 24
+\BOOKMARK [2][-]{section*.5}{Integrated brightness}{section.5}% 25
+\BOOKMARK [1][-]{section.6}{Statistical properties of galaxies}{}% 26
+\BOOKMARK [2][-]{section*.6}{Luminosity Function}{section.6}% 27
+\BOOKMARK [3][-]{section*.6}{Measuring the LF}{section.6}% 28
+\BOOKMARK [3][-]{section*.6}{Observed LF}{section.6}% 29
+\BOOKMARK [3][-]{section*.6}{Functional fits to the observed LF and parameters of the LF}{section.6}% 30
+\BOOKMARK [3][-]{section*.6}{Evolution of the LF}{section.6}% 31
+\BOOKMARK [2][-]{section*.6}{Colors of galaxies}{section.6}% 32
+\BOOKMARK [1][-]{section.7}{Elliptical/Spheroidal galaxies}{}% 33
+\BOOKMARK [2][-]{section*.7}{SB profiles}{section.7}% 34
+\BOOKMARK [2][-]{section*.7}{Intrinsic \(3D\) shapes of ellipticals}{section.7}% 35
+\BOOKMARK [2][-]{section*.7}{Non-axisymmetric features in galaxies}{section.7}% 36
+\BOOKMARK [2][-]{section*.7}{Kinematics}{section.7}% 37
+\BOOKMARK [2][-]{section*.7}{Relations between different parameters and different families}{section.7}% 38
+\BOOKMARK [3][-]{section*.8}{Photometric parameters}{section*.7}% 39
+\BOOKMARK [3][-]{section*.8}{Kinematics vs. luminosity}{section*.7}% 40
+\BOOKMARK [3][-]{section*.8}{The Fundamental Plane}{section*.7}% 41
+\BOOKMARK [3][-]{Item.14}{Isophotal deviations vs. luminosity and kinematics}{section*.7}% 42
+\BOOKMARK [3][-]{Item.14}{Several types of ellipticals??}{section*.7}% 43
+\BOOKMARK [2][-]{Item.14}{Spectral energy distributions}{section.7}% 44
+\BOOKMARK [2][-]{Item.14}{Interstellar matter in ellipticals}{section.7}% 45
+\BOOKMARK [1][-]{section.8}{Spiral/Disk galaxies}{}% 46
+\BOOKMARK [2][-]{section*.9}{SB profiles}{section.8}% 47
+\BOOKMARK [2][-]{section*.9}{Size-L/SB-L relations}{section.8}% 48
+\BOOKMARK [2][-]{section*.9}{Vertical distributions in disk galaxies}{section.8}% 49
+\BOOKMARK [2][-]{section*.9}{Non-axisymmetric features in disk galaxies: bars and spiral arms}{section.8}% 50
+\BOOKMARK [2][-]{section*.9}{Kinematics}{section.8}% 51
+\BOOKMARK [3][-]{section*.10}{Tully-Fisher relation}{section*.9}% 52
+\BOOKMARK [2][-]{section*.10}{Typical spectra}{section.8}% 53
+\BOOKMARK [2][-]{section*.10}{Gas and dust}{section.8}% 54
+\BOOKMARK [1][-]{section.9}{Galaxy parameter \(scaling\) relations}{}% 55
+\BOOKMARK [1][-]{section.10}{Environments of galaxies: clusters and cluster galaxies}{}% 56
+\BOOKMARK [1][-]{section.11}{Some galaxies to be familiar with}{}% 57
+\BOOKMARK [1][-]{section.12}{The building blocks of galaxies}{}% 58
+\BOOKMARK [2][-]{section*.11}{Stars and Stellar populations}{section.12}% 59
+\BOOKMARK [3][-]{section*.11}{Relating observables to intrinsic population characteristics}{section.12}% 60
+\BOOKMARK [3][-]{section*.11}{Stellar evolution}{section.12}% 61
+\BOOKMARK [3][-]{section*.11}{More information in a CMD than is represented by isochrones}{section.12}% 62
+\BOOKMARK [3][-]{section*.11}{Star Formation Histories \(SFHs\) from resolved stellar populations}{section.12}% 63
+\BOOKMARK [3][-]{section*.11}{Integrated light from unresolved stellar populations}{section.12}% 64
+\BOOKMARK [3][-]{section*.11}{Chemical evolution}{section.12}% 65
+\BOOKMARK [3][-]{section*.11}{Abundances as function of time}{section.12}% 66
+\BOOKMARK [3][-]{section*.11}{Relative abundances of different elements}{section.12}% 67
+\BOOKMARK [2][-]{section*.11}{Gas}{section.12}% 68
+\BOOKMARK [2][-]{section*.11}{Dust}{section.12}% 69
+\BOOKMARK [2][-]{section*.11}{Central black holes}{section.12}% 70
+\BOOKMARK [2][-]{section*.11}{Galaxy spectral energy distributions}{section.12}% 71
+\BOOKMARK [2][-]{section*.11}{Dark matter and galaxy masses}{section.12}% 72
