@@ -3,8 +3,7 @@
 \renewcommand\familydefault{\sfdefault}
 \usepackage[margin=1.5in]{geometry}
 \setlength{\parindent}{0em}
-\setlength{\parskip}{0.75ex}
-%\usepackage{enumerate}
+
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -15,8 +14,11 @@
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{ragged2e}
+%\usepackage{mathptmx}
+\usepackage{mathpazo}
 
-%\usepackage{fancyhdr}
+\usepackage{fancyhdr}
+\pagestyle{headings}  % Put section name in top left, page number in top right
 %\pagestyle{fancy}
 %\fancyhf{}  % Clear all headers and footers (including default page number).
 %\setlength{\headheight}{15pt}
@@ -24,178 +26,155 @@
 %\lhead{text} % Top left
 %\rhead{text} % Top right
 %\cfoot{text} % Top center
-%\rfoot{\thepage} % Page numbers on bottom right corner
+\rfoot{\thepage} % Page numbers on bottom right corner
+
+\usepackage[symbol]{footmisc}
+\usepackage{perpage}
+\MakePerPage{footnote}
+%\renewcommand{\footnoterule}{\kern-3pt\hrule width\textwidth height 0.4pt\kern 2pt}
 
 \definecolor{bred}{rgb}{0.8, 0.0, 0.0}
 \definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
 \definecolor{darkcyan}{rgb}{0.0, 0.55, 0.55}
 \definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
-\definecolor{halayaube}{rgb}{0.4, 0.22, 0.33}
+\definecolor{mypur}{rgb}{0.4, 0.22, 0.33}
+\definecolor{myblue}{rgb}{0.0, 0.2, 0.6}
+\definecolor{mygreen}{rgb}{0.67, 0.88, 0.69}
+\definecolor{mygray}{rgb}{0.90, 0.90, 0.90}
 
 \newcommand{\mynotes}[1]{\textcolor{cadmiumorange}{#1}}
+\usepackage{tikz}\usetikzlibrary{backgrounds, shapes.misc}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]
+            \node[draw=black,shape=rounded rectangle,draw,inner sep=10pt] (char) {#1};}
 
-% Sections
+%\setcounter{secnumdepth}{1}
 \usepackage{titlesec}
+%\usepackage[compact]{titlesec}
 %   [<shape>]{<format>}{<label>}{<sep>}{<before-code>}{<after-code>}
 \titleformat{\section}%
-    [hang]
-  {\LARGE\bfseries\color{cadmiumgreen}} %\filcenter\bfseries\LARGE
-  {\Roman{section}.\;}        % label%    {\thesection} %{<label>}
-  {0pt}     % sep
-  {}        % before code
+  {\fontsize{16}{18}\selectfont\bfseries\color{myblue}}
+  {\fontsize{46}{50}\selectfont\color{mypur}\arabic{section}\color{black}$\vert$}
+  {0em}{}
 \titleformat{\subsection}%
-  {\Large\bfseries\color{darkcyan}} %\filcenter\bfseries\LARGE
-  {\arabic{subsection}.\;} % label%    {\thesection} %{<label>}
-  {0pt}     % sep
-  {}        % before code
+  {\fontsize{14}{16}\selectfont\bfseries\color{mypur}}
+  {\color{myblue}\circled{\arabic{section}.\arabic{subsection}}}
+  {0.5em}{}
+  [\vspace{-2.5pt}{\color{mygray}\titlerule[5pt]}]
+  %[\vspace{-20pt}\colorbox{mygray}{% \begin{minipage}{\textwidth}% %\vspace*{2pt}%Space before \hfill %\vspace*{2pt}%Space after \end{minipage}}]
 \titleformat{\subsubsection}%
-  {\large\bfseries\color{halayaube}} %\filcenter\bfseries\LARGE
-  {\arabic{subsection}.\arabic{subsubsection}\;}        % label%    {\thesection} %{<label>}
-  {0pt}     % sep
-  {}        % before code
-
-\setcounter{secnumdepth}{1}
+  {\fontsize{13}{14}\selectfont\bfseries\color{mypur}}
+  {\color{myblue}\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+  {1em}{}
+  [\vspace{-2.5pt}{\color{mygray}\titlerule[3pt]}]
+\titleformat{\paragraph}%
+  {\fontsize{12}{13}\selectfont\bfseries\color{myblue}}
+  {}
+  {0.5em}{}
 
 %\titlespacing*{⟨command⟩}{⟨left⟩}{⟨before-sep⟩}{⟨after-sep⟩}[⟨right-sep⟩]
-%\titlespacing*{\section}{-0.5in}{0ex}{0ex}
-%\titlespacing*{\subsection}{0pt}{0.5ex}{-10ex}
-
-% Section references...?
-%\renewcommand{\thesection}{}
-%\renewcommand{\thesubsection}{\arabic{subsection}}
-%\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+\titlespacing*{\section}{-0.75in}{0ex}{0ex}
+\titlespacing*{\subsection}{-0.25in}{0ex}{0ex}[-0.25in]
+\titlespacing*{\subsubsection}{0pt}{2ex}{-1ex}
+\titlespacing*{\paragraph}{0pt}{1ex}{-2ex}
 
 % Lists
-\setlist[itemize]{noitemsep, topsep=0ex}
-\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+\setlist[itemize]{noitemsep, topsep=0ex,
+    label=$\vcenter{\hbox{\tiny$\bullet$}}$}
+%\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+%\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
 \setlist[enumerate]{noitemsep, topsep=0ex}
 \setlist[description]{noitemsep, topsep=0ex,}
 \definecolor{cadet}{rgb}{0.33, 0.41, 0.47}
 \renewcommand{\descriptionlabel}[1]{%
     \bfseries\textcolor{cadet}{#1}
 }
-% Verbatim
-\usepackage{fancyvrb}  % framebox around verbatim text
-\makeatletter
-\renewcommand\verbatim@font{\normalfont\small\ttfamily}
-\makeatother
-
-\usepackage{listings}
-\lstset{% general command to set parameter(s)
-    basicstyle=\small, % print whole listing small
-    keywordstyle=\color{black}\bfseries\underbar,% underlined bold black keywords % nothing happens
-    identifierstyle=,
-    commentstyle=\color{white},
-    stringstyle=\ttfamily,
-    showstringspaces=false % no special string spaces
-    }
-
-\usepackage{setspace} % spacing between toc items
-%\usepackage[toc]{multitoc}
-%\renewcommand*{\multicolumntoc}{2}
-%\setlength{\columnseprule}{0.5pt}
-
 \usepackage{hyperref}
-\definecolor{darkpowderblue}{rgb}{0.0, 0.2, 0.6}
-\hypersetup{colorlinks=true, urlcolor=darkpowderblue, linkcolor=black}
+\hypersetup{colorlinks=true, urlcolor=myblue, linkcolor=black}
 \urlstyle{same}
 
 \begin{document}
+\setlength{\parskip}{0pt}
 \tableofcontents
 \newpage
-
-\textcolor{red}{\textbf{Important things to know}:
-\begin{itemize}
-    \item Derive the Virial Theorem
-    \item Schecter function
-    \item Sersic relation
-    \item deVouceleurs
-    \item Fundamental Plane
-    \item Tully Fisher relation
-    \item Kormendy relation
-    \item isophotes: boxy vs.\ disky
-    \item inner SB profiles: cuspy vs.\ core
-\end{itemize}
-}
+\setlength{\parskip}{10pt}
 
 \section{History}
 \begin{enumerate}
-  \item 1700's: Messier objects, 39 of
-  which are actually galaxies (total of 110 in the final catalogue).
-  \item 1864: GC, 1888: NGC (William Herschel and son John)
-  \item 1920's: `Great Debate' between Curtis and Shapley on whether
-  or not galaxies were located within the MW\@. Resolved by Hubbles
-  discovery of Cepheids in M31.
-  \item 1980's: Importance of environment recognized:
-  \textbf{morphology/density relation}; `Nature vs. Nurture'.
-  \item 1990's: Techniques for finding and confirming high redshift
-  galaxies (z>2): \textbf{Lyman break galaxies}:
-  \begin{itemize}
-    \item Lyman limit
-    \item Rydberg formula: $\frac{1}{\lambda}=
-    R\Big(\frac{1}{n_u^2}-\frac{1}{n_l^2}\Big) $
-  \end{itemize}
-  First large scale surveys, both nearby and at medium redshift. HST
-  imaging of distant galaxies. N-body (dark matter) simulations.
-  \item 2000's:Precision Cosmology and LCDM, outside optical
-  wavelengths: IR (Spitzer) and sub-mm (JCMT).
-  \item 2010's: Extended gas halos in galaxies. Possibly detection of
-  DM and dark energy.
+    \item 1700's: Messier objects, 39 of
+        which are actually galaxies (total of 110 in the final catalogue).
+    \item 1864: GC, 1888: NGC (William Herschel and son John)
+    \item 1920's: `Great Debate' between Curtis and Shapley on whether
+        or not galaxies were located within the MW\@. Resolved by Hubbles
+        discovery of Cepheids in M31.
+    \item 1980's: Importance of environment recognized:
+        \textbf{morphology/density relation}; `Nature vs. Nurture'.
+    \item 1990's: Techniques for finding and confirming high redshift
+        galaxies (z>2): \textbf{Lyman break galaxies}:
+        \begin{itemize}
+            \item Lyman limit
+            \item Rydberg formula: $\frac{1}{\lambda}=
+                R\Big(\frac{1}{n_u^2}-\frac{1}{n_l^2}\Big) $
+        \end{itemize}
+        First large scale surveys, both nearby and at medium redshift. HST
+        imaging of distant galaxies. N-body (dark matter) simulations.
+    \item 2000's:Precision Cosmology and LCDM, outside optical
+        wavelengths: IR (Spitzer) and sub-mm (JCMT).
+    \item 2010's: Extended gas halos in galaxies. Possibly detection of
+        DM and dark energy.
 \end{enumerate}
 
 \section{Approaches}
-    Multifaceted approach to studying galaxy formation and evolution:
-    \subsection{Galaxy ``archaeology''}
-    Study nearby galaxies in detail,
-    attempt to understand processes that led to their current
-    appearence.
-            \begin{itemize}
-                \item Advantages: can resolve structure, individual stars
-                    in nearest galaxies, high S/N observations
-                \item Disadvantages: some information may be erased by
-                    physical processes (e.g.\ merging), degeneracies in
+Multifaceted approach to studying galaxy formation and evolution:
+\subsection{Galaxy ``archaeology''}
+Study nearby galaxies in detail,
+attempt to understand processes that led to their current
+appearence.
+\begin{itemize}
+    \item Advantages: can resolve structure, individual stars
+        in nearest galaxies, high S/N observations
+    \item Disadvantages: some information may be erased by
+        physical processes (e.g.\ merging), degeneracies in
                     integrated light
-            \end{itemize}
-   \subsection{Distant galaxies}
-   look at galaxy samples at different lookback
-   times, study distribution of properties (galaxy population) as
-   a function of time.
-            \begin{itemize}
-                \item Advantages: direct probe of different stages.
-                    Relationship between lookback time and redshift.
-                \item Disadvantages: brightness/selection effects, lack
-                    of detail, difficulty in associating objects at one redshift
+\end{itemize}
+\subsection{Distant galaxies}
+look at galaxy samples at different lookback
+times, study distribution of properties (galaxy population) as
+a function of time.
+\begin{itemize}
+    \item Advantages: direct probe of different stages.
+        Relationship between lookback time and redshift.
+    \item Disadvantages: brightness/selection effects, lack
+        of detail, difficulty in associating objects at one redshift
                     to those at another.
-            \end{itemize}
-   \subsection{Physics of galaxy formation}
-            \begin{itemize}
-                \item Advantages: some physics (e.g.\ gravity) is well
-                    understood
-                \item Disadvantages: some physics (e.g.\ star formation)
-                    is not. Dyanamic range of the problem is huge.
-                    \begin{itemize}
-                        \item Dynamic range in distances, from stellar scales
-                            to largest scale structure.
-                        \item Dynamic range in mass, from stellar scales
-                            (1 $M_{\odot}$) to
-                            largest scale structure ($10^6-10^{15} M_{\odot}$)
-                    \end{itemize}
-            \end{itemize}
+\end{itemize}
+\subsection{Physics of galaxy formation}
+\begin{itemize}
+    \item Advantages: some physics (e.g.\ gravity) is well
+        understood
+    \item Disadvantages: some physics (e.g.\ star formation)
+        is not. Dyanamic range of the problem is huge.
+        \begin{itemize}
+            \item Dynamic range in distances, from stellar scales
+                to largest scale structure.
+            \item Dynamic range in mass, from stellar scales
+                (1 $M_{\odot}$) to
+                largest scale structure ($10^6-10^{15} M_{\odot}$)
+        \end{itemize}
+\end{itemize}
 
 \section{Overview of galaxies and galaxy formation}
 Components:
-\begin{itemize}
-    \item \textbf{Dark Matter:} usually non-baryonic, but some baryonic matter
-        can be hard to see, such as brown dwarfs. Dominates mass of
+\begin{description}
+    \item [Dark Matter] (DM); usually non-baryonic, though even some baryonic
+        matter can be hard to see, such as brown dwarfs. DM dominates mass of
         galaxies.
-    \item \textbf{Stars:} observed properties depend primarily on mass, age,
+    \item [Stars] Observed properties depend primarily on mass, age,
         and composition. Variety leads to multiple luminosities and colors
         in galaxies.
-    \item \textbf{ISM:} molecular, atomic, and ionized gas phases; dust; mass
+    \item [ISM] molecular, atomic, and ionized gas phases; dust; mass
         of ISM varies widely between galaxies.
-    \item \textbf{Central (supermassive) black holes}
-\end{itemize}
+    \item [Central (supermassive) black holes]
+\end{description}
 Why do galaxies appear as they do? Important processes (not necessarily
 in chronological order):
 \begin{itemize}
@@ -457,7 +436,8 @@ Some representative data from
         to be smaller, less massive, and less luminous
         (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh2.htm}
         {\textcolor{blue}{RH figure 2}}).
-        However, note that LSB(???) galaxies tend to be later types, and,
+        However, note that LSB \mynotes{(Low Surface Brightness?)}
+        galaxies tend to be later types, and,
         since these are not included, there may be a bias here.
     \item Typical SB may be lower for latest types, even without inclusion
         of LSB galaxies; CSB(?????) much higher for large ellipticals than
@@ -471,7 +451,7 @@ Some representative data from
         (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh4.htm}
         {\textcolor{blue}{RH figure 4}}).
 \end{itemize}
-
+\newpage
 \section{Basic observational properties of galaxies}
 \subsection{Surface Brightness}
 Surface Brightness (SB) is the basic measured property for imaging of
@@ -488,8 +468,9 @@ Units:
 \end{itemize}
 Magnitudes are often used, but if \emph{summing} multiple SBs, flux units
 must be used. If you're adding and subtracting magnitudes, you're probably
-doing something wrong. \Smiley Differences in magnitudes correspond to
-ratios in fluxes:
+doing something wrong. \Smiley
+
+Differences in magnitudes correspond to ratios in fluxes:
 \[
     m_{1} - m_{2} = -2.5\log\frac{F_{1}}{F_{2}}
 \]
@@ -508,88 +489,93 @@ galaxies, be aware that \emph{mass} in stars doesn't necessarily track
 In principle, SB is measured directly from a 2D detector as an
 arbitrary function of location. However,
 galaxies are relatively faint. Typical values in center of galaxies:
-\begin{itemize}
-    \item Spiral: $V \sim 20 - 21$ mag arcsec$^{-2}$
+\begin{description}[align=right,labelwidth=5em]
+    \item [Spiral] $V \sim 20 - 21$ mag arcsec$^{-2}$
         (not much brighter than typical dark sky)
-    \item Elliptical: $V \sim 16 - 17$ mag arcsec$^{-2}$
-\end{itemize}
+    \item [Elliptical] $V \sim 16 - 17$ mag arcsec$^{-2}$
+\end{description}
 More than half the light from galaxies comes from regions with
 $SB < SB_{\mathrm{sky}}$ so $S/N$ is difficult to obtain.
 
 Problems of seeing and \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/sky.htm}
 {sky determination} for determination of SB distribution in center and
 outer parts of galaxies. Sky problems are worse with small detectors and/or
-large galaxies.
+large galaxies. \mynotes{Why large galaxies?}
 
 Since SB is the key observable, there can be strong \emph{selection effects}
 against low SB objects. If all galaxies had the same SB profile (they don't)
 then low SB galaxies are \emph{strongly} biased against in either
-magnitude-limited or size-limited catalogs (apparent ``size'' of a galaxy will
-depend on its SB).
+magnitude-limited or size-limited catalogs.
+The apparent ``size'' of a galaxy will depend on its SB.
 
 Most galaxies are symmetric at a significant level;
 isophotes are often well represented by ellipses.
 Elliptical contours fit spirals and ellipticals for different reasons:
-\begin{itemize}
-    \item Spiral: viewing angle/disk thickness
-    \item Elliptical: intrinsic ellipticity
-\end{itemize}
-(\href{http://astronomy.nmsu.edu/holtz/a555/resources/n1226.h.jpg}
-{NGC1226},
-\href{http://astronomy.nmsu.edu/holtz/a555/resources/n1316.h.jpg}
-{NGC1316}).
-
-Some basics of techniques for ellipse fitting: (insert links!)
+\footnote{Some basics of techniques for ellipse fitting:
+Kent, ApJ 266, 562 (1983); Lauer, ApJ 311, 34}
+\begin{description}[align=right, labelwidth=5em]
+    \item [Spiral] viewing angle/disk thickness
+    \item [Elliptical] intrinsic ellipticity
+\end{description}
 
 In reality, galaxies have more complex features, e.g.\ asymmetries,
 departures from elliptical isophtoes, bars, spiral arms, jets, etc.\
 (see below).
 
 For a purely axisymmetric object, SB distribution reduces to a 1D SB profile.
-SB profiles are often parameterized, with distributions of the form
+SB profiles are often parameterized, with distributions in the form
 of a \textbf{Sersic Law}\footnote{MacArthur et al. (2003)}:
 \[
     \Sigma(r) = \Sigma_e\exp\left(-b_n\left[\left(
     \frac{r}{r_e}\right)^{1/n}-1\right]\right)
 \]
-where $r_e$ is the half-light radius (the radius that encloses half the
-total light if the model is extrapolated to infinity),
-$\Sigma_e$ is the SB at the \emph{effective} radius
-($\Sigma_0 \sim 2000\Sigma_e$),
-$b_{n} \approx 2n - 0.324$ and is determined from the definition of $r_e$,
-and $n$ depends on the type of galaxy
-($n=4$ for ellipticals and $n=1$ for disks).
 \begin{itemize}
-    \item Disks are usually well represented \emph{on average} by an exponential:
+    \item $\Sigma_{r}$ = SB at radius $r$
+    \item $r_{e}$ = \textit{effective} radius (aka.\ half-light radius),
+        the radius enclosing half the
+        total light if the model is extrapolated to infinity.
+    \item $\Sigma_{e}$ = SB at $r_{e}$
+        ($\Sigma_{0} \sim 2000\Sigma_{e}$) \mynotes{at galaxy center?}
+    \item $b_{n} \approx 2n - 0.324$ and is determined from the definition of
+        $r_e$ \mynotes{(I assume this is talking about where that particular
+        expression came from, including the constants.)}
+    \item $n$ depends on the type of galaxy ($n=4$ for ellipticals and $n=1$
+        for disks).
+\end{itemize}
+\subsubsection{SB profile for disk galaxies}
+Disks are usually well represented \emph{on average} by an exponential:
         \[
             \Sigma(r) = \Sigma_{s}\exp\left(-\frac{r}{r_{s}}\right)
         \]in flux units, or\[
             m(r) = m_s + kr
         \]
         in magnitudes.
-    \item Spherioids are historically characterized by
-        \textbf{deVaucouleurs profile}, otherwise known as the
-        ``$r^{1/4}$'' law:
-        \[
-            \Sigma(r) = \Sigma_e\exp\left(-7.67\left[\left(
-            \frac{r}{r_e}\right)^{1/4}-1\right] \right)
-        \]in flux units, or\[
-            m = m_0 + kr^{1/4}
-        \]
-        in magnitudes.
-\end{itemize}
+\subsubsection{SB profile for spheroids}
+Spheroids are historically characterized by
+\textbf{deVaucouleurs profile}, otherwise known as the ``$r^{1/4}$'' law:
+\[
+    \Sigma(r) = \Sigma_e\exp\left(-7.67\left[\left(
+    \frac{r}{r_e}\right)^{1/4}-1\right] \right)
+    \]
+in flux units, or
+\[
+    m = m_{0} + kr^{1/4}
+    \]
+in magnitudes.
+
 There are other forms that can be used as well.
 
 \subsubsection{Sizes of galaxies}
 Generally, galaxies do not appear to have sharp edges (although SB can
 drop sharply in some disk galaxies).
 \begin{itemize}
-    \item Isophotal ($D_{25}$ in RC is B=25.0): Beware for low SB
-        galaxies
+    \item Isophotal ($D_{25}$ \mynotes{???} in RC \mynotes{(rotation curve?)}
+        is B=25.0): Beware for low SB galaxies \mynotes{???}
     \item Half-light radii (e.g.\ $R_{e}$)
-    \item Petrosian radius: radius at which SB (in an annulus, SDSS
-        used 0.8 - 1.25r) drops to some fraction of light (SDSS uses
-        0.2) within this radius.
+    \item Petrosian radius: radius at which the \emph{local}
+        SB at that radius drops to some fraction of the \emph{mean} SB within
+        that radius.  (in an annulus, SDSS used 0.8$r$ - 1.25$r$, with a
+        fraction of 0.2)
 \end{itemize}
 Typical angular sizes: arcminutes for nearby galaxies, arcseconds for
 distant galaxies. Can get linear sizes with distance estimate
@@ -597,49 +583,52 @@ distant galaxies. Can get linear sizes with distance estimate
 component) is $\sim$ 1-30 kpc.
 
 \subsection{Spectral Energy Distribution}
-Spectra are often obtained over some aperture, or long slit. Note
+The SED of a galaxy is the other fundamental observable; obviously,
+the most fundamental is spectral energy SB, but spectra are often
+obtained over some aperture, or long slit. Note
 increasing use of integral field spectroscopy.
 
 The overall shape and features in SEDs provide important information
 about the nature of the luminous components, i.e.\ physical properties
-of the stellar population, and the gas component, although these can
-be challenging to sort out, as we'll discuss later.
+of the stellar population and the gas component
+As we'll discuss later, these can be challenging to sort out.
 
-Spectra also allow the study of
-velocities via the Doppler shift:
+Spectra also allow the study of velocities via the Doppler shift:
 \[
     \frac{\nabla\lambda}{\lambda} = \frac{v}{c}
-\]
-Both the bulk velocity of the galaxy and the
-distribution of velocities of the stars within the galaxy can be
-measured this way. Mean velocities of galaxies indicate that they are
-receding, with velocity proportional to distance $\rightarrow$ expansion
-of the universe. There is a dispersion of velocities around the mean
-relation; the deviation is called the \textbf{peculiar velocity}.
-\mynotes{This is the movement of the galaxy \emph{through} space,
-whereas the mean is the velocity \emph{with} space due to expansion.}
-In the field, typical peculiar velocities are a few hundred km s$^{-1}$.
-In clusters, they can be a thousand km s$^{-1}$.
-
-Internal velocities can be organized, e.g.\ rotation in disks.
-They can also be random, leading to broader lines that represent the
+    \]
+which measures both the bulk velocity of the galaxy and the
+distribution of stellar velocities within the galaxy.
+\paragraph{Bulk velocities}
+\begin{itemize}
+    \item Mean velocities of galaxies indicate that they are receding, with
+        velocity proportional to distance $\rightarrow$ expansion of the
+        universe.
+    \item There is a dispersion of velocities around the mean relation; the
+        deviation is called the \textbf{peculiar velocity}.  In the field,
+        typical peculiar velocities are a few hundred km s$^{-1}$.  In
+        clusters, they can be a thousand km s$^{-1}$.
+\end{itemize}
+\paragraph{Internal velocities}
+Internal velocities can be organized (rotation in disks), or they can
+be random, leading to broader lines that represent the
 velocity distribution of stars within a galaxy.
 \mynotes{This broadening would be the same at all points in the galaxy.}
 \[
     F(\lambda) \propto \int{N(v_{los})S\left(\lambda-\frac{v_{los}\lambda}{c}
     \right)\mathrm{d}v_{los} }
-\]
+    \]
 where $S$ represents the spectrum of an individual star and $N$
 represents the fractional distribution of stars at different
 line-of-sight velocities. Lines are usually fairly well represented
 by a Gaussian velocity profile, characterized by the mean velocity:
 \[
     \int{v_{los}F(v_{los})\mathrm{d}v_{los}}
-\]
+    \]
 and the velocity dispersion:
 \[
     \int{(v_{los}-\overline{v}_{los})F(v_{los})\mathrm{d}v_{los}}
-\]
+    \]
 e.g., central velocity dispersion or, more generally, the velocity
 dispersion profile.
 
@@ -653,26 +642,25 @@ by higher order moments: \textit{skew} ($h_{3}$) and \textit{kurtosis}
 where $\omega \equiv (v_{los}-\overline{v})/\sigma$ and
 $H_{k}$ are Gauss-Hermite functions.
 
-\subsubsection{Relevance of internal velocities}
-Probe mass distribution within
+Internal velocities can be used to probe mass distribution within
 galaxies (assuming that gravity drives the motions).
-
-For a rotationally supported system,
+For a rotationally supported system:
 \[
     v(r) = \sqrt{\frac{GM(r)}{r}}
-\]
+    \]
 For a collisionless system of particles, \mynotes{(independent particles)}
 the distribution of velocities at
-any given location characterized by the velocity ellipsoid, and
-Jeans equation gives:
+any given location characterized by the velocity ellipsoid, along with the
+Jeans equation, gives:
 \[
-    \frac{d\rho\sigma^{2}}{\rho{dr}} + \frac{2\beta\sigma^{2}}{r} = -g(r)
-\]
+    \frac{\mathrm{d}\rho\sigma^{2}}{\rho{\mathrm{d}r}} +
+    \frac{2\beta\sigma^{2}}{r} = -g(r)
+    \]
 where $\beta$ is the \textbf{velocity anisotropy}:
 \[
     \beta \equiv \left(1-
     \frac{\sigma_{\theta}^{2}+\sigma_{\phi}^{2}}{2\sigma_{r}^{2}}\right)
-\]
+    \]
 
 \subsection{Distances to galaxies}
 Some properties of galaxies, like luminosities and linear sizes, require
@@ -680,92 +668,101 @@ knowledge of distances to galaxies:
 \[
     m_{M} = 5\log{d}-5
 \]
-where $d$ is the distance in parsecs, $M$ is the absolute magnitude
-(or SB), and $m$ is the apparent magnitude.
+\begin{itemize}
+    \item $d$ = distance [pc]
+    \item $M$ = absolute magnitude (or SB)
+    \item $m$ = apparent magnitude
+\end{itemize}
 
 Various techniques for getting distances:
-\begin{itemize}
-    \item Variable stars: Cepheids/RR Lyrae stars through period-luminosity
+\begin{description}
+    \item [Variable stars] Cepheids/RR Lyrae stars through period-luminosity
         (period-luminosity-color/metallicity) relation.
-    \item Geometric techniques: masers and eclipsing binaries.
-    \item SB fluctuations: requires objects with a ``standard'' population
-    \item Planetary nebulae luminosity function
-    \item \textbf{Scaling relations between velocity and luminosity}
-    \begin{itemize}
-      \item Spirals: \textbf{Tully-Fisher relation} between maximum
-        rotational velocity and luminosity
-      \item Ellipticals: fundamental plane relation between velocity
-        dispersion, SB, and physical size
-            ($D_{n}-\sigma$) relation.
-    \end{itemize}
-    \item Redshift
-\end{itemize}
-\underline{Regarding redshift}:
+    \item [Geometric techniques] masers and eclipsing binaries
+    \item [SB fluctuations] requires objects with a ``standard'' population
+    \item [Planetary nebulae luminosity function]
+    \item [Scaling relations between velocity and luminosity]
+        \mynotes{for relatively nearby galaxies}
+        \begin{itemize}
+          \item Spirals: \textbf{Tully-Fisher relation} between maximum
+            rotational velocity and luminosity
+          \item Ellipticals: fundamental plane relation between velocity
+            dispersion, SB, and physical size
+                ($D_{n}-\sigma$) relation.
+        \end{itemize}
+    \item [Redshift]
+\end{description}
+\subsubsection{Distances from redshift}
 Galaxies expand with everything else in the cosmic flow according to $v=Hd$.
 At low $z$, $z \approx v/c$. At high $z$, need knowledge of cosmological
 parameters to get distance from redshift (i.e.\ redshift-distance
-relation\footnote{see, e.g.\ Hogg, Distance Measures in Cosmology}) However,
-galaxies move around relative to the uniform expansion because of local
-gravitational attraction from concentrations of mass - the deviation of the
-velocity from the smooth flow is called the peculiar velocity.
+relation\footnote{see, e.g.\ Hogg, Distance Measures in Cosmology})
 
+Galaxies also move around relative to the uniform expansion because of local
+gravitational attraction from concentrations of mass.
+As mentioned above, the deviation of the
+velocity from the smooth flow is called the \textit{peculiar velocity}.
 Typical peculiar velocities are on the order of several hundred km s$^{-1}$,
-but depend on environment; c.f., Milky Way and galaxy clusters; if these
-are ignored, introduces spurious features in distance maps (``fingers of
-God'').
-At $z \geq 0.1$, peculiar velocities lead to relatively small distance
+but depend on environment; c.f., \mynotes{??}
+Milky Way and galaxy clusters; if these are ignored, introduces spurious
+features in distance maps (``fingers of God'').
+
+At $z \gtrsim 0.1$, peculiar velocities lead to relatively small distance
 errors. At lower redshifts, might estimate distances using model of mass
 distribution and velocity field, but this is likely not well determined.
 
-Determining spectroscopic redshift for distant (faint) galaxies is
+\paragraph{Spectroscopic redshift} Determining redshift spectroscopically
+for distant (faint) galaxies is
 observationally time-consuming. Accurate positions of individual lines
 require reasonable S/N. It is possible to get good redshifts from low
 S/N observations by taking advantage of multiple spectral features,
 e.g., by cross-correlation of spectrum against a template
 in $\log\lambda$ space.
 
+\paragraph{Photometric redshift}
 Lower accuracy distances are possible from so-called \textit{photometric
-redshifts}. \mynotes{Can't disperse light.} Use low resolution spectral
-information, i.e.\ multiband photometry to constrain redshift. Need to
+redshifts} \mynotes{(though can't disperse light.)}
+Use low resolution spectral
+information, i.e.\ multiband photometry to constrain redshift.
+Need to
 separate different intrinsic SEDs of galaxies, internal reddening, and
 redshift. Accuracy of results obviously depends on quality of photometry
 and number of bandpasses. Typical accuracies (checked against spectroscopic
 redshifts) give
 \[
     \frac{\Delta{z}}{\left(1+z\right)} \sim 0.1
-\]
+    \]
 (sometimes better); note typical $\sim$ 10\% outlier fraction
 (varies for different types of galaxies).
 
 
 
-\subsection{Integrated brightness}
-Issue: galaxies don't have edges! Types of mags:
+\subsection{Integrated brightness}\label{intb}
+Issue: galaxies don't have edges.
 \begin{itemize}
     \item \textbf{Metric mags:} brightness within an aperture of fixed
         angular or physical size. Be careful if galaxies have a range
         of sizes.
     \item \textbf{Isophotal mags:} brightness within a specified SB
         contour, e.g.\ Holmberg mags, which is the brightness within
-        $\mu_{pg} = 26.5$. Be aware if galaxies have a range of SB profiles.
+        $\mu_{pg} = 26.5$. \mynotes{wtf is $\mu_{pg}$??}
+        Be careful if galaxies have a range of SB profiles.
     \item \textbf{Model mags:} require assumption about outer SB profile
     \item \textbf{Petrosian mags:} mag within some fixed number of Petrosian
-        radii (SDSS uses 2), where the latter is defined as the radius at
-        which SB (in an annulus, SDSS used 0.8-1.25r) drops to some fraction
-        of light (SDSS uses 0.2) within this radius. Advantages with regard
-        to SB (distance) and seeing effects. Note relation of Petrosian mag
-        to model mag depends on SB profile.
+        radii (SDSS uses 2).
+        Advantages with regard to SB (distance) and seeing effects. Note
+        relation of Petrosian mag to model mag depends on SB profile.
 \end{itemize}
 Typical integrated brightnesses of galaxies, and star-galaxy separation
 and crossover in number counts \mynotes{(\ldots yes?)}
 
 Other issues in getting luminosities of galaxies:
 \begin{itemize}
-    \item Foreground extinction, which depends strongly of Galactic
+    \item Foreground extinction, which depends strongly on Galactic
         latitude\footnote{Burstein \& Heiles, ApJS 54,33 (1984);
         Schlegel, Finkbeiner, \& Davis, ApJ 500,525 (1998)}
     \item Internal extinction/inclination, which can be significant
-        (up to 1.5 mag in RC3 prescription)
+        (up to 1.5 mag in RC3 prescription \mynotes{(???)})
     \item If looking at a population, be sure to compare luminosities in
         the same bandpass. This is an issue if looking over a range of
         redshifts; a fixed observed wavelength range corresponds to a
@@ -778,19 +775,20 @@ Other issues in getting luminosities of galaxies:
         observed wavelengths.
 \end{itemize}
 
+\newpage
 \section{Statistical properties of galaxies}
 Consider relative number of galaxies with different parameters,
 e.g.\ color or luminosity.
 \subsection{Luminosity Function}
-The luminosity function (LF) gives the number density of galaxies as a function
-of luminosity, which can be expressed either in luminosity or absolute
-magnitude units.
-\begin{itemize}
-    \item $\Phi(L)$ = number density of galaxies with
+The luminosity function (LF) gives the number density of galaxies as a
+function of luminosity, which can be expressed either in luminosity or
+absolute magnitude units.
+\begin{description}[labelwidth=3em, labelindent=0.25in]
+    \item [$\Phi(L)$] = number density of galaxies with
         luminosity between $L$ and $L$ + $\mathrm{d}L$
-    \item $\Phi(M)$ = number density of galaxies with absolute
+    \item [$\Phi(M)$] = number density of galaxies with absolute
         mag between $M$ and $M$ + $\mathrm{d}M$
-\end{itemize}
+\end{description}
 The integral over the LF gives the total number density of galaxies (at all
 luminosities). The LF is the first step toward understanding a fundamental
 question of galaxy formation: What sets the \emph{range} of galaxy luminosities
@@ -800,26 +798,27 @@ cosmological probe for evolution of the galaxy population (more later).
 
 \subsubsection{Measuring the LF}
 Obviously, distance measurements are required to get luminosity.
-Measurement critically depends on knowledge of the \textbf{selection function}.
-For magnitude limited samples, more luminous objects will be overrepresented.
-This is called the Malmquist bias\footnote{Be aware that this name is sometimes
-used to refer to different things.}
+Measurement critically depends on knowledge of the \textbf{selection
+function}. For magnitude limited samples, more luminous objects will
+be overrepresented. This is called the Malmquist bias\footnote{Be
+aware that this name is sometimes used to refer to different things.}
 
-The simplest idea for correction is to weigh counts by $V_{max}$, the largest
-volume to which the galaxy could have been observed given the slection funcion.
-However, the issue here is large-scale structure.
-$\rightarrow \cfrac{V}{V_{max}}$ test for uniformity and understanding of
-selection function\footnote{Significantly more sophisticated methods have
-been developed; see, e.g.\ Binggelli et al (ARAA 26, 26, 1988) for
-more details}.
+The simplest idea for correction is to weigh counts by $V_{max}$, the
+largest volume to which the galaxy could have been observed given the
+selection function. However, the issue here is large-scale structure.
+$\rightarrow \cfrac{V}{V_{max}}$ test for uniformity and understanding
+of selection function\footnote{Significantly more sophisticated
+methods have been developed; see, e.g.\ Binggelli et al (ARAA 26, 26,
+1988) for more details}.
 
-Also may need to be careful about systematic biases arising from uncertainties
-in measured magnitudes and distances, if population is not uniform in
-underlying distribution of absoluate mags and distances sampled (which it
-isn't).  The LF rises toward fainter magnitudes, so more galaxies are scattered
-bright than are scattered faint \mynotes{(WTF??)}.  In distance, more galaxies
-are located farther than nearer because of volume element \mynotes{(seriously,
-WTF)}, so more galaxies scattered into sample (with corresponding error in
+Also may need to be careful about systematic biases arising from
+uncertainties in measured magnitudes and distances, if population is
+not uniform in underlying distribution of absoluate mags and distances
+sampled (which it isn't). The LF rises toward fainter magnitudes, so
+more galaxies are scattered bright than are scattered faint
+\mynotes{(WTF??)}. In distance, more galaxies are located farther
+than nearer because of volume element \mynotes{(seriously, WTF)}, so
+more galaxies scattered into sample (with corresponding error in
 absolute magnitude) than scattered out of it.
 
 Note that many biases are possible aside from a simple magnitude cut, e.g.\
@@ -1335,22 +1334,23 @@ kinematics(maximum rotational velocity)-luminosity relation.
 
 \section{Some galaxies to be familiar with}
 
-%-------------------------------------------------------------------%
-\section{The building blocks of galaxies}
+\newpage
+\begin{center}
+    \fontsize{20}{22}\selectfont\textbf{Part II: The building blocks of galaxies}
+\end{center}
 
-\subsection{Stars and Stellar populations}
-
-\subsubsection{Relating observables to intrinsic population characteristics}
+\section{Stars and Stellar populations}
+How to relate observables to intrinsic population characteristics:
 \begin{itemize} % AA
     \item \textbf{Population characteristics:} distribution of masses, compositions
         and ages (star formation history).
     \item \textbf{Observe spectral energy distributions (or colors) of stars:}
         individual stars in very nearby galaxies, interated starlight
         for most galaxies.
-\end{itemize}% end AA
+\end{itemize}
 
-\subsubsection{Stellar evolution}
-\begin{itemize} % BB
+\subsection{Review: stellar evolution}
+\begin{itemize}
     \item Internal structure of stars: determined by mass, chemical
         composition, and age (Russell-Vogt theorem). Exclues
         non-spherical symmetric effects, e.g.\ rotation, magnetic
@@ -1397,8 +1397,8 @@ kinematics(maximum rotational velocity)-luminosity relation.
         stellar atmospheres give observables: spectral energy
         distribution/colors. Some model atmospheres (need links!):
         \begin{itemize}
-            \item \textcolor{blue}{Kurucz}
-            \item \textcolor{blue}{MARCS}
+            \item {Kurucz}
+            \item {MARCS}
         \end{itemize}
     \item Theoretical Color-Magnitude Diagrams (CMDs) $\rightarrow$
       observed; need distance and reddening/extinction
@@ -1514,7 +1514,7 @@ kinematics(maximum rotational velocity)-luminosity relation.
       \end{itemize}
   \end{itemize}
 
-  \subsubsection{More information in a CMD than is represented by isochrones}
+\subsection{More information in a CMD than is represented by isochrones}
   one can also consider relative numbers of stars at
       different locations: CMDs that incorporate number of stars are
       reffered to as Hess diagrams (e.g.\ \textcolor{blue}{Fornax}
@@ -1545,7 +1545,7 @@ kinematics(maximum rotational velocity)-luminosity relation.
               \end{itemize}
       \end{itemize}
 
-\subsubsection{Star Formation Histories (SFHs) from resolved stellar populations}
+\subsection{Star Formation Histories (SFHs) from resolved stellar populations}
       \begin{itemize}
           \item In general, galaxies are not SSPs, i.e.\ their CMDs don't look
               like those of a cluster. Can fit Hess diagrams of resolved stellar
@@ -1629,7 +1629,7 @@ kinematics(maximum rotational velocity)-luminosity relation.
               \end{itemize}
       \end{itemize}
 
-\subsubsection{Integrated light from \emph{un}resolved stellar populations}
+\subsection{Integrated light from \emph{un}resolved stellar populations}
       \begin{itemize}
         \item What stars contribute the most light?
             \begin{itemize}
@@ -1763,175 +1763,878 @@ kinematics(maximum rotational velocity)-luminosity relation.
 % ---------------------------------page 10-----------------------------------%
       \end{itemize}
 
-\subsubsection{Chemical evolution}
-\begin{itemize} % A
-    \item Understanding
-    \item Start with some initial conditions,
-        then add star formation history: (IMF + SFR). This results
-        in chemical enrichment for stars as a function of mass and
-        metallicity. Also consider input and output of gas from any
-        particular region, with either primordial or modified
-        composition.
-        \begin{itemize} % AA
-            \item ICs: No heavy elements and pure gas (no stars).
-            \item SFH: birthrate function $\psi(m,t)$ gives
-                number of stars formed with mass $m$ per unit
-                volume, usually split into separable function:
-                $$ B(m,t) = \xi(M)\psi(t) $$
-                where $\xi(M)$ is the IMF and $\psi(t)$ is the SFR\@.
-                This implicityly assumes an IMF which is constant
-                in time, which may or may not be true, but so far,
-                there is no strong observational evidence against
-                it (although note pop III issues).
-            \item For any particular star, use stellar evolution
-                to compute the amount and composition of mass
-                returned to the ISM vs.\ amount locked up in stellar
-                remnants (Pagel fig 2, from Maeder 1992). Note that
-                the \emph{rate} of return depends on stellar mass,
-                especially for the case of SnIa, which also depends
-                on the binary fraction.
-% ---------------------------------page 11-----------------------------------%
-            \item nucleosynthesis: main element groups and their sources:
-            \begin{itemize} % AAA
-                \item light elements: Big Bang Nucleosynthesis (BBN)
-                    plus subsequent destruction (?)
-                \item $\alpha$ elements (even Z from O up$\ldots$???):
-                        massive stars (core collapse SN)
-                \item Fe-peak elements: type Ia SN and core collapse SN
-                \item $s$ and $r$ process (neutron capture, plux beta
-                        decay) elements: core collapse SN, AGB stars$\ldots$
-                        (need neutron capture diagram here)
-            \end{itemize} % end AAA
-            \item Note that infall might arise from primordial clouds, or from
-                processed material, e.g.\ mass-loss from halo stars. Outflow
-                might come from SN winds, and in this case, it's possible that
-                the composition of outflow material might be more enriched than
-                the typical composition at any given time. So things can get
-                complicated.
-        \end{itemize} % end AA
-    \item Basic equations of chemical evolution
-        \begin{itemize}
-            \item Allowing for
-            \item Consider a total (galaxy) mass M, split into a gas mass
-                $g$ and stellar mass $s$. For a simple model, consider the
-                gas at any time to be well mixed. At any given time, we wish
-                to know the fraction abundance ($Z_i$) of element $i$.
-                Consider an inflow rate into the system, $F$ and outflow
-                (ejection) rate, $E$. Then we have:
-                $$ M = g + s $$
-                $$ \frac{dM}{dt} = F - E $$
-                $$ \frac{dg}{dt} = F - E + e - \psi't $$
-                where $\psi'$ is the SFR in units of mass per time,
-                $$ \psi' = \psi\int\xi\textrm{d}m $$
-% ---------------------------------page 12-----------------------------------%
-                (so $\xi$ is normalized to a total of one), and $e$ is the
-                ejection rate of mass from stars,
-                $$ e = \int_{m_t}^{m_U} \left(m-m_{\textrm{rem}}\right)
-                \psi\left(t-\tau(m)\right)
-                \xi\left(m\right)\textrm{d}m $$
-                which is a sum over all stellar masses of the product of the
-                SFR at the time of formation of each mass with the mass returned
-                to the ISM, weighted by the IMF\@. The lower limit of integration
-                is at the stellar mass which is dying at time $t$; lower mass
-                stars don't contribute because they haven't ejected any mass yet.
-                We also have
-                $$ \frac{ds}{dt} = \psi' - e$$
-                wince the mass in stars increases by te number of stars formed,
-                but decreases by the amount of mass lost back to the ISM from
-                the previous generation of stars. For the elements, we have
-                $$ \frac{d(gZ_i)}{dt} = e_Z(i) - Z_i\psi + Z_FF - Z_EE  $$
-                ($Z_i$ is the mass fraction of element $i$; hereafter we'll drop
-                the subscript for simplicity). The mass in each element
-                \emph{increases} by:
-                \begin{itemize}
-                    \item amount of mass released by previous generations
-                    \item amount of mass added by inflow
-                \end{itemize}
-                but \emph{decreases} by:
-                \begin{itemize}
-                    \item amount of mass locked up in new stars
-                    \item amount of mass lost to outflow
-                \end{itemize}
-                The term $e_Z$ is given by:
-                $$
-                    \psi(t-\tau(m))\xi(m)\textrm{d}m
-                $$
-                where $q_Z$ represents the fractional mass of element $Z$
-                synthesized and ejected during stellar evolution (so left term
-                in brackets gives material which returns unprocessed and right
-                term gives newly synthesized contribution).
-                In a simple model, the synthesized masses are independent of
-                the metallicity of the population (although we know this is not
-                true for some elements, more on this later).
-            \item To simplify, consider an approximation to these formulae called
-                the \emph{instantaneous recycling approximation} which assumes
-                that all elements are returned instantaneously - good for products
-                of massive stars, but less good for products from lower mass stars,
-                e.g.\ iron. Then we have
-% ---------------------------------page 13-----------------------------------%
-                $$ e = \psi\int(m-m_{\textrm{rem}})\xi(m)\textrm{d}m
-                \equiv (1-\alpha)\psi $$
-                where $\alpha$ is the \emph{lock-up fraction}: the fraction
-                of mass ``locked up'' in stars and remnants.
-                $$ \ldots $$
-% ---------------------------------page 14-----------------------------------%
-                $$ \ldots $$
-                and finally,
-                $$ g\frac{dZ}{ds} = \frac{d(gZ)}{ds} - Z\frac{dg}{ds} =
-                p + (Z_F - Z)\frac{F}{\alpha\psi} $$
-                \textcolor{red}{This is a basic equation of chemical synthesis}.
-            \item The \emph{simplest} model for chemical evolution assumes no
-                inflow or outflow, a homogeneous system without any spatial
-                differentiation of metallicity, zero initial metallicity, and
-                yields which are independent of composition. This is known as the
-                Simple, one-zone model.
+\subsection{Chemical evolution}
+Understanding chemical evolution provides another clue about
+the formation history of galaxies. Since stars generate this evolution,
+one can in principle learn something about star formation histories by
+looking at the distribution of compositions. The more handle we have on
+metallicites, the better we can contstrain ages. The \emph{distribution}
+of metallicities within galaxies (recall gradients) potentially provide
+important information about mode of galaxy formation. We'd like self-
+consistency between SFH  and chemical abundances. Potential information
+about gas entering and leaving system. Relative abundances of different
+elements also may provide clues about formation history.
 
-                In the simple model, we have
-                $$ \frac{dg}{dt} = -\frac{ds}{dt} $$
-                $$ g\frac{dZ}{ds} = -g\frac{dZ}{dg} = p $$
+The basic picture of chemical evolution starts with some initial conditions,
+then add SFH: (IMF + SFR). This results in chemical enrichment for stars as a
+function of mass and metallicity. Also consider input and output of gas from
+any particular region, with either primordial or modified composition.
+\begin{itemize}
+    \item ICs: No heavy elements and pure gas (no stars).
+    \item SFH: birthrate function $\psi(m,t)$ gives number of stars formed with
+        mass $m$ per unit volume, usually split into a separable function:
+        \[
+            B(m,t) = \xi(M)\psi(t)
+        \]
+        where $\xi(M)$ is the IMF and $\psi(t)$ is the SFR\@.  This implicitly
+        assumes an IMF which is constant in time, which may or may not be true,
+        but so far, there is no strong observational evidence against it
+        (although note pop III issues).
+\end{itemize}
+For any particular star, use stellar evolution to compute the amount and
+composition of mass returned to the ISM vs.\ amount locked up in stellar
+remnants (Pagel fig 2, from Maeder 1992).  Note that the \emph{rate} of return
+depends on stellar mass, especially for the case of SnIa, which also depends on
+the binary fraction.
+
+\textbf{\underline{nucleosynthesis}}: main element groups and their sources:
+\begin{itemize}
+    \item light elements: Big Bang Nucleosynthesis (BBN)
+        plus subsequent destruction (?)
+    \item $\alpha$ elements (even Z from O up\ldots???): massive stars (core
+        collapse SN)
+    \item Fe-peak elements: type Ia SN and core collapse SN
+    \item $s$ and $r$ process (neutron capture, plux beta decay) elements: core
+        collapse SN, AGB stars\ldots (need neutron capture diagram here)
+\end{itemize} % end AAA
+Note that infall might arise from primordial clouds, or from processed
+material, e.g.\ mass-loss from halo stars. Outflow might come from SN winds,
+and in this case, it's possible that the composition of outflow material might
+be more enriched than the typical composition at any given time. So things can
+get complicated.
+
+\paragraph{Basic equations of chemical evolution:}
+Allowing for all sorts of realistic effects makes it difficult to make
+very simple predictions for the evolution of abundances. However, under
+some simplifying assumptions, it is possible to do so. A simple chemical
+evolution model serves as a useful baseline against which observations
+can be compared to determine where the assumptions may break down.
+In addition, understanding a simple model allows us to introduce and
+become aquainted with terminology that is in widespread use.
+
+Consider a total (galaxy) mass $M$, split into a gas mass
+$g$ and stellar mass $s$. For a simple model, consider the
+gas at any time to be well mixed. At any given time, we wish
+to know the fraction abundance ($Z_{i}$) of element $i$.
+Consider an inflow rate into the system, $F$ and outflow
+(ejection) rate, $E$. Then we have:
+\[
+    M = g + s
+\]\[
+    \frac{\mathrm{d}M}{\mathrm{d}t} = F - E
+\]\[
+    \frac{\mathrm{d}g}{\mathrm{d}t} = F - E + e - \psi't
+\]
+where $\psi'$ is the SFR in units of mass per time,
+\[
+    \psi' = \psi\int\xi\textrm{d}m
+\]
+% ---------------------------------page 12-----------------------------------%
+(so $\xi$ is normalized to a total of one), and $e$ is the
+ejection rate of mass from stars,
+\[
+    e = \int_{m_{t}}^{m_{U}}{
+        \left(m-m_{\mathrm{rem}}\right)\psi\left(t-\tau(m)\right)
+        \xi\left(m\right)\mathrm{d}m}
+\]
+which is a sum over all stellar masses of the product of the SFR at the time of
+formation of each mass with the mass returned to the ISM, weighted by the
+IMF\@. The lower limit of integration is at the stellar mass which is dying at
+time $t$; lower mass stars don't contribute because they haven't ejected any
+mass yet.  We also have
+\[
+    \frac{\mathrm{d}s}{\mathrm{d}t} = \psi' - e
+\]
+wince the mass in stars increases by te number of stars formed,
+but decreases by the amount of mass lost back to the ISM from
+the previous generation of stars. For the elements, we have
+\[
+    \frac{\mathrm{d}(gZ_{i})}{\mathrm{d}t} =
+    e_{Z}(i) - Z_{i}\psi + Z_{F}F - Z_{E}E
+\]
+($Z_i$ is the mass fraction of element $i$; hereafter we'll drop
+the subscript for simplicity). The mass in each element
+\emph{increases} by:
+\begin{itemize}
+    \item amount of mass released by previous generations
+    \item amount of mass added by inflow
+\end{itemize}
+but \emph{decreases} by:
+\begin{itemize}
+    \item amount of mass locked up in new stars
+    \item amount of mass lost to outflow
+\end{itemize}
+The term $e_{Z}$ is given by:
+\[
+    e_{Z} = \int_{m_{\tau}}^{m_{U}}{
+        \left[(m-m_{rem})Z(t-\tau(m))+mq_{Z}\right]
+        \psi(t-\tau(m))\xi(m)\textrm{d}m}
+\]
+where $q_{Z}$ represents the fractional mass of element $Z$ synthesized and
+ejected during stellar evolution (so left term in brackets gives material which
+returns unprocessed and right term gives newly synthesized contribution).  In a
+simple model, the synthesized masses are independent of the metallicity of the
+population (although we know this is not true for some elements, more on this
+later).
+
+To simplify, consider an approximation to these formulae called
+the \textit{instantaneous recycling approximation} which assumes
+that all elements are returned instantaneously - good for products
+of massive stars, but less good for products from lower mass stars,
+e.g.\ iron. Then we have
+\[
+    e = \psi\int{(m-m_{\textrm{rem}})\xi(m)\textrm{d}m}
+    \equiv (1-\alpha)\psi
+\]
+where $\alpha$ is the \textit{lock-up fraction}: the fraction
+of mass ``locked up'' in stars and remnants.
+\[
+    \alpha = 1-\int_{m_{\tau}}^{m_{U}}{{m'}\xi(m')\mathrm{d}{m'}} +
+    \int_{m_{\tau}}^{m_{U}}{m_{\mathrm{rem}}(m)\xi(m)\mathrm{d}m}
+\]
+where the second term is the total mass in stars that have died, and
+the third term is the mass from those stars that have been locked up
+in remnants.
+
+Alternatively, one can think of the \textit{Return fraction},
+$R=1-\alpha$. This gives us
+\[
+    \frac{\mathrm{d}g}{\mathrm{d}t} = F-E+(1-\alpha)\psi-\psi=F-E-\alpha\psi
+\]
+We also have
+\[
+\]
+We define the stellar \textit{yield}, $p_{Z}$ to be
+\[
+\]
+so the yield gives the fraction of the remnant population synthesized
+and released in each element. This gives
+\[
+\]
+where the RHS terms are recycled material, new production, lock-up in
+new stars, inflow, and outflow. Simplifying, we have
+\[
+\]
+Using mass locked up in stars, $s$, as the independent variable
+\[
+\]
+\[
+\]
+so we get
+\[
+\]
+\[
+\]
+If we make a further assumption of a uniform wind, $Z_{E}=Z$, then
+\[
+\]
+and finally,
+\[
+    g\frac{\mathrm{d}Z}{\mathrm{d}s} =
+    \frac{\mathrm{d}(gZ)}{\mathrm{d}s} - Z\frac{\mathrm{d}g}{\mathrm{d}s} =
+    p + (Z_{F} - Z)\frac{F}{\alpha\psi}
+\]
+\textcolor{bred}{This is a basic equation of chemical synthesis}.
+The \emph{simplest} model for chemical evolution assumes no
+inflow or outflow, a homogeneous system without any spatial
+differentiation of metallicity, zero initial metallicity, and
+yields which are independent of composition. This is known as the
+\textit{Simple, one-zone model}.
+
+In the Simple model, we have
+\[
+    \frac{\mathrm{d}g}{\mathrm{d}t} = -\frac{\mathrm{d}s}{\mathrm{d}t}
+\]\[
+    g\frac{\mathrm{d}Z}{\mathrm{d}s} = -g\frac{\mathrm{d}Z}{\mathrm{d}g} = p
+\]
 % ---------------------------------page 15-----------------------------------%
-                Solving for $Z(g)$, we get
-                $$ Z
-                $$
+Solving for $Z(g)$, we get
+\[
+\]
+where $\mu$ is the gas fraction
+\[
+\]
+The average abundance in stars is
+\[
+\]
+which tends to $p$ as $\mu$ becomes small, i.e.\ the gas fraction becomes
+small. For larger gas fractions, the mean $<Z>$ will be lower than the yield.
+Note that this is the mean metallicity weighted by stellar mass, not by
+stellar luminosity or by number (but these could easily be derived).
+
+\subsection{Measuring stellar abundances}
+Stellar abundances in individual stars measured from absorption features.
+Hot stars only allow measurements of very few elements, while cool stars
+(T\textless3500 K) are complicated due to very large numbers of lines and
+prominence of molecular features. When lines are well-separated, abundance
+determination is possible from measurements of the \textit{equivalent width}.
+When lines are more crowded, usually approached by spectral synthesis.
+
+In all cases, to measure abundances, need to know:
+\begin{description}[
+            labelindent=0in,
+            labelwidth=2in
+            style=multiline,
+            itemsep=2ex,
+        ]
+    \item [atmospheric parameters]
+        \begin{itemize}
+            \item Temperatures ($T_{e}$) may be derived from colors
+                (unless reddening is an issue); also often derived from
+                excitation equilibrium: require lines of different
+                excitation potential to give the same abundance (e.g. FeI lines)
+            \item Surface gravity ($\log{g}$) can be derived from luminosities,
+                temperatures and masses, hence distances are required.
+                Alternatively, use ionization equilibrium: require lines
+                of different ionization states to give the same abundance
+                (e.g., FeI vs.\ FeII).
+            \item microturbulence
+        \end{itemize}
+    \item [atomic parameters]
+        \begin{itemize}
+            \item Astrophysical $gf$ values: Atomic parameters are determined
+                from lab experiments, but not always available at high quality.
+                $gf$ values are derived from measurements of stars in which
+                abundance is presumed to be known from other measurements.
+        \end{itemize}
+\end{description}
+Abundances in unresolved populations are challenging, for the reasons
+previously discussed (age-metallicity degeneracy, blending of different
+features, etc.) Present day abundances in galaxies best measured through
+gas abundances (to be discussed).
+
+Units for measuring abundances:
+\begin{itemize}
+    \item Stellar abundances: usually measured relative to the sun
+        $[X/Y]$:
+        \[ \log\left[\frac{(X/Y)}{(X/Y)_{\odot}}\right] \]
+    \item $Z_{i}$: mass fraction of element $i$
+    \item $\log(X/Y)$: log of ratio of mass fractions
+    \item $12 + \log(Z_{i}/H)$: log of ratio of mass fraction to hydrogen,
+        with 12 added (to keep the numbers positive?)
+\end{itemize}
+
+
+\paragraph{Abundances as function of time}
+The simple model predicts an increase of the metallicity with time.
+The rate of increase depends on the SFR.
+For example, if we \emph{assume} that the SFR is proportional to the
+gas mass, $\mathrm{d}s/\mathrm{d}t = \omega{g}$, where $\omega = constant$,
+we get:
+\[
+    z = \omega{t}
+\]
+and the abundance is expected to increase linearly with time.
+
+\paragraph{Relative abundances of different elements}
+Simple model predicts that, at any time, elements will be found in relative
+abundances given by the ratio of their yields. This is true to some extent
+for $\alpha$ elments, e.g.\ in the solar neighborhood\footnote{from
+Bensby et al. 2003}. Most other elements go in lockstep with O (Fig. 11)
+
+This is not true for Fe. This is plausibly explained for by a significant
+fraction of Fe coming from SnIa, which has a time delay, and so the simple
+model with instantaneous recycling doesn't hold. This is important to realize,
+because many direct ``metallicity'' determinations are make from Fe liens.
+If SnIa is the right explanation, one would expect to a constant ratio
+of Fe/O for systems in which star formation proceeded rapidly (i.e.\ finished
+before SnIa go off), but in systems with more extended start formation,
+Fe/O would increase at higher O abundance (Page l figure 10).
+Note that $\alpha/Fe$ traces timescales of extended star formation,
+which is not necessarily the same as age (you could have a short epoch
+of star formation at a late time to give alpha-enhancement even at younger
+ages). However, very old populations would be expected to have alpha-enhanced
+populations, e.g.\ as observed in globular clusters.
+With the SnIa interpretation, $\alpha/Fe$ provides a clock. Unfortunately,
+the calibration of the clock is not extremely well known because of the
+unknown precise nature of SNIa projenitors. It is usually considered
+to be of order 1 Gyr but there is very plausibly a range of SNIa ages.
+
+The constancy of element abundance ratio holds for \emph{primary}
+elements i.e. those that are produced from primordial abundance.
+In addition some elements are secondary which means that some element must
+previously exist in order for the secondary element to be created.
+An example is N, which is produced during the CNO cycle
+in greater abundance with a larger initial abundance of C.
+This is observed (Fig. 12)
+
+More generally, the constancy of element abundance ratios could fail if
+the yields are themselves a function of metallicity. This may be
+expected to occur, e.g.\ for elements that are significantly contributed by mass
+loss, since mass loss may increase with increasing metallicity.
+
+In reality, lots of different elements appear \emph{not} to go
+in lockstep with one another, presumably because of the origin of different
+elements from different processes and in different types of stars.
+These variations may hold important clues for tracing the origin of stellar
+systems. $\alpha/Fe$ traces duration of star formation (relative to
+SnIa timescale). Other element ratios may trace variations in the IMF,
+since different mass stars contribute different fractions of heavy
+elements, or stochastic effects from a given IMF for star formation occurring
+in small parcels (e.g.\ clusters). Gives rise to the idea of
+\textit{chemical tagging} \mynotes{???}. Example: Local Group
+dwarf galaxies and the Galactic halo\footnote{from Tolstoy et al. 2009}.
+Could the halo come to be built up by dwarfs? Caution: just because
+\emph{present-day} dwarfs don't match doesn't mean previously existing
+ones don't. Note SDSS-III APOGEE survey.
+
+Mass-metallicity relation here? \url{http://arxiv.org/abs/1211.3418}
+
+\section{Gas}
+Intrinsic gas characteristics:
+\begin{itemize}
+    \item temperature
+    \item density
+    \item composition
+    \item ionization field
+    \item total gas mass
+\end{itemize}
+Gas in galaxies exists in multiple phases:
+\begin{center}
+\begin{tabular}{l l}
+    phase & temperature\\
+    \hline
+    molecular clouds & $\lesssim$ 100 K\\
+    cold, neutral (atmic) medium (CNM) & $\lesssim$ 100 K\\
+    warm, neutral (atmic) medium (WNM) & $\lesssim$ 8000 K\\
+    warm, ionized medium (WIM/DIG) & $\sim$ 8000 K\\
+    hot, ionized medium (HIM) & $> 10^{5}$ K\\
+\end{tabular}
+\end{center}
+Also denser ionized gas in HII regions, SN remnants, PNe.
+CNM/WNM/WIM/HIM perhaps roughly in pressure equilibrium, but note
+other support mechanisms such as turbulence, magnetic fields, etc.
+If they are in pressure equilibrium, higher temperature components
+have correspondingly lower densities.
+
+\subsection{Observing and characterizing the gas}
+Two general methods:
+\paragraph{Emission}
+Atomic lines
+\begin{itemize}
+    \item Permitted: In low temperature gas (T = 10000 K $\sim$ 1eV),
+        the energy difference to excited states is typically too high
+        for excitations to occur from collisions. An exception is
+        H lines from recombination; these exist from UV through radio
+        wavelengths.
+    \item ``Forbidden'': Low transition probabilites; important in low
+        density gas because collisions are less frequent, allowing time
+        for radiative transitions to occur before collisional de-excitation.
+        Wavelengths are typically in the optical and UV regimes. Note that
+        many of these are doublets because of multiple angular momentum
+        levels. Most prominent in optical: [OIII], [NII], [SII], [OII], [OI]
+    \item Fine-structure lines, transitions ivolving spin alignment with
+        orbital alignment. Typically FIR wavelengths
+    \item Hyperfine-structure lines, transitions involving electron spin
+        alignment with nuclear spin. Radio wavelengths.
+\end{itemize}
+\subparagraph{Molecular lines}
+\begin{itemize}
+    \item Vibrational transitions, typically IR wavelengths
+    \item Rotational transitions, typically mm wavelengths. However,
+        rotational transitions only strong for non-symmetric molecules
+        that have a dipole moment (not H$_{2}$, although it can have
+        some IR features if shock heated). CO emission is most prominent.
+\end{itemize}
+Emission in many cases is proportional to $\rho^{2}$. If the excitation
+mechanism is collisional (i.e., requires two particles), the observational
+quantity is the \textit{emission measure}: $\propto\int{n_{e}^{2}\mathrm{d}\ell}$.
+
+\subsubsection{Absorption}
+\paragraph{Atomic lines}
+\begin{itemize}
+    \item Typically from ground state, e.g.\ H Lyman transitions,
+        Na 5890, CaII
+    \item Most prominent in optical
+\end{itemize}
+\paragraph{Molecular lines}
+\begin{itemize}
+    \item Mostly UV, e.g.\ H$_{2}$ absorption
+\end{itemize}
+Absorption is generally more sensitive, but it does require a bright
+background source, e.g.\ UV light from quasars. Absorption is
+linearly proportional to density. The observational quantity is
+\textit{column density}: $\propto\int{n\mathrm{d}\ell} $
+
+\subsection{Heating and cooling} What determines temperature?
+\subsubsection{Heating}
+\begin{itemize}
+    \item Radiative heating (both via ionization and heating through dust)
+    \item Mechanical heating (shocks, jets, etc.)
+    \item Gravitational heating
+    \item Cosmic rays
+\end{itemize}
+\subsubsection{Cooling}
+\begin{itemize}
+    \item Bremsstrahlung (free-free)
+    \item Line emission from heavier elements
+    \item Molecules
+    \item Cooling curves and contributions (Sutherland \& Dopita 1983)
+\end{itemize}
+
+\subsection{HI measurements: 21 cm line}
+\begin{itemize}
+    \item Traces neutral medium
+    \item From spin-flip transition: very rare (10 Myr) but H is very
+        numerous. Relative number in two energy states set by collisional
+        equilibrium and proportional to statistical weights of two levels
+        (3:1); upper levels are populated from (microwave background photons,
+        collisional saturation?)
+    \item HI flux at a given location gives column density (atoms/surface
+        area):
+        \[
+        n_{HI} [\mathrm{cm}^{-2}] \approx 1.82\times10^{18}\int{
+            \left[\frac{T_{b}(\nu)}{\mathrm{K}}\right]\mathrm{d}
+            \left[\frac{v}{\mathrm{km\;s}^{-1}}\right]}
+        \]
+        Typical column densities in galaxies $\sim 10^{20}\;\mathrm{cm}^{-2}$
+    \item Total HI flux (integrated over entire galaxy), along with distance,
+        gives total HI mass:
+        \[
+            \frac{M_{HI}}{M_{\odot}} = 2.36\times10^{5}\left(
+            \frac{D}{\mathrm{Mpc}}\right)^{2}F_{HI}
+        \]
+        for $F_{HI}$ in Jy km s$^{-1}$.
+    \item 21-cm single dish observations have low spatial resolution.
+        Higher resolution possibly with interferometric observations
+        (e.g.\ VLA) but information on smooth distribution/total mass can
+        be lost.
+    \item HI can be observed to very low column densities
+        ($\sim10^{13}\;\mathrm{cm}^{2}$) in absorption, but only for
+        the Lyman series. Primary tool for studying the IGM:
+        Lyman alpha clouds, epoch of reionization, quasar absorption
+        line systems\ldots
+    \item Typical column densities are\ldots
+        Total mass in HI can be a significant fraction of total stellar
+        mass, increasingly important in lower luminosity galaxies.
+    \item Temperature might be inferred from width of line, but need to
+        be careful about turbulence, cloud structure, etc. Estimate can
+        also be made by comparing emission flux with absorption if you
+        have a background source (radio galaxy).
+\end{itemize}
+
+\subsection{Molecular gas}
+\subsection{Warm ionized gas}
+\subsection{Hot gas}
+If ``very'' hot, detectable in X rays: thermal Bremstrahlung (free-free)
+cutoff frequency decreases with increasing temperature. At lower temps
+(T $\sim$ 10$^{5}$ K), very hard to detect. Soft X rays are absorbed
+by neutral hydrogen. Detectalbe in absorption by high ionized metals,
+e.g.\ OVI, CIV, NV. Very hard to determine total mass, but mass may be
+very significant, just from cosmological baryon fraction \mynotes{???}
+\subsection{Denser ionized gas}
+Easiest gas to observe in galaxies.
+\subsection{Chemical evolution and abundances from gas}
+\subsection{Distribution of gas within spirals}
+Neutral gas primarily observed in blue sequence galaxies.
+HI distribution usually extends beyond optical distribution of starlight,
+while molecular is more centrally concentrated. In some galaxies,
+CO traces H$\alpha$ well, but not in others. Hot gas is observed in
+most galaxies.
+
+\subsection{Gas as a kinematic tracer}
+Measuring galaxy rotation - both optically and using HI (both spatially
+resolved, e.g.\ VLA, and unresolved data).
+\begin{itemize}
+    \item Swaters et al. 2002
+    \item Velocity-coded color (from NRAO)
+    \item Spider diagrams
+    \item PV diagrams: note spread of velocity at any given position;
+        location of peak velocity may not give the \emph{maximum}
+        velocity at that position
+\end{itemize}
+Rotation is often characterized by $v_{max}$: maximum of rotation curve
+(sometimes hard to measure).  From unresolved HI profiles, rotation is
+characterized by line widths, e.g.\ $W_{50}, W_{20}$ (width at 50\% and 20\% of
+the peak line flux, respectively).
+
+\subsection{Interaction between stars and gas}
+\subsubsection{supernovae and mass loss from stars}
+
+
+\newpage
+\section{Dust}
+\subsection{General importance of dust}
+\begin{itemize}
+    \item Can obscure light from stars/gas: affects inferences on
+        populations, abundances, etc.
+    \item Emits radiation which can be observed (mostly IR) to probue
+        obscured emission.
+    \item Important for ehemistry of ISM, e.g.\ created of H$_{2}$.
+    \item Important for heating and cooling of ISM
+    \item Probably \emph{not} important as a significant mass component;
+        likely only a fraction of a percent of ISM by mass
+\end{itemize}
+
+\subsection{Extinction}
+Foreground and internal. Extinction laws and their variation.
+
+Extinction of light is characterized by an \textbf{extinction curve}, which gives
+the relative amount of light lost as a function of wavelength. Note that
+extinction curves are often in magnitudes (logarithmic). Generally,
+shorter wavelengths are attenuated more, leading to the phenomenon of
+reddening. This implies that the dust grain sizes are comparable to the
+wavelength of the light. \textcolor{bred}{Existence of the 2200\AA{} bump.}
+The total amount of extinction is proportional to the amount of reddening,
+e.g.\ $R_{V} \equiv A_{V}/E(B-V)$.
+More generally, $R_{\lambda} \equiv A_{\lambda}/E(B-V)$.
+
+Variations in the extinction curve exist, both within the Milky Way
+and in nearby galaxies\footnote{Gordon et al. 2003}. This variation is
+more significant in the UV. Cardelli, Clayton, and Mathis suggest that
+extinction curves can be parameterized by a single parameter $R_{V}$.
+Probably related to dust properties, e.g.\ grain size.
+
+Extinction has both scattering and absorption components. Scattering
+leads to, e.g., reflection nebula and diffuse light. Measuring scattering
+suggests optical albedo $\sim$ 0.5, so roughly equal amounts of scattering
+and absorption. Absorption leads to heating and re-emission.
+
+Discussions of extinction curves refer to the extinction of background light by
+foreground dust (i.e. a foreground screen). Integrated galaxy light likely does
+not fall into this scenario (apart from foreground Milky Way extinction).
+Remember Burstein \& Heiles and Sclegel, Fink beiner \& Davis for MW maps.
+Scattering is significant and leads to ``saturation''\footnote{Witt \&
+Gordon, 2003}.
+
+\subsubsection{Amount of gas, dust-to-gas ratio, and transparency of galaxies}
+The amount of extinction seems to be well correlated with the amount of
+neutral H
+\[
+    N(H) = 5.8\times10^{21}E(B-V)\quad
+    \left[\mathrm{cm}^{-2}\;\mathrm{mag}^{-1}\right]
+\]\[
+    A_{V} = 5.3\times10^{-22}N_{H}\quad
+    \left[\mathrm{mag}\;\mathrm{cm}^{2}\right]
+\]
+This suggests that dense (inner) regions of ISM are likely to be optically
+thick, but not low density ones. Confirmed by observations of ``overlapping''
+galaxies.
+
+\subsection{Emission from dust}
+\begin{itemize}
+    \item Predominant heating is from starlight (some collisional
+        heating in dense clouds)
+    \item Amount of energy absorbed depends on flux, size, and albedo.
+        Amount of energy radiated depends on temperature, size, and emissivity.
+    \item Dust particles are not ideal blackbodies. In addition, they may not
+        be in temperature equilibrium, especially small particles.
+    \item MW dust
+    \item Dust emits in far IR, e.g. MW emission and models. Note sharper
+        emission features from PAHs around 10 microns.
+    \item Dust emission traces star formation; luminous IR galaxies
+        (LIRGs, ULIRGs, 10 to 100x IR emission than typical galaxy).
+    \item Implications for higher redshift: sub-mm observations and
+        the negative K-correction
+\end{itemize}
+
+\subsection{Composition}
+\begin{itemize}
+    \item Solids have broad or non-existent absorption features, so abundances
+        from absorption are difficult or impossible.
+    \item Some inferences from interstellar gas abundances:
+        if stellar abundance ratios are assumed, than observed gas abundances
+        show depletion (from Draine), e.g. of C, Mg, Si, Fe at a level
+        greater than 50\%.
+    \item Still can't identify uniquely what molecules the dust is in.
+        Possibilities:
+        \begin{itemize}
+            \item silicates
+            \item oxides
+            \item carbon solids
+            \item hydrocarbons, e.g. PAHs (polycyclic aromatic hydrocarbons)
+            \item carbides
+            \item metallic Fe
+        \end{itemize}
+    \item Some absorption features are observed:
+        \begin{itemize}
+            \item 2200\AA{} feature: originally thought to be graphite,
+                now perhaps PAHs
+            \item 9.7 and 18 microns: silicates? (from Draine)
+            \item diffuese interstellar bands (DIBs) (from Draine)
+        \end{itemize}
+    \item As stated above, emission features are observed in IR from PAHs
+\end{itemize}
+Overall, plausible to expect that the \textbf{dust-to-gas ratio might be
+a function of metallicity}.
+
+\subsection{Creation/destruction}
+Dust is apparently difficult to create in the ISM. It is thought to be
+created in envelopes of cool stars $\rightarrow$ \textbf{the amount of dust
+may also be a function of star formation.}
+
+\newpage
+\section{Central black holes}
+(some references: Peterson, ``An Introduction to Active Galactic Nuclei'',
+Ferrarese \& Ford (2005)).
+
+Galaxies harbor central supermassive black holes: how do we know?
+\subsection{AGN as indicators of central black holes}
+Some fraction nearby galaxies who ``active'' nuclei:
+\begin{itemize}
+    \item Optical emission lines
+    \item Power-law continua spanning most of the EM spectrum.
+    \item Radio sources, often with jets
+    \item AGN review\footnote{see book by Peterson, 1997}\footnote{see
+        Whittle (UVa) lecture notes}
+        \begin{itemize}
+            \item Seyfert galaxies: Optical emission lines. Types 1
+                (broad lines) and 2 (narrow lines). Distinguishable from
+                HII regions, etc. from \textbf{emission line ratios}.
+            \item LINERS: weaker lines, lower ionization
+            \item BL Lac objects
+            \item Quasars and QSOs
+            \item Radio galaxies, e.g.\ Cen A, M87. Emission is from
+                synchrotron emission. Energy source may be the same,
+                but don't generally directly see nuclear activity.
+                Fanaroff-Riley (FR) types 1 (low radio luminosity,
+                edge-darkened) and 2 (high radio luminosity, edge-brightened).
+            \item See tables in section 4b of Whittle notes with some spectra.
+        \end{itemize}
+    \item Frequency of Seyfert phenomenon 1-2\% but LINERS much more common;
+        perhaps tens of percents of local galaxies show activity at some
+        level.
+\end{itemize}
+Generally considered to be powered by accretion onto a nuclear black hole.
+Arguments for the existence of black holes:
+\begin{itemize}
+    \item Luminosity: can be as high as $\sim10^{45-58}$ erg s$^{-1}$
+        for some AGN. \textbf{Eddington Luminosity:}
+        \[
+            L_{e} = \frac{4{\pi}GMm_{p}c}{\sigma_{T}} =
+            1.3\times10^{46}\frac{M}{10^{8}M_{\odot}}
+            \left[\mathrm{erg\;s}^{-1}\right]
+        \]
+    \item Non-stellar continua
+    \item Timing arguments. AGN show rapid variability with timescales of
+        days (optical/radio) to hours (X-ray): implies small objects
+        (small fraction of a pc).
+\end{itemize}
+\textbf{Overall physical picture:}
+different active nucleii phenomena all arise from
+a common physical scenario. Some \emph{intrinsic} differences give rise
+to different phenomena, whereas some differences arise from viewing angle.
+\begin{itemize}
+    \item Unified model: several main regions:
+        \begin{itemize}
+            \item Accretion disk
+            \item Broad line region (BLR)
+            \item Narrow line regions (NLR)
+            \item Dust torus
+        \end{itemize}
+    \item Alternative model\footnote{Elvis (2000)}
+    \item Viewing angle differences: Unified model (and another)
+    \item Some possible intrinsic causes of variation between types
+        \begin{itemize}
+            \item Accretion rates and accretion rate differences
+            \item Differences from variations in gas suppy (quantity and/or
+                efficiency of infall)
+            \item Differences from different black hole masses?
         \end{itemize}
 \end{itemize}
-% ---------------------------------page 16-----------------------------------%
-\subsubsection{Abundances as function of time}
-% ---------------------------------page 17-----------------------------------%
-\subsubsection{Relative abundances of different elements}
-% ---------------------------------page 18-----------------------------------%
+\subsection{Black holes in non-active galaxies}
+It appears that most galaxies, even inactive ones, harbor central
+supermassive black holes. This is expected at some level from number density
+of quasars at higher redshift.
+Detection of SMBHs\footnote{Ferrarese \& Ford}\footnote{Whittle (UVa) lecture}:
+\begin{itemize}
+    \item \textbf{Sphere of influence} (region where velocity generated by
+        central mass is comparable to or larger than velocity determined
+        from overall galaxy potential) is very small:
+        \[
+            r_{h} \sim \frac{GM_{BH}}{\sigma^{2}} \sim
+            11.2\frac{M_{BH}}{10^{8}M_{\odot}}\left(
+            \frac{\sigma}{200\mathrm{km\;s}^{-1}}\right)^{-2}\quad
+            \left[\mathrm{pc}\right]
+            \]
+    \item MW galactic center (e.g. UCLA group video)
+    \item Other galaxies: BHs inferred but strictly speaking, not absolutley
+        required\footnote{Ferrarese \& Ford 2005}.
+\end{itemize}
+If they have BHs, why aren't they active? Gas supply? Advection dominated
+accretion flow (ADAF)?
 
+\subsection{Measuring black hole masses}
+\begin{itemize}
+    \item Proper motions
+    \item Stellar and gas kinematics
+    \item Gas kinematics
+    \item Broad Fe K$\alpha$ (6.4 KeV X-ray line)
+    \item Reverberation mapping
+\end{itemize}
+BH masses have now been made for several dozen galaxies. Initially, correlation
+seen between BH mass and galaxy luminosity. Relation between BH mass and
+central velocity dispersion significantly tighter. Origin not well understood.
+M$_{BH}-\sigma$ relation (or M$_{spheroid}$).
 
+\subsection{Importance of central black holes}
 
-% ---------------------------------page 19-----------------------------------%
-\subsection{Gas}
-\subsection{Dust}
-\subsection{Central black holes}
-\subsection{Galaxy spectral energy distributions}
-\subsection{Dark matter and galaxy masses}
+\newpage
+\section{Galaxy spectral energy distributions}
+
+\newpage
+\section{Dark matter and galaxy masses}
+Dark matter dominates mass in the universe. How much is there? How is
+it distributed, both among and within galaxies? To what extent does it
+regulate galaxy properties?
+
+Note from cosmology: we expect
+\begin{itemize}
+    \item $\Omega_{m} \sim 0.27$
+    \item $\Omega_{b} \sim 0.047$
+\end{itemize}
+
+\subsection{Observations of dark matter in galaxies}
+The amount of dark matter in a galaxy is often characterized by the
+mass-to-light ratio (M/L). \textbf{Note that there is a distinction
+between \emph{stellar} M/L and \emph{total} M/L.}
+
+\subsubsection{Galaxy rotation curves}
+Rotation curves (RCs) probe dark matter content and profile. The general
+observation of flat profiles (sometimes reffered to as ``isothermal'' profiles)
+implies that $M \propto r$ and $\rho \propto r^{-2}$.
+
+Recall that the shape of the rotation curve is moderately well-correlated
+with the luminosity, in the sense that one gets steeper RCs for lower L
+galaxies\footnote{Persic and Salucci, figure 4}. However there is significant
+variation at each luminosity. Note that not all RCs are flat; there is a
+variety of shapes.
+
+Comparison of the luminosity profile with the rotation profile shows that
+the \emph{luminous} mass alone is unable to produce the rotation profile,
+therefore dark matter is required. The fraction of ``dark mass'' increases
+with radius, and also increases with fixed radius with decreasing luminosity.
+
+\paragraph{Dark matter in disk galaxies}
+Given the luminosity profile, the shape of the RC shows that DM has to be
+present, because there's no way to get high enough stellar mass-to-light ratios
+in the outer region.  However, determining the amount of dark matter in disk
+galaxies requires knowledge of the M/L of the stellar population, which is
+unknown (recall that M/L depends on the SFH, especially the IMF).  The stellar
+M/L can't be derived from the RC because the density distribution of the DM is
+unknown.  It's possible that the presence of dust makes this more challenging
+to infer.
+
+A common assumption is the \textbf{``maximum-disk hypothesis''}, in which
+the innermost parts of the RC are assumed to be driven by the luminous mass
+alone. These regions then give a M/L, which is assumed to be constant as
+a function of radius. Combined with the outer roation curve, mass profiles
+for the luminous and dark components are derived. However, data is often
+degenerate in different ratios of disk to DM\footnote{see van der Kruit
+example, from van der Kruit Galaxy Masses 2009 talk}.
+The applicability of this hypothesis is debateable. For example,
+for an exponential disk:
+\[
+    V_{max} \propto \sqrt{\frac{M}{r_{d}}}
+    \]
+so we might expect a trend at fixed L (if we extrapolate from M to L)
+with scale length: not observed in Tully-Fisher relation.
+
+The \emph{total} M/L in disk galaxies
+has been found to be $\sim$ 10-50 in regions probed by RCs.
+
+\paragraph{Dark matter in LSB galaxies}
+The RCs for LSB galaxies confirm a high M/L. Compare two galaxies at
+identical positions in TF relation and see that the LSB galaxy is much
+more DM dominated\footnote{from de Blok \& McGaugh}. This suggests that
+RCs are correlated not only with luminosity, but also with surface
+brightness.
+
+LSB RCs are of particular interest because they may provide the most
+direct probes of DM distribution. The shapes of their RCs are currently under
+active debate as to what they imply for DM distribution.
+Numerical DM simulations predict a ``cuspy'' distribution of DM,
+with $\rho_{DM} \propto r^{-1}$ in the inner regions, e.g.\ the
+Navarro-Frenk-White (NFW) profile:
+\[
+    \rho = \frac{\rho_{0}}{\frac{r}{r_{s}}\left(1+\frac{r}{r_{s}}\right)^{2}}
+    \]
+family of profiles characterized by the concentration $r_{200}/r_{s}$.
+
+However, there may also be an effect of baryons on DM (adiabatic compression,
+or expansion?), since in inner regions, gravity from baryons may not be
+negligible. Some observations\footnote{Swaters et al 2003} suggest more of
+a core. The interpretation of relatively low velocities in LSB centers can
+be complicated by a variety of effects, such as projection, beam smearing,
+non-circular velocities, etc. The ``core vs.\ cusp'' debate is still active.
+
+DM halos are expected to extend far beyond what we can see from physical
+tracers (even HI gas) within the galaxy embedded in their centers.
+Typical virial radii (from simulations) are expected to be several hundred
+kpc. So total masses are not well probed by rotation curves.
+
+\paragraph{Dark matter in ellipticals}
+Theoretically, the presnece of DM in ellipticals is exptected. However, it
+is harder to observe than in spirals because of the lack of an ``easy''
+dynamical tracer, like a rotating component. THey also have higher SB,
+so there is a larger contribution by baryones to kinematics\footnote{see
+review by Gerhard 2006}.
+
+For non-rotating components, the velocity dispersion profiel is insufficient
+to measure mases without knowledge of \textit{velosity ellipsoid},
+parameterized by \textit{velocity anisotropy}:
+\[
+    \beta \equiv 1 - \frac{<v_{\theta}^{2}>}{<v_{r}^{2}>}
+    \]
+Or more generally, distribution of orbits\footnote{e.g.\ velocity dispersion
+profiles, from van der Marel (1994)}. Inclination/projection also plays a
+role\ldots
+
+Potential tracers:
+\begin{itemize}
+    \item Velocity distribution of stars (integrated light). Need to use
+        line profile shapes, 2D distributions (integral field)
+    \item Planetary nebulae
+    \item Globular clusters
+    \item Gas disks (rare, but do exist)
+\end{itemize}
+Note that even for non-rotating systems, distribution of mass often described
+by the \textit{circular velocity}:
+\[
+    v_{c} \equiv \sqrt{\frac{GM(r)}{r}}
+    \]
+From stellar velocity distributions, most ellipticals show evidence of
+flat circular velocity curves, indicating the presence of DM in the inner
+regions, but not always a lot.
+
+Modelling suggests that a simple estimate\footnote{Cappellari et al. (2006)}
+\[
+    M/L \sim 5\frac{\sigma_{e}^{2}r_{e}}{GL}
+    \]
+gives a reasonable rough estimate; c.f virial relation \mynotes{(???)}
+and relation for
+central velocity dispersion, e.g.\ for isothermal sphere.
+There has been some debate about PN observations at larger radii, with some
+observations gsuggesting declining circular velocities. However, understanding
+of velocity anisotropy is important to the conclusion.
+
+Indpendent mass estimate proveded by X-ray halos under the sasumption of
+hydrostatic equilibrium (requires measuring densities and temperatures),
+which, when they exist, generally indicate the presence of dark matter
+halos\footnote{from Sato et al. 2000}
+\[
+    M(r) = -\frac{k_{B}T(r)r}{{\mu}m_{p}G}
+    \left[\frac{\mathrm{d}\ln{\rho}}{\mathrm{d}\ln{r}} +
+    \frac{\mathrm{d}\ln{T}}{\mathrm{d}\ln{r}}\right]
+    \]
+Bottom line: ellipcals probably have dark matter.
+
+\subsubsection{Gravitational lensing}
+Another way of probing mass. There is a distinction between \textit{strong}
+and \textit{weak} lensing\footnote{both from Treu talk at Galaxy Masses 2009}.
+Weak lensing is measured statistically.
+
+\subsection{Total masses of galaxies}
+\subsection{Halo abundance matching}
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
