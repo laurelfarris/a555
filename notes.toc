@@ -20,15 +20,15 @@
 \contentsline {subsection}{\numberline {5.1}Surface Brightness}{11}{subsection.5.1}
 \contentsline {subsubsection}{\numberline {5.1.1}SB profile for disk galaxies}{12}{subsubsection.5.1.1}
 \contentsline {subsubsection}{\numberline {5.1.2}SB profile for spheroids}{12}{subsubsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.3}Sizes of galaxies}{13}{subsubsection.5.1.3}
-\contentsline {subsection}{\numberline {5.2}Spectral Energy Distribution}{13}{subsection.5.2}
-\contentsline {paragraph}{Bulk velocities}{13}{subsection.5.2}
-\contentsline {paragraph}{Internal velocities}{13}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Distances to galaxies}{14}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Distances from redshift}{15}{subsubsection.5.3.1}
-\contentsline {paragraph}{Spectroscopic redshift}{15}{subsubsection.5.3.1}
-\contentsline {paragraph}{Photometric redshift}{15}{subsubsection.5.3.1}
-\contentsline {subsection}{\numberline {5.4}Integrated brightness}{16}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.1.3}Sizes of galaxies}{12}{subsubsection.5.1.3}
+\contentsline {subsection}{\numberline {5.2}Integrated brightness}{13}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Spectral Energy Distribution}{13}{subsection.5.3}
+\contentsline {paragraph}{Bulk velocities}{14}{subsection.5.3}
+\contentsline {paragraph}{Internal velocities}{14}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Distances to galaxies}{15}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}Distances from redshift}{15}{subsubsection.5.4.1}
+\contentsline {paragraph}{Spectroscopic redshift}{16}{subsubsection.5.4.1}
+\contentsline {paragraph}{Photometric redshift}{16}{subsubsection.5.4.1}
 \contentsline {section}{\numberline {6}Statistical properties of galaxies}{17}{section.6}
 \contentsline {subsection}{\numberline {6.1}Luminosity Function}{17}{subsection.6.1}
 \contentsline {subsubsection}{\numberline {6.1.1}Measuring the LF}{17}{subsubsection.6.1.1}

@@ -302,13 +302,13 @@ Good reference: Sandage in Galaxies and the Universe, 1975.
 Some pictures:
 \begin{itemize}
     \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/ellips.htm}
-        {\textcolor{blue}{ellipticals}}
+        {{ellipticals}}
     \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/s0.htm}
-        {\textcolor{blue}{S0s}}, also known as lenticulars
+        {{S0s}}, also known as lenticulars
     \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/spirals.htm}
-        {\textcolor{blue}{spirals}}
+        {{spirals}}
     \item \href{http://astronomy.as.virginia.edu}
-        {\textcolor{blue}{Tuning fork diagram}}
+        {{Tuning fork diagram}}
 \end{itemize}
 
 \subsection{Hubble classification}
@@ -355,9 +355,9 @@ See also \href{http://astronomy.as.virginia.edu}{here}.
     \item Note that location along spiral dequence may not be the same as in
         ``Hubble classification'' (more based on B/D).
     \item Some \href{http://astronomy.as.virginia.edu}
-        {\textcolor{blue}{pictorial examples}}
+        {{pictorial examples}}
     \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/numtype.htm}
-        {\textcolor{blue}{Numerical galaxy types (T)}}
+        {{Numerical galaxy types (T)}}
 \end{itemize}
 Note that
 morphological classification often depends on multiple characteristics,
@@ -435,7 +435,7 @@ Some representative data from
         radius, $L_B$(?), and total mass for S0-Sc, but later types tend
         to be smaller, less massive, and less luminous
         (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh2.htm}
-        {\textcolor{blue}{RH figure 2}}).
+        {{RH figure 2}}).
         However, note that LSB \mynotes{(Low Surface Brightness?)}
         galaxies tend to be later types, and,
         since these are not included, there may be a bias here.
@@ -444,51 +444,50 @@ Some representative data from
         spirals. Mass surface density appears to decrease monotonically with
         morphological class in spirals
         (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh3.htm}
-        {\textcolor{blue}{RH figure 3}}).
+        {{RH figure 3}}).
     \item Cold gas absent in ellipticals, and neutral hydrogen (HI) content
         appears to increase monotonically with type for spirals. It is possible
         that molecular gas content decreases with type, but not certain.
         (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh4.htm}
-        {\textcolor{blue}{RH figure 4}}).
+        {{RH figure 4}}).
 \end{itemize}
 \newpage
-\section{Basic observational properties of galaxies}
-\subsection{Surface Brightness}
-Surface Brightness (SB) is the basic measured property for imaging of
+\section{Observing galaxies}
+\subsection{Imaging}
+\textbf{Surface Brightness (SB)} is the basic measured property for imaging of
 a \emph{resolved} object.
 \textcolor{bred}{SB is independent of distance until geometry of the
 universe becomes important:}
 \[
-    SB \sim (1+z)^{-4}
+    SB \propto (1+z)^{-4}
 \]
 Units:
 \begin{itemize}
     \item erg cm$^{-2}$ s$^{-1}$ sterradian$^{-1}$
     \item mag arcsec$^{-2}$
 \end{itemize}
-Magnitudes are often used, but if \emph{summing} multiple SBs, flux units
-must be used. If you're adding and subtracting magnitudes, you're probably
+For adding multiple SBs, flux units must be used.
+If you're adding and subtracting magnitude units, you're probably
 doing something wrong. \Smiley
-
-Differences in magnitudes correspond to ratios in fluxes:
+Differences in magnitudes correspond to \emph{ratios} in fluxes:
 \[
     m_{1} - m_{2} = -2.5\log\frac{F_{1}}{F_{2}}
 \]
 In general, flux is a function of wavelength, so SB is measured in
 different bandpasses, e.g.\ UBVRI or SDSS (ugriz).
+The ratio of the flux of the same object in different bandpasses
+gives an estimate of the \textbf{spectral slope} between bandpasses;
+often expressed as a \emph{color index}, the difference in magnitude
+between the two bandpasses, such as U-R.
 
-The \emph{ratio} of the flux of the same object in different bandpasses
-gives an estimate of the \emph{spectral slope} between bandpasses;
-often expressed as a difference in magnitudes, or
-\emph{color index}, such as U-R.
-
-Relevance of SB distribution: when investigating how stars are distributed in
-galaxies, be aware that \emph{mass} in stars doesn't necessarily track
+Relevance of SB distribution:
+\textcolor{bred}{How are stars distributed in galaxies?}
+Be aware that \emph{mass} in stars doesn't necessarily track
 \emph{light} in stars (nor does it trace mass in other components).
 
 In principle, SB is measured directly from a 2D detector as an
 arbitrary function of location. However,
-galaxies are relatively faint. Typical values in center of galaxies:
+galaxies are relatively faint. Typical values in galactic centers are:
 \begin{description}[align=right,labelwidth=5em]
     \item [Spiral] $V \sim 20 - 21$ mag arcsec$^{-2}$
         (not much brighter than typical dark sky)
@@ -499,8 +498,8 @@ $SB < SB_{\mathrm{sky}}$ so $S/N$ is difficult to obtain.
 
 Problems of seeing and \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/sky.htm}
 {sky determination} for determination of SB distribution in center and
-outer parts of galaxies. Sky problems are worse with small detectors and/or
-large galaxies. \mynotes{Why large galaxies?}
+outer parts of galaxies. Sky problems are worse with small detectors/large
+galaxies.
 
 Since SB is the key observable, there can be strong \emph{selection effects}
 against low SB objects. If all galaxies had the same SB profile (they don't)
@@ -509,7 +508,7 @@ magnitude-limited or size-limited catalogs.
 The apparent ``size'' of a galaxy will depend on its SB.
 
 Most galaxies are symmetric at a significant level;
-isophotes are often well represented by ellipses.
+\textbf{isophotes} (contours of constant SB) are often well represented by ellipses.
 Elliptical contours fit spirals and ellipticals for different reasons:
 \footnote{Some basics of techniques for ellipse fitting:
 Kent, ApJ 266, 562 (1983); Lauer, ApJ 311, 34}
@@ -519,12 +518,17 @@ Kent, ApJ 266, 562 (1983); Lauer, ApJ 311, 34}
 \end{description}
 
 In reality, galaxies have more complex features, e.g.\ asymmetries,
-departures from elliptical isophtoes, bars, spiral arms, jets, etc.\
+departures from elliptical isophotes, bars, spiral arms, jets, etc.\
 (see below).
 
 For a purely axisymmetric object, SB distribution reduces to a 1D SB profile.
 SB profiles are often parameterized, with distributions in the form
-of a \textbf{Sersic Law}\footnote{MacArthur et al. (2003)}:
+of a
+\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/sersic.htm}
+{\textbf{Sersic Law}}\footnote{plot from
+\href{http://adsabs.harvard.edu/abs/2003ApJ...582..689M}
+{MacArthur et al. (2003)}}
+(though there are other forms that can be used as well):
 \[
     \Sigma(r) = \Sigma_e\exp\left(-b_n\left[\left(
     \frac{r}{r_e}\right)^{1/n}-1\right]\right)
@@ -537,33 +541,34 @@ of a \textbf{Sersic Law}\footnote{MacArthur et al. (2003)}:
     \item $\Sigma_{e}$ = SB at $r_{e}$
         ($\Sigma_{0} \sim 2000\Sigma_{e}$) \mynotes{at galaxy center?}
     \item $b_{n} \approx 2n - 0.324$ and is determined from the definition of
-        $r_e$ \mynotes{(I assume this is talking about where that particular
+        $r_{e}$ \mynotes{(I assume this is talking about where that particular
         expression came from, including the constants.)}
     \item $n$ depends on the type of galaxy ($n=4$ for ellipticals and $n=1$
         for disks).
 \end{itemize}
 \subsubsection{SB profile for disk galaxies}
 Disks are usually well represented \emph{on average} by an exponential:
-        \[
-            \Sigma(r) = \Sigma_{s}\exp\left(-\frac{r}{r_{s}}\right)
-        \]in flux units, or\[
-            m(r) = m_s + kr
-        \]
-        in magnitudes.
+\[
+    \Sigma(r) = \Sigma_{s}\exp\left(-\frac{r}{r_{s}}\right)
+    \quad\mathrm{[flux\;units]}
+    \]
+\[
+    m(r) = m_{s} + kr
+    \quad\mathrm{[magnitudes]}
+    \]
+
 \subsubsection{SB profile for spheroids}
 Spheroids are historically characterized by
 \textbf{deVaucouleurs profile}, otherwise known as the ``$r^{1/4}$'' law:
 \[
     \Sigma(r) = \Sigma_e\exp\left(-7.67\left[\left(
     \frac{r}{r_e}\right)^{1/4}-1\right] \right)
+    \quad\mathrm{[flux\;units]}
     \]
-in flux units, or
 \[
     m = m_{0} + kr^{1/4}
+    \quad\mathrm{[magnitudes]}
     \]
-in magnitudes.
-
-There are other forms that can be used as well.
 
 \subsubsection{Sizes of galaxies}
 Generally, galaxies do not appear to have sharp edges (although SB can
@@ -579,14 +584,64 @@ drop sharply in some disk galaxies).
 \end{itemize}
 Typical angular sizes: arcminutes for nearby galaxies, arcseconds for
 distant galaxies. Can get linear sizes with distance estimate
-(which depends on cosmology). Typical physical size (of the luminious
+(which depends on cosmology). Typical physical size (of the luminous
 component) is $\sim$ 1-30 kpc.
 
-\subsection{Spectral Energy Distribution}
+\subsubsection{Integrated brightness}\label{intb}
+Issue: galaxies don't have edges. Types of mags:
+\begin{description}[align=right, labelwidth=0.5in,
+        labelindent=0.25in,
+        leftmargin=1in]
+    \item [Metric:] brightness within an aperture of fixed
+        angular or physical size. Be careful if galaxies have a range
+        of sizes.
+    \item [Isophotal:] brightness within a specified SB
+        contour, e.g.\ Holmberg mags, which is the brightness within
+        $\mu_{pg} = 26.5$. \mynotes{wtf is $\mu_{pg}$??}
+        Be careful if galaxies have a range of SB profiles.
+    \item [Model:] require assumption about outer SB profile
+    \item [Petrosian:]
+        mag within some fixed number of Petrosian
+        radii (SDSS uses 2).
+        Advantages with regard to SB (distance) and seeing effects. Note
+        \href{http://astronomy.nmsu.edu/holtz/a555/images/petrogal.htm}
+        {relation of Petrosian mag to model mag} depends on SB profile.
+        \footnote{\url{http://classic.sdss.org/dr5/algorithms/photometry.html\#mag_petro}}
+\end{description}
+Typical integrated brightnesses of galaxies, and star-galaxy separation
+and crossover in number counts \mynotes{(\ldots yes?)}
+
+Other issues in getting luminosities of galaxies:
+\begin{itemize}
+    \item Foreground extinction, which depends strongly on Galactic
+        latitude
+        \footnote{\href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1984ApJS...54...33B}
+            {Burstein \& Heiles, ApJS 54,33 (1984)};
+            \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1998ApJ...500..525S}
+        {Schlegel, Finkbeiner, \& Davis, ApJ 500,525 (1998)}}
+    \item Internal extinction/inclination, which can be significant
+        (up to 1.5 mag in RC3 prescription \mynotes{(???)})
+    \item If looking at a population, be sure to compare luminosities in
+        the same bandpass. This is an issue if looking over a range of
+        redshifts; a fixed observed wavelength range corresponds to a
+        different rest frame wavelength range at different redshifts.
+        \textbf{K-corrections} are used to account for this at some
+        level\footnote{\href{http://arxiv.org/abs/astro-ph/0210394}
+            {Hogg et al. astro-ph/0210394};
+            \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1996ApJ...467...38K}
+            {Kinney et al. ApJ 467.38 (1996)};
+            \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1980ApJS...43..393C}
+            {Coleman, Wu, Weedman, ApJS 43,393 (1980)}}.
+        These require knowledge/assumptions about the spectral energy
+        distribution of galaxies. Alternatively, measure at different
+        observed wavelengths.
+\end{itemize}
+
+\subsection{Spectroscopy}
 The SED of a galaxy is the other fundamental observable; obviously,
 the most fundamental is spectral energy SB, but spectra are often
 obtained over some aperture, or long slit. Note
-increasing use of integral field spectroscopy.
+increasing use of integral field spectroscopy (e.g.\ SDSS MaNGA).
 
 The overall shape and features in SEDs provide important information
 about the nature of the luminous components, i.e.\ physical properties
@@ -734,46 +789,6 @@ redshifts) give
     \]
 (sometimes better); note typical $\sim$ 10\% outlier fraction
 (varies for different types of galaxies).
-
-
-
-\subsection{Integrated brightness}\label{intb}
-Issue: galaxies don't have edges.
-\begin{itemize}
-    \item \textbf{Metric mags:} brightness within an aperture of fixed
-        angular or physical size. Be careful if galaxies have a range
-        of sizes.
-    \item \textbf{Isophotal mags:} brightness within a specified SB
-        contour, e.g.\ Holmberg mags, which is the brightness within
-        $\mu_{pg} = 26.5$. \mynotes{wtf is $\mu_{pg}$??}
-        Be careful if galaxies have a range of SB profiles.
-    \item \textbf{Model mags:} require assumption about outer SB profile
-    \item \textbf{Petrosian mags:} mag within some fixed number of Petrosian
-        radii (SDSS uses 2).
-        Advantages with regard to SB (distance) and seeing effects. Note
-        relation of Petrosian mag to model mag depends on SB profile.
-\end{itemize}
-Typical integrated brightnesses of galaxies, and star-galaxy separation
-and crossover in number counts \mynotes{(\ldots yes?)}
-
-Other issues in getting luminosities of galaxies:
-\begin{itemize}
-    \item Foreground extinction, which depends strongly on Galactic
-        latitude\footnote{Burstein \& Heiles, ApJS 54,33 (1984);
-        Schlegel, Finkbeiner, \& Davis, ApJ 500,525 (1998)}
-    \item Internal extinction/inclination, which can be significant
-        (up to 1.5 mag in RC3 prescription \mynotes{(???)})
-    \item If looking at a population, be sure to compare luminosities in
-        the same bandpass. This is an issue if looking over a range of
-        redshifts; a fixed observed wavelength range corresponds to a
-        different rest frame wavelength range at different redshifts.
-        \textbf{K-corrections} are used to account for this at some
-        level\footnote{Hogg et al. astro-ph/0210394; Kinney et al. ApJ
-        467.38 (1996); Coleman, Wu, Weedman, ApJS 43,393 (1980)}.
-        These require knowledge/assumptions about the spectral evergy
-        distribution of galaxies. Alternatively, measure at different
-        observed wavelengths.
-\end{itemize}
 
 \newpage
 \section{Statistical properties of galaxies}
@@ -1405,7 +1420,7 @@ How to relate observables to intrinsic population characteristics:
     \item Age effects (model isochrones) from Yi et al 2001.
     \item Metallicity effects: internal (opacity) and atmosphere
       (line blanketing) effect combine in the same direction to make
-      more metal-rich populations redder: \textcolor{blue}{CMDs}
+      more metal-rich populations redder: CMDs
       \begin{itemize}
           \item Metallicity terminology: often given as mass fractions of
               hydrogen (X), helium (Y), and heavier elements (Z).
@@ -1441,8 +1456,8 @@ How to relate observables to intrinsic population characteristics:
                 tip luminosity \emph{if} observing at long wavelengths
                 (e.g.\ I band): basis for Tip of Red Giant Brance (TRGB)
                 distance indicator.
-            \item RGB bump (\textcolor{blue}{RGBB} from
-                \textcolor{blue}{Bono et al 2001}),
+            \item RGB bump (RGBB from
+                Bono et al 2001),
                 location of which depends on mass/age and metallicity;
                 arises when H burning shell crosses chemical discontinuity.
         \end{itemize}
@@ -1458,7 +1473,7 @@ How to relate observables to intrinsic population characteristics:
                 metal-poor populations have bluer HB.
             \item However, there is something else that also affects HB
                 morphology, leading to the so-called second-parameter problem
-                (e.g.\ \textcolor{blue}{M3/M13}, from \textcolor{blue}{Rey et al
+                (e.g.\ {M3/M13}, from {Rey et al
                 2001}). Possibilities: Age? He abundance? Heavy element
                 abundances? Density? Rotation?
             \item RR Lyrae stars: in instability strip (caused by doubly
@@ -1482,17 +1497,17 @@ How to relate observables to intrinsic population characteristics:
                 give the appearence of a star 0.75 mag brighter.
             \item interacting binary stars
             \item blue stragglers: possible stellar merger/interaction products?
-                \textcolor{blue}{M3 example} from Sandage 1953.
+                {M3 example} from Sandage 1953.
             \item supernovae type SNIa: arise from binaries, produce different
                 heavy element abundances than core collapse SNe. (e?)
         \end{itemize}
     \item End stages of stellar evolution:
         WDs, neutron stars, black holes, and supernovae
         \begin{itemize}
-            \item \textcolor{blue}{projenitor-final mass relation}
+            \item {projenitor-final mass relation}
                 (from Binney and Merrifield)
-            \item \textcolor{blue}{White dwarf cooling sequence}
-                (from \textcolor{blue}{Hansen et al 2007}: potential for
+            \item {White dwarf cooling sequence}
+                (from {Hansen et al 2007}: potential for
                 age dating).
             \item Supernovae: generate significant fraction of heavy elements
                 (but not all). Significant energy input, thermal and mechanical.
@@ -1504,7 +1519,7 @@ How to relate observables to intrinsic population characteristics:
       \begin{itemize}
           \item However, it's not recognized that not all GCs are so simple.
           \item Some CMDs show clear evidence of multiple components, e.g.\
-              \textcolor{blue}{NGC2808}.
+              {NGC2808}.
           \item Long history of evidence of abundance variations between
               different stars, typified by the Na-O anticorrelation;
               demonstrated through observations of main sequence stars that
@@ -1517,7 +1532,7 @@ How to relate observables to intrinsic population characteristics:
 \subsection{More information in a CMD than is represented by isochrones}
   one can also consider relative numbers of stars at
       different locations: CMDs that incorporate number of stars are
-      reffered to as Hess diagrams (e.g.\ \textcolor{blue}{Fornax}
+      reffered to as Hess diagrams (e.g.\ {Fornax}
       from Battaglia et al., 2006).
       \begin{itemize}
           \item For a simple stellar population (SSP, a population with
@@ -1527,13 +1542,13 @@ How to relate observables to intrinsic population characteristics:
           \item IMF determinations and parameterizations:
               \begin{itemize}
                   \item ``classical'' Salpeter IMF (power law with
-                      $ dN/dM \propto M^{-2.35}$) and \textcolor{blue}{others}
-                      (from \textcolor{blue}{Pagel}). Note power law form:
+                      $ dN/dM \propto M^{-2.35}$) and {others}
+                      (from {Pagel}). Note power law form:
                       $ dN/dM \propto M^{\alpha}  $,
                       or alternatively,
                       $ dN/d\log{M} \propto M^{\Gamma} \propto M^{\alpha + 1} $
                   \item Widely used determination of local IMF is by
-                      \textcolor{blue}{Droupa Tout, and Gilmore 1993}, who find
+                      {Droupa Tout, and Gilmore 1993}, who find
                       $$ dN/dM \propto M^{-2.7}\ \textrm{for}\ M > 1M_{\odot} $$
                       $$ dN/dM \propto M^{-2.2}\ \textrm{for}\ 0.5 < M < 1M_{\odot} $$
                       $$ dN/dM \propto M^{-1.3}\ \textrm{for}\ M < 0.5M_{\odot} $$
@@ -1550,7 +1565,7 @@ How to relate observables to intrinsic population characteristics:
           \item In general, galaxies are not SSPs, i.e.\ their CMDs don't look
               like those of a cluster. Can fit Hess diagrams of resolved stellar
               populations with combinations of SSPs to derive constraints on SFH,
-              e.g.\ \textcolor{blue}{simulated galaxies} (from \textcolor{blue}
+              e.g.\ {simulated galaxies} (from
               {Tolstoy et al}).
           \item Generally speaking, we want the star formation history:
               $SFH(t,Z,M)$ gives the number of stars (or stellar mass) at all
@@ -1564,12 +1579,12 @@ How to relate observables to intrinsic population characteristics:
               without large investment of telescope time.
           \item Results for MW:
               \begin{itemize}
-                  \item \textcolor{blue}{solar neighborhood Hipparcos sample}:
-                      roughly constant \textcolor{blue}{SFH}, but be aware
+                  \item {solar neighborhood Hipparcos sample}:
+                      roughly constant {SFH}, but be aware
                       of dynamical effects and limited volume bias nearby
                       sample to younger populations. When corrected for, star
                       formation history in solar neighborhood likely to have
-                      significantly declined (see, e.g.\ \textcolor{blue}
+                      significantly declined (see, e.g.\
                       {Aumer \& Binney 2009}).
                   \item Age of oldest stars can be studied by WD sequence,
                       gives $t_{\textrm{oldest}} > 8$ Gyr. Also note presence
@@ -1580,8 +1595,8 @@ How to relate observables to intrinsic population characteristics:
                       younger clusters.
                   \item Bulge can also be studied, but note foreground population
                       and extinction issues. Predominantly old population,
-                      e.g.\ \textcolor{blue}{bulge CMD}, and \textcolor{blue}
-                      {luminosity function} (from \textcolor{blue}{Ortolani
+                      e.g.\ {bulge CMD}, and
+                      {luminosity function} (from {Ortolani
                       et al 1995}).
                   \item Halo (as defined kinematically/spatially) also
                       prdominantly old, both from field population and from
