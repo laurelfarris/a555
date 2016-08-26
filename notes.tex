@@ -85,18 +85,27 @@
 \setlist[enumerate]{noitemsep, topsep=0ex}
 \setlist[description]{noitemsep, topsep=0ex,}
 \definecolor{cadet}{rgb}{0.33, 0.41, 0.47}
+
 \renewcommand{\descriptionlabel}[1]{%
     \bfseries\textcolor{cadet}{#1}
 }
+\definecolor{mypurple}{rgb}{0.41, 0.16, 0.38}
+\definecolor{pinegreen}{rgb}{0.0, 0.47, 0.44}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true, urlcolor=myblue, linkcolor=black}
+\hypersetup{colorlinks=true,
+    urlcolor=myblue,
+    linkcolor=black,}
 \urlstyle{same}
+\newcommand{\myref}[1]{\textcolor{pinegreen}{\S{} \ref{#1}}}
 
 \begin{document}
 \setlength{\parskip}{0pt}
 \tableofcontents
 \newpage
 \setlength{\parskip}{10pt}
+\hypersetup{colorlinks=true,
+    urlcolor=myblue,
+    linkcolor=pinegreen,}
 
 \section{History}
 \begin{enumerate}
@@ -290,167 +299,7 @@ through and add details, depending on how much time you have.}
 \end{itemize}
 \newpage
 
-\section{Morphological classification}
-Historically, galaxies were considered in terms of their morphology, i.e.\ the
-Hubble sequence.  However, it is not totally clear to what extent morphological
-classification traces underlying physics, and descriptive morphology may be
-biased by things that may not be fundamental.  Still, it is widely used, so
-important to understand a bit.
 
-\subsection{Morphological systems}
-Good reference: Sandage in Galaxies and the Universe, 1975.
-Some pictures:
-\begin{itemize}
-    \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/ellips.htm}
-        {{ellipticals}}
-    \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/s0.htm}
-        {{S0s}}, also known as lenticulars
-    \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/spirals.htm}
-        {{spirals}}
-    \item \href{http://astronomy.as.virginia.edu}
-        {{Tuning fork diagram}}
-\end{itemize}
-
-\subsection{Hubble classification}
-\begin{itemize}
-    \item \textbf{ellipticals:} given as En, where
-        \[
-            n = 10(\frac{1-b}{a})
-        \]
-        E.g., E0 (sphere) $\rightarrow$ E7 (skinny).
-        No distinction between dwarf ellipticals and dwarf spheroidals
-    \item \textbf{spirals:} barred or unbarred (SBa,SBb,SBc; or Sa,Sb,Sc;
-        respectively)
-        where a,b,c denote size of bulge (bulge-to-disk ratio: B/D)
-        in decreasing order. Also classified according to tightness of
-        arms and the degree to which arms are resolved into HII regions
-        (note that the latter two are essentially impossible to judge
-        for edge-ons).
-        Later, have SA (normal spirals), SB (barred), and SAB (transition)
-    \item \textbf{SOs (aka lenticulars, or disks):} intermediate, no spiral
-        structure but have disk system, split into $S0_1$, $S0_2$, $S0_3$,
-        depending on the amount of dust.
-    \item \textbf{Irregulars:}
-        \begin{itemize}
-            \item Irr I (Magellenic irregulars with lots of distinct HII regions)
-            \item Irr II (lack the resolution into distinct HII regions).
-        \end{itemize}
-    \item Some pictorial examples
-\end{itemize}
-
-\subsection{deVaucouleurs/RC3 classification}
-\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rc3class.htm}
-{diagram}.
-See also \href{http://astronomy.as.virginia.edu}{here}.
-\begin{itemize}
-    \item Extends Hubble to later spiral types Sd, Sm, and finally Im.
-    \item Extra classes around $S0$ ($S0^{-}, S0^{+}$)
-    \item Allows for intermediate between barred and unbarred:
-        \begin{itemize}
-            \item SA: normal spirals
-            \item SB: barred spirals
-            \item SAB: transition
-        \end{itemize}
-    \item Adds extra distinction for \emph{ring} vs.\ \emph{s} shaped.
-    \item Note that location along spiral dequence may not be the same as in
-        ``Hubble classification'' (more based on B/D).
-    \item Some \href{http://astronomy.as.virginia.edu}
-        {{pictorial examples}}
-    \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/numtype.htm}
-        {{Numerical galaxy types (T)}}
-\end{itemize}
-Note that
-morphological classification often depends on multiple characteristics,
-and therefore it can become somewhat subjective. Quantitative classification
-schemes have been worked on, but are not widely used.
-
-\subsection{Wavelength dependence}
-Morphology depends on wavelength
-(e.g.\ \href{http://ned.ipac.caltech.edu/level5/Kuchinski/frames.html}
-{O'Connell 9609101}).
-Be careful about morphological classification at higher redshift
-(or at least a direct comparison with lower redshift galaxies)
-because you may be looking at morphology at a different wavelength
-(morphological \textbf{K Correction:} correction to magnitude (or flux) due
-to redshift).
-
-\subsection{Classification for ellipticals}
-Based on global characteristics, the Hubble morphological classification of
-ellipticals is probably not fundamental.  It may be more meaningful to classify
-by \emph{isophotal shape}
-(\href{http://astronomy.as.virginia.edu}{(Kormendy and Bender classification)})
-or kinematically by $v/\sigma$.
-
-\subsection{Classification for spirals}
-For the spiral sequence, there are correlations of luminosity, surface
-brightness, rotational velocity and gas fraction with Hubble type. However,
-each category has a broad range of global observables, and the catroies overlap
-significantly.
-
-\subsection{Quantitative classification schemes}
-All of the aforementioned classification schemes are subjective at some level.
-Some more quantitative schemes have been proposed, both parametric and
-non-parametric.
-\begin{itemize}
-    \item \textbf{Bulge-to-disk ratio}, using B/D decomposition\footnote{
-        \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2003ApJ...582..689}
-        {MacArthur, Courteau, \& Holtzman, ApJ 582, 689 (2003)}}.
-        Issues: covariance between parameters, 1D vs.\ 2D, and validity of models.
-    \item \textbf{Global profile fit}, e.g.\ Sersic index
-    \item \textbf{Concentration}, e.g.\ SDSS $r_{90}/r_{50}$, $r_{80}/r_{20}$,
-        using circular apertures. Elliptical apertures can also be considered,
-        e.g.\ based on \emph{second order moments}.
-        Related to B/D. Sensitivity to seeing/distance.
-\end{itemize}
-
-\subsection{Non-symmetric galaxies}
-Many of the schemes used for nearby galaxies fail for non-symmetric galaxies,
-for which other indicators have been suggested:
-\begin{itemize}
-    \item \textbf{Asymmetry:}\footnote{Abraham et al, ApJS 107, 1, 1996}
-        Rotate about center, self-subtract,
-        \[
-            A = \frac{0.5\vert\mathrm{subtracted}\vert}{\mathrm{total}}
-        \]
-        Possible indicator of mergers.
-    \item \textbf{Clumpiness:}\footnote{
-        Conselice ApJS 147, 1 (2003)} e.g.\ S.  Subtract smoothed version of
-        image from original image, ratio of flux in subtracted image to flux in
-        original images gives S.  Possible indicator of star formation.
-    \item \textbf{Gini coefficient:}\footnote{
-        Abraham et al, ApJ 588, 218 (2003), Lotz et al., AJ 128, 163 (2004)}
-        Applied to sorted list of pixel values. May be more stable at low
-        resolution, S/N.
-    \item \textbf{M20:} second order moment of brightest 20\% of
-        galaxy light\footnote{Lotz et al., AJ 128, 163 (2004)}.
-        May be more stable at low resolution, S/N.
-\end{itemize}
-
-\subsection{Mystery section}
-Some representative data from
-\href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1994ARA\%26A..32..115}
-{Roberts and Haynes review (ARAA 1994)}:
-\begin{itemize}
-    \item Considering mean or median values, there is little trend in
-        radius, $L_B$(?), and total mass for S0-Sc, but later types tend
-        to be smaller, less massive, and less luminous
-        (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh2.htm}
-        {{RH figure 2}}).
-        However, note that LSB \mynotes{(Low Surface Brightness?)}
-        galaxies tend to be later types, and,
-        since these are not included, there may be a bias here.
-    \item Typical SB may be lower for latest types, even without inclusion
-        of LSB galaxies; CSB(?????) much higher for large ellipticals than
-        spirals. Mass surface density appears to decrease monotonically with
-        morphological class in spirals
-        (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh3.htm}
-        {{RH figure 3}}).
-    \item Cold gas absent in ellipticals, and neutral hydrogen (HI) content
-        appears to increase monotonically with type for spirals. It is possible
-        that molecular gas content decreases with type, but not certain.
-        (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh4.htm}
-        {{RH figure 4}}).
-\end{itemize}
 \newpage
 \section{Observing galaxies}
 \subsection{Imaging}
@@ -461,6 +310,7 @@ universe becomes important:}
 \[
     SB \propto (1+z)^{-4}
 \]
+
 Units:
 \begin{itemize}
     \item erg cm$^{-2}$ s$^{-1}$ sterradian$^{-1}$
@@ -643,10 +493,15 @@ the most fundamental is spectral energy SB, but spectra are often
 obtained over some aperture, or long slit. Note
 increasing use of integral field spectroscopy (e.g.\ SDSS MaNGA).
 
-The overall shape and features in SEDs provide important information
+The overall shape and features in \href{http://astronomy.nmsu.edu/holtz/a555/resources/galaxyspectra.gif}
+{SEDs} (see also \href{http://astronomy.nmsu.edu/nicole/teaching/ASTR505/lectures/quickview.html}
+{here}) provide important information
 about the nature of the luminous components, i.e.\ physical properties
 of the stellar population and the gas component
 As we'll discuss later, these can be challenging to sort out.
+The composite spectrum of a galaxy is the sum of different types of
+stars, weighted by relative numbers and luminosities, plus emission
+from gas and dust.
 
 Spectra also allow the study of velocities via the Doppler shift:
 \[
@@ -665,17 +520,22 @@ distribution of stellar velocities within the galaxy.
         clusters, they can be a thousand km s$^{-1}$.
 \end{itemize}
 \paragraph{Internal velocities}
-Internal velocities can be organized (rotation in disks), or they can
+\href{http://astronomy.nmsu.edu/holtz/a555/resources/intvel.gif}
+{Internal velocities} can be organized (rotation in disks), or they can
 be random, leading to broader lines that represent the
 velocity distribution of stars within a galaxy.
 \mynotes{This broadening would be the same at all points in the galaxy.}
 \[
-    F(\lambda) \propto \int{N(v_{los})S\left(\lambda-\frac{v_{los}\lambda}{c}
+    F(\lambda) \propto \int{F(v_{los})S\left(\lambda-\frac{v_{los}\lambda}{c}
     \right)\mathrm{d}v_{los} }
     \]
-where $S$ represents the spectrum of an individual star and $N$
-represents the fractional distribution of stars at different
-line-of-sight velocities. Lines are usually fairly well represented
+
+\begin{itemize}
+    \item $S$ = spectrum of an individual star
+    \item $F$ = fractional distribution of stars at
+        different line-of-sight velocities.
+\end{itemize}
+Lines are usually fairly well represented
 by a Gaussian velocity profile, characterized by the mean velocity:
 \[
     \int{v_{los}F(v_{los})\mathrm{d}v_{los}}
@@ -696,17 +556,21 @@ by higher order moments: \textit{skew} ($h_{3}$) and \textit{kurtosis}
 \]
 where $\omega \equiv (v_{los}-\overline{v})/\sigma$ and
 $H_{k}$ are Gauss-Hermite functions.
+Some
+\href{http://astronomy.nmsu.edu/holtz/a555/resources/examplesh3h4.gif}
+{examples of velocity data}.
 
+\underline{\textbf{Relevance}}:
 Internal velocities can be used to probe mass distribution within
 galaxies (assuming that gravity drives the motions).
 For a rotationally supported system:
 \[
     v(r) = \sqrt{\frac{GM(r)}{r}}
     \]
-For a collisionless system of particles, \mynotes{(independent particles)}
+For a collisionless system of \mynotes{(independent)} particles,
 the distribution of velocities at
-any given location characterized by the velocity ellipsoid, along with the
-Jeans equation, gives:
+any given location characterized by the velocity ellipsoid, and
+Jeans equation leads to:
 \[
     \frac{\mathrm{d}\rho\sigma^{2}}{\rho{\mathrm{d}r}} +
     \frac{2\beta\sigma^{2}}{r} = -g(r)
@@ -716,42 +580,60 @@ where $\beta$ is the \textbf{velocity anisotropy}:
     \beta \equiv \left(1-
     \frac{\sigma_{\theta}^{2}+\sigma_{\phi}^{2}}{2\sigma_{r}^{2}}\right)
     \]
+though $\beta$ is not generally known.
 
 \subsection{Distances to galaxies}
-Some properties of galaxies, like luminosities and linear sizes, require
-knowledge of distances to galaxies:
+Some properties of galaxies, such as luminosity and linear size,
+require knowledge of distances to galaxies:
 \[
-    m_{M} = 5\log{d}-5
+    m-M = 5\log{d_{L}}-5
 \]
 \begin{itemize}
-    \item $d$ = distance [pc]
+    \item $d_{L}$ = distance [pc] \mynotes{$L$ = ?}
     \item $M$ = absolute magnitude (or SB)
     \item $m$ = apparent magnitude
 \end{itemize}
 
-Various techniques for getting distances:
+Various techniques for getting distances\footnote{see
+\href{http://adsabs.harvard.edu/abs/2010ARA\%26A..48..673F}
+{Freedman \& Madore, ARAA review}}:
 \begin{description}
     \item [Variable stars] Cepheids/RR Lyrae stars through period-luminosity
         (period-luminosity-color/metallicity) relation.
-    \item [Geometric techniques] masers and eclipsing binaries
-    \item [SB fluctuations] requires objects with a ``standard'' population
+    \item [Geometric techniques]
+        \begin{itemize}
+            \item masers (proper motion compared with radial velocity in
+                central disks)
+            \item exclipsing binaries
+        \end{itemize}
+    \item [SB fluctuations] from imprint of Poisson statistics:
+        requires objects with a ``standard'' population (i.e.\ stellar
+        luminosity function).
     \item [Planetary nebulae luminosity function]
+    \item [More luminous standard candles:] type-Ia supernova (``standardizable'')
     \item [Scaling relations between velocity and luminosity]
         \mynotes{for relatively nearby galaxies}
         \begin{itemize}
-          \item Spirals: \textbf{Tully-Fisher relation} between maximum
-            rotational velocity and luminosity
-          \item Ellipticals: fundamental plane relation between velocity
-            dispersion, SB, and physical size
+            \item Spirals: \textbf{Tully-Fisher relation} between maximum
+                rotational velocity and luminosity
+            \item Ellipticals: fundamental plane relation between velocity
+                dispersion, SB, and physical size
                 ($D_{n}-\sigma$) relation.
         \end{itemize}
-    \item [Redshift]
+    \item [Redshift] (see next section)
 \end{description}
 \subsubsection{Distances from redshift}
-Galaxies expand with everything else in the cosmic flow according to $v=Hd$.
-At low $z$, $z \approx v/c$. At high $z$, need knowledge of cosmological
+Galaxies expand with everything else in the cosmic flow.
+\[
+    \frac{\Delta\lambda}{\lambda} = z;\quad
+    1+z = \frac{lambda_{obs}}{\lambda_{emit}}
+    \]
+At \emph{low} $z$, $z \approx v/c, v=Hd$.
+At \emph{high} $z$, need knowledge of cosmological
 parameters to get distance from redshift (i.e.\ redshift-distance
-relation\footnote{see, e.g.\ Hogg, Distance Measures in Cosmology})
+relation.\footnote{see, e.g.\
+\href{http://ned.ipac.caltech.edu/level5/Hogg/Hogg_contents.html}
+{Hogg, Distance Measures in Cosmology}})
 
 Galaxies also move around relative to the uniform expansion because of local
 gravitational attraction from concentrations of mass.
@@ -760,16 +642,19 @@ velocity from the smooth flow is called the \textit{peculiar velocity}.
 Typical peculiar velocities are on the order of several hundred km s$^{-1}$,
 but depend on environment; c.f., \mynotes{??}
 Milky Way and galaxy clusters; if these are ignored, introduces spurious
-features in distance maps (``fingers of God'').
+features in distance maps
+(\href{http://astronomy.nmsu.edu/holtz/a555/resources/cfa.html}
+{``fingers of God'', redshift space distortions}).
 
 At $z \gtrsim 0.1$, peculiar velocities lead to relatively small distance
 errors. At lower redshifts, might estimate distances using model of mass
 distribution and velocity field, but this is likely not well determined.
 
-\paragraph{Spectroscopic redshift} Determining redshift spectroscopically
-for distant (faint) galaxies is
+\paragraph{Spectroscopic redshift}
+Determining redshift spectroscopically for distant (faint) galaxies is
 observationally time-consuming. Accurate positions of individual lines
-require reasonable S/N. It is possible to get good redshifts from low
+require reasonable S/N; emission line galaxies are significantly easier.
+It is possible to get good redshifts from low
 S/N observations by taking advantage of multiple spectral features,
 e.g., by cross-correlation of spectrum against a template
 in $\log\lambda$ space.
@@ -778,10 +663,12 @@ in $\log\lambda$ space.
 Lower accuracy distances are possible from so-called \textit{photometric
 redshifts} \mynotes{(though can't disperse light.)}
 Use low resolution spectral
-information, i.e.\ multiband photometry to constrain redshift.
-Need to
-separate different intrinsic SEDs of galaxies, internal reddening, and
-redshift. Accuracy of results obviously depends on quality of photometry
+information, i.e.\ multiband photometry to constrain redshift.\footnote{
+    e.g. \href{http://astronomy.nmsu.edu/holtz/a555/resources/photoz.png}
+    {plot} (from Niemack et al 2009, ApJ)}
+The different intrinsic SEDs of galaxies, internal reddening, and
+redshift need to be separated.
+Accuracy of results obviously depends on quality of photometry
 and number of bandpasses. Typical accuracies (checked against spectroscopic
 redshifts) give
 \[
@@ -789,6 +676,171 @@ redshifts) give
     \]
 (sometimes better); note typical $\sim$ 10\% outlier fraction
 (varies for different types of galaxies).
+
+\subsection{Morphological classification}
+Historically, galaxies were considered in terms of their morphology, i.e.\ the
+Hubble sequence.  However, it is not totally clear to what extent morphological
+classification traces underlying physics, and descriptive morphology may be
+biased by things that may not be fundamental.  Still, it is widely used, so
+important to understand a bit.
+
+\subsubsection{Morphological systems}
+Good reference: Sandage in Galaxies and the Universe, 1975.
+Some pictures:
+\begin{itemize}
+    \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/ellips.htm}
+        {{ellipticals}}
+    \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/s0.htm}
+        {{S0s}}, also known as lenticulars
+    \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/spirals.htm}
+        {{spirals}}
+    \item \href{http://astronomy.as.virginia.edu}
+        {{Tuning fork diagram}}
+\end{itemize}
+
+\subsubsection{Hubble classification}
+\begin{itemize}
+    \item \textbf{ellipticals:} given as En, where
+        \[
+            n = 10(\frac{1-b}{a})
+        \]
+        E.g., E0 (sphere) $\rightarrow$ E7 (skinny).
+        No distinction between dwarf ellipticals and dwarf spheroidals
+    \item \textbf{spirals:} barred or unbarred (SBa,SBb,SBc; or Sa,Sb,Sc;
+        respectively)
+        where a,b,c denote size of bulge (bulge-to-disk ratio: B/D)
+        in decreasing order. Also classified according to tightness of
+        arms and the degree to which arms are resolved into HII regions
+        (note that the latter two are essentially impossible to judge
+        for edge-ons).
+        Later, have SA (normal spirals), SB (barred), and SAB (transition)
+    \item \textbf{SOs (aka lenticulars, or disks):} intermediate, no spiral
+        structure but have disk system, split into $S0_1$, $S0_2$, $S0_3$,
+        depending on the amount of dust.
+    \item \textbf{Irregulars:}
+        \begin{itemize}
+            \item Irr I (Magellenic irregulars with lots of distinct HII regions)
+            \item Irr II (lack the resolution into distinct HII regions).
+        \end{itemize}
+    \item Some pictorial examples
+\end{itemize}
+
+\subsubsection{deVaucouleurs/RC3 classification}
+\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rc3class.htm}
+{diagram}.
+See also \href{http://astronomy.as.virginia.edu}{here}.
+\begin{itemize}
+    \item Extends Hubble to later spiral types Sd, Sm, and finally Im.
+    \item Extra classes around $S0$ ($S0^{-}, S0^{+}$)
+    \item Allows for intermediate between barred and unbarred:
+        \begin{itemize}
+            \item SA: normal spirals
+            \item SB: barred spirals
+            \item SAB: transition
+        \end{itemize}
+    \item Adds extra distinction for \emph{ring} vs.\ \emph{s} shaped.
+    \item Note that location along spiral dequence may not be the same as in
+        ``Hubble classification'' (more based on B/D).
+    \item Some \href{http://astronomy.as.virginia.edu}
+        {{pictorial examples}}
+    \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/numtype.htm}
+        {{Numerical galaxy types (T)}}
+\end{itemize}
+Note that morphological classification often depends on multiple
+characteristics, and therefore it can be somewhat subjective.
+Quantitative classification schemes have been worked on
+%(see \S{} \ref{sssec:quantitative}),
+(see \myref{sssec:quantitative}),
+but are not widely used
+for nearby galaxies.
+
+\subsubsection{Wavelength dependence}
+Morphology depends on wavelength
+(e.g.\ \href{http://ned.ipac.caltech.edu/level5/Kuchinski/frames.html}
+{O'Connell 9609101}).
+Be careful about morphological classification at higher redshift
+(or at least a direct comparison with lower redshift galaxies)
+because you may be looking at morphology at a different wavelength
+(morphological \textbf{K Correction:} correction to magnitude (or flux) due
+to redshift).
+
+Based on global characteristics, the Hubble morphological classification of
+ellipticals is probably not fundamental. It may be more meaningful to classify
+by \emph{isophotal shape}
+(\href{http://astronomy.as.virginia.edu}{(Kormendy and Bender classification)})
+or kinematically by $v/\sigma$.
+
+For the spiral sequence, there are correlations of luminosity, surface
+brightness, rotational velocity and gas fraction with Hubble type. However,
+each category has a broad range of global observables, and the categories overlap
+significantly.\footnote{Some representative data from
+\href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1994ARA\%26A..32..115}
+{Roberts and Haynes review (ARAA 1994)}}:
+\begin{itemize}
+    \item Considering mean or median values, there is little trend in
+        radius, $L_{B}$ \mynotes{(Bolometric luminosity?)},
+        and total mass for S0-Sc, but later types tend
+        to be smaller, less massive, and less luminous
+        (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh2.htm}
+        {{RH figure 2}}).
+        However, note that LSB \mynotes{(Low Surface Brightness?)}
+        galaxies tend to be later types, and
+        since these are not included, there may be a bias here.
+    \item Typical SB may be lower for latest types, even without inclusion
+        of LSB galaxies; CSB(?????) much higher for large ellipticals than
+        spirals. Mass surface density appears to decrease monotonically with
+        morphological class in spirals
+        (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh3.htm}
+        {{RH figure 3}}).
+    \item Cold gas is absent in ellipticals, and neutral hydrogen (HI) content
+        appears to increase monotonically with type for spirals. It is possible
+        that molecular gas content decreases with type, but not certain.
+        (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh4.htm}
+        {{RH figure 4}}).
+\end{itemize}
+
+\subsubsection{Quantitative classification schemes}\label{sssec:quantitative}
+As stated above, all of the aforementioned classification schemes are
+subjective at some level.  Some of the more quantitative schemes that have been
+proposed, both parametric and non-parametric, are:
+\begin{itemize}
+    \item \textbf{Bulge-to-disk ratio}, using B/D decomposition\footnote{
+        \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2003ApJ...582..689}
+        {MacArthur, Courteau, \& Holtzman, ApJ 582, 689 (2003)}}.
+        Issues: covariance between parameters, 1D vs.\ 2D, and validity of models.
+    \item \textbf{Global profile fit}, e.g.\ Sersic index
+    \item \textbf{Concentration}, e.g.\ SDSS $r_{90}/r_{50}$, $r_{80}/r_{20}$,
+        using circular apertures. Elliptical apertures can also be considered,
+        e.g.\ based on \emph{second order moments}.
+        Related to B/D. Sensitivity to seeing/distance.
+\end{itemize}
+
+\subsubsection{Non-symmetric galaxies}
+Many of the schemes used for nearby galaxies fail for non-symmetric galaxies,
+for which other indicators have been suggested:
+\begin{itemize}
+    \item \textbf{Asymmetry:}\footnote{\href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1996ApJS..107....1A}
+        {Abraham et al, ApJS 107, 1, 1996}}
+        Rotate about center, self-subtract,
+        \[
+            A = \frac{0.5\vert\mathrm{subtracted}\vert}{\mathrm{total}}
+            \]
+        Possible indicator of mergers.
+    \item \textbf{Clumpiness:}\footnote{\href{http://adsabs.harvard.edu/cgi-bin/bib_query?2003ApJS..147....1}
+        {Conselice ApJS 147, 1 (2003)}} e.g.\ S. Subtract smoothed version of
+        image from original image, ratio of flux in subtracted image to flux in
+        original images gives S. Possible indicator of star formation.
+    \item \textbf{\href{http://astronomy.nmsu.edu/holtz/a555/images/gini.htm}
+        {Gini coefficient:}}\footnote{\href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2003ApJ...588..218A}
+        {Abraham et al, ApJ 588, 218 (2003)}}
+        Applied to sorted list of pixel values. May be more stable at low
+        resolution, S/N.
+    \item \textbf{M20:} second order moment of brightest 20\% of
+        galaxy light
+        \footnote{\href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2004AJ....128..163L}
+        {Lotz et al., AJ 128, 163 (2004)}}
+        May be more stable at low resolution, S/N.
+\end{itemize}
 
 \newpage
 \section{Statistical properties of galaxies}
