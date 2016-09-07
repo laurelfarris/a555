@@ -56,43 +56,60 @@
 \BOOKMARK [1][-]{section.10}{Some galaxies to be familiar with}{}% 56
 \BOOKMARK [1][-]{section.11}{Stars and Stellar populations}{}% 57
 \BOOKMARK [2][-]{subsection.11.1}{Review: stellar evolution}{section.11}% 58
-\BOOKMARK [2][-]{subsection.11.2}{More information in a CMD than is represented by isochrones}{section.11}% 59
-\BOOKMARK [2][-]{subsection.11.3}{Star Formation Histories \(SFHs\) from resolved stellar populations}{section.11}% 60
-\BOOKMARK [2][-]{subsection.11.4}{Integrated light from unresolved stellar populations}{section.11}% 61
-\BOOKMARK [2][-]{subsection.11.5}{Chemical evolution}{section.11}% 62
-\BOOKMARK [2][-]{subsection.11.6}{Measuring stellar abundances}{section.11}% 63
-\BOOKMARK [1][-]{section.12}{Gas}{}% 64
-\BOOKMARK [2][-]{subsection.12.1}{Observing and characterizing the gas}{section.12}% 65
-\BOOKMARK [3][-]{subsubsection.12.1.1}{Absorption}{subsection.12.1}% 66
-\BOOKMARK [2][-]{subsection.12.2}{Heating and cooling}{section.12}% 67
-\BOOKMARK [3][-]{subsubsection.12.2.1}{Heating}{subsection.12.2}% 68
-\BOOKMARK [3][-]{subsubsection.12.2.2}{Cooling}{subsection.12.2}% 69
-\BOOKMARK [2][-]{subsection.12.3}{HI measurements: 21 cm line}{section.12}% 70
-\BOOKMARK [2][-]{subsection.12.4}{Molecular gas}{section.12}% 71
-\BOOKMARK [2][-]{subsection.12.5}{Warm ionized gas}{section.12}% 72
-\BOOKMARK [2][-]{subsection.12.6}{Hot gas}{section.12}% 73
-\BOOKMARK [2][-]{subsection.12.7}{Denser ionized gas}{section.12}% 74
-\BOOKMARK [2][-]{subsection.12.8}{Chemical evolution and abundances from gas}{section.12}% 75
-\BOOKMARK [2][-]{subsection.12.9}{Distribution of gas within spirals}{section.12}% 76
-\BOOKMARK [2][-]{subsection.12.10}{Gas as a kinematic tracer}{section.12}% 77
-\BOOKMARK [2][-]{subsection.12.11}{Interaction between stars and gas}{section.12}% 78
-\BOOKMARK [3][-]{subsubsection.12.11.1}{supernovae and mass loss from stars}{subsection.12.11}% 79
-\BOOKMARK [1][-]{section.13}{Dust}{}% 80
-\BOOKMARK [2][-]{subsection.13.1}{General importance of dust}{section.13}% 81
-\BOOKMARK [2][-]{subsection.13.2}{Extinction}{section.13}% 82
-\BOOKMARK [3][-]{subsubsection.13.2.1}{Amount of gas, dust-to-gas ratio, and transparency of galaxies}{subsection.13.2}% 83
-\BOOKMARK [2][-]{subsection.13.3}{Emission from dust}{section.13}% 84
-\BOOKMARK [2][-]{subsection.13.4}{Composition}{section.13}% 85
-\BOOKMARK [2][-]{subsection.13.5}{Creation/destruction}{section.13}% 86
-\BOOKMARK [1][-]{section.14}{Central black holes}{}% 87
-\BOOKMARK [2][-]{subsection.14.1}{AGN as indicators of central black holes}{section.14}% 88
-\BOOKMARK [2][-]{subsection.14.2}{Black holes in non-active galaxies}{section.14}% 89
-\BOOKMARK [2][-]{subsection.14.3}{Measuring black hole masses}{section.14}% 90
-\BOOKMARK [2][-]{subsection.14.4}{Importance of central black holes}{section.14}% 91
-\BOOKMARK [1][-]{section.15}{Galaxy spectral energy distributions}{}% 92
-\BOOKMARK [1][-]{section.16}{Dark matter and galaxy masses}{}% 93
-\BOOKMARK [2][-]{subsection.16.1}{Observations of dark matter in galaxies}{section.16}% 94
-\BOOKMARK [3][-]{subsubsection.16.1.1}{Galaxy rotation curves}{subsection.16.1}% 95
-\BOOKMARK [3][-]{subsubsection.16.1.2}{Gravitational lensing}{subsection.16.1}% 96
-\BOOKMARK [2][-]{subsection.16.2}{Total masses of galaxies}{section.16}% 97
-\BOOKMARK [2][-]{subsection.16.3}{Halo abundance matching}{section.16}% 98
+\BOOKMARK [3][-]{subsubsection.11.1.1}{Main stages of stellar evolution}{subsection.11.1}% 59
+\BOOKMARK [3][-]{subsubsection.11.1.2}{Isochrones}{subsection.11.1}% 60
+\BOOKMARK [2][-]{subsection.11.2}{Simple Stellar Populations and the Initial Mass Function}{section.11}% 61
+\BOOKMARK [2][-]{subsection.11.3}{Resolved stellar populations}{section.11}% 62
+\BOOKMARK [3][-]{subsubsection.11.3.1}{Results}{subsection.11.3}% 63
+\BOOKMARK [3][-]{subsubsection.11.3.2}{General conclusions}{subsection.11.3}% 64
+\BOOKMARK [2][-]{subsection.11.4}{Unresolved stellar populations}{section.11}% 65
+\BOOKMARK [3][-]{subsubsection.11.4.1}{What stars contribute the most light?}{subsection.11.4}% 66
+\BOOKMARK [3][-]{subsubsection.11.4.2}{Integrated brightness}{subsection.11.4}% 67
+\BOOKMARK [3][-]{subsubsection.11.4.3}{Integrated colors}{subsection.11.4}% 68
+\BOOKMARK [3][-]{subsubsection.11.4.4}{Dependence of color and luminosity on time}{subsection.11.4}% 69
+\BOOKMARK [3][-]{subsubsection.11.4.5}{What stars contribute the most mass?}{subsection.11.4}% 70
+\BOOKMARK [3][-]{subsubsection.11.4.6}{The mass-to-light ratio \(M/L\)}{subsection.11.4}% 71
+\BOOKMARK [3][-]{subsubsection.11.4.7}{Star formation histories from integrated colors}{subsection.11.4}% 72
+\BOOKMARK [3][-]{subsubsection.11.4.8}{Integrated spectra}{subsection.11.4}% 73
+\BOOKMARK [2][-]{subsection.11.5}{Chemical evolution}{section.11}% 74
+\BOOKMARK [3][-]{subsubsection.11.5.1}{Basic picture of chemical evolution}{subsection.11.5}% 75
+\BOOKMARK [3][-]{subsubsection.11.5.2}{Basic equations of chemical evolution:}{subsection.11.5}% 76
+\BOOKMARK [2][-]{subsection.11.6}{Measuring stellar abundances}{section.11}% 77
+\BOOKMARK [3][-]{subsubsection.11.6.1}{Units for measuring abundances}{subsection.11.6}% 78
+\BOOKMARK [3][-]{subsubsection.11.6.2}{Abundances as function of time}{subsection.11.6}% 79
+\BOOKMARK [3][-]{subsubsection.11.6.3}{Relative abundances of different elements}{subsection.11.6}% 80
+\BOOKMARK [1][-]{section.12}{Gas}{}% 81
+\BOOKMARK [2][-]{subsection.12.1}{Observing and characterizing the gas}{section.12}% 82
+\BOOKMARK [2][-]{subsection.12.2}{Heating and cooling}{section.12}% 83
+\BOOKMARK [3][-]{subsubsection.12.2.1}{Heating}{subsection.12.2}% 84
+\BOOKMARK [3][-]{subsubsection.12.2.2}{Cooling}{subsection.12.2}% 85
+\BOOKMARK [2][-]{subsection.12.3}{Cold gas: HI measurements with 21 cm line}{section.12}% 86
+\BOOKMARK [2][-]{subsection.12.4}{Molecular gas}{section.12}% 87
+\BOOKMARK [2][-]{subsection.12.5}{Warm ionized gas}{section.12}% 88
+\BOOKMARK [2][-]{subsection.12.6}{Hot gas}{section.12}% 89
+\BOOKMARK [2][-]{subsection.12.7}{Denser ionized gas}{section.12}% 90
+\BOOKMARK [2][-]{subsection.12.8}{Chemical evolution and abundances from gas}{section.12}% 91
+\BOOKMARK [2][-]{subsection.12.9}{Distribution of gas within spirals}{section.12}% 92
+\BOOKMARK [2][-]{subsection.12.10}{Gas as a kinematic tracer}{section.12}% 93
+\BOOKMARK [2][-]{subsection.12.11}{Interactions between gas and stars}{section.12}% 94
+\BOOKMARK [3][-]{subsubsection.12.11.1}{Star formation}{subsection.12.11}% 95
+\BOOKMARK [3][-]{subsubsection.12.11.2}{Supernovae and mass loss from stars}{subsection.12.11}% 96
+\BOOKMARK [1][-]{section.13}{Dust}{}% 97
+\BOOKMARK [2][-]{subsection.13.1}{General importance of dust}{section.13}% 98
+\BOOKMARK [2][-]{subsection.13.2}{Extinction}{section.13}% 99
+\BOOKMARK [3][-]{subsubsection.13.2.1}{Amount of gas, dust-to-gas ratio, and transparency of galaxies}{subsection.13.2}% 100
+\BOOKMARK [2][-]{subsection.13.3}{Emission from dust}{section.13}% 101
+\BOOKMARK [2][-]{subsection.13.4}{Composition}{section.13}% 102
+\BOOKMARK [2][-]{subsection.13.5}{Creation/destruction}{section.13}% 103
+\BOOKMARK [1][-]{section.14}{Central black holes}{}% 104
+\BOOKMARK [2][-]{subsection.14.1}{AGN as indicators of central black holes}{section.14}% 105
+\BOOKMARK [2][-]{subsection.14.2}{Black holes in non-active galaxies}{section.14}% 106
+\BOOKMARK [2][-]{subsection.14.3}{Measuring black hole masses}{section.14}% 107
+\BOOKMARK [2][-]{subsection.14.4}{Importance of central black holes}{section.14}% 108
+\BOOKMARK [1][-]{section.15}{Galaxy spectral energy distributions}{}% 109
+\BOOKMARK [1][-]{section.16}{Dark matter and galaxy masses}{}% 110
+\BOOKMARK [2][-]{subsection.16.1}{Observations of dark matter in galaxies}{section.16}% 111
+\BOOKMARK [3][-]{subsubsection.16.1.1}{Galaxy rotation curves}{subsection.16.1}% 112
+\BOOKMARK [3][-]{subsubsection.16.1.2}{Gravitational lensing}{subsection.16.1}% 113
+\BOOKMARK [2][-]{subsection.16.2}{Total masses of galaxies}{section.16}% 114
+\BOOKMARK [2][-]{subsection.16.3}{Halo abundance matching}{section.16}% 115

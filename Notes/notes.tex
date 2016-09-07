@@ -5,6 +5,7 @@
 \setlength{\parindent}{0em}
 
 \usepackage{hyperref}
+\usepackage{framed}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{marvosym}
@@ -34,15 +35,14 @@
 %\renewcommand{\footnoterule}{\kern-3pt\hrule width\textwidth height 0.4pt\kern 2pt}
 
 \definecolor{bred}{rgb}{0.8, 0.0, 0.0}
-\definecolor{cadmiumorange}{rgb}{0.93, 0.53, 0.18}
-\definecolor{darkcyan}{rgb}{0.0, 0.55, 0.55}
 \definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
 \definecolor{mypur}{rgb}{0.4, 0.22, 0.33}
 \definecolor{myblue}{rgb}{0.0, 0.2, 0.6}
-\definecolor{mygreen}{rgb}{0.67, 0.88, 0.69}
 \definecolor{mygray}{rgb}{0.90, 0.90, 0.90}
+\definecolor{mypurple}{rgb}{0.41, 0.16, 0.38}
+\definecolor{pinegreen}{rgb}{0.0, 0.47, 0.44}
 
-\newcommand{\mynotes}[1]{\textcolor{cadmiumorange}{#1}}
+\newcommand{\mynotes}[1]{\textcolor{cadmiumgreen}{#1}}
 \usepackage{tikz}\usetikzlibrary{backgrounds, shapes.misc}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]
             \node[draw=black,shape=rounded rectangle,draw,inner sep=10pt] (char) {#1};}
@@ -70,27 +70,31 @@
   {\fontsize{12}{13}\selectfont\bfseries\color{myblue}}
   {}
   {0.5em}{}
+\titleformat{\subparagraph}%
+  {\fontsize{11}{12}\selectfont\bfseries\color{black}}
+  {}
+  {0.5em}{}
 
 %\titlespacing*{⟨command⟩}{⟨left⟩}{⟨before-sep⟩}{⟨after-sep⟩}[⟨right-sep⟩]
 \titlespacing*{\section}{-0.75in}{0ex}{0ex}
 \titlespacing*{\subsection}{-0.25in}{0ex}{0ex}[-0.25in]
 \titlespacing*{\subsubsection}{0pt}{2ex}{-1ex}
 \titlespacing*{\paragraph}{0pt}{1ex}{-2ex}
+\titlespacing*{\subparagraph}{0pt}{1ex}{-2ex}
 
 % Lists
-\setlist[itemize]{noitemsep, topsep=0ex,
-    label=$\vcenter{\hbox{\tiny$\bullet$}}$}
+\setlist[itemize]{noitemsep, topsep=-1ex}
+\setlist[itemize, 1]{label=$\vcenter{\hbox{\footnotesize$\bullet$}}$}
+\setlist[itemize, 2]{label=$\vcenter{\hbox{\footnotesize$\circ$}}$}
 %\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 %\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
-\setlist[enumerate]{noitemsep, topsep=0ex}
-\setlist[description]{noitemsep, topsep=0ex, labelsep=2em,}
+\setlist[enumerate]{noitemsep, topsep=-1ex}
+\setlist[description]{noitemsep, topsep=-1ex, labelindent=2em,}
 \definecolor{cadet}{rgb}{0.33, 0.41, 0.47}
 
 \renewcommand{\descriptionlabel}[1]{%
     \bfseries\textcolor{cadet}{#1}
 }
-\definecolor{mypurple}{rgb}{0.41, 0.16, 0.38}
-\definecolor{pinegreen}{rgb}{0.0, 0.47, 0.44}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,
     urlcolor=myblue,
@@ -678,11 +682,16 @@ redshifts) give
 (varies for different types of galaxies).
 
 \subsection{Morphological classification}
-Historically, galaxies were considered in terms of their morphology, i.e.\ the
-Hubble sequence.  However, it is not totally clear to what extent morphological
-classification traces underlying physics, and descriptive morphology may be
-biased by things that may not be fundamental.  Still, it is widely used, so
-important to understand a bit.
+\href{https://ned.ipac.caltech.edu/level5/Sept11/Buta/frames.html}
+{Level 5: GALAXY MORPHOLOGY - Ronald J. Buta (2013)}, also
+\href{http://people.virginia.edu/~dmw8f/astr5630/Topic02/Lecture_2.html}
+{Whittle notes}.
+
+Historically, galaxies were considered in terms of their morphology, i.e.\
+the Hubble sequence. However, it is not totally clear to what extent
+morphological classification traces underlying physics, and descriptive
+morphology may be biased by things that may not be fundamental. Still, it
+is widely used, so important to understand a bit.
 
 \subsubsection{Morphological systems}
 Good reference: Sandage in Galaxies and the Universe, 1975.
@@ -694,7 +703,7 @@ Some pictures:
         {{S0s}}, also known as lenticulars
     \item \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/spirals.htm}
         {{spirals}}
-    \item \href{http://astronomy.as.virginia.edu}
+    \item \href{http://people.virginia.edu/~dmw8f/astr5630/Topic02/t2_hubble_tfork.html}
         {{Tuning fork diagram}}
 \end{itemize}
 
@@ -1494,28 +1503,31 @@ distance and reddening/extinction Age effects (model isochrones) from Yi et al
 2001.  Metallicity effects: internal (opacity) and atmosphere (line blanketing)
 effect combine in the same direction to make more metal-rich populations
 redder: CMDs
-      \begin{itemize}
-          \item Metallicity terminology: often given as mass fractions of
-              hydrogen (X), helium (Y), and heavier elements (Z).
-          \item solar abundance: X=0.7, Y=0.28, Z=0.019 (roughly)
-          \item also given by
-              $$ \left[\frac{\textrm{Fe}}{\textrm{H}}\right] =
-              \log\left[
-              \frac{\left( {\textrm{Fe}}/{\textrm{H}} \right)}
-              {\left({\textrm{Fe}}/{\textrm{H}}\right)_{\odot}}
-              \right]$$
-          \item Be aware that this is an oversimplification, as Z contains
-              lots of different elements. More later.
-      \end{itemize}
-    \item Main sequence (MS)
-        \begin{itemize}
-            \item Very rough scaling relation between luminosity and mass:
-                $ L \propto M^{3.5} $
-            \item Main sequence shifts with metallicity: redder for
-                higher metallicity
-            \item Location also depends on helium abundance
-        \end{itemize}
-    \item Red Giant Branch (RGB)
+\begin{itemize}
+    \item Metallicity terminology: often given as mass fractions of
+        hydrogen (X), helium (Y), and heavier elements (Z).
+    \item solar abundance: X=0.7, Y=0.28, Z=0.019 (roughly)
+    \item also given by
+        \[
+            \left[\frac{\textrm{Fe}}{\textrm{H}}\right] = \log\left[
+            \frac{\left( {\textrm{Fe}}/{\textrm{H}} \right)}
+            {\left({\textrm{Fe}}/{\textrm{H}}\right)_{\odot}}
+            \right]
+        \]
+    \item Be aware that this is an oversimplification, as Z contains
+        lots of different elements. More later.
+\end{itemize}
+
+Main sequence (MS)
+\begin{itemize}
+    \item Very rough scaling relation between luminosity and mass:
+        $ L \propto M^{3.5} $
+    \item Main sequence shifts with metallicity: redder for
+        higher metallicity
+    \item Location also depends on helium abundance
+\end{itemize}
+
+Red Giant Branch (RGB)
         \begin{itemize}
             \item note that because of more rapid evolution after MS,
                 RGB stars all have roughly the same mass.
@@ -1534,7 +1546,7 @@ redder: CMDs
                 location of which depends on mass/age and metallicity;
                 arises when H burning shell crosses chemical discontinuity.
         \end{itemize}
-    \item Horizontal Branch (HB), aka.\ Red Clump (RC) or more generally
+Horizontal Branch (HB), aka.\ Red Clump (RC) or more generally
         He core burning sequence
         \begin{itemize}
             \item High mass stars form blue He core-burning branch
@@ -1555,7 +1567,7 @@ redder: CMDs
                 Periods of 0.5 days, but multiple groups (Oosterhoff classes)
                 depending on stellar parameters$\ldots$
         \end{itemize}
-    \item Asymtotic Giant Branch (AGB)
+Asymtotic Giant Branch (AGB)
         \begin{itemize}
             \item For intermediate masses/ages, AGB is significantly more
                 luminous than the TRGB, hence of potential critical importance
@@ -1563,7 +1575,7 @@ redder: CMDs
             \item For lower masses (older populations), AGB tip comparable
                 to TRGB and AGB asymtotically approaches RGB (hence its name).
         \end{itemize}
-    \item Potential importance of binaries/interactions
+Potential importance of binaries/interactions
         \begin{itemize}
             \item unresolved (but otherwise non-interacting) binaries:
                 broaden sequences, depending on mass ratios: equal masses
@@ -1574,7 +1586,7 @@ redder: CMDs
             \item supernovae type SNIa: arise from binaries, produce different
                 heavy element abundances than core collapse SNe. (e?)
         \end{itemize}
-    \item End stages of stellar evolution:
+End stages of stellar evolution:
         WDs, neutron stars, black holes, and supernovae
         \begin{itemize}
             \item {projenitor-final mass relation}
@@ -1585,7 +1597,7 @@ redder: CMDs
             \item Supernovae: generate significant fraction of heavy elements
                 (but not all). Significant energy input, thermal and mechanical.
         \end{itemize}
-    \item Galactic globular clusters: cornerstone of understanding
+Galactic globular clusters: cornerstone of understanding
       stellar evolution historically, as apparent examples of a
       ``simple stellar population (SSP)'', with all stars of the same
       age and abundance.
@@ -1601,279 +1613,374 @@ redder: CMDs
               understanding of how the multiple populations arise.
       \end{itemize}
 
-\subsection{More information in a CMD than is represented by isochrones}
-  one can also consider relative numbers of stars at
-      different locations: CMDs that incorporate number of stars are
-      reffered to as Hess diagrams (e.g.\ {Fornax}
-      from Battaglia et al., 2006).
-      \begin{itemize}
-          \item For a simple stellar population (SSP, a population with
-              a single age and metllicity), the relative number of stars
-              at each stage is determined by the initial mass function (IMF)
-              and the age.
-          \item IMF determinations and parameterizations:
-              \begin{itemize}
-                  \item ``classical'' Salpeter IMF (power law with
-                      $ dN/dM \propto M^{-2.35}$) and {others}
-                      (from {Pagel}). Note power law form:
-                      $ dN/dM \propto M^{\alpha}  $,
-                      or alternatively,
-                      $ dN/d\log{M} \propto M^{\Gamma} \propto M^{\alpha + 1} $
-                  \item Widely used determination of local IMF is by
-                      {Droupa Tout, and Gilmore 1993}, who find
-                      $$ dN/dM \propto M^{-2.7}\ \textrm{for}\ M > 1M_{\odot} $$
-                      $$ dN/dM \propto M^{-2.2}\ \textrm{for}\ 0.5 < M < 1M_{\odot} $$
-                      $$ dN/dM \propto M^{-1.3}\ \textrm{for}\ M < 0.5M_{\odot} $$
-                  \item Chabrier IMF: log-normal form,
-                      $ dN/dM \propto \exp(\log{M}-\log{M_o})^2  $
-                  \item Empirically, no strong evidence for variations of the
-                    IMF as functions of, e.g., metallicity.
-                  \item No well-established theory for predicting the IMF
-              \end{itemize}
-      \end{itemize}
+\subsection{Simple Stellar Populations and the Initial Mass Function}
+There is more information in a CMD than is represented by isochrones;
+one can also consider the relative \textit{numbers} of stars at
+different locations. CMDs that incorporate number of stars are
+reffered to as \textbf{Hess diagrams} (e.g.\
+\href{http://astronomy.nmsu.edu/holtz/a555/resources/fornaxhess.gif}
+{Fornax} from Battaglia et al., 2006).
 
-\subsection{Star Formation Histories (SFHs) from resolved stellar populations}
-      \begin{itemize}
-          \item In general, galaxies are not SSPs, i.e.\ their CMDs don't look
-              like those of a cluster. Can fit Hess diagrams of resolved stellar
-              populations with combinations of SSPs to derive constraints on SFH,
-              e.g.\ {simulated galaxies} (from
-              {Tolstoy et al}).
-          \item Generally speaking, we want the star formation history:
-              $SFH(t,Z,M)$ gives the number of stars (or stellar mass) at all
-              combinations of age, metallicity, and mass; because of lack of
-              observed IMF variation, usually IMF is separated out:
-              $$ SFH(t,Z,M) = \xi(M)\psi(t,Z) $$
-              where $\xi$ is the IMF.
-          \item MW neighbors resolved down to oldest MS turnoff ($M \sim 5$),
-              because typical distances give distance modulii $\lesssim$ 20.
-          \item M31 and neighbors somewhat shallower ($m-M\sim$ 24.5)
-              without large investment of telescope time.
-          \item Results for MW:
-              \begin{itemize}
-                  \item {solar neighborhood Hipparcos sample}:
-                      roughly constant {SFH}, but be aware
-                      of dynamical effects and limited volume bias nearby
-                      sample to younger populations. When corrected for, star
-                      formation history in solar neighborhood likely to have
-                      significantly declined (see, e.g.\
-                      {Aumer \& Binney 2009}).
-                  \item Age of oldest stars can be studied by WD sequence,
-                      gives $t_{\textrm{oldest}} > 8$ Gyr. Also note presence
-                      of disk RR Lyrae stars ($t > 10$ Gyr??)
-                  \item Might consider studying age distribution of clusters,
-                      as they are simpler populations, but note problems with
-                      disruption of clusters that would lead to a bias to
-                      younger clusters.
-                  \item Bulge can also be studied, but note foreground population
-                      and extinction issues. Predominantly old population,
-                      e.g.\ {bulge CMD}, and
-                      {luminosity function} (from {Ortolani
-                      et al 1995}).
-                  \item Halo (as defined kinematically/spatially) also
-                      prdominantly old, both from field population and from
-                      globular cluster population.
-                  \item Historically, distinction between disk stars/open
-                      clusters (population I) and halo stars/globular clusters
-                      (population II), with pop I being younger and more metal
-                      rich. Note, however, the pop II association with low
-                      metallicity is now recognized not to be fundamental;
-                      inner halo/bulge significantly more metal rich.
-                  \item For metallicities, note that there is a significant
-                      puzzle in that there is \emph{not} a strong age-metallicity
-                      relation in the solar neighborhood (e.g.\ Orion has
-                      roughly solar metallicity, but is nearly 5 billion years
-                      younger): radial migration, inhomogeneous ISM, inflow
-                      $\ldots$?
-              \end{itemize}
-          \item Results for Local Group (LG) dwarf galaxies
-              \begin{itemize}
-                  \item Carina dSph: striking evidence of episodic star
-                      formation, but this is NOT characteristic.
-                  \item Others (from Tolstoy et al); note range of SFHs.
-                  \item LG dIrrs compilation (from Dolphin et al 2005)
-                  \item LG dSphs (from Dolphin et al 2005); possible similarity
-                      to dIrrs apart from lack of recent SF?
-                  \item Many dwarfs show population gradients, e.g.\ from
-                      RGB/HB morphology (e.g., Harbeck et al 2001), likely
-                      metallicity gradients: some show evidence of age gradients,
-                      with younger population in center.
-              \end{itemize}
-          \item Results for M33 (from Holtzman et al 2011); note significant age
-              gradient, and significant component of younger stars.
-          \item M31 halo (from Brown et al 2006); significantly different from
-              MW bulge, with more of an intermediate-old population?
-          \item Can do more distant galaxies if information from advanced stages
-              (RC, HB) is reliable; (e.g.\ local volume SFH (from Williams et al,
-              in prep), dwarf SFH (from Weisz et al 2011)).
-          \item Even farther if info from AGB is reliable.
-          \item General conclusions:
-              \begin{itemize}
-                  \item galaxies are not SSPs.
-                  \item galaxies have gradients in their stellar populations
-                  \item significant population of old stars in nearby galaxies?
-                  \item more massive galaxies formed stars earlier??
-              \end{itemize}
-      \end{itemize}
+For a \textbf{simple stellar population (SSP)}, a population with a single age
+and metallicity, the relative number of stars at each stage is
+determined by the \textbf{initial mass function (IMF)} and the age.
 
-\subsection{Integrated light from \emph{un}resolved stellar populations}
-      \begin{itemize}
-        \item What stars contribute the most light?
-            \begin{itemize}
-                \item Along the MS, use combination of M-L relation and IMF:
-                    $$ L \propto (M^{-2.35}M^{3.5}) \propto M^{1.15} $$
-                    Massive stars dominate light.
-                \item Compare MSTO with evolved population: RGB has almost
-                    same mass as MSTO, but significantly more luminous: relative
-                    contributions depend on relative number of starsalong the
-                    giant branch compared with MSTO stars, but one finds that
-                    the luminous evolved populations dominate (Renzini fig 1.5).
-                \item Since post-MS evolution is fast compared to MS evolution
-                    for all masses, it is true that at any given time when the
-                    most luminous stars are the most evolved stars, the luminosity
-                    is given predominantly by stars of (nearly) a single mass
-                    (true for all except youngest ages, see Renzini 1.1) and
-                    luminosity vs.\ lifetime plots.
-            \end{itemize}
-        \item Integrated brightness: do SSPs get brighter or fainter as they age?
-            \begin{itemize}
-                \item At younger ages, have MS ``peel-off'' effect, but also
-                    supergiants! (WTF$\ldots$)
-                % ------------------page 6-----------------------------------%
-                \item At older ages, have competing effects of IMF and rate of
-                    evolution.
-                    \begin{itemize}
-                        \item To determine the luminosity of a stellar
-                            population, consider the number of stars evolving
-                            off the MS, or equivalently, dying, which is given
-                            by the \emph{evolutionary flux}:
-                            $$ b(t) = \psi(M_{\textrm{TO}})|\dot{M}|
-                            \textrm{\ [stars\ yr}^{-1}]$$
-                            where TO stands for turnoff, $\psi$ is the IMF,
-                            and $|\dot{M}|$ is the time derivative of the
-                            turnoff mass, e.g.\ Renzini 1.1. The key point is
-                            that lower mass stars evolve more slowly.
-                        \item The IMF is important, along with age, in
-                            determining the luminosity evolution of a galaxy.
-                        \item Once one reaches an age where most massive stars
-                            have died, all stars of lower mass reach comparable
-                            luminosity (tip of RGB), hence luminosity of
-                            population depends on number of red giants.
-                        \item For a typical IMF number of stars increases
-                            slower toward lower mass than rate of generation
-                            of turnoff stars decreases.
-                        \item Luminosity of the turnoff also has some smaller
-                            effect.
-                    \end{itemize}
-                \item Do integrated colors depend on the IMF?
-                    \begin{itemize}
-                        \item Need to know the relative contributions of each
-                            stage of evolution, i.e., from stars of different
-                            masses.
-                        \item Number of stars in each post-MS stage is
-                            determined predominatnly by the time spend in each
-                            stage:
-                            $$ N_j = b(t)t_j $$
-                            because all post-MS stars have nearly the same mass.
-                            So although the total flux is sensitive to the IMF,
-                            the relative contributions of each stage are not,
-                            at least for older populations (Renzini fig 1.5).
-                        \item For all except the youngest population, the later
-                            stages of evolution provide a majority of the light.
-                            Evolved stages are nearly all the same mass.
-                        \item Consequently, the integrated spectrum and the
-                            relative contributions of various evolutionary
-                            stages are nearly independent of the IMF\@. They
-                            \emph{do} depend on the age and metallicity.
-                    \end{itemize}
-                \item Dependence of color and luminosity on time (from
-                    Bruzual and Charlot 199?) for a SSP (single burst)
-                    normalized to one solar mass.
-                    \begin{itemize}
-                        \item luminosity variation is a combination of IMF plus
-                            rate of evolution for lower masses.
-                        \item color evolution comes from changing mix of stellar
-                            population, but this is just for a single (solar)
-                            metallicity.
-                        \item note RSG phase, then subsequent dimming and
-                            reddening.
-                        \item note this is bandpass dependent, with less dimming
-                            (at older ages where the RGB is dominant) at longer
-                            wavelengths.
-                    \end{itemize}
-                \item Implication: if range of ages is present, integrated light
-                    is (significantly) weighted toward younger populations.
-                % ------------------page 7-----------------------------------%
-            \end{itemize}
-        \item What stars contribute the most \emph{mass}?
-            \begin{itemize}
-                \item For all measured
-                \item relative stellar M/L ratios
-            \end{itemize}
-        \item Can you estimate stellar mass from integrated light?
-            \begin{itemize}
-                \item Consider the
-                \item For individual stars
-                \item Absolute value of
-                \item stellar M/L ratio depends on
-                \item So, it is possible
-                    \begin{itemize}
-                        \item Variety of different
-                        \item Some uncertainties
-                        \item Larger
-                        \item if IMF were to be variable
-                    \end{itemize}
-            \end{itemize}
-        \item Star formation histories from integrated colors
-            \begin{itemize}
-                \item Issue: intgrated colors are affected by combination of age
-                    distribution,
-% ----------------------------------page 8-----------------------------------%
-                    metallicty distribution, and reddening distribution.
-                \item color variations with age:
-                \item situation somewhat improved
-                \item Even if age-metallicity
-            \end{itemize}
-        \item Given age-metallicty degeneracy from colors,
-        \item Spectral evolution (BC fig 4) for a variety of SFRs
-        \item Dependence of contributor on wavelength
-        \item Potential problems with synthetic integrated spectra:
-        \item What about spectral features?
-            \begin{itemize}
-                \item For populations
-                \item For older populations
-% ----------------------------------page 9-----------------------------------%
-                \item typical optical spectra
-            \end{itemize}
-        \item Even with
-        \item Main area of application
-% ---------------------------------page 10-----------------------------------%
-      \end{itemize}
+IMF determinations and parameterizations:
+\begin{itemize}
+    \item ``classical'' \textbf{Salpeter} IMF (power law with
+        $ dN/dM \propto M^{-2.35}$) and others
+        (from {Pagel}). Note power law form:
+        $ dN/dM \propto M^{\alpha}  $,
+        or alternatively,
+        $ dN/d\log{M} \propto M^{\Gamma} \propto M^{\alpha + 1} $
+    \item Widely used determination of local IMF is by
+        {Droupa Tout, and Gilmore 1993}, who find
+        $$ dN/dM \propto M^{-2.7}\ \textrm{for}\ M > 1M_{\odot} $$
+        $$ dN/dM \propto M^{-2.2}\ \textrm{for}\ 0.5 < M < 1M_{\odot} $$
+        $$ dN/dM \propto M^{-1.3}\ \textrm{for}\ M < 0.5M_{\odot} $$
+    \item Chabrier IMF: log-normal form,
+        $ dN/dM \propto \exp(\log{M}-\log{M_o})^2  $
+    \item Empirically, no strong evidence for variations of the
+        IMF as functions of, e.g., metallicity.
+    \item No well-established theory for predicting the IMF
+\end{itemize}
+
+\subsection{Resolved stellar populations}
+In general, galaxies are not SSPs; their CMDs don't look like those of a
+cluster. Hess diagrams of resolved stellar populations can be fit with
+\emph{combinations} of SSPs to derive \emph{constraints} on SFH, e.g.\
+\href{http://astronomy.nmsu.edu/holtz/a555/resources/modelpops.gif}
+{simulated galaxies} (from \href{http://adsabs.harvard.edu/abs/2009ARA\%26A..47..371T}
+{Tolstoy et al.}).
+
+Generally speaking, we want the star formation history, represented by
+$SFH(t,Z,M)$. This gives the number of stars (or stellar mass)
+at all combinations of age ($t$), metallicity ($Z$), and mass ($M$).
+Because there has been no variation observed in the IMF, it is usually
+separated from the rest of the SFH:
+\[
+    SFH(t,Z,M) = \xi(M)\psi(t,Z)
+    \]
+where $\xi$ is the IMF.
+
+MW neighbors resolved down to oldest MS turnoff ($M \sim 5$),
+because typical distances give distance modulii $\lesssim$ 20.
+M31 and neighbors somewhat shallower ($m-M \sim 24.5$)
+without large investment of telescope time.
+
+\subsubsection{Results}
+\paragraph{MW}
+\begin{itemize}
+    \item {solar neighborhood Hipparcos sample}: roughly constant {SFH}, but be
+        aware of dynamical effects and limited volume bias nearby sample to
+        younger populations. When corrected for, star formation history in
+        solar neighborhood likely to have significantly declined (see, e.g.\
+        {Aumer \& Binney 2009}).
+    \item Age of oldest stars can be studied by WD sequence, gives
+        $t_{\textrm{oldest}} > 8$ Gyr. Also note presence of disk RR Lyrae
+        stars ($t > 10$ Gyr??)
+    \item Might consider studying age distribution of clusters, as they are
+        simpler populations, but note problems with disruption of clusters that
+        would lead to a bias to younger clusters.
+    \item Bulge can also be studied, but note foreground population and
+        extinction issues. Predominantly old population, e.g.\ {bulge CMD}, and
+        {luminosity function} (from {Ortolani et al 1995}).
+    \item Halo (as defined kinematically/spatially) also prdominantly old, both
+        from field population and from globular cluster population.
+    \item Historically, distinction between disk stars/open clusters
+        (population I) and halo stars/globular clusters (population II), with
+        pop I being younger and more metal rich. Note, however, the pop II
+        association with low metallicity is now recognized not to be
+        fundamental; inner halo/bulge significantly more metal rich.
+    \item There is \emph{not} a strong age-metallicity relation in the solar
+        neighborhood (Orion has roughly solar metallicity despite the fact that it is nearly
+        5 billion years younger).
+        Radial migration, inhomogeneous ISM, inflow\ldots?
+\end{itemize}
+
+\paragraph{Local Group (LG) dwarf galaxies}
+\begin{itemize}
+    \item Carina dSph: striking evidence of episodic star formation, but this is NOT characteristic.  \item Others (from Tolstoy et al); note range of SFHs.
+    \item LG dIrrs compilation (from Dolphin et al 2005)
+    \item LG dSphs (from Dolphin et al 2005); possible similarity to dIrrs
+        apart from lack of recent SF?
+    \item Many dwarfs show population gradients, e.g.\ from RGB/HB morphology
+        (e.g., Harbeck et al 2001), likely metallicity gradients: some show
+        evidence of age gradients, with younger population in center.
+\end{itemize}
+
+\paragraph{M33}
+(from Holtzman et al 2011); note significant age
+gradient, and significant component of younger stars.
+\paragraph{M31 halo}
+(from Brown et al 2006); significantly different from
+MW bulge, with more of an intermediate-old population?
+
+Can do more distant galaxies if information from advanced stages (RC, HB) is
+reliable; (e.g.\ local volume SFH (from Williams et al, in prep), dwarf SFH
+(from Weisz et al 2011)).
+
+Even farther if info from AGB is reliable.
+
+\subsubsection{General conclusions}
+\begin{itemize}
+    \item Galaxies are not SSPs.
+    \item Galaxies have gradients in their stellar populations
+    \item Significant population of old stars in nearby galaxies?
+    \item More massive galaxies formed stars earlier??
+\end{itemize}
+
+\subsection{Unresolved stellar populations}
+\subsubsection{What stars contribute the most light?}
+\begin{itemize}
+    \item Along the MS, use combination of M-L relation and IMF:
+        \[
+            L \propto \left(M^{-2.35}M^{3.5}\right) \propto M^{1.15}
+            \]
+        Massive stars dominate light.
+    \item Compare MSTO with evolved population: stars on the RGB have almost
+        the same mass as those on the MSTO, but they are significantly more
+        luminous.  The relative contributions depend on the relative
+        \emph{number} of stars along the giant branch compared to the MSTO
+        stars, but ultimately it is the luminous evolved populations that
+        dominate the total luminosity.
+        \href{http://astronomy.nmsu.edu/holtz/a555/images/renzini5.htm}
+        {(Renzini fig 1.5)}.
+    \item Since post-MS evolution is fast compared to MS evolution for all
+        masses, it is true that at any given time when the most luminous stars
+        are the most evolved stars, the luminosity is given predominantly by
+        stars of (nearly) a single mass (true for all except youngest ages, see
+        \href{http://astronomy.nmsu.edu/holtz/a555/images/renzini1.htm}
+        {Renzini 1.1}) and
+        \href{http://astronomy.nmsu.edu/holtz/a555/resources/iso.html}
+        {luminosity vs.\ lifetime plots}.
+\end{itemize}
+\subsubsection{Integrated brightness}
+Do SSPs get brighter or fainter as they age?
+\begin{itemize}
+    \item At younger ages, have MS ``peel-off'' effect.
+        \mynotes{As a cluster ages, the MSTO gets redder and fainter,
+        since massive, bright stars (O, B, etc.) evolve off the MS first.}
+        Also supergiants\mynotes{$\ldots$?}
+    \item At older ages, have competing effects of IMF and rate of
+        evolution.
+        \begin{itemize}
+            \item To determine the luminosity of a stellar population, consider
+                the number of stars evolving off the MS (dying)
+                which is given by the \textit{evolutionary flux}:
+                \[
+                    b(t) = \psi\left(M_{\textrm{TO}}\right)
+                    |\dot{M}|\quad[\textrm{stars\;yr}^{-1}]
+                    \]
+                where TO stands for turnoff, $\psi$ is the IMF, and $|\dot{M}|$
+                is the time derivative of the turnoff mass, e.g.\ Renzini 1.1.
+                \textbf{The key point is that lower mass stars evolve more slowly.}
+            \item The IMF is important, along with age, in
+                determining the luminosity evolution of a galaxy.
+            \item Once most massive stars have died,
+                all stars of lower mass reach comparable luminosity (tip of
+                RGB), hence \textbf{luminosity of population depends on number
+                of red giants.}
+            \item For a typical IMF, the rate at which the number of stars
+                increases toward lower masses is slower than the rate at which
+                the generation of turnoff stars decreases.
+            \item The luminosity of the turnoff also has some smaller effect.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Integrated colors}
+Do integrated colors depend on the IMF?
+\begin{itemize}
+    \item Need to know the relative contributions of each
+        stage of evolution, i.e., from stars of different masses.
+    \item Since all post-MS stars have nearly the same mass, the number of
+        stars in each post-MS stage is determined predominantly by the time
+        spent in each stage:
+        \[
+            N_{j} = b(t)t_{j}
+            \]
+        So although the total flux is sensitive to the IMF, the relative
+        contributions of each stage are not sensitive to the IMF, at least for
+        older populations
+        \href{http://astronomy.nmsu.edu/holtz/a555/images/renzini5.htm}
+        {(Renzini fig 1.5)}.
+    \item For all except the youngest population, the later stages of evolution
+        provide a majority of the light.  \textbf{Evolved stages are nearly all
+        the same mass.}
+    \item \textcolor{bred}{Consequently, the integrated spectrum and the
+        relative contributions of various evolutionary stages are nearly
+        \emph{independent} of the IMF\@.} They \emph{do} depend on the age and
+        metallicity.
+\end{itemize}
+
+\subsubsection{Dependence of color and luminosity on time}
+See \href{http://astronomy.nmsu.edu/holtz/a555/images/bc1.htm}
+{figure 1} from \href{http://adsabs.harvard.edu/abs/1993ApJ...405..538B}
+{Bruzual and Charlot (1993)}
+for a SSP (single burst) normalized to one solar mass.
+\begin{itemize}
+    \item Luminosity variation is a combination of IMF plus
+        rate of evolution for lower masses.
+    \item Color evolution comes from a changing mix of stellar population, but
+        this is just for a single (solar) metallicity.
+    \item RSG phase, followed by subsequent dimming and reddening.
+    \item Note that this is bandpass dependent, with less dimming
+        at longer wavelengths (at older ages where the RGB is dominant).
+\end{itemize}
+\textbf{Implication:} if a range of ages is present, then integrated light
+is (significantly) weighted toward younger populations.
+
+\subsubsection{What stars contribute the most \emph{mass}?}
+\begin{itemize}
+    \item For all measured IMFs, the bulk of the mass is in relatively
+        low mass stars ($< 1 M_{\odot}$).
+    \item Relative stellar M/L ratios for different IMFs can differ
+        by a factor of two or more. For example, the Salpeter IMF has much more
+        mass the IMFs with low mass turnover or cutoff.
+\end{itemize}
+
+%\fbox{\parbox{\textwidth}
+\begin{framed}
+    \textbf{Exercises}
+    \begin{itemize}
+        \item consider four populations with combinations of alpha=-2.35,-1.35,
+            age=3,10 Gyr. How do relative brightnesses compare?
+            How do relative colors compare?
+        \item now consider alpha=-2.35,-1.35 with contiuous SF from 3-10 Gyr ago.
+            How do brightnesses and colors compare?
+        \item how do stellar masses compare?
+        \item consider two galaxies with L* and 2 L*, with same IMF and age?
+            How do stellar masses compare? What if IMFs are different?
+            What if ages are different?
+    \end{itemize}
+\end{framed}
+
+\subsubsection{The mass-to-light ratio (M/L)}
+Can you estimate stellar mass from integrated light?
+\begin{itemize}
+    \item Consider the \emph{stellar} M/L
+        (not to be confused with \emph{total} M/L, which
+        includes dust, gas, and dark matter, in addition to stars).
+        The stellar M/L is defined in solar terms:
+        \[
+            \left(\frac{M}{L}\right)_{*} \equiv
+            \frac{M_{*}/M_{\odot}}{L_{*}/L_{\odot}}
+            \]
+    \item For individual stars, M/L decreases as mass increases
+        ($L \propto R^{2}$). So younger populations will have a lower M/L
+        than older populations.
+    \item \textbf{The absolute value of M/L of a population depends strongly
+        on the IMF.} Relative values characterize different stellar populations
+        for a fixed IMF.
+    \item The stellar M/L depends on luminosity bandpass;
+        there is less variation toward near-IR bandpasses
+        (less sensitivity to younger stars), but still not insigificant.
+        K-band luminosity is sometimes used as a proxy for stellar mass, but
+        see \href{http://astronomy.nmsu.edu/holtz/a555/resources/belldejong.html}
+        {Bell \& deJong results} from
+        \href{http://adsabs.harvard.edu/abs/2001ApJ...550..212B}
+        {Bell \& deJong (2001)}.
+        \begin{itemize}
+            \item More variation in stellar M/L at shorter wavelengths
+            \item Stellar M/L does seem to be well correlated with color,
+                however, this assumes no systematic variations in the IMF.
+            \item Some variations from metallicity
+            \item Some variations from reddening, although reddening and
+                extinction act in opposite directions.
+        \end{itemize}
+    \item So, it is possible to get some information about stellar M/L given
+        colors, but the level of uncertainty depends on bandpass and color
+        information available.
+        \begin{itemize}
+            \item Variety of different stellar M/L techniques in use, e.g.
+                using different colors, or spectral energy distributions,
+                different assumptions about star formation history
+            \item Some uncertainties in relative M/L for different populations
+                even with colors
+            \item Larger uncertainty in absolute value of M/L because of IMF
+            \item if IMF were to be variable, then even relative M/L would be
+                challenging
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Star formation histories from integrated colors}
+\begin{itemize}
+    \item Issue: intgrated colors are affected by combination of age
+        distribution,
+        metallicty distribution, and reddening distribution.
+    \item \href{http://astronomy.nmsu.edu/holtz/a555/resources/int.gif}
+        {color variations with age}: note significant degeneracy between age
+        and metallicity. Both older populations and metal-rich populations
+        are redder. However, only young populations have very blue colors.
+    \item The situation is somewhat improved with a longer wavelength
+        baseline (e.g.\ IR colors), but still significant.
+    \item Even if age-metallicity were resolved, there is still an issue
+        of luminosity weighting for non-SSPs.
+\end{itemize}
+
+\subsubsection{Integrated spectra}
+Given age-metallicty degeneracy from colors, measurements of spectral features
+might help. One can consider a full spectral synthesis to get an ingegrated
+spectrum for a population. Some existing evolutionary synthesis
+compilations/codes:
+%\begin{itemize}
+%\end{itemize}
+
+Spectral evolution (BC fig 4) for a variety of SFRs
+%\begin{itemize}
+%\end{itemize}
+
+Dependence of contributor on wavelength
+
+Potential problems with synthetic integrated spectra:
+%\begin{itemize}
+%\end{itemize}
+
+What about spectral features?
+\begin{itemize}
+    \item For populations
+    \item For older populations
+    \item typical optical spectra
+\end{itemize}
+
+%  page 9
+Even with
+%\begin{itemize}
+%\end{itemize}
+
+Main area of application
+%\begin{itemize}
+%\end{itemize}
+
+
+
+
 
 \subsection{Chemical evolution}
 Understanding chemical evolution provides another clue about
 the formation history of galaxies. Since stars generate this evolution,
 one can in principle learn something about star formation histories by
-looking at the distribution of compositions. The more handle we have on
-metallicites, the better we can contstrain ages. The \emph{distribution}
-of metallicities within galaxies (recall gradients) potentially provide
-important information about mode of galaxy formation. We'd like self-
-consistency between SFH  and chemical abundances. Potential information
-about gas entering and leaving system. Relative abundances of different
+looking at the distribution of compositions. The more we know about
+metallicities, the better we can constrain ages. The \emph{distribution}
+of metallicities within galaxies (recall gradients) potentially provides
+important information about the mode of galaxy formation.
+We'd like self-consistency between SFH and chemical abundances.
+Potential information about gas entering and leaving system. Relative abundances of different
 elements also may provide clues about formation history.
 
+\subsubsection{Basic picture of chemical evolution}
 The basic picture of chemical evolution starts with some initial conditions,
 then add SFH: (IMF + SFR). This results in chemical enrichment for stars as a
-function of mass and metallicity. Also consider input and output of gas from
-any particular region, with either primordial or modified composition.
+function of mass and metallicity. Also may wish to consider input and output of
+gas from any particular region, with either primordial or modified composition.
 \begin{itemize}
     \item ICs: No heavy elements and pure gas (no stars).
     \item SFH: birthrate function $\psi(m,t)$ gives number of stars formed with
         mass $m$ per unit volume, usually split into a separable function:
         \[
             B(m,t) = \xi(M)\psi(t)
-        \]
-        where $\xi(M)$ is the IMF and $\psi(t)$ is the SFR\@.  This implicitly
+            \]
+        where $\xi(M)$ is the IMF and $\psi(t)$ is the SFR\@. This implicitly
         assumes an IMF which is constant in time, which may or may not be true,
         but so far, there is no strong observational evidence against it
         (although note pop III issues).
@@ -1888,19 +1995,20 @@ the binary fraction.
 \begin{itemize}
     \item light elements: Big Bang Nucleosynthesis (BBN)
         plus subsequent destruction (?)
-    \item $\alpha$ elements (even Z from O up\ldots???): massive stars (core
-        collapse SN)
+    \item $\alpha$ elements (even Z from O up\mynotes{\ldots???}):
+        massive stars (core collapse SN)
     \item Fe-peak elements: type Ia SN and core collapse SN
-    \item $s$ and $r$ process (neutron capture, plux beta decay) elements: core
-        collapse SN, AGB stars\ldots (need neutron capture diagram here)
-\end{itemize} % end AAA
+    \item elements from \textit{slow} ($s$) and \textit{rapid} $r$ processes
+        (neutron capture, plux beta decay):
+        core collapse SN, AGB stars\ldots (need neutron capture diagram here)
+\end{itemize}
 Note that infall might arise from primordial clouds, or from processed
 material, e.g.\ mass-loss from halo stars. Outflow might come from SN winds,
 and in this case, it's possible that the composition of outflow material might
 be more enriched than the typical composition at any given time. So things can
 get complicated.
 
-\paragraph{Basic equations of chemical evolution:}
+\subsubsection{Basic equations of chemical evolution:}
 Allowing for all sorts of realistic effects makes it difficult to make
 very simple predictions for the evolution of abundances. However, under
 some simplifying assumptions, it is possible to do so. A simple chemical
@@ -1917,41 +2025,42 @@ Consider an inflow rate into the system, $F$ and outflow
 (ejection) rate, $E$. Then we have:
 \[
     M = g + s
-\]\[
+    \]
+\[
     \frac{\mathrm{d}M}{\mathrm{d}t} = F - E
-\]\[
+    \]
+\[
     \frac{\mathrm{d}g}{\mathrm{d}t} = F - E + e - \psi't
-\]
+    \]
 where $\psi'$ is the SFR in units of mass per time,
 \[
-    \psi' = \psi\int\xi\textrm{d}m
-\]
-% ---------------------------------page 12-----------------------------------%
+    \psi' = \psi\int\xi\textrm{d}m\quad[\mathrm{g\;s}^{-1}]
+    \]
+
 (so $\xi$ is normalized to a total of one), and $e$ is the
 ejection rate of mass from stars,
 \[
     e = \int_{m_{t}}^{m_{U}}{
         \left(m-m_{\mathrm{rem}}\right)\psi\left(t-\tau(m)\right)
         \xi\left(m\right)\mathrm{d}m}
-\]
+    \]
 which is a sum over all stellar masses of the product of the SFR at the time of
 formation of each mass with the mass returned to the ISM, weighted by the
-IMF\@. The lower limit of integration is at the stellar mass which is dying at
+IMF\@. The lower limit of integration is the stellar mass that is dying at
 time $t$; lower mass stars don't contribute because they haven't ejected any
-mass yet.  We also have
+mass yet. We also have
 \[
     \frac{\mathrm{d}s}{\mathrm{d}t} = \psi' - e
-\]
-wince the mass in stars increases by te number of stars formed,
-but decreases by the amount of mass lost back to the ISM from
-the previous generation of stars. For the elements, we have
+    \]
+since the mass in stars increases by the number of stars formed, but decreases
+by the amount of mass lost back to the ISM from the previous generation of
+stars. For the elements, we have
 \[
     \frac{\mathrm{d}(gZ_{i})}{\mathrm{d}t} =
     e_{Z}(i) - Z_{i}\psi + Z_{F}F - Z_{E}E
-\]
-($Z_i$ is the mass fraction of element $i$; hereafter we'll drop
-the subscript for simplicity). The mass in each element
-\emph{increases} by:
+    \]
+($Z_{i}$ is the mass fraction of element $i$; hereafter we'll drop
+the subscript for simplicity). The mass in each element \emph{increases} by:
 \begin{itemize}
     \item amount of mass released by previous generations
     \item amount of mass added by inflow
@@ -1966,7 +2075,7 @@ The term $e_{Z}$ is given by:
     e_{Z} = \int_{m_{\tau}}^{m_{U}}{
         \left[(m-m_{rem})Z(t-\tau(m))+mq_{Z}\right]
         \psi(t-\tau(m))\xi(m)\textrm{d}m}
-\]
+    \]
 where $q_{Z}$ represents the fractional mass of element $Z$ synthesized and
 ejected during stellar evolution (so left term in brackets gives material which
 returns unprocessed and right term gives newly synthesized contribution).  In a
@@ -1974,86 +2083,101 @@ simple model, the synthesized masses are independent of the metallicity of the
 population (although we know this is not true for some elements, more on this
 later).
 
-To simplify, consider an approximation to these formulae called
-the \textit{instantaneous recycling approximation} which assumes
-that all elements are returned instantaneously - good for products
-of massive stars, but less good for products from lower mass stars,
-e.g.\ iron. Then we have
+To simplify, consider an approximation to these formulae called the
+\textit{instantaneous recycling approximation} which assumes that all elements
+are returned instantaneously - good for products of massive stars, but less
+good for products from lower mass stars, e.g.\ iron. Then we have
 \[
     e = \psi\int{(m-m_{\textrm{rem}})\xi(m)\textrm{d}m}
     \equiv (1-\alpha)\psi
-\]
+    \]
 where $\alpha$ is the \textit{lock-up fraction}: the fraction
 of mass ``locked up'' in stars and remnants.
 \[
     \alpha = 1-\int_{m_{\tau}}^{m_{U}}{{m'}\xi(m')\mathrm{d}{m'}} +
     \int_{m_{\tau}}^{m_{U}}{m_{\mathrm{rem}}(m)\xi(m)\mathrm{d}m}
-\]
+    \]
 where the second term is the total mass in stars that have died, and
 the third term is the mass from those stars that have been locked up
 in remnants.
 
 Alternatively, one can think of the \textit{Return fraction},
-$R=1-\alpha$. This gives us
+$R=1-\alpha$. This gives
 \[
     \frac{\mathrm{d}g}{\mathrm{d}t} = F-E+(1-\alpha)\psi-\psi=F-E-\alpha\psi
-\]
+    \]
 We also have
 \[
-\]
+    e_{Z} = (1-\alpha)Z_{\psi} + \psi \int_{m_{L}}^{m_{U}}{
+        mq_{Z}\xi(m)\mathrm{d}m}
+    \]
 We define the stellar \textit{yield}, $p_{Z}$ to be
 \[
-\]
+    p_{Z} = \frac{\int_{m_{L}}^{m_{U}} {mq_{Z}\xi(m) \mathrm{d}m}} {\alpha}
+    \]
 so the yield gives the fraction of the remnant population synthesized
 and released in each element. This gives
 \[
-\]
+    \frac{\mathrm{d}(gZ)}{\mathrm{d}t} =
+    (1-\alpha)Z\psi + \alpha\psi{p} -Z\psi + Z_{F}F - Z_{E}E
+    \]
 where the RHS terms are recycled material, new production, lock-up in
 new stars, inflow, and outflow. Simplifying, we have
 \[
-\]
-Using mass locked up in stars, $s$, as the independent variable
+    \frac{\mathrm{d}(gZ)}{\mathrm{d}t} =
+    -\alpha{Z}\psi + \alpha\psi{p} + Z_{F}F - Z_{E}E
+    \]
+Using mass locked up in stars, $s$, as the independent variable:
 \[
-\]
+    s(t) = \alpha\int_{0}^{t} {\psi'(t')dt'}
+    \]
 \[
-\]
+    \frac{\mathrm{d}s}{\mathrm{d}t} = \alpha\psi
+    \]
 so we get
 \[
-\]
+    \frac{\mathrm{d}g}{\mathrm{d}s} = \frac{F-E}{\alpha\psi} - 1
+    \]
 \[
-\]
+    \frac{\mathrm{d}gZ}{\mathrm{d}s} = -Z + p +
+    \frac{Z_{F}F}{\alpha\psi} -
+    \frac{Z_{E}E}{\alpha\psi}
+    \]
 If we make a further assumption of a uniform wind, $Z_{E}=Z$, then
 \[
-\]
+    \frac{\mathrm{d}gZ}{\mathrm{d}s} = -Z\left( 1 + \frac{E}{\alpha\psi}\right) +
+    p + \frac{Z_{F}F}{\alpha\psi}
+    \]
 and finally,
 \[
     g\frac{\mathrm{d}Z}{\mathrm{d}s} =
     \frac{\mathrm{d}(gZ)}{\mathrm{d}s} - Z\frac{\mathrm{d}g}{\mathrm{d}s} =
     p + (Z_{F} - Z)\frac{F}{\alpha\psi}
-\]
-\textcolor{bred}{This is a basic equation of chemical synthesis}.
+    \]
+\textbf{This is a basic equation of chemical synthesis}.
 The \emph{simplest} model for chemical evolution assumes no
 inflow or outflow, a homogeneous system without any spatial
 differentiation of metallicity, zero initial metallicity, and
 yields which are independent of composition. This is known as the
-\textit{Simple, one-zone model}.
+\textcolor{bred}{\textbf{Simple, one-zone model}}.
 
 In the Simple model, we have
 \[
     \frac{\mathrm{d}g}{\mathrm{d}t} = -\frac{\mathrm{d}s}{\mathrm{d}t}
-\]\[
+    \]
+\[
     g\frac{\mathrm{d}Z}{\mathrm{d}s} = -g\frac{\mathrm{d}Z}{\mathrm{d}g} = p
-\]
-% ---------------------------------page 15-----------------------------------%
+    \]
+
 Solving for $Z(g)$, we get
 \[
-\]
+    \]
 where $\mu$ is the gas fraction
 \[
-\]
+    \]
 The average abundance in stars is
 \[
-\]
+    \]
 which tends to $p$ as $\mu$ becomes small, i.e.\ the gas fraction becomes
 small. For larger gas fractions, the mean $<Z>$ will be lower than the yield.
 Note that this is the mean metallicity weighted by stellar mass, not by
@@ -2068,13 +2192,8 @@ determination is possible from measurements of the \textit{equivalent width}.
 When lines are more crowded, usually approached by spectral synthesis.
 
 In all cases, to measure abundances, need to know:
-\begin{description}[
-            labelindent=0in,
-            labelwidth=2in
-            style=multiline,
-            itemsep=2ex,
-        ]
-    \item [atmospheric parameters]
+\begin{itemize}
+    \item atmospheric parameters
         \begin{itemize}
             \item Temperatures ($T_{e}$) may be derived from colors
                 (unless reddening is an issue); also often derived from
@@ -2087,20 +2206,20 @@ In all cases, to measure abundances, need to know:
                 (e.g., FeI vs.\ FeII).
             \item microturbulence
         \end{itemize}
-    \item [atomic parameters]
+    \item atomic parameters
         \begin{itemize}
             \item Astrophysical $gf$ values: Atomic parameters are determined
                 from lab experiments, but not always available at high quality.
                 $gf$ values are derived from measurements of stars in which
                 abundance is presumed to be known from other measurements.
         \end{itemize}
-\end{description}
+\end{itemize}
 Abundances in unresolved populations are challenging, for the reasons
 previously discussed (age-metallicity degeneracy, blending of different
 features, etc.) Present day abundances in galaxies best measured through
 gas abundances (to be discussed).
 
-Units for measuring abundances:
+\subsubsection{Units for measuring abundances}
 \begin{itemize}
     \item Stellar abundances: usually measured relative to the sun
         $[X/Y]$:
@@ -2111,8 +2230,7 @@ Units for measuring abundances:
         with 12 added (to keep the numbers positive?)
 \end{itemize}
 
-
-\paragraph{Abundances as function of time}
+\subsubsection{Abundances as function of time}
 The simple model predicts an increase of the metallicity with time.
 The rate of increase depends on the SFR.
 For example, if we \emph{assume} that the SFR is proportional to the
@@ -2120,10 +2238,10 @@ gas mass, $\mathrm{d}s/\mathrm{d}t = \omega{g}$, where $\omega = constant$,
 we get:
 \[
     z = \omega{t}
-\]
+    \]
 and the abundance is expected to increase linearly with time.
 
-\paragraph{Relative abundances of different elements}
+\subsubsection{Relative abundances of different elements}
 Simple model predicts that, at any time, elements will be found in relative
 abundances given by the ratio of their yields. This is true to some extent
 for $\alpha$ elments, e.g.\ in the solar neighborhood\footnote{from
@@ -2187,44 +2305,47 @@ Intrinsic gas characteristics:
     \item total gas mass
 \end{itemize}
 Gas in galaxies exists in multiple phases:
-\begin{center}
-\begin{tabular}{l l}
-    phase & temperature\\
-    \hline
-    molecular clouds & $\lesssim$ 100 K\\
-    cold, neutral (atmic) medium (CNM) & $\lesssim$ 100 K\\
-    warm, neutral (atmic) medium (WNM) & $\lesssim$ 8000 K\\
-    warm, ionized medium (WIM/DIG) & $\sim$ 8000 K\\
-    hot, ionized medium (HIM) & $> 10^{5}$ K\\
-\end{tabular}
-\end{center}
-Also denser ionized gas in HII regions, SN remnants, PNe.
-CNM/WNM/WIM/HIM perhaps roughly in pressure equilibrium, but note
-other support mechanisms such as turbulence, magnetic fields, etc.
+\begin{description}[labelwidth=20em, ]
+    \item [molecular clouds] T $\lesssim$ 100 K
+    \item [cold, neutral (atomic) medium (CNM)] T $\lesssim$ 100 K
+    \item [warm, neutral (atomic) medium (WNM)] T $\lesssim$ 8000 K
+    \item [warm, ionized medium (WIM/DIG)] T $\gtrsim$ 8000 K
+        (DIG = diffuse ionized medium)
+    \item [hot, ionized medium (HIM)] T $ > 10^{5}$ K
+    \item [denser, ionized gas] $n \approx x$
+        \begin{itemize}
+            \item HII regions
+            \item AGN
+            \item SN remnants
+            \item PNe
+        \end{itemize}
+\end{description}
+CNM/WNM/WIM/HIM perhaps roughly in pressure equilibrium, but there are
+other support mechanisms such as turbulence and magnetic fields.
 If they are in pressure equilibrium, higher temperature components
 have correspondingly lower densities.
 
 \subsection{Observing and characterizing the gas}
 Two general methods:
-\paragraph{Emission}
-Atomic lines
-\begin{itemize}
-    \item Permitted: In low temperature gas (T = 10000 K $\sim$ 1eV),
+\paragraph{1. Emission}
+\subparagraph{Atomic lines}
+\begin{description}[labelwidth=5em, leftmargin=8em ]
+    \item [Permitted] In low temperature gas (T = 10000 K $\sim$ 1eV),
         the energy difference to excited states is typically too high
         for excitations to occur from collisions. An exception is
         H lines from recombination; these exist from UV through radio
         wavelengths.
-    \item ``Forbidden'': Low transition probabilites; important in low
+    \item [``Forbidden''] Low transition probabilities; important in low
         density gas because collisions are less frequent, allowing time
         for radiative transitions to occur before collisional de-excitation.
         Wavelengths are typically in the optical and UV regimes. Note that
-        many of these are doublets because of multiple angular momentum
-        levels. Most prominent in optical: [OIII], [NII], [SII], [OII], [OI]
-    \item Fine-structure lines, transitions ivolving spin alignment with
+        many of these are \textit{doublets because of multiple angular momentum
+        levels}. Most prominent in optical: [OIII], [NII], [SII], [OII], [OI]
+    \item [Fine-structure] transitions involving spin alignment with
         orbital alignment. Typically FIR wavelengths
-    \item Hyperfine-structure lines, transitions involving electron spin
+    \item [Hyperfine-structure] transitions involving electron spin
         alignment with nuclear spin. Radio wavelengths.
-\end{itemize}
+\end{description}
 \subparagraph{Molecular lines}
 \begin{itemize}
     \item Vibrational transitions, typically IR wavelengths
@@ -2232,31 +2353,39 @@ Atomic lines
         rotational transitions only strong for non-symmetric molecules
         that have a dipole moment (not H$_{2}$, although it can have
         some IR features if shock heated). CO emission is most prominent.
+    \item \href{http://astronomy.nmsu.edu/holtz/a555/resources/irism.gif}
+        {example spectrum}.
 \end{itemize}
-Emission in many cases is proportional to $\rho^{2}$. If the excitation
-mechanism is collisional (i.e., requires two particles), the observational
-quantity is the \textit{emission measure}: $\propto\int{n_{e}^{2}\mathrm{d}\ell}$.
+Emission in many cases is proportional to density \emph{squared}.
+If the excitation mechanism is collisional (i.e., requires two particles),
+the observational quantity is the \textit{emission measure}:
+\[
+    EM \propto \int{n_{e}^{2}\mathrm{d}\ell}
+    \]
 
-\subsubsection{Absorption}
-\paragraph{Atomic lines}
-\begin{itemize}
-    \item Typically from ground state, e.g.\ H Lyman transitions,
-        Na 5890, CaII
-    \item Most prominent in optical
-\end{itemize}
-\paragraph{Molecular lines}
-\begin{itemize}
-    \item Mostly UV, e.g.\ H$_{2}$ absorption
-\end{itemize}
+\paragraph{2. Absorption}
+\subparagraph{Atomic lines}
+Typically from ground state, e.g.\ H Lyman transitions, Na 5890, CaII
+most prominent in optical
+
+\subparagraph{Molecular lines}
+Also mostly UV, e.g.\ H$_{2}$
+\href{http://astronomy.nmsu.edu/holtz/a555/resources/uvabsorp.htm}
+{absorption}
+
 Absorption is generally more sensitive, but it does require a bright
 background source, e.g.\ UV light from quasars. Absorption is
-linearly proportional to density. The observational quantity is
-\textit{column density}: $\propto\int{n\mathrm{d}\ell} $
+\emph{linearly} proportional to density. The observational quantity is
+\textit{column density}:
+\[
+    CD \propto \int{n\mathrm{d}\ell}
+    \]
 
-\subsection{Heating and cooling} What determines temperature?
+\subsection{Heating and cooling}
+What determines gas temperature?
 \subsubsection{Heating}
 \begin{itemize}
-    \item Radiative heating (both via ionization and heating through dust)
+    \item Radiative heating (both via ionization and via heating through dust)
     \item Mechanical heating (shocks, jets, etc.)
     \item Gravitational heating
     \item Cosmic rays
@@ -2264,12 +2393,13 @@ linearly proportional to density. The observational quantity is
 \subsubsection{Cooling}
 \begin{itemize}
     \item Bremsstrahlung (free-free)
-    \item Line emission from heavier elements
-    \item Molecules
-    \item Cooling curves and contributions (Sutherland \& Dopita 1983)
+    \item Line emission from heavier elements, molecules
+    \item Cooling curves and contributions
+        \href{http://adsabs.harvard.edu/abs/1993ApJS...88..253S}
+        {(Sutherland \& Dopita, 1983)}
 \end{itemize}
 
-\subsection{HI measurements: 21 cm line}
+\subsection{Cold gas: HI measurements with 21 cm line}
 \begin{itemize}
     \item Traces neutral medium
     \item From spin-flip transition: very rare (10 Myr) but H is very
@@ -2280,29 +2410,33 @@ linearly proportional to density. The observational quantity is
     \item HI flux at a given location gives column density (atoms/surface
         area):
         \[
-        n_{HI} [\mathrm{cm}^{-2}] \approx 1.82\times10^{18}\int{
+        n_{HI}\; [\mathrm{cm}^{-2}] \approx 1.82\times10^{18}\int{
             \left[\frac{T_{b}(\nu)}{\mathrm{K}}\right]\mathrm{d}
             \left[\frac{v}{\mathrm{km\;s}^{-1}}\right]}
         \]
-        Typical column densities in galaxies $\sim 10^{20}\;\mathrm{cm}^{-2}$
+        Typical column densities in galaxies are
+        $\sim 10^{20}$ cm$^{-2}$
     \item Total HI flux (integrated over entire galaxy), along with distance,
         gives total HI mass:
         \[
             \frac{M_{HI}}{M_{\odot}} = 2.36\times10^{5}\left(
             \frac{D}{\mathrm{Mpc}}\right)^{2}F_{HI}
-        \]
+            \]
         for $F_{HI}$ in Jy km s$^{-1}$.
     \item 21-cm single dish observations have low spatial resolution.
         Higher resolution possibly with interferometric observations
         (e.g.\ VLA) but information on smooth distribution/total mass can
         be lost.
-    \item HI can be observed to very low column densities
-        ($\sim10^{13}\;\mathrm{cm}^{2}$) in absorption, but only for
+    \item In absorption, HI can be observed to very low column densities
+        ($\sim10^{13}$ cm$^{2}$), but only for
         the Lyman series. Primary tool for studying the IGM:
-        Lyman alpha clouds, epoch of reionization, quasar absorption
-        line systems\ldots
-    \item Typical column densities are\ldots
-        Total mass in HI can be a significant fraction of total stellar
+        \begin{itemize}
+            \item Lyman alpha clouds
+            \item epoch of reionization
+            \item quasar absorption line systems
+        \end{itemize}
+    \item Typical column densities are $10^{13} - 10^{21}$ cm$^{-2}$
+    \item Total mass in HI can be a significant fraction of total stellar
         mass, increasingly important in lower luminosity galaxies.
     \item Temperature might be inferred from width of line, but need to
         be careful about turbulence, cloud structure, etc. Estimate can
@@ -2311,25 +2445,65 @@ linearly proportional to density. The observational quantity is
 \end{itemize}
 
 \subsection{Molecular gas}
+\begin{itemize}
+    \item Most dominant molecule is $H_{2}$, but since this has no net dipole moment,
+        it doesn't have strong rotational transition emission.
+        There are some mid-IR lines from shock-heated $H_{2}$
+    \item $H_2$ can be observed in absorption in the far UV
+    \item Molecular gas in emission most often traced by CO. However, relating
+        CO emission strength to total amount of molecular gas is not
+        necessarily trivial. The X (CO) factor
+        relates observed strength of CO to $H_{2}$ column density:
+        \[
+            X \equiv \frac{
+                N(H_{2})/\mathrm{cm}^{-2}}{
+                I_{CO}/\mathrm{km\; s}^{-1}}
+            \sim 2 \times 10^{20}
+            \]
+        However, there are many issues with this, and almost certainly
+        depends on metallicity.
+    \item Overall mass contribution\ldots less than atomic, but significant?
+\end{itemize}
+
 \subsection{Warm ionized gas}
+Also known as ``Diffuse Ionized Gas'', or ``DIG''.
+\begin{itemize}
+    \item Visible in H$\alpha$
+    \item Heating source likely photoionization, visible through
+        recombination.
+    \item Hard to estimate masses
+    \item Pulsar dispersion gives measurement of $\int{n_{e}\mathrm{d}\ell}$,
+        which can help a lot.
+\end{itemize}
+
 \subsection{Hot gas}
-If ``very'' hot, detectable in X rays: thermal Bremstrahlung (free-free)
-cutoff frequency decreases with increasing temperature. At lower temps
-(T $\sim$ 10$^{5}$ K), very hard to detect. Soft X rays are absorbed
-by neutral hydrogen. Detectalbe in absorption by high ionized metals,
-e.g.\ OVI, CIV, NV. Very hard to determine total mass, but mass may be
-very significant, just from cosmological baryon fraction \mynotes{???}
+\begin{itemize}
+    \item If ``very'' hot \mynotes{(number please?)}, detectable in X rays:
+        thermal Bremstrahlung (free-free) cutoff frequency decreases with
+        increasing temperature.
+    \item  At lower temperatures (T $\sim$ 10$^{5}$ K), very hard to detect:
+        soft X rays are absorbed by neutral hydrogen.
+    \item Detectable in absorption by highly ionized metals,
+        e.g.\ OVI, CIV, NV.
+    \item Very hard to determine total mass, but mass may be
+        very significant, just from cosmological baryon fraction \mynotes{???}
+\end{itemize}
+
 \subsection{Denser ionized gas}
-Easiest gas to observe in galaxies.
+\begin{itemize}
+    \item Easiest gas to observe in galaxies.
+\end{itemize}
 \subsection{Chemical evolution and abundances from gas}
 \subsection{Distribution of gas within spirals}
-Neutral gas primarily observed in blue sequence galaxies.
-HI distribution usually extends beyond optical distribution of starlight,
-while molecular is more centrally concentrated. In some galaxies,
-CO traces H$\alpha$ well, but not in others. Hot gas is observed in
-most galaxies.
+Neutral gas primarily observed in blue sequence galaxies. HI distribution
+usually extends beyond optical distribution of starlight, while molecular is
+more centrally concentrated. In some galaxies, CO traces H$\alpha$ well, but
+not in others. Distribution of HI is very flat compared to distribution of
+molecular gas (and stars). Extended hot gas is observed in most galaxies.
 
 \subsection{Gas as a kinematic tracer}
+\mynotes{(This section not in online notes anymore\ldots)}
+
 Measuring galaxy rotation - both optically and using HI (both spatially
 resolved, e.g.\ VLA, and unresolved data).
 \begin{itemize}
@@ -2345,9 +2519,149 @@ Rotation is often characterized by $v_{max}$: maximum of rotation curve
 characterized by line widths, e.g.\ $W_{50}, W_{20}$ (width at 50\% and 20\% of
 the peak line flux, respectively).
 
-\subsection{Interaction between stars and gas}
-\subsubsection{supernovae and mass loss from stars}
 
+\subsection{Interactions between gas and stars}
+\subsubsection{Star formation}
+Due to the lack of detailed knowledge of star formation, and lack of sufficient
+resolution, star formation is parameterized within models, e.g.\ based on
+stability arguments given gas densities and temperatures. Parameterization
+is tuned by need to match characteristic observed relations of observed star
+formation.
+
+Star formation parameterizations: want to relate SFR to
+some observed property.
+\begin{itemize}
+    \item Measure current star formation rate. Three main methods:
+        \begin{enumerate}
+            \item $H\alpha$ emission (but note possible issues with assumed
+                IMF, leakage)
+            \item UV as more direct SFR indicator (but associated
+                uncertainty from extinction)
+            \item IR emission from dust heated by young stars
+        \end{enumerate}
+        Typical galaxy SFRs are 0-100 M$_{\odot}$ yr$^{-1}$.
+        The \textit{specific star formation rate (SSFR)} is
+        the SFR per unit \textit{mass} (usually stellar).
+        A typical galaxy has SSFR $\sim 10^{-10}$ yr$^{-1}$.
+        For nearby resolved galaxies, we can
+        also consider the surface density of star formation.
+    \item Relate star formation with gas properties: Simplest quantity is
+        gas density, observed as gas surface density. Can consider density
+        of neutral gas, molecular gas, or a combination of all phases.
+        Molecular might be considered to be the most relevant, but it is
+        difficult to observe (also, recall profiles of H$\alpha$ vs gas
+        density shown earlier).  Also, molecular gas forms from neutral
+        gas.
+    \item Schmidt law:
+        \[
+            SF \propto \rho^{n} \propto \Sigma^{N}
+            \]
+        (where $\Sigma^{N}$ is relevant as it is the observable).  Schmidt
+        (1959) suggested $N \sim 2$ based on observations of HI and stars
+        in Milky way. Note that a fixed star formation efficiency would
+        have SFR proportional to gas mass.
+    \item Measured relations show a more complex behavior (Kennicutt Fig
+        8). Slope in regions of high gas density roughly comparable between
+        galaxies (Schmidt law), but different galaxies have different
+        thresholds for SF. Molecular gas may be more relevant above
+        threshold, see e.g. Mo Fig 9.4
+    \item Kennicutt SF law: has a threshold density, then a power law
+        dependence
+\end{itemize}
+several ``scenarios'' might give observed trends: consider two possible
+qualitative physical mechanisms behind observed relations.
+\begin{enumerate}
+    \item star formation related to growth of instabilities suggests
+        \[
+            \rho_{SFR} \propto \frac{\rho_{gas}}{(G\rho_{gas})^{-0.5}} \propto
+            \rho^{1.5}
+            \]
+        we observe surface density, not density. For \emph{fixed} scale height of
+        gas, these are directly proportional, but not for \emph{variable} scale
+        height
+    \item Alternatively, perhaps SF is related to the local dynamical
+        timescale (e.g., SF triggered by passage through spiral arms). Then
+        \[
+            \Sigma_{SFR}
+            \propto \frac{\Sigma_{gas}}{(\tau_{dyn})}
+            \propto \Sigma\Omega_{gas}
+            \]
+\end{enumerate}
+Both give comparable SFRs (Kennicutt Figure 7).
+
+For thresholds, threshold density might be expected from consideration of
+stability of disks - below critical density, disks are stable against large
+scale perturbations; for a thin isothermal gas disk,
+$\Sigma_{c}(r) = \alpha \kappa(r) \sigma / 3.36$G,
+where $\sigma$ is the gas velocity dispersion, and $\kappa$ is the
+epicyclic frequency, which is related to the rotation curve. The critical
+density depends on rotation profile and velocity dispersion. Density of gas
+in spirals matches reasonably well the profile of critical density (Figs 10
+\& 11). In this model, the threshold surface density is a function of radius
+(Fig 14), and varies from galaxy to galaxy. Suggests threshold as f(r) then
+Schmidt law with $N\sim 1.3$ - with several possible systematic
+uncertainties (extinction, other factors which vary with r). However,
+behavior near the threshold is significantly steeper - and most regions of
+most galaxies appear to be near the threshhold.
+
+there are other possible explanations as well, e.g. ability to develop
+molecular clouds at low densities..
+
+see Leroy et al 2008 for nice discussion of lots of different
+parameterizations
+\begin{itemize}
+    \item Focus on star formation efficiency (SFE), i.e. SFR / gas mass
+    \item Find roughly constant SFE in molecular dominated regions, with
+        declining SFE in outer regions (Figure 1). Note that this suggests
+        there is not a simple threshold.
+    \item Simple SF ``laws'' do not appear to well match observations (e.g.
+        Figure 5 and Figure 7)
+    \item Perhaps the issue has to do with conditions for molecular cloud
+        formation
+    \item Note issue of observing surface mass density may fall short if
+        spatial resolution is insufficient to resolve real structure! (see,
+        e.g. Leroy et al 2013a)
+    \item Leroy et al 2013b suggest that there are measureable deviations
+        of SFE in molecular dominated regions, that may be related to
+        variations of CO/H
+\end{itemize}
+Simulations often adopt some prescription related to one of these
+mechanisms
+
+global star formation law. Star forming galaxies show range of current star
+formation rates from $\sim$ 1 Msun/yr to hundreds of Msun/yr; what sets the
+SFR? Results from a sample of normal galaxies (Kennicutt Fig 2), starburst
+galaxies(Kennicutt Fig 5), and all galaxies combined (Fig 6). Remarkably
+tight relation is seen over wide range of densities and star formation
+rates.
+
+\subsubsection{Supernovae and mass loss from stars}
+supernovae clear out ``superbubbles'' in the ISM; it is possible that these
+superbubbles even propagate to the vertical edges of the disks and allow
+for mass outflow from the disk into the halo. If this is the case, one
+might expect this gas to eventually fall back down onto the disk, leading
+the the ideas of galactic fountains and chimneys.
+\begin{itemize}
+    \item Note active study/debate: extraplanar gas arising from disk
+        (outflow/inflow) or from IGM (inflow), e.g. Milky Way high velocity
+        clouds (HVCs), lagging gas in galaxies
+    \item Note implication for chemical evolution
+\end{itemize}
+Significant galactic winds (outflows) are observed in starburst galaxies,
+e.g. M82. These may be more common at higher redshift.
+
+also possible that the shocks from supernovae act to compress gas clouds,
+possibly trigering further star formation in nearby regions.
+
+These processes are important for understanding:
+\begin{itemize}
+    \item feedback mechanisms by which star formation may be self-regulating
+    \item chemical evolution of galactic disks
+    \item the existence of gas halos around galaxies
+    \item the escape of ionizing radiation from galactic disks.
+    \item overall issue of ``gas cycle'' in galaxies, e.g. Fig 2 from Lilly
+        et al 2013
+\end{itemize}
 
 \newpage
 \section{Dust}
