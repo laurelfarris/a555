@@ -42,6 +42,12 @@
 \definecolor{mypurple}{rgb}{0.41, 0.16, 0.38}
 \definecolor{pinegreen}{rgb}{0.0, 0.47, 0.44}
 
+\definecolor{hl}{rgb}{0.61, 0.87, 1.0}
+\newcommand{\test}[1]{%
+    \begin{center}
+        \colorbox{hl}{\parbox{0.9\textwidth}{\emph{\centering #1}}}
+    \end{center}}
+
 \newcommand{\mynotes}[1]{\textcolor{cadmiumgreen}{#1}}
 \usepackage{tikz}\usetikzlibrary{backgrounds, shapes.misc}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]
@@ -83,22 +89,20 @@
 \titlespacing*{\subparagraph}{0pt}{1ex}{-2ex}
 
 % Lists
-\setlist[itemize]{noitemsep, topsep=-1ex}
+\setlist[itemize]{noitemsep, topsep=0ex}
 \setlist[itemize, 1]{label=$\vcenter{\hbox{\footnotesize$\bullet$}}$}
 \setlist[itemize, 2]{label=$\vcenter{\hbox{\footnotesize$\circ$}}$}
 %\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 %\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
-\setlist[enumerate]{noitemsep, topsep=-1ex}
-\setlist[description]{noitemsep, topsep=-1ex, labelindent=2em,}
+\setlist[enumerate]{noitemsep}
+\setlist[description]{noitemsep}
 \definecolor{cadet}{rgb}{0.33, 0.41, 0.47}
 
 \renewcommand{\descriptionlabel}[1]{%
     \bfseries\textcolor{cadet}{#1}
 }
 \usepackage{hyperref}
-\hypersetup{colorlinks=true,
-    urlcolor=myblue,
-    linkcolor=black,}
+\hypersetup{colorlinks=true, urlcolor=myblue, linkcolor=black,}
 \urlstyle{same}
 \newcommand{\myref}[1]{\textcolor{pinegreen}{\S{} \ref{#1}}}
 
@@ -107,11 +111,26 @@
 \tableofcontents
 \newpage
 \setlength{\parskip}{10pt}
-\hypersetup{colorlinks=true,
-    urlcolor=myblue,
-    linkcolor=pinegreen,}
+\hypersetup{colorlinks=true, urlcolor=myblue, linkcolor=pinegreen,}
 
-\section{History}
+\section{Introduction}
+Galaxies: defined as a gravitationally bound collection of stars,
+gas, dust, dark matter, and black holes.
+
+Goals:
+\begin{itemize}
+    \item Understand general current picture of galaxies and galaxy evolution
+    \item Basic understanding of how galaxies are observed
+    \item Review statistical properties of the galaxy population, and specific properties of different types of galaxies
+    \item Understand physical tools by which we learn and characterize different components of galaxies
+    \item If time permits: what we can learn from the Milky Way
+\end{itemize}
+
+ASTR 555 intended to provide basic overview of galaxies and their components.
+ASTR 616 to focus on galaxy formation and evolution.
+
+\subsection{History}
+\textcolor{red}{Incomplete!}
 \begin{enumerate}
     \item 1700's: Messier objects, 39 of
         which are actually galaxies (total of 110 in the final catalogue).
@@ -136,36 +155,33 @@
         DM and dark energy.
 \end{enumerate}
 
-\section{Approaches}
+\subsection{Approaches}
 Multifaceted approach to studying galaxy formation and evolution:
-\subsection{Galaxy ``archaeology''}
-Study nearby galaxies in detail,
+\subsubsection{Nearby galaxies}
+Galaxy ``archaeology'': study nearby galaxies in detail,
 attempt to understand processes that led to their current
-appearence.
-\begin{itemize}
-    \item Advantages: can resolve structure, individual stars
+appearance.
+\begin{description}[labelindent=2em, labelwidth=8em, leftmargin=12em]
+    \item [Advantages] can resolve structure, individual stars
         in nearest galaxies, high S/N observations
-    \item Disadvantages: some information may be erased by
-        physical processes (e.g.\ merging), degeneracies in
-                    integrated light
-\end{itemize}
-\subsection{Distant galaxies}
-look at galaxy samples at different lookback
-times, study distribution of properties (galaxy population) as
-a function of time.
-\begin{itemize}
-    \item Advantages: direct probe of different stages.
-        Relationship between lookback time and redshift.
-    \item Disadvantages: brightness/selection effects, lack
-        of detail, difficulty in associating objects at one redshift
-                    to those at another.
-\end{itemize}
-\subsection{Physics of galaxy formation}
-\begin{itemize}
-    \item Advantages: some physics (e.g.\ gravity) is well
-        understood
-    \item Disadvantages: some physics (e.g.\ star formation)
-        is not. Dyanamic range of the problem is huge.
+    \item [Disadvantages] some information may be erased by physical processes
+        (e.g.\ merging), degeneracies in integrated light
+\end{description}
+\subsubsection{Distant galaxies}
+Look at galaxy samples at different lookback times, study distribution of
+properties (galaxy population) as a function of time.
+\begin{description}[labelindent=2em, labelwidth=8em, leftmargin=12em]
+    \item [Advantages] direct probe of different stages.
+        \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/misc/tz_lcdm.htm}
+        {Relationship between lookback time and redshift}.
+    \item [Disadvantages] brightness/selection effects, lack of detail,
+        difficulty in associating objects at one redshift to those at another.
+\end{description}
+\subsubsection{Physics of galaxy formation}
+\begin{description}[labelindent=2em, labelwidth=8em, leftmargin=12em]
+    \item [Advantages] some physics (e.g.\ gravity) is well understood
+    \item [Disadvantages] some physics (e.g.\ star formation) is not well
+        understood. Dynamic range of the problem is huge:
         \begin{itemize}
             \item Dynamic range in distances, from stellar scales
                 to largest scale structure.
@@ -173,23 +189,38 @@ a function of time.
                 (1 $M_{\odot}$) to
                 largest scale structure ($10^6-10^{15} M_{\odot}$)
         \end{itemize}
+\end{description}
+
+\subsection{Overview of galaxies and galaxy formation}
+\paragraph{Cosmological context of galaxy formation and evolution:}
+\begin{itemize}
+    \item Baryonic matter (and some leptons), non-baryonic matter, dark energy
+    \item \href{http://astronomy.nmsu.edu/holtz/a555/resources/Cosmological_Composition_1.png}
+        {Current composition of the universe}
+    \item \href{http://astronomy.nmsu.edu/holtz/a555/resources/Cosmological_Composition_2.png}
+        {Past composition of the universe}
 \end{itemize}
 
-\section{Overview of galaxies and galaxy formation}
-Components:
+\paragraph{Main components:}
 \begin{description}
     \item [Dark Matter] (DM); usually non-baryonic, though even some baryonic
         matter can be hard to see, such as brown dwarfs. DM dominates mass of
-        galaxies.
+        galaxies, and is currently detectable only by its gravitational effect
+        on motions, or background light (lensing).
     \item [Stars] Observed properties depend primarily on mass, age,
         and composition. Variety leads to multiple luminosities and colors
         in galaxies.
-    \item [ISM] molecular, atomic, and ionized gas phases; dust; mass
-        of ISM varies widely between galaxies.
+    \item [gas] molecular, atomic, and ionized gas phases. Low density gas
+        can be hard to detect.
+    \item [dust] mass of ISM varies widely between galaxies. Observed via
+        emisison and absorption.
     \item [Central (supermassive) black holes]
+        Observed indirectly via gravitational effects, accretion
 \end{description}
-Why do galaxies appear as they do? Important processes (not necessarily
-in chronological order):
+
+\paragraph{Formation}
+How do galaxies come to appear as they do?
+Important processes (not necessarily in chronological order):
 \begin{itemize}
     \item Gravitational collapse (of dark matter, and later, baryons)
         in cosmological framework.
@@ -216,9 +247,10 @@ in chronological order):
         \end{itemize}
     \item Feedback/mass loss
         \begin{itemize}
-            \item How much energy? Does mass escape or just delay accretion?
-            \item What objects generate it? Winds, supernovae, galactic
-                nucleii? How?
+            \item How much energy? Mechanical or thermal?
+                Does mass escape or just delay accretion?
+            \item What objects generate it, and how? Possibilities:
+                Winds, supernovae, galactic nucleii.
         \end{itemize}
     \item Continued accretion from IGM
         \begin{itemize}
@@ -226,20 +258,104 @@ in chronological order):
             \item What mode?
             \item What composition?
         \end{itemize}
-    \item Merging: Gas-rich vs.\ gas-poor
-    \item Cluster (group?) environment: ram pressure, tides
+    \item Merging:
+        \begin{itemize}
+            \item halo merging; dynamical friction
+            \item galaxy merging: gas-rich (``wet'') vs.\ gas-poor (``dry'')
+        \end{itemize}
+    \item Other environmental processes:
+        \begin{itemize}
+            \item Cluster (group?) environment: ram pressure, tides
+        \end{itemize}
     \item Dynamical evolution
         \begin{itemize}
-            \item Dynamical instabilities
+            \item Dynamical instabilities; e.g.\ bars and spiral arms
             \item Migration
             \item Internal vs.\ external triggers
         \end{itemize}
 \end{itemize}
 These processes have \emph{characteristic timescales}, and the relation between
 them may influence how galaxies form, evolve, and appear.\footnote{
-see Mo et al.}
+    see a \href{http://astronomy.nmsu.edu/holtz/a555/resources/mofig1.1.gif}
+    {schematic flowchart} and some of the
+    \href{http://astronomy.nmsu.edu/holtz/a555/resources/mofig1.1.gif}
+    {complicated links} from Mo et al.}
 
-\subsection{Example}
+\paragraph{Hubble time:}
+\[
+    t \propto H_{0}^{-1}
+    \]
+\paragraph{Critical density:}
+Value today:
+\[
+    \rho_{crit} = \frac{3H_{0}^{2}}{8\pi{G}}
+    \approx 10^{-29}\;[\mathrm{g\;cm}^{-3}]
+    \approx 5.5\times10^{-6}\;[\mathrm{cm}^{-3}]
+    \]
+$\rho_{crit}$ increases with redshift. ``Collapsed'' halo has
+$\overline{\rho} \approx 200\rho_{crit}$.
+
+\paragraph{Gravitational timescales}
+Orbital time:
+\[
+    t_{orb} = \left( \frac{3\pi}{G\overline{\rho}} \right)^{1/2}
+    \]
+Freefall time (time for unsupported cloud to collapse\ldots doesn't happen!):
+\[
+    t_{ff} = \left( \frac{3\pi}{32G\overline{\rho}} \right)
+    \sim 2.1\times10^{9}\quad [f^{1/2}n_{-3}^{-1/2}\; \mathrm{yr}]
+    \]
+\begin{itemize}
+    \item $n_{-3}$ = gas density [10$^{-3}$ cm$^{-3}$]
+    \item $f$ = gas fraction of the cloud
+\end{itemize}
+
+\paragraph{Cooling timescale}
+\[
+    t_{cool} = \frac{\frac{3}{2} nkT}{n^{2}\Lambda(T)}
+    = 3.3\times10^{9}\quad \left[
+        \frac{T_{6}}{n_{-3}\Lambda_{-23}} \mathrm{yr}
+        \right]
+    \]
+\begin{itemize}
+    \item $\Lambda_{-23}$ =
+        cooling curve in units of 10$^{-23}$ erg cm$^{-3}$ s$^{-1}$.
+        $\Lambda_{-23}$ = 1 is roughly the minimum cooling rate for a
+        primordial plasma at $T > 10^{4}$ K.
+        \footnote{See Mo, van den Bosch, \& White for derivation/discussion of above).}
+\end{itemize}
+What determines gas temperature?
+A gas cloud is heated during the process of gravitational collapse:
+\[
+    T_{vir} \approx 3.6\times10^{5}\quad \left[
+        \mathrm{K} \left( \frac{v_{c}}{100\mathrm{km/s}} \right)^{2}
+        \right]
+    \]
+\begin{itemize}
+    \item $v_{c} = \sqrt{GM/R}$ characterizes the mass and radius of the halo.
+\end{itemize}
+
+\paragraph{Star-formation/gas consumption time}
+\[
+    t_{sf} \propto \frac{M_{gas}}{\dot{M}_{sf}}
+    \]
+Typical SF rates today are $\sim$ 1 M$_{\odot}$ yr$^{-1}$, but can be
+much higher in ``starbursts''.
+
+\paragraph{Chemical enrichment time}
+Depends on element, but for many, massive star lifetime, $\sim 10^{7}$ yr.
+
+\paragraph{Merging time}
+Orbital timescales between halos.
+
+\paragraph{Dynamical friction time}
+Only important for massive subhalos.
+\[
+    t_{df} \frac{t_{hubble}}{10} M_{main}/M_{sat}\quad [\mathrm{yr}]
+    \]
+(Note error in Moe et al.).
+
+\subsection{Toy example}
 Overly simple, but illustrates the consequences of this scenerio\footnote{
 Rees 1995}.
 \begin{itemize}
@@ -307,89 +423,118 @@ through and add details, depending on how much time you have.}
 \newpage
 \section{Observing galaxies}
 \subsection{Imaging}
-\textbf{Surface Brightness (SB)} is the basic measured property for imaging of
-a \emph{resolved} object.
+\subsubsection{Surface brightness}
+\textbf{Surface Brightness (SB)} is the most fundamental observable for galaxies.
+It is the basic measured property for imaging of a \emph{resolved} object.
 \textcolor{bred}{SB is independent of distance until geometry of the
 universe becomes important:}
 \[
     SB \propto (1+z)^{-4}
-\]
-
+    \]
 Units:
 \begin{itemize}
     \item erg cm$^{-2}$ s$^{-1}$ sterradian$^{-1}$
     \item mag arcsec$^{-2}$
 \end{itemize}
 For adding multiple SBs, flux units must be used.
-If you're adding and subtracting magnitude units, you're probably
-doing something wrong. \Smiley
+\mynotes{(If you're adding and subtracting magnitude units, you're probably
+doing something wrong. \Smiley)}
 Differences in magnitudes correspond to \emph{ratios} in fluxes:
 \[
     m_{1} - m_{2} = -2.5\log\frac{F_{1}}{F_{2}}
-\]
-In general, flux is a function of wavelength, so SB is measured in
-different bandpasses, e.g.\ UBVRI or SDSS (ugriz).
-The ratio of the flux of the same object in different bandpasses
-gives an estimate of the \textbf{spectral slope} between bandpasses;
-often expressed as a \emph{color index}, the difference in magnitude
-between the two bandpasses, such as U-R.
+    \]
+In general, flux is a function of wavelength, so SB is measured in different
+bandpasses, e.g.\ UBVRI or SDSS (ugriz). The ratio of the flux of the same
+object in different bandpasses gives an estimate of the \textbf{spectral slope}
+between bandpasses; often expressed as a \emph{color index}, the difference in
+magnitude between the two bandpasses, such as U-R.
+
+
 
 Relevance of SB distribution:
 \textcolor{bred}{How are stars distributed in galaxies?}
-Be aware that \emph{mass} in stars doesn't necessarily track
-\emph{light} in stars (nor does it trace mass in other components).
+There is not a direct correlation between stellar luminosities and stellar masses,
+nor is there one between stellar mass and mass in other components.
 
-In principle, SB is measured directly from a 2D detector as an
-arbitrary function of location. However,
-galaxies are relatively faint. Typical values in galactic centers are:
+
+
+Typical SB values in galactic \emph{centers} are:
 \begin{description}[align=right,labelwidth=5em]
     \item [Spiral] $V \sim 20 - 21$ mag arcsec$^{-2}$
         (not much brighter than typical dark sky)
     \item [Elliptical] $V \sim 16 - 17$ mag arcsec$^{-2}$
 \end{description}
-More than half the light from galaxies comes from regions with
+In principle, SB is measured directly from a 2D detector as an arbitrary
+function of location.
+Galaxies are relatively faint;
+more than half the light from galaxies comes from regions with
 $SB < SB_{\mathrm{sky}}$ so $S/N$ is difficult to obtain.
+It's challenging to observe anything fainter than 24-25 mag arcsec$^{-2}$
+in unresolved light
+(although note recent discovery of ``ultra-diffuse galaxies'',
+\href{https://arxiv.org/abs/1506.01712}
+{Subaru (Koda et al.)},
+\href{http://arxiv.org/abs/1410.8141}
+{Dragonfly (van Dokkum et al)}). \mynotes{eh?}
+Can observe to significantly lower surface
+brightness (30 mag arcsec$^{-2}$) for nearby objects in which you can resolve
+stars, i.e. add up their individual brightnesses.
 
-Problems of seeing and \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/sky.htm}
-{sky determination} for determination of SB distribution in center and
-outer parts of galaxies. Sky problems are worse with small detectors/large
-galaxies.
+Observational challenges:
+\begin{description}[labelindent=2em, labelwidth=5em]
+    \item [seeing:] affects SB distribution in \emph{center},
+        e.g., existence of cores?
+    \item [sky determination]: affects SB distribution in outer regions,
+        see \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/sky.htm}
+        {here}.
+\end{description}
 
-Since SB is the key observable, there can be strong \emph{selection effects}
+Since SB is the key observable, there can be strong \textbf{selection effects}
 against low SB objects. If all galaxies had the same SB profile (they don't)
 then low SB galaxies are \emph{strongly} biased against in either
-magnitude-limited or size-limited catalogs.
+magnitude-limited or size-limited catalogs (if mag/size is determined isophotally).
 The apparent ``size'' of a galaxy will depend on its SB.
 
-Most galaxies are symmetric at a significant level;
-\textbf{isophotes} (contours of constant SB) are often well represented by ellipses.
+\textbf{Isophotes} are contours of constant SB.
+They are often well (though not perfectly) represented by ellipses since
+most galaxies are symmetric at a significant level.
 Elliptical contours fit spirals and ellipticals for different reasons:
 \footnote{Some basics of techniques for ellipse fitting:
 Kent, ApJ 266, 562 (1983); Lauer, ApJ 311, 34}
 \begin{description}[align=right, labelwidth=5em]
-    \item [Spiral] viewing angle/disk thickness
-    \item [Elliptical] intrinsic ellipticity
+    \item [Spiral] viewing angle and disk thickness
+    \item [Elliptical] intrinsic ellipticity (for example,
+        \href{http://astronomy.nmsu.edu/holtz/a555/resources/n1226.h.jpg}
+        {NGC1226} and
+        \href{http://astronomy.nmsu.edu/holtz/a555/resources/n1316.h.jpg}
+        {NGC1316}).
 \end{description}
-
+Some basics of techniques for ellipse fitting:
+\begin{itemize}
+    \item Fourier moments
+    \item Model fitting
+\end{itemize}
 In reality, galaxies have more complex features, e.g.\ asymmetries,
 departures from elliptical isophotes, bars, spiral arms, jets, etc.\
 (see below).
 
-For a purely axisymmetric object, SB distribution reduces to a 1D SB profile.
+For a purely axisymmetric object, SB distribution reduces to a 1D
+(major axis) SB profile.
 SB profiles are often parameterized, with distributions in the form
 of a
 \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/sersic.htm}
-{\textbf{Sersic Law}}\footnote{plot from
+{\textbf{Sersic Profile}}\footnote{plot from
 \href{http://adsabs.harvard.edu/abs/2003ApJ...582..689M}
 {MacArthur et al. (2003)}}
-(though there are other forms that can be used as well):
+(though there are other forms that can be used as well).
+The Sersic Profile is given by
 \[
-    \Sigma(r) = \Sigma_e\exp\left(-b_n\left[\left(
-    \frac{r}{r_e}\right)^{1/n}-1\right]\right)
-\]
+    \Sigma(r) = \Sigma_{e}\exp \left( -b_{n} \left[ \left(
+    \frac{r}{r_{e}} \right) ^{1/n}-1 \right] \right)
+    \]
 \begin{itemize}
     \item $\Sigma_{r}$ = SB at radius $r$
-    \item $r_{e}$ = \textit{effective} radius (aka.\ half-light radius),
+    \item $r_{e}$ = \textit{effective radius} (aka.\ half-light radius),
         the radius enclosing half the
         total light if the model is extrapolated to infinity.
     \item $\Sigma_{e}$ = SB at $r_{e}$
@@ -400,7 +545,8 @@ of a
     \item $n$ depends on the type of galaxy ($n=4$ for ellipticals and $n=1$
         for disks).
 \end{itemize}
-\subsubsection{SB profile for disk galaxies}
+
+\paragraph{SB profile for disk galaxies}
 Disks are usually well represented \emph{on average} by an exponential:
 \[
     \Sigma(r) = \Sigma_{s}\exp\left(-\frac{r}{r_{s}}\right)
@@ -408,12 +554,12 @@ Disks are usually well represented \emph{on average} by an exponential:
     \]
 \[
     m(r) = m_{s} + kr
-    \quad\mathrm{[magnitudes]}
+    \quad \mathrm{[magnitudes]}
     \]
 
-\subsubsection{SB profile for spheroids}
+\paragraph{SB profile for spheroids}
 Spheroids are historically characterized by
-\textbf{deVaucouleurs profile}, otherwise known as the ``$r^{1/4}$'' law:
+\textbf{deVaucouleurs profile}, also known as the ``$r^{1/4}$'' law:
 \[
     \Sigma(r) = \Sigma_e\exp\left(-7.67\left[\left(
     \frac{r}{r_e}\right)^{1/4}-1\right] \right)
@@ -423,36 +569,50 @@ Spheroids are historically characterized by
     m = m_{0} + kr^{1/4}
     \quad\mathrm{[magnitudes]}
     \]
+Many galaxies appear to have SB profiles that are well fit by a combination of multiple
+components, e.g., a bulge and a disk.
+The contributions from the different components can be split
+via bulge-disk decomposition (e.g.
+MacArthur, Courteau, \& Holtzman, ApJ 582, 689 (2003)). Issues:
+\begin{itemize}
+    \item covariance between parameters
+    \item 1D vs. 2D
+    \item validity of models
+\end{itemize}
 
 \subsubsection{Sizes of galaxies}
 Generally, galaxies do not appear to have sharp edges (although SB can
 drop sharply in some disk galaxies).
 \begin{itemize}
-    \item Isophotal ($D_{25}$ \mynotes{???} in RC \mynotes{(rotation curve?)}
-        is B=25.0): Beware for low SB galaxies \mynotes{???}
-    \item Half-light radii (e.g.\ $R_{e}$)
+    \item Isophotal ($D_{25}$ in RC is B=25.0 \mynotes{???}):
+        Beware for low SB galaxies and for galaxies
+        at non-negligible redshift\ldots\mynotes{?????}
+    \item Half-light radii (e.g.\ $R_{e}$); requires extrapolation for
+        total brightness
     \item Petrosian radius: radius at which the \emph{local}
         SB at that radius drops to some fraction of the \emph{mean} SB within
         that radius.  (in an annulus, SDSS used 0.8$r$ - 1.25$r$, with a
         fraction of 0.2)
 \end{itemize}
-Typical angular sizes: arcminutes for nearby galaxies, arcseconds for
-distant galaxies. Can get linear sizes with distance estimate
+Typical angular sizes:
+\begin{itemize}
+    \item Nearby galaxies: arcminutes
+    \item Distant galaxies: arcseconds
+\end{itemize}
+Linear sizes can be derived from distance estimate
 (which depends on cosmology). Typical physical size (of the luminous
 component) is $\sim$ 1-30 kpc.
 
 \subsubsection{Integrated brightness}\label{intb}
 Issue: galaxies don't have edges. Types of mags:
 \begin{description}[align=right, labelwidth=0.5in,
-        labelindent=0.25in,
-        leftmargin=1in]
-    \item [Metric:] brightness within an aperture of fixed
-        angular or physical size. Be careful if galaxies have a range
-        of sizes.
-    \item [Isophotal:] brightness within a specified SB
-        contour, e.g.\ Holmberg mags, which is the brightness within
-        $\mu_{pg} = 26.5$. \mynotes{wtf is $\mu_{pg}$??}
-        Be careful if galaxies have a range of SB profiles.
+        labelindent=0.25in, leftmargin=1in]
+    \item [Metric:] brightness within an aperture of fixed angular or physical
+        size. Be careful if galaxies have a range of sizes.
+    \item [Isophotal:] brightness within a specified SB contour, e.g.\ Holmberg
+        mags, which is the brightness within $\mu_{pg} = 26.5$. \mynotes{wtf is
+        $\mu_{pg}$??} Be careful if galaxies have a range of SB profiles, as
+        sample will be strongly biased against lower SB object.
     \item [Model:] require assumption about outer SB profile
     \item [Petrosian:]
         mag within some fixed number of Petrosian
@@ -463,19 +623,21 @@ Issue: galaxies don't have edges. Types of mags:
         \footnote{\url{http://classic.sdss.org/dr5/algorithms/photometry.html\#mag_petro}}
 \end{description}
 Typical integrated brightnesses of galaxies, and star-galaxy separation
-and crossover in number counts \mynotes{(\ldots yes?)}
+and crossover in number counts at $V \sim 21$.
+When determining integrated colors of a galaxy, be sure to use the same
+region of integration for both bandpasses.
+For example, use the petrosian radius as determined in the highest S/N bandpass.
 
 Other issues in getting luminosities of galaxies:
 \begin{itemize}
-    \item Foreground extinction, which depends strongly on Galactic
-        latitude
+    \item Foreground extinction, which depends strongly on Galactic latitude
         \footnote{\href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1984ApJS...54...33B}
             {Burstein \& Heiles, ApJS 54,33 (1984)};
             \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1998ApJ...500..525S}
-        {Schlegel, Finkbeiner, \& Davis, ApJ 500,525 (1998)}}
+            {Schlegel, Finkbeiner, \& Davis, ApJ 500,525 (1998)}}
     \item Internal extinction/inclination, which can be significant
         (up to 1.5 mag in RC3 prescription \mynotes{(???)})
-    \item If looking at a population, be sure to compare luminosities in
+    \item If looking at a population, luminosities need to be compared in
         the same bandpass. This is an issue if looking over a range of
         redshifts; a fixed observed wavelength range corresponds to a
         different rest frame wavelength range at different redshifts.
@@ -486,33 +648,66 @@ Other issues in getting luminosities of galaxies:
             {Kinney et al. ApJ 467.38 (1996)};
             \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1980ApJS...43..393C}
             {Coleman, Wu, Weedman, ApJS 43,393 (1980)}}.
-        These require knowledge/assumptions about the spectral energy
-        distribution of galaxies. Alternatively, measure at different
-        observed wavelengths.
+        K-corrections are defined in magnitudes:
+        \[
+            m_{R} = M_{Q} + DM + K_{QR}
+            \]
+        where the object is observed in bandpass $R$, and you are interested in
+        absolute magnitude in rest-frame bandpass $Q$ (which might be $R$,
+        the classical K-correction).
+
+        For significant redshift, measure in different bandpass, so that K
+        correction is less sensitive to assumptions about spectrum
+        (i.e., $Q$ not the same as $R$).
+
+        If you ``know'' (make assumptions about) the spectrum of the object, you
+        can do this:
+        \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1996ApJ...467...38K}
+        {Kinney et al, ApJ 467, 38 (1996)},
+        \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1980ApJS...43..393C}
+        {Coleman, Wu, Weedman, ApJS 43, 393 (1980)}.
+        Often, multiple bandpasses (colors) are used to determine best matching
+        template.
 \end{itemize}
 
 \subsection{Spectroscopy}
-The SED of a galaxy is the other fundamental observable; obviously,
-the most fundamental is spectral energy SB, but spectra are often
-obtained over some aperture, or long slit. Note
-increasing use of integral field spectroscopy (e.g.\ SDSS MaNGA).
+The other fundamental observable is the spectral energy distribution (SED),
+or spectrum, of a galaxy. Spectra are often obtained over some aperture,
+or long slit; however, note increasing use of integral field spectroscopy
+(e.g.\ SDSS MaNGA).
 
-The overall shape and features in \href{http://astronomy.nmsu.edu/holtz/a555/resources/galaxyspectra.gif}
+Galaxy spectra are \textit{composite}:
+\begin{itemize}
+    \item Stars
+        \begin{itemize}
+            \item multiple velocities
+            \item luminosity weighted: total number of
+                stars (for each stellar type), times luminosity per star
+        \end{itemize}
+        Generally, individual stellar lines can't be isolated.
+    \item Gas emission \mynotes{(not absorption?)}
+    \item Dust absorption/emission
+\end{itemize}
+
+The overall shape and features in
+\href{http://astronomy.nmsu.edu/holtz/a555/resources/galaxyspectra.gif}
 {SEDs} (see also \href{http://astronomy.nmsu.edu/nicole/teaching/ASTR505/lectures/quickview.html}
-{here}) provide important information
-about the nature of the luminous components, i.e.\ physical properties
-of the stellar population and the gas component
-As we'll discuss later, these can be challenging to sort out.
-The composite spectrum of a galaxy is the sum of different types of
-stars, weighted by relative numbers and luminosities, plus emission
-from gas and dust.
+{here}) provide important information about the nature of the luminous
+components, i.e.\ physical properties of the stellar population and the gas
+component.
 
-Spectra also allow the study of velocities via the Doppler shift:
+\subsubsection{Velocities}
+Spectra allow the study of velocities via the Doppler shift:
 \[
     \frac{\nabla\lambda}{\lambda} = \frac{v}{c}
     \]
-which measures both the bulk velocity of the galaxy and the
-distribution of stellar velocities within the galaxy.
+which measures both the bulk velocity of the galaxy and the distribution of
+stellar velocities within the galaxy. Note that the shift in wavelength is
+proportional to the emitted wavelength; lines are shifted and broadened more at
+longer wavelengths. As a result, it is common to work with spectra to that are
+evenly sampled in $\log \lambda$ rather than $\lambda$, because  $\Delta
+\log\lambda \propto \Delta v$.
+
 \paragraph{Bulk velocities}
 \begin{itemize}
     \item Mean velocities of galaxies indicate that they are receding, with
@@ -523,46 +718,86 @@ distribution of stellar velocities within the galaxy.
         typical peculiar velocities are a few hundred km s$^{-1}$.  In
         clusters, they can be a thousand km s$^{-1}$.
 \end{itemize}
+
 \paragraph{Internal velocities}
 \href{http://astronomy.nmsu.edu/holtz/a555/resources/intvel.gif}
-{Internal velocities} can be organized (rotation in disks), or they can
-be random, leading to broader lines that represent the
-velocity distribution of stars within a galaxy.
-\mynotes{This broadening would be the same at all points in the galaxy.}
-\[
-    F(\lambda) \propto \int{F(v_{los})S\left(\lambda-\frac{v_{los}\lambda}{c}
-    \right)\mathrm{d}v_{los} }
-    \]
+{Internal velocities} can be organized or random.
+\begin{description}
+    \item [Organized] (e.g.\ rotation in disk galaxies). Note effects of
+        inclination, which need to be measured to get intrinsic rotation
+        velocity ($v_{obs} = v\sin{i}$).
+        Also note that populations in disk galaxies are not entirely
+        kinematically ``cold"; there is some dispersion around the rotational
+        velocity, typically at the level of 10s of km s$^{-1}$.
+    \item [Random] broader lines that represent the line-of-sight
+        velocity distribution (LOSVD) of stars within a galaxy.
+        \mynotes{This broadening would be the same at all points in the galaxy.}
+        \[
+            F(\lambda) \propto \int{
+                F (v_{los}) S \left( \lambda - \frac{v_{los}\lambda}{c} \right)
+                \mathrm{d}v_{los}}
+            \]
+        \begin{itemize}
+            \item $S$ = spectrum of an individual star
+            \item $F$ = fractional distribution of stars at
+                different LOS velocities.
+        \end{itemize}
+\end{description}
 
-\begin{itemize}
-    \item $S$ = spectrum of an individual star
-    \item $F$ = fractional distribution of stars at
-        different line-of-sight velocities.
-\end{itemize}
 Lines are usually fairly well represented
 by a Gaussian velocity profile, characterized by the mean velocity:
 \[
-    \int{v_{los}F(v_{los})\mathrm{d}v_{los}}
+    \overline{v} = \int{v_{los}F(v_{los})\mathrm{d}v_{los}}
     \]
 and the velocity dispersion:
 \[
-    \int{(v_{los}-\overline{v}_{los})F(v_{los})\mathrm{d}v_{los}}
+    \sigma = \int{ \left(v_{los} - \overline{v}_{los} \right)
+    F\left(v_{los}\right) \mathrm{d}v_{los}}
     \]
 e.g., central velocity dispersion or, more generally, the velocity
 dispersion profile.
 
-Deviations from a Gaussian can be measured, and are usually characterized
+Deviations from a Gaussian can be measured (at high S/N),
+and are usually characterized
 by higher order moments: \textit{skew} ($h_{3}$) and \textit{kurtosis}
 ($h_{4}$):
 \[
-    F(v_{los}) \propto \exp\frac{-\omega^{2}}{2}\left[
+    F\left(v_{los}\right) \propto \exp\frac{-\omega^{2}}{2}\left[
         1 + \sum{h_{k}H_{k}(\omega)}\right]
-\]
+    \]
 where $\omega \equiv (v_{los}-\overline{v})/\sigma$ and
 $H_{k}$ are Gauss-Hermite functions.
+
+Extracting information about velocity distribution requires:
+\begin{itemize}
+    \item Some model of the underlying composite spectrum: stellar absorption
+        lines are not infinitely narrow, and blends are common: use some
+        template, either from observations of a stellar library or atmospheric
+        models
+    \item An understanding of the instrumental broadening, i.e., the line
+        spread function (LSF)
+    \item for a rough approximation, the instrumental broadening may be close
+        to Gaussian, and if one just wants to characterize the velocity
+        dispersion (i.e. Gaussian profile), one would determine the Gaussian
+        width needed to match template to observed data, and subtract the
+        instrumental Gaussian width in quadrature, since two Gaussian
+        convolutions (LSF and velocity distribution) are equivalent to a single
+        convolution with a Gaussian with width
+        \[
+            \sigma_{tot}^{2} = \sigma_{LSF}^{2} + \sigma_{LOSVD}^{2}
+            \]
+        Measuring velocity dispersion significantly smaller than the
+        instrumental resolution is challenging, and at some level, becomes
+        impossible.
+    \item sophisticated techniques exist for extracting velocity distribution
+        information, e.g. penalized pixel fitting
+        (\href{}
+        {pPXF}).
+\end{itemize}
+
 Some
 \href{http://astronomy.nmsu.edu/holtz/a555/resources/examplesh3h4.gif}
-{examples of velocity data}.
+{examples of velocity data}. What kind of galaxies are these?
 
 \underline{\textbf{Relevance}}:
 Internal velocities can be used to probe mass distribution within
@@ -571,27 +806,38 @@ For a rotationally supported system:
 \[
     v(r) = \sqrt{\frac{GM(r)}{r}}
     \]
+\mynotes{$\rightarrow$ Keplerian velocities!}
 For a collisionless system of \mynotes{(independent)} particles,
 the distribution of velocities at
-any given location characterized by the velocity ellipsoid, and
-Jeans equation leads to:
+any given location characterized by the velocity ellipsoid
+(with radial, azimuthal, and vertical components),
+and Jeans equation leads to:
 \[
     \frac{\mathrm{d}\rho\sigma^{2}}{\rho{\mathrm{d}r}} +
     \frac{2\beta\sigma^{2}}{r} = -g(r)
     \]
 where $\beta$ is the \textbf{velocity anisotropy}:
 \[
-    \beta \equiv \left(1-
-    \frac{\sigma_{\theta}^{2}+\sigma_{\phi}^{2}}{2\sigma_{r}^{2}}\right)
+    \beta \equiv \left(
+        1 - \frac{\sigma_{\theta}^{2}+\sigma_{\phi}^{2}}{2\sigma_{r}^{2}}
+    \right)
     \]
-though $\beta$ is not generally known.
+though $\beta$ is not generally known. So mass modeling of kinematically
+``hot'' systems is not so easy.
+
+Mean velocities of galaxies indicate that they are receding, with velocity
+proportional to distance $\rightarrow$ expansion of the universe.
+There is a dispersion of
+velocities around the mean relation; deviation is called the peculiar velocity.
+In the field, typical peculiar velocities are a few hundred km/s, in clusters,
+can be a thousand km/s.
 
 \subsection{Distances to galaxies}
 Some properties of galaxies, such as luminosity and linear size,
 require knowledge of distances to galaxies:
 \[
-    m-M = 5\log{d_{L}}-5
-\]
+    m - M = 5\log{d_{L}} - 5
+    \]
 \begin{itemize}
     \item $d_{L}$ = distance [pc] \mynotes{$L$ = ?}
     \item $M$ = absolute magnitude (or SB)
@@ -601,44 +847,67 @@ require knowledge of distances to galaxies:
 Various techniques for getting distances\footnote{see
 \href{http://adsabs.harvard.edu/abs/2010ARA\%26A..48..673F}
 {Freedman \& Madore, ARAA review}}:
-\begin{description}
-    \item [Variable stars] Cepheids/RR Lyrae stars through period-luminosity
-        (period-luminosity-color/metallicity) relation.
-    \item [Geometric techniques]
-        \begin{itemize}
-            \item masers (proper motion compared with radial velocity in
-                central disks)
-            \item exclipsing binaries
-        \end{itemize}
-    \item [SB fluctuations] from imprint of Poisson statistics:
-        requires objects with a ``standard'' population (i.e.\ stellar
-        luminosity function).
-    \item [Planetary nebulae luminosity function]
-    \item [More luminous standard candles:] type-Ia supernova (``standardizable'')
-    \item [Scaling relations between velocity and luminosity]
-        \mynotes{for relatively nearby galaxies}
-        \begin{itemize}
-            \item Spirals: \textbf{Tully-Fisher relation} between maximum
-                rotational velocity and luminosity
-            \item Ellipticals: fundamental plane relation between velocity
-                dispersion, SB, and physical size
-                ($D_{n}-\sigma$) relation.
-        \end{itemize}
-    \item [Redshift] (see next section)
-\end{description}
-\subsubsection{Distances from redshift}
+
+\paragraph{Variable stars}
+Cepheids/RR Lyrae stars through period-luminosity
+(period-luminosity-color/metallicity) relation.
+
+\paragraph{RGB tip}
+Nearby galaxies with old stellar populations where individual stars can
+be resolved.
+
+\paragraph{Geometric techniques}
+\begin{itemize}
+    \item masers (proper motion compared with radial velocity in central disks)
+    \item exclipsing binaries
+\end{itemize}
+
+\paragraph{SB fluctuations}
+From imprint of Poisson statistics.
+Requires objects with a ``standard'' population (i.e.\ stellar
+luminosity function).
+
+\paragraph{Planetary nebulae luminosity function}
+
+\paragraph{More luminous standard candles:}
+type-Ia supernova (``standardizable'')
+
+\paragraph{Scaling relations between velocity and luminosity}
+\mynotes{for relatively nearby galaxies}
+\begin{itemize}
+    \item Spirals: \textbf{Tully-Fisher relation} between maximum rotational velocity and luminosity
+    \item Ellipticals: fundamental plane relation between velocity
+        dispersion, SB, and physical size
+        ($D_{n}-\sigma$) relation.
+\end{itemize}
+See %\S\ref{} for more details.
+
+\paragraph{Redshift}
 Galaxies expand with everything else in the cosmic flow.
 \[
-    \frac{\Delta\lambda}{\lambda} = z;\quad
-    1+z = \frac{lambda_{obs}}{\lambda_{emit}}
+    z = \frac{\Delta\lambda}{\lambda}
     \]
-At \emph{low} $z$, $z \approx v/c, v=Hd$.
-At \emph{high} $z$, need knowledge of cosmological
-parameters to get distance from redshift (i.e.\ redshift-distance
-relation.\footnote{see, e.g.\
-\href{http://ned.ipac.caltech.edu/level5/Hogg/Hogg_contents.html}
-{Hogg, Distance Measures in Cosmology}})
+\[
+    1 + z = \frac{lambda_{obs}}{\lambda_{emit}}
+    \]
+\begin{itemize}
+    \item At \emph{low} $z$, $z \approx v/c, v = H_{0}d$.
+        Determining $H_{0}$ requires independent distance measurement;
+        uncertainties are often parameterized by using $H_{0} = 100h$
+        km s$^{-1}$ Mpc $^{-1}$, and distance-dependent quantities given
+        in terms of $h$. Current best estimate of $H_{0}$ is $\sim$ 70 km s$^{-1}$.
+    \item At \emph{high} $z$, need knowledge of cosmological
+        parameters to get distance from redshift (i.e.\ redshift-distance
+        relation.\footnote{see, e.g.\
+        \href{http://ned.ipac.caltech.edu/level5/Hogg/Hogg_contents.html}
+        {Hogg, Distance Measures in Cosmology}})
+\end{itemize}
 
+Note that observed velocity needs to be corrected for earth motion (to
+heliocentric or barycentric velocity), motion of the Sun ( to LSR), rotation of
+Galaxy (to GSR), and motion of Galaxy within the Local Group.
+
+\paragraph{Peculiar velocities}
 Galaxies also move around relative to the uniform expansion because of local
 gravitational attraction from concentrations of mass.
 As mentioned above, the deviation of the
@@ -649,6 +918,8 @@ Milky Way and galaxy clusters; if these are ignored, introduces spurious
 features in distance maps
 (\href{http://astronomy.nmsu.edu/holtz/a555/resources/cfa.html}
 {``fingers of God'', redshift space distortions}).
+
+Hubble's law and the smooth Hubble flow (at what velocity? what redshift?)
 
 At $z \gtrsim 0.1$, peculiar velocities lead to relatively small distance
 errors. At lower redshifts, might estimate distances using model of mass
@@ -688,9 +959,9 @@ redshifts) give
 {Whittle notes}.
 
 Historically, galaxies were considered in terms of their morphology, i.e.\
-the Hubble sequence. However, it is not totally clear to what extent
+the Hubble sequence. However, it is not clear to what extent
 morphological classification traces underlying physics, and descriptive
-morphology may be biased by things that may not be fundamental. Still, it
+morphology may be biased by things that are not fundamental. Still, it
 is widely used, so important to understand a bit.
 
 \subsubsection{Morphological systems}
@@ -708,35 +979,39 @@ Some pictures:
 \end{itemize}
 
 \subsubsection{Hubble classification}
-\begin{itemize}
-    \item \textbf{ellipticals:} given as En, where
+\begin{description}
+    \item [ellipticals:] given as $En$, where
         \[
-            n = 10(\frac{1-b}{a})
-        \]
-        E.g., E0 (sphere) $\rightarrow$ E7 (skinny).
+            n = 10\left( \frac{1-b}{a} \right)
+            \]
+        $E0$ (sphere) $\rightarrow$ $E7$ (skinny).
         No distinction between dwarf ellipticals and dwarf spheroidals
-    \item \textbf{spirals:} barred or unbarred (SBa,SBb,SBc; or Sa,Sb,Sc;
-        respectively)
-        where a,b,c denote size of bulge (bulge-to-disk ratio: B/D)
-        in decreasing order. Also classified according to tightness of
-        arms and the degree to which arms are resolved into HII regions
-        (note that the latter two are essentially impossible to judge
-        for edge-ons).
-        Later, have SA (normal spirals), SB (barred), and SAB (transition)
-    \item \textbf{SOs (aka lenticulars, or disks):} intermediate, no spiral
-        structure but have disk system, split into $S0_1$, $S0_2$, $S0_3$,
+    \item [spirals:] barred or unbarred (SBa,SBb,SBc; or Sa,Sb,Sc;
+        respectively) where a,b,c denote size of bulge (bulge-to-disk ratio:
+        B/D) in decreasing order. Also classified according to tightness of
+        arms and the degree to which arms are resolved into individual HII
+        regions (note that the latter two are essentially impossible to judge
+        for edge-ons). These criteria are not perfectly correlated, and
+        classifiers might emphasize different criteria.
+        Note that spiral arms are generally higher contrast in surface
+        brightness than they are in mass, so they may be somewhat misleading;
+        also note that origin of spiral arms may not be fundamentally related
+        to global galaxy properties.
+    \item [S0s:] (aka lenticulars, or disks); intermediate, no spiral
+        structure but have disk system, split into $S0_{1}$, $S0_{2}$, $S0_{3}$,
         depending on the amount of dust.
-    \item \textbf{Irregulars:}
-        \begin{itemize}
-            \item Irr I (Magellenic irregulars with lots of distinct HII regions)
-            \item Irr II (lack the resolution into distinct HII regions).
-        \end{itemize}
-    \item Some pictorial examples
-\end{itemize}
+    \item [irregulars:]
+        \begin{description}
+            \item [Irr I] (Magellenic irregulars with lots of distinct HII regions)
+            \item [Irr II] (lack the resolution into distinct HII regions).
+        \end{description}
+    \item \href{http://people.virginia.edu//~dmw8f/astr5630/Topic02/t2_Hubble_orientation.jpg}
+        {Some pictorial examples}
+\end{description}
 
 \subsubsection{deVaucouleurs/RC3 classification}
 \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rc3class.htm}
-{diagram}.
+{Diagram}.
 See also \href{http://astronomy.as.virginia.edu}{here}.
 \begin{itemize}
     \item Extends Hubble to later spiral types Sd, Sm, and finally Im.
@@ -758,25 +1033,25 @@ See also \href{http://astronomy.as.virginia.edu}{here}.
 Note that morphological classification often depends on multiple
 characteristics, and therefore it can be somewhat subjective.
 Quantitative classification schemes have been worked on
-%(see \S{} \ref{sssec:quantitative}),
 (see \myref{sssec:quantitative}),
-but are not widely used
-for nearby galaxies.
+but are not widely used for nearby galaxies.
 
-\subsubsection{Wavelength dependence}
 Morphology depends on wavelength
 (e.g.\ \href{http://ned.ipac.caltech.edu/level5/Kuchinski/frames.html}
 {O'Connell 9609101}).
 Be careful about morphological classification at higher redshift
 (or at least a direct comparison with lower redshift galaxies)
 because you may be looking at morphology at a different wavelength
-(morphological \textbf{K Correction:} correction to magnitude (or flux) due
-to redshift).
+(morphological \textit{K-correction:} correction to magnitude (or flux) due
+to redshift). \mynotes{K-correction is introduced in a previous section... should put
+in a reference or something.}
 
 Based on global characteristics, the Hubble morphological classification of
-ellipticals is probably not fundamental. It may be more meaningful to classify
-by \emph{isophotal shape}
-(\href{http://astronomy.as.virginia.edu}{(Kormendy and Bender classification)})
+ellipticals is probably not fundamental.
+Viewing angle must play a part at some level.
+It may be more meaningful to classify
+by \emph{isophotal shape}\footnote{
+    \href{http://astronomy.as.virginia.edu}{(Kormendy and Bender classification)}}
 or kinematically by $v/\sigma$.
 
 For the spiral sequence, there are correlations of luminosity, surface
@@ -786,19 +1061,19 @@ significantly.\footnote{Some representative data from
 \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1994ARA\%26A..32..115}
 {Roberts and Haynes review (ARAA 1994)}}:
 \begin{itemize}
-    \item Considering mean or median values, there is little trend in
-        radius, $L_{B}$ \mynotes{(Bolometric luminosity?)},
-        and total mass for S0-Sc, but later types tend
-        to be smaller, less massive, and less luminous
+    \item Considering mean or median values, there is little trend in radius,
+        $L_{B}$ \mynotes{(Bolometric luminosity?)}, and total mass for
+        $S0$-$Sc$, but later types tend to be smaller, less massive, and less
+        luminous
         (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh2.htm}
         {{RH figure 2}}).
-        However, note that LSB \mynotes{(Low Surface Brightness?)}
-        galaxies tend to be later types, and
-        since these are not included, there may be a bias here.
-    \item Typical SB may be lower for latest types, even without inclusion
-        of LSB galaxies; CSB(?????) much higher for large ellipticals than
-        spirals. Mass surface density appears to decrease monotonically with
-        morphological class in spirals
+        However, note that LSB \mynotes{(Low Surface Brightness?)} galaxies
+        tend to be later types, and since these are not included, there may be
+        a bias here.
+    \item Typical SB may be lower for latest types, even without inclusion of
+        LSB galaxies; CSB\mynotes{(?????)} much higher for large ellipticals
+        than spirals. Mass surface density appears to decrease monotonically
+        with morphological class in spirals
         (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh3.htm}
         {{RH figure 3}}).
     \item Cold gas is absent in ellipticals, and neutral hydrogen (HI) content
@@ -807,10 +1082,13 @@ significantly.\footnote{Some representative data from
         (\href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/rh4.htm}
         {{RH figure 4}}).
 \end{itemize}
+As stated above, all of the aforementioned classification schemes are
+subjective at some level. Note general problem of human classification on
+large-scales, e.g. with millions of galaxies, although also note Galaxy Zoo.
+\mynotes{(?????????????????)}
 
 \subsubsection{Quantitative classification schemes}\label{sssec:quantitative}
-As stated above, all of the aforementioned classification schemes are
-subjective at some level.  Some of the more quantitative schemes that have been
+Some of the more quantitative schemes that have been
 proposed, both parametric and non-parametric, are:
 \begin{itemize}
     \item \textbf{Bulge-to-disk ratio}, using B/D decomposition\footnote{
@@ -851,122 +1129,55 @@ for which other indicators have been suggested:
         May be more stable at low resolution, S/N.
 \end{itemize}
 
+\subsection{Galaxy catalogs/resources}
+\subsubsection{Large area/all sky surveys}
+\subsubsection{Smaller region surveys}
+\subsubsection{Spectroscopic surveys}
+\subsubsection{``Classic catalogs''}
+\subsubsection{Modern digital catalogs}
+\subsubsection{Web tools}
+\subsubsection{Selection effects}
+\begin{itemize}
+    \item There is generally no such thing as a catalog that contains
+        ``everything" since there will always be objects that fall below the
+        detection criterion for inclusion
+    \item a ``complete" catalog is a catalog that has all objects that
+        satisfy well-defined selection criteria, but this still does not
+        mean that you can't get biased results from it, you still have to
+        consider the effects of the selection function
+    \item Consider a plot from a redshift survey of galaxy absolute
+        magnitude vs redshift
+    \item For magnitude limited samples, more luminous objects will be
+        overrepresented: Malmquist bias (but beware that sometimes people
+        refer to different things with this name!)
+    \item Also may need to be careful about systematic biases arising from
+        uncertainties in measured magnitudes, distances, if population is
+        not uniform in underlying distribution of absolute mags and
+        distances sampled - which it isn't! Luminosity function rises
+        towards fainter mags, so more galaxies are scattered bright than
+        are scattered faint. In distance, more galaxies are located farther
+        than nearer just because of volume element, so more galaxies
+        scattered into sample (with corresponding error in absolute mag)
+        than scattered out of it
+    \item Note many biases are possible aside from a simple mag cut, e.g.,
+        color bias, surface brightness bias, etc.
+        Whenever you see a relation that shows a correlation, consider
+        selection effects!
+    \item Best approach to selection biases may be to ``forward model",
+        i.e. model underlying distribution through selection function and
+        compare to observed properties.
+\end{itemize}
+
 \newpage
-\section{Statistical properties of galaxies}
+\section{Overview of nearby galaxy population}
+Consider some of the main quantifiable observable properties of nearby
+galaxies.
+
+\subsection{Statistical properties of galaxies}
 Consider relative number of galaxies with different parameters,
 e.g.\ color or luminosity.
-\subsection{Luminosity Function}
-The luminosity function (LF) gives the number density of galaxies as a
-function of luminosity, which can be expressed either in luminosity or
-absolute magnitude units.
-\begin{description}[labelwidth=3em, labelindent=0.25in]
-    \item [$\Phi(L)$] = number density of galaxies with
-        luminosity between $L$ and $L$ + $\mathrm{d}L$
-    \item [$\Phi(M)$] = number density of galaxies with absolute
-        mag between $M$ and $M$ + $\mathrm{d}M$
-\end{description}
-The integral over the LF gives the total number density of galaxies (at all
-luminosities). The LF is the first step toward understanding a fundamental
-question of galaxy formation: What sets the \emph{range} of galaxy luminosities
-and the relative \emph{numbers} of objects at different luminosities (though
-mass may be a more fundamental characteristic). It is also an important
-cosmological probe for evolution of the galaxy population (more later).
 
-\subsubsection{Measuring the LF}
-Obviously, distance measurements are required to get luminosity.
-Measurement critically depends on knowledge of the \textbf{selection
-function}. For magnitude limited samples, more luminous objects will
-be overrepresented. This is called the Malmquist bias\footnote{Be
-aware that this name is sometimes used to refer to different things.}
-
-The simplest idea for correction is to weigh counts by $V_{max}$, the
-largest volume to which the galaxy could have been observed given the
-selection function. However, the issue here is large-scale structure.
-$\rightarrow \cfrac{V}{V_{max}}$ test for uniformity and understanding
-of selection function\footnote{Significantly more sophisticated
-methods have been developed; see, e.g.\ Binggelli et al (ARAA 26, 26,
-1988) for more details}.
-
-Also may need to be careful about systematic biases arising from
-uncertainties in measured magnitudes and distances, if population is
-not uniform in underlying distribution of absoluate mags and distances
-sampled (which it isn't). The LF rises toward fainter magnitudes, so
-more galaxies are scattered bright than are scattered faint
-\mynotes{(WTF??)}. In distance, more galaxies are located farther
-than nearer because of volume element \mynotes{(seriously, WTF)}, so
-more galaxies scattered into sample (with corresponding error in
-absolute magnitude) than scattered out of it.
-
-Note that many biases are possible aside from a simple magnitude cut, e.g.\
-color bias, SB bias, etc. In general, need to be \emph{very} careful about
-understanding selection effects; model (and verify) them.
-
-\subsubsection{Observed LF}
-\begin{itemize}
-    \item Absolute magnitudes ($M_{V}$) range from -22 to -8.
-    \item Nomenclature: ``dwarf'' galaxies vs.\ ``normal'' galaxies.
-    \item What objects dominate by number? What objects dominate the
-        total luminosity?
-    \item Different types have clearly different LFs
-    \item Since proportion of a given type depends on environment, so
-        must the general LF.
-\end{itemize}
-
-\subsubsection{Functional fits to the observed LF and parameters of the LF}
-LFs are usually well characterized by a \textbf{Schecter Function}
-\[
-    \phi(L) = \frac{\phi_{*}}{L_{*}}\left(\frac{L}{L_{*}}\right)^{\alpha}
-    \exp\left(-\frac{L}{L_{*}}\right)
-\]
-\[
-    \phi(M) \propto 10^{-0.4\left(\alpha+1\right)\left(M-M^*\right)}
-    \exp\left(-10^{0.4(M^{*}-M)}\right)
-\]
-where $\phi(L)$ is the number of galxies with luminosity between
-$L$ and $L + dL$.  $\phi_{*}$, $L_{*}$, and $\alpha$ (the faint-end slope)
-are the three parameters. The Schecter function is only an approximation, and
-is purely empirical.
-
-A possibly useful feature of the Schecter function is that it can be
-integrated to get total luminosity density:
-\[
-    j = \phi_{*}L_{*}\Gamma\left(\alpha + 2\right)
-\]
-Typical ``local'' parameters (e.g. SDSS at $z\sim0.1$) are:
-\begin{itemize}
-    \item $\phi^{*}\sim0.015h^{3}$ Mpc$^{-3}$
-    \item $M_{B}^{*}\sim-19.5$
-    \item $M_{R}^{*}\sim-20.5$
-    \item $\alpha=-1$ to $-1.5$
-\end{itemize}
-As noted above, there is a dependence on type. So what is the implied
-luminosity density? And (getting ahead of ourselves) the implied stellar
-mass density, c.f. cosmological.
-
-There has been significant discussian over detailed shape and normalization of
-LF\@.  There are probably both observational issues (e.g.\ selection functions)
-and astrophysical ones (e.g.\ large scale structure, ``cosmic variance'').
-
-\subsubsection{Evolution of the LF}
-LF evolution contains a lot of information about galaxy evolution.
-Some possibilities:
-\begin{itemize}
-    \item No evolution: distribution of galaxiy luminosities is unchanging.
-    \item Passive evolution: number and internal (stellar) makeup of
-        galaxies is unchanging \mynotes{(no star formation)},
-        but luminosity evolves as stars evolve.
-    \item Luminosity evolution: stellar makeup of galaxies changes with
-        time (star \emph{formation}, leading to luminosity changes).
-    \item Number (density) evolution: number of galaxies changes with time.
-        Galaxies may be either created (formed) or destroyed (e.g.\
-        mergers) as a function of luminosity.
-\end{itemize}
-There is a large amount of work on this, but certainly the LF shows
-evolution\footnote{Faber et al. (2007)}. All samples show luminosity
-evolution, but red galaxies show number density evolution.
-Schecter parameters (link?)
-
-\subsection{Colors of galaxies}
+\subsubsection{Colors of galaxies}
 Consider the distribution of SEDs of galaxies, to first order represented by
 their color. There is a striking bimodality in color\footnote{quantified from SDSS
 by (Strateva et al., AJ 122, 1861 (2001))}:
@@ -986,7 +1197,7 @@ The correspondance with morphology is supported
 by correlation with structural parameters, e.g.\ multidimensional
 correlations\footnote{Blanton and Moustakis ARAA 2009}.
 
-The key point is that color is easily observed and quantified.  Given likely
+The key point is that color is easily observed and quantified. Given likely
 differences in stellar populations, the relation between luminosity and stellar
 mass is probably different for the two different sequences. At a rough level,
 the color allows one to estimate the stellar mass from the luminosity, though
@@ -998,13 +1209,139 @@ Note that the relation shifts when expressed in terms of stellar
 mass\footnote{Baldry et al. 2006}, and that there appears to be a transistion
 mass around $10^{10}$ M$_{\odot}$ between the two sequences.
 
-\section{Elliptical/Spheroidal galaxies}
-Elliptical galaxies are not simple collections of stars that are all
-similar to one another. They exist over a wide range in luminosity and
-other quantities.
+\subsubsection{Luminosity Function}
+The luminosity function (LF) gives the number density of galaxies as a
+function of luminosity, which can be expressed either in luminosity or
+absolute magnitude units.
+\begin{description}[labelwidth=3em, labelindent=0.25in]
+    \item [$\Phi(L)$] = number density of galaxies with
+        luminosity between $L$ and $L$ + $\mathrm{d}L$
+    \item [$\Phi(M)$] = number density of galaxies with absolute
+        mag between $M$ and $M$ + $\mathrm{d}M$
+\end{description}
+The integral over the LF gives the total number density of galaxies (at all
+luminosities). The LF is the first step toward understanding a fundamental
+question of galaxy formation: What sets the \emph{range} of galaxy luminosities
+and the relative \emph{numbers} of objects at different luminosities (though
+mass may be a more fundamental characteristic). It is also an important
+cosmological probe for evolution of the galaxy population (more later).
 
-\subsection{SB profiles}
-Ellipticals better fit by Sersic profiles than by
+\paragraph{Measuring the luminosity function}
+Obviously, distance measurements are required to get luminosity.
+Measurement critically depends on knowledge of the \textbf{selection
+function}.
+Simplest idea for correction: weight counts by $V_{max}$, the largest
+volume to which the galaxy could have been observed given the selection
+function. Issue: large scale structure.
+
+The simplest idea for correction is to weigh counts by $V_{max}$, the
+largest volume to which the galaxy could have been observed given the
+selection function. However, the issue here is large-scale structure.
+$\rightarrow \cfrac{V}{V_{max}}$ test for uniformity and understanding
+of selection function\footnote{Significantly more sophisticated
+methods have been developed; see, e.g.\ Binggelli et al (ARAA 26, 26,
+1988) for more details}.
+
+%------------------------------------------------------------------------
+For magnitude limited samples, more luminous objects will
+be overrepresented. This is called the Malmquist bias\footnote{Be
+aware that this name is sometimes used to refer to different things.}
+Also may need to be careful about systematic biases arising from
+uncertainties in measured magnitudes and distances, if population is
+not uniform in underlying distribution of absoluate mags and distances
+sampled (which it isn't). The LF rises toward fainter magnitudes, so
+more galaxies are scattered bright than are scattered faint
+\mynotes{(WTF??)}. In distance, more galaxies are located farther
+than nearer because of volume element \mynotes{(seriously, WTF)}, so
+more galaxies scattered into sample (with corresponding error in
+absolute magnitude) than scattered out of it.
+Note that many biases are possible aside from a simple magnitude cut, e.g.\
+color bias, SB bias, etc.
+%------------------------------------------------------------------------
+
+In general, need to be \emph{very} careful about
+understanding selection effects; model (and verify) them.
+
+\paragraph{Observed luminosity function}
+\begin{itemize}
+    \item Absolute magnitudes ($M_{V}$) range from -22 to -8.
+    \item Nomenclature: ``dwarf'' galaxies vs.\ ``normal'' galaxies.
+    \item What objects dominate by number? What objects dominate the
+        total luminosity?
+    \item Different types have clearly different LFs
+    \item Since proportion of a given type depends on environment, so
+        must the general LF.
+\end{itemize}
+
+\paragraph{Functional fits to the observed luminosity function}
+Funcional fits to the observed LF and parameters of the LF
+LFs are usually well characterized by a \textbf{Schecter Function}
+\[
+    \phi(L) = \frac{\phi_{*}}{L_{*}} \left( \frac{L}{L_{*}} \right) ^{\alpha}
+    \exp\left( -\frac{L}{L_{*}} \right)
+    \]
+\[
+    \phi(M) \propto 10^{ -0.4 \left( \alpha + 1 \right)
+    \left( M - M^{*} \right) }
+    \exp \left[ -10^{ 0.4(M^{*} - M) } \right]
+    \]
+where $\phi(L)$ is the number of galxies with luminosity between
+$L$ and $L + dL$.  $\phi_{*}$, $L_{*}$, and $\alpha$ (the faint-end slope)
+are the three parameters. The Schecter function is only an approximation, and
+is purely empirical.
+
+A possibly useful feature of the Schecter function is that it can be
+integrated (for $\alpha > -2$) to get total luminosity density:
+\[
+    j = \phi_{*}L_{*}\Gamma\left(\alpha + 2\right)
+    \]
+Typical ``local'' parameters (e.g. SDSS at $z\sim0.1$) are:
+\begin{itemize}
+    \item $\phi^{*}\sim0.015h^{3}$ Mpc$^{-3}$
+    \item $M_{B}^{*}\sim-19.5$
+    \item $M_{R}^{*}\sim-20.5$
+    \item $\alpha=-1$ to $-1.5$
+\end{itemize}
+As noted above, there is a dependence on type. So what is the implied
+luminosity density? And (getting ahead of ourselves) the implied stellar
+mass density, c.f. cosmological.
+
+There has been significant discussian over detailed shape and normalization of
+LF\@.  There are probably both observational issues (e.g.\ selection functions)
+and astrophysical ones (e.g.\ large scale structure, ``cosmic variance'').
+
+\paragraph{Origin of the luminosity function}
+relative number of galaxies at different masses, if there is a
+correspondance between mass and luminosity. Related to primordial
+distribution?
+compare galaxy LF with dark halo LF, figure from Whittle
+cooling at highest masses
+galaxy ``efficiency" at higher and lower galaxy masses: feedback? affecting
+numbers or luminosities?
+
+\paragraph{Evolution of the luminosity function}
+LF evolution contains a lot of information about galaxy evolution.
+Some possibilities:
+\begin{itemize}
+    \item No evolution: distribution of galaxiy luminosities is unchanging.
+    \item Passive evolution: number and internal (stellar) makeup of
+        galaxies is unchanging \mynotes{(no star formation)},
+        but luminosity evolves as stars evolve.
+    \item Luminosity evolution: stellar makeup of galaxies changes with
+        time (star \emph{formation}, leading to luminosity changes).
+    \item Number (density) evolution: number of galaxies changes with time.
+        Galaxies may be either created (formed) or destroyed (e.g.\
+        mergers) as a function of luminosity.
+\end{itemize}
+There is a large amount of work on this, but certainly the LF shows
+evolution\footnote{Faber et al. (2007)}. All samples show luminosity
+evolution, but red galaxies show number density evolution.
+Schecter parameters (link?)
+
+
+\subsection{Elliptical/Spheriodal galaxies}
+\subsubsection{Surface brightness profiles}
+Ellipticals are probably better fit by Sersic profiles than by
 deVaucouleurs\footnote{Caon et al. 1993}.
 \begin{itemize}
     \item Correlation of Sersic indices with other parameters
@@ -1014,63 +1351,64 @@ deVaucouleurs\footnote{Caon et al. 1993}.
         represented by exponentials.
     \item Slope of SB profile (Sersic $n$) appears to be correlated with
         luminosity
-    \item SB vs L ``turns over'' \mynotes{(?)} at intermediate luminosity:
+    \item SB vs L turns over at intermediate luminosity:
         two families of shperoidal systems? \mynotes{
             $\rightarrow$ \textbf{Cuspy and Core}}
     \item Ellipticals exist over wide range of sizes, luminosities, and SBs.
 \end{itemize}
 Other profiles that have been used:
 \begin{itemize}
-    \item King model (truncated Gaussian for velocity distribution)
+    \item King model (truncated Gaussian for velocity distribution). This
+        is the only profile with theoretical basis; the others are
+        empirical - Hubble law doesn't converge.
     \item Hubble profile:
         \[
-            \Sigma(r) = \frac{\Sigma_{s}}{\left(1+\frac{r}{r_{s}}\right)^{2}}
-        \]
-        where $\Sigma_{s}$ = 0.25$\Sigma_{o}$
+            \Sigma(r) = \frac{ \Sigma_{s} }
+            {\left( 1 + \frac{r}{r_{s}} \right)^{2}}
+            \]
+        where $\Sigma_{s}$ = 0.25$\Sigma_{0}$
 \end{itemize}
 None are perfect matches to data over all scales\footnote{see Burkert 1993 for
 comparison with deVaucouleurs law}.
 
-Inner regions of spheroidals deviate from Sersic profiles fit to outer regions,
-(though outer regions can also deviate from Sersic profiles,
-especially notable in central cluster (cD) galaxies).
-Inner regions are of particular interest because they may reflect dissipational
-collapse of low angular momentum material\footnote{See, e.g.\ NGC 4472}.
-Initially, it seemed like
-galaxies had cores, but this is partly an effect of seeing. Higher spatial
-resolution (HST) shows that galaxies have both flat and steep (cuspy) inner
-profiles\footnote{e.g.\ NGC720 vs.\ NGC4621}.
-Inner profiles seem to be roughly bimodal (though this bimodality is currently
+Inner regions of spheroidal galaxies deviate from Sersic profiles fit to
+outer regions, (though outer regions can also deviate from Sersic profiles,
+especially notable in central cluster (cD) galaxies). Inner regions are of
+particular interest because they may reflect dissipational collapse of low
+angular momentum material\footnote{See, e.g.\ NGC 4472}. Initially, it
+seemed like galaxies had cores, but this is partly an effect of seeing.
+Higher spatial resolution (HST) shows that galaxies have both flat and
+steep (cuspy) inner profiles\footnote{e.g.\ NGC720 vs.\ NGC4621}. Inner
+profiles seem to be roughly bimodal (though this bimodality is currently
 under debate).
 
 Parametric fits to account for these become more complex,
-e.g.\ the `nuker law':
+e.g.\ the ``nuker law'':
 \[
-    I(r) = I_{b}2^{(\beta-\gamma)/\alpha)}
-    \left(\frac{r_{b}}{r}\right)^{\gamma}
-    \left[1+\left(\frac{r_{b}}{r}\right)^{\alpha}\right]
-    ^{\left(\gamma-\beta\right)/\alpha}
-\]
-where $\gamma$ is the slope of the inner power law, $\beta$ is
-the slope of the outer power law, and $\alpha$ is the sharpness
-of the break between them.
+    I(r) = I_{b}2^{ (\beta-\gamma) / \alpha) }
+    \left( \frac{r_{b}}{r} \right) ^{\gamma}
+    \left[ 1 + \left( \frac{r_{b}}{r} \right) ^{\alpha} \right]
+    ^{ \left( \gamma - \beta \right) / \alpha }
+    \]
+where $\gamma$ is the slope of the inner power law, $\beta$ is the slope of
+the outer power law, and $\alpha$ is the sharpness of the break between
+them.
 
-Profile type is correlated with luminosity. Luminous
-ellipticals ten to have ``cuspy cores'' with a break radius and
-shallower central density profile. Lower luminosity ellipticals
-have power laws all the way in.
+Profile type is correlated with luminosity. Luminous ellipticals ten to
+have ``cuspy cores'' with a break radius and shallower central density
+profile. Lower luminosity ellipticals have power laws all the way in.
 
-Galaixes with cusps may have ``extra light'', perhaps related to an accrection
-event; note that at least some of these show distinct kinematic signature in
-their cores.
+Galaxies with cusps may have ``extra light'', perhaps related to an
+accretion event; note that at least some of these show distinct kinematic
+signature in their cores.
 
-\subsection{Intrinsic (3D) shapes of ellipticals}
+\subsubsection{Intrinsic (3D) shapes of ellipticals}
 \begin{itemize}
     \item oblate (2 long axes)
     \item prolate (1 long axis)
     \item triaxial (all axes different length).
 \end{itemize}
-True shapes are determined by by looking at distribution of ellipticiites
+True shapes are determined by by looking at distribution of ellipticities.
 \begin{itemize}
     \item Distribution function is different for fainter and
         brighter Es.
@@ -1084,29 +1422,31 @@ True shapes are determined by by looking at distribution of ellipticiites
         oblate or prolate shape\footnote{de Zeeuw, Fig 1}.
 \end{itemize}
 
-\subsection{Non-axisymmetric features in galaxies}
+\subsubsection{Non-axisymmetric features in galaxies}
 Often described by amplitudes of Fourier moments of
 intensity distribution as a function of radius, e.g.
-$\alpha_1$, $\alpha_2$, $\alpha_4$
+$\alpha_{1}$, $\alpha_{2}$, $\alpha_{4}$
 \[
     I\left(r,\theta\right) = \sum{c_{m}\cos\left(m\theta\right)} +
     \sum{s_{m}\sin\left(m\theta\right)}
-\]\[
+    \]
+\[
     \alpha_{m} = \frac{\sqrt{c^{2}_{m} + s_{m}^{2}}}{I_{o}}
-\]
-``First even term above ellipses is $\alpha_4$ term:'' \mynotes{(WTF???)}
+    \]
+``First even term above ellipses is $\alpha_{4}$ term:'' \mynotes{(WTF???)}
 \begin{itemize}
-    \item ``boxy" isophotes: $\alpha_4 < 0$;
+    \item ``boxy" isophotes: $\alpha_{4} < 0$;
         bright, slow, central cores, strong radio and x-ray.
-    \item ``disky" isophotes: $\alpha_4 > 0$;
+    \item ``disky" isophotes: $\alpha_{4} > 0$;
         faint, significant rotation-flattening, little
         radio or x-ray emission, steep cusp.
 \end{itemize}
-Deviations from elliptical fits are seen in slliptical/spheroidal systems,
+Deviations from elliptical fits are seen in elliptical/spheroidal systems,
 e.g.\ NGC 821 v.\ NGC 2300. It is possible that isophotal deviations form
 a continuous sequence\footnote{e.g.\ Kormendy and Bender classification}:
 \begin{center}
-S $\rightarrow$ S0 $\rightarrow$ disky Es $\rightarrow$ true Es $\rightarrow$ boxy Es.
+    S $\rightarrow$ S0 $\rightarrow$ disky Es $\rightarrow$
+    true Es $\rightarrow$ boxy Es
 \end{center}
 It is also possible that true Es are just disky Es viewed
 edge-on\footnote{Kormendy and Bender, figure 3}, and that there are two
@@ -1114,181 +1454,210 @@ distinct classes of Es. Some Es also show non-symmetric deviations from
 smooth SB distributions, e.g.\ ripples, shells, and streams, especially
 in outer regions.
 
-\subsection{Kinematics}
+\subsubsection{Kinematics}
 Elliptical galaxies are kinematically \emph{hot}. The random motions of stars
 is generally large compared to the organized motion (but this is not to say
-that there is \emph{no} rotation).
+that there is no rotation at all).
 
-The key kinematic quantity is \textbf{velocity dispersion}, $\sigma$.  Galaxies
-can be characterized by \emph{central} $\sigma$, but $\sigma$ does vary with
-radius.
+The key kinematic quantity is \textbf{velocity dispersion}, $\sigma$.
+Galaxies can be characterized by \emph{central} $\sigma$, but $\sigma$ does
+vary with radius.
 
-Some ellipticals do have some rotation, mostly in lower luminosity systems.
+Some ellipticals have some rotation, mostly in lower luminosity systems.
 The relative importance of \emph{organized} motion over \emph{random} motion
-can be characterized by $v_{rot}/\sigma$.  Shapes are expected to be influenced
+can be characterized by $v_{rot}/\sigma$. Shapes are expected to be influenced
 by rotation: for an oblate model with isotropic velocity distribution that is
 flattened by rotation:
 \[
     \frac{v_{rot}}{\sigma} = \sqrt{\frac{\epsilon}{\left(1-\epsilon\right)}}
-\]
+    \]
 Giant ellipticals have less rotation than this, implying anisotropic velocity
 dispersions to account for their shape (required for triaxial systems in any
-case).  Low/medium luminosity (high SB) Es, however, \emph{may} be isotropic
-with flattening caused by rotation\footnote{de Zeeuw, figure 3}.  Low SB Es
-appear to have anisotropic $\sigma$, i.e.\ more eccentric than expected from
-rotation; ``measured in LG Es 185 (factor of three low in $v_{rot}/\sigma$,
-147, factor of 10 low)." \mynotes{seriously, wtf}.  Significant fraction of Es
-may have dynamical subcomponents, e.g.\ velocity and dispersion for some
-interesting cases.
+case). Low/medium luminosity (high SB) Es, however, \emph{may} be isotropic
+with flattening caused by rotation
+\footnote{
+    \href{}
+    {de Zeeuw, figure 3}
+}.
 
-\subsection{Relations between different parameters and different families}
-\subsubsection{Photometric parameters}
+Low SB Es appear to have anisotropic $\sigma$, i.e.\ more eccentric than
+expected from rotation; ``measured in LG Es 185 (factor of three low in
+$v_{rot}/\sigma$, 147, factor of 10 low).'' \mynotes{seriously, wtf}.
+
+Significant fraction of Es may have dynamical subcomponents, e.g.\ velocity
+and dispersion for some interesting cases.
+
+\subsubsection{Relations between different parameters and different families
+of ellipticals}
+
+\paragraph{Photometric parameters}
 SB-size relation, between SB and SB-luminosity relations
 (``Kormendy relations'')\mynotes{???}.
 Also, profile \emph{shape} (e.g. Sersic index) with luminosity.
 
-\subsubsection{Kinematics vs.\ luminosity}
+\paragraph{Kinematics vs.\ luminosity}
 More luminous galaxies have less rotation, but higher velocity dispersions
 (\textbf{Faber-Jackson relation}, which is roughly $L\sim\sigma^{4}$, but
 lots of scatter).
 
-\subsubsection{The Fundamental Plane}
+\paragraph{The Fundamental Plane}
 Faber-Jackson relations and the Kormendy relation (between SB and L/size) are
-manifestations of the \textbf{Fundamental Plane of elliptical galaxies}; there
+manifestations of the
+\href{http://astronomy.nmsu.edu/holtz/a555/images/djorfig2.htm}
+{\textbf{Fundamental Plane of elliptical galaxies}}; there
 is a correlation between residuals in the Faber-Jackson emphrelation and SB.
 Galaxies do not populate the entire 3D space of $I$, $r$, and $\sigma$, but
-instead populate only a \emph{plane} in this space.  There is a relation
-between the \textbf{three fundamental global observables}: SB (or luminosity),
-size, and velocity dispersion\footnote{original refs: Dressler et al. 1987;
-Djorgovski and Davis 1987; Bender, Burstein and Faber 199x}.  The observed
-relation given by Virgo ellipticals is:
-\[
-    r_{c} \propto \left(\sigma_{0}^{2}\right)^{0.7}I_{c}^{-0.85}
-\]
-What is the origin of relation? Three assumptions would have to be
-true:
-\begin{enumerate}
-    \item Es are in virial equilibrium
-    \item M/L varies systematically with luminosity
-    \item Es form a ``homologous" family, all, e.g.\ with deVaucouleurs profiles.
-\end{enumerate}
-In this case, one expects:
-\[
-    L = c_{1}I_{c}r_{c}^{2}
-\]\[
-    M = c_{2}\frac{\sigma^{2}_{o}r_{e}}{G}
-\]
-where the first is a definition and the second is related to the \textbf{virial
-theorem} (though this applies to the mean potential energy and mean kinetic
-energy per unit mass, averaged over the entire system). The constants are
-related to the shapes and other details (not necessarily constant among the
-variety of Es).
-
-Combining these, we get
-\[
-    r_e = \frac{c_{2}}{c_{1}}\left(\frac{M}{L}\right)^{-1}\sigma_{o}^{2}I_{c}^{-1}
-\]
-If $M/L \propto L^{~0.2}$, then the observed fundamental plane is recovered;
-could arise from stellar populations or from variations in baryon to total
-mass. Alternatively, if $M/L$ is constant with a structure that varies relative
-to one or more of the fundamental variables (which we know it does, e.g.,
-systematic variations of Sersic $n$ with luminosity, but not clear if this is
-entire ``explanation'').
-
-However, we still need to understand origin of assumptions; why should
-parameters, e.g.\ mass-to-light vary smoothly with luminosity?  Recall that
-this ratio includes dark matter.  If ellipticals have dark matter halos, the
-luminous inner parts are not required to be in virial equilibrium.
-
-There is relatively little scatter around the fundamental plane, implying that
-the assumptions are reasonably valid over a large range of elliptical
-properties, which implies some significant regularities in the galaxy formation
-process.
-
-Galaxies do not fully populate the entire plane defined by our relation.
-Consequently,when the plane is projected onto the other two axes, there is a
-correlation\footnote{Djorgovski figure 2}.
-
-\paragraph{Luminosity (size) --- $\sigma$ plane:}
-Luminosity is proportional to velocity dispersion as
-$L\propto\sigma^{4}$, which is known as the \textbf{Faber-Jackson relation}.
-However, since the locus of Es isn't perfectly linear and the plane defied by
-the ellipticals isn't perpendicular to this dimension, the scatter around the
-Faber-Jackson relation is larger than the scatter around the fundamental plane.
-A new radius can be defined that incorporates SB such that the new radius vs.\
-$\sigma$ views the fundamental plane edge-on. Such a size measurement is called
-$D_{n}$, the isophotal \emph{diameter} of the B=20.75 isophote. This
-$D_{N}-\sigma$ relation provides a very useful distance estimator (if the
-fundamental plane really is fundamental).
-
-\paragraph{SB --- size plane:}
-Relation for \emph{smaller} galaxies:
+instead populate only a \emph{plane} in this space.
 \begin{itemize}
-    \item \emph{higher} SB for \emph{normal} small Es
-    \item \emph{lower} SB for \emph{diffuse} small Es
+    \item There is a relation between the \textbf{three fundamental global
+        observables}: SB (or luminosity), size, and velocity
+        dispersion\footnote{original refs: Dressler et al. 1987; Djorgovski
+        and Davis 1987; Bender, Burstein and Faber 199x}.
+    \item The observed relation given by Virgo ellipticals is:
+        \[
+            r_{e} \propto \left( \sigma_{0}^{2} \right) ^{0.7}I_{e}^{-0.85}
+            \]
+        What is the origin of relation?
+        Might expect something like this if
+        the following three assumptions are true:
+        \begin{enumerate}
+            \item Es are in virial equilibrium
+            \item M/L varies systematically with luminosity
+            \item Es form a ``homologous'' family, all, e.g.\ with
+                deVaucouleurs profiles.
+        \end{enumerate}
+        In this case, one expects:
+        \[
+            L = c_{1}I_{c}r_{c}^{2}
+            \]
+        \[
+            M = c_{2}\frac{\sigma^{2}_{o}r_{e}}{G}
+            \]
+        where the first is a definition and the second is related to the
+        \textbf{virial theorem} (though this applies to the mean potential
+        energy and mean kinetic energy per unit mass, averaged over the
+        entire system). The constants are related to the shapes and other
+        details (not necessarily constant among the variety of Es).
+
+        Combining these, we get
+        \[
+            r_{e} = \frac{c_{2}}{c_{1}}
+            \left( \frac{M}{L} \right)^{-1} \sigma_{0}^{2}I_{c}^{-1}
+            \]
+        If $M/L \propto L^{~0.2}$, then the observed fundamental plane is
+        recovered; could arise from stellar populations or from variations
+        in baryon to total mass. Alternatively, if $M/L$ is constant with a
+        structure that varies relative to one or more of the fundamental
+        variables (which we know it does, e.g., systematic variations of
+        Sersic $n$ with luminosity, but not clear if this is entire
+        ``explanation'').
+
+        However, we still need to understand origin of assumptions; why
+        should parameters, e.g.\ mass-to-light vary smoothly with
+        luminosity?  Recall that this ratio includes dark matter.  If
+        ellipticals have dark matter halos, the luminous inner parts are
+        not required to be in virial equilibrium.
+
+        There is relatively little scatter around the fundamental plane,
+        implying that the assumptions are reasonably valid over a large
+        range of elliptical properties, which implies some significant
+        regularities in the galaxy formation process.
+
+    \item Galaxies do not fully populate the entire plane defined by our
+        relation.
+        \begin{itemize}
+            \item Consequently, when the plane is projected onto the other
+                two axes, there is a correlation.\footnote{
+                    Djorgovski figure 2
+                }
+            \item In the luminosity (size) --- $\sigma$ plane,
+                Luminosity is proportional to velocity dispersion as
+                $L\propto\sigma^{4}$,
+                which is known as the \textbf{Faber-Jackson relation}.
+                However, since the locus of Es isn't perfectly linear and
+                the plane defied by the ellipticals isn't perpendicular to
+                this dimension, the scatter around the Faber-Jackson
+                relation is larger than the scatter around the fundamental
+                plane. A new radius can be defined that incorporates SB
+                such that the new radius vs.\ $\sigma$ views the
+                fundamental plane edge-on. Such a size measurement is
+                called $D_{n}$, the isophotal \emph{diameter} of the
+                B=20.75 isophote. This $D_{N}-\sigma$ relation provides a
+                very useful distance estimator (if the fundamental plane
+                really is fundamental).
+            \item In the SB --- size plane, relation for \emph{smaller} galaxies:
+                \begin{itemize}
+                    \item \emph{higher} SB for \emph{normal} small Es
+                    \item \emph{lower} SB for \emph{diffuse} small Es
+                \end{itemize}
+                These are sometimes known as the \textbf{Kormendy
+                relations} and are one of the main bases for separating
+                these two types of objects.
+            \item The SB --- $\sigma$ plane is presumably related to
+                two underlying physical parameters:
+                \begin{enumerate}
+                    \item density
+                    \item virial temperature
+                \end{enumerate}
+                In this plane, one can only form galaxies where
+                \emph{cooling is effective}, i.e.\ at larger densities and
+                hotter temperatures. This restricts the area in the space
+                in which we can find galaxies.
+            \item Additional features of the galaxy formation process may
+                introduce additional restrictions into allowed locations of
+                galaxies on the fundamental plane. Most luminous
+                ellipticals are located along one line (with some scatter)
+                in the fundamental plane, and most diffuse ellipticals are
+                located along another.
+            \item For more recent descussion, see
+        \end{itemize}
+    \item Isophotal deviations vs.\ luminosity and kinematics
+        \begin{itemize}
+            \item Deviations from elliptical shape is correlated with
+                dynamics, such that slower rotators are more likely to be
+                ``boxy'', and faster rotators are more likely to be
+                ``disky''\footnote{Kormendy and Bender, figure 2}.
+            \item There appears to be two kinds of ``boxiness'', one found
+                in giant Es and one found in bulges, which in fact are
+                relatively rapid rotators.  It is likely that these come
+                from different origins: plausibly, mergers in the case of
+                giant Es and bars/disk evolution in the case of bulges.
+            \item The core properties are correlated with the global shapes
+                and dynamics: cuspy core galaxies are boxy and anisotropic,
+                cuspy galaxies are disky and rotating.
+        \end{itemize}
+    \item Several types of ellipticals??
+        Normal and low luminosity Es:
+        \begin{itemize}
+            \item significant rotation
+            \item nearly isotropic
+            \item oblate spheroids
+            \item cusps (no cores)
+            \item disky isophotes
+        \end{itemize}
+        Giant Es:
+        \begin{itemize}
+            \item non-rotating
+            \item anisotropic (triaxial)
+            \item less flattened
+            \item cuspy cores
+            \item boxy isophotes
+        \end{itemize}
+        Dwarf spheroidals (diffuse ellipticals?):
+        \begin{itemize}
+            \item lower SB
+            \item off the fundamental plane
+            \item anisotropic (slow rotators for their ellipticity)
+        \end{itemize}
+        Bulges: multiple types? As an aside: globular clusters, which are
+        likely to be significantly different.
+    \item ellipticals as extension of disk galaxies to larger B/D ratio?
+        see, e.g. Cappellari 2013 figure
 \end{itemize}
-These are sometimes known as the \textbf{Kormendy relations} and are one of the
-main bases for separating these two types of objects.
 
-\paragraph{SB --- $\sigma$ plane:} Presumably related to
-two underlying physical parameters:
-\begin{enumerate}
-    \item density
-    \item virial temperature
-\end{enumerate}
-In this plane, one can only form galaxies where \emph{cooling is effective},
-i.e.\ at larger densities and hotter temperatures. This restricts
-the area in the space in which we can find galaxies.
-
-Additional features of the galaxy formation process may introduce additional
-restrictions into allowed locations of galaxies on the fundamental plane. Most
-luminous ellipticals are located along one line (with some scatter) in the
-fundamental plane, and most diffuse ellipticals are located along another.
-
-\subsubsection{Isophotal deviations vs.\ luminosity and kinematics}
-Deviations from elliptical shape is correlated with dynamics, such that slower
-rotators are more likely to be ``boxy'', and faster rotators are more likely to
-be ``disky''\footnote{Kormendy and Bender, figure 2}.
-
-There appears to be two
-kinds of ``boxiness'', one found in giant Es and one found in bulges, which in
-fact are relatively rapid rotators.  It is likely that these come from
-different origins: plausibly, mergers in the case of giant Es and bars/disk
-evolution in the case of bulges.
-
-The core properties are correlated with the global shapes and dynamics:
-cuspy core galaxies are boxy and anisotropic, cuspy galaxies are
-disky and rotating.
-
-\subsubsection{Several types of ellipticals??}
-Normal and low luminosity Es:
-\begin{itemize}
-    \item significant rotation
-    \item nearly isotropic
-    \item oblate spheroids
-    \item cusps (no cores)
-    \item disky isophotes
-\end{itemize}
-Giant Es:
-\begin{itemize}
-    \item non-rotating
-    \item anisotropic (triaxial)
-    \item less flattened
-    \item cuspy cores
-    \item boxy isophotes
-\end{itemize}
-Dwarf spheroidals (diffuse ellipticals?):
-\begin{itemize}
-    \item lower SB
-    \item off the fundamental plane
-    \item anisotropic (slow rotators for their ellipticity)
-\end{itemize}
-Bulges: multiple types? As an aside: globular clusters, which are
-likely to be significantly different.
-
-\subsection{Spectral energy distributions}
+\subsubsection{Spectral energy distributions}
 Note typical features in ellipticals: stellar absorption lines
-(4000\AA{} break, Mg, Fe, etc.)
+(4000 \AA{} break, Mg, Fe, etc.)
 Es are generally red: implications are predominantly old population.
 Relations:
 \begin{itemize}
@@ -1302,7 +1671,7 @@ Relations:
         arise from variations in age or metallicity, or different heavy element
         abundance ratios. Of equal interest to the Mg-$\sigma$ relation is the
         quite small scatter around the relation.
-  \end{itemize}
+\end{itemize}
 Some Es have signatures of a younger population: E+A (or k+a) galaxies:
 galaxies with strong Balmer lines. These are relatively rare, but likely
 are indicative of post-starburst galaxies with significant star formation
@@ -1313,32 +1682,181 @@ Stellar populations within ellipticals: Es have gradients in color/line
 strength, i.e.\ tend to be redder toward the center (but again, there is
 some degeneracy between age and metallicity as possible reasons for this).
 
-\subsection{Interstellar matter in ellipticals}
-It is now known that Es have significant interstellar gas, seen not in
-optical, but in X-ray emission $\rightarrow$ hot gas.
-This makes sense since some gas is expected from stellar evolution,
-although there is also the possibility of gas from the environment.
+\subsubsection{Interstellar matter in ellipticals} It is now known that Es
+have significant interstellar gas, seen not in optical, but in X-ray
+emission $\rightarrow$ hot gas. This makes sense since some gas is expected
+from stellar evolution, although there is also the possibility of gas from
+the environment.
 
-Some Es aso show evidence of colder gas and dust.  A surprisingly large
-fraction ($\sim$ 50\%) show some evidence for dust their cores\footnote{Lauer
-et al. 2005} These are typically small components by mass.
+Some Es aso show evidence of colder gas and dust. A surprisingly large
+fraction ($\sim$ 50\%) show some evidence for dust their
+cores\footnote{Lauer et al. 2005} These are typically small components by
+mass.
 
-\section{Spiral/Disk galaxies}
-\subsection{SB profiles}
-\subsection{Size-L/SB-L relations}
-\subsection{Vertical distributions in disk galaxies}
-\subsection{Non-axisymmetric features in disk galaxies: bars and spiral arms}
-\subsection{Kinematics}
-spirals are kinematically cold, meaning the
-random motion of stars is small compared to the organized motion
-(rotation), though there is some dispersion of velocities.
 
-\subsubsection{Tully-Fisher relation}:
-kinematics(maximum rotational velocity)-luminosity relation.
-\subsection{Typical spectra}
-\subsection{Gas and dust}
+\subsection{Spiral/Disk galaxies}
 
-\section{Galaxy parameter (scaling) relations}
+\paragraph{SB profiles}
+
+Most spiral galaxies are a combination of a disk plus a spheroid.
+
+Common to ``decompose'' spirals into two components: exponential + Sersic
+(e.g. MacArthur, Courteau, \& Holtzman, ApJ 582, 689 (2003)). Issues:
+covariance between parameters, 1D vs. 2D, validity of models (is there
+anything fundamental about an exponential that guarantees extrapolating it
+into the center?)
+Disk scale lengths typically several kpc
+Bulges in spirals tend to be better fit with variable Sersic indices, with
+lower index towards later type, smaller bulges
+Appears to be some correlation between bulge scale length and disk scale
+length (Macarthur, Courteau, Holtzman ApJ 582, 689 (2003)), : perhaps
+components are not independent?
+Different families of disk profiles exist, e.g., Freeman type I and type II
+profiles, may be related to a bar or dust
+Some spirals appear to have truncated disks
+Disks are not always perfectly flat, e.g. warps in the outer regions
+Spiral galaxies have stellar halos: in Milky Way  $\rho \propto r^{-3}$; in
+M31 stars have been found out to 200 kpc! Increasingly, stellar halos are
+being recognized to have significant substructure, e.g., stellar streams in
+NGC 891 and M31, Milky Way ``field of streams'' and some models
+Size-luminosity / surface brightness-luminosity relations: more luminous
+spirals are larger, but still have higher surface brightness
+Vertical distributions in disk galaxies: disks are not always perfectly
+flat, e.g. warps , NGC 5907 (need to scan!) in the outer regions. Also,
+disks are not infinitely thin. To first order, disk thickness appears to be
+independent of radius. Typically, vertical luminosity distribution is
+characterized by an exponential  $I(z) \propto \exp{-\vert z\vert/z_s}$,
+although sometimes more general form used to allow for some flattening
+towards disk center, characterized by
+\begin{displaymath}I(z) = sech^{2/n} \left({n\vert z\vert\over
+2z_d}\right)\end{displaymath}
+
+typical scale heights roughly 0.1 of disk scale length
+more luminous galaxies may have thicker disks
+in the Milky Way, and some other external galaxies, a single exponential is
+not a good fit, and a sum of two exponentials has been used, leading to the
+idea of a thin plus thick disk. Thick disk also visible in velocity and
+chemical space. Much debate about whether these are distinct components or
+not, and origin of the thick disk, e.g. recent Bovy et al papers.
+
+
+\subsubsection{Non-axisymmetric features in disk galaxies: bars and spiral arms}
+(Milky way structure, Bland-Hawthorn and Gerhard, 2016 ARAA)
+Many disk galaxies (1/3 to 1/2) have bars, with various morphologies
+(rings, etc.). Typical axis ratios 2.5 to 5
+Bars represent significant variations in mass density, factors of 2-3
+Seen edge on, bars may look like bulges, e.g. peanut shaped bulges
+Likely form as result of dynamical instability in disk, not totally clear
+about internal vs external trigger
+Spiral arms come in a variety of morphologies: ``grand-design'' vs.
+multitarm vs. flocculent (from Elmegreen et al, ApJ 2011)
+Arms are more prevalent in blue light, but exist in red light and gas as
+well, so not entirely from young stars
+Overall mass contrast in spiral arms not so large
+Spiral arms are generally ``trailing", i.e. spiral winds behind the
+rotation
+instabilities and differential rotation likely play part in driving
+different types of spiral structure
+
+\subsubsection{Kinematics}
+Spiral galaxies are kinematically cold: the random motion of
+stars is generally small compared to the organized motion (rotation); this
+is not to say that there is no dispersion of velocities
+
+Measuring galaxy rotation - optically and using HI (both spatially
+resolved, e.g. VLA, and unresolved data). While spirals are often just
+characterized by rotation curves (from Vogt el al 2004), velocity fields
+are 2D:
+several different ways (from Swaters et al. 2002) to look at HI kinematic
+data
+velocity-coded color (from NRAO)
+Spider diagrams
+PV diagrams: note spread of velocity at any given position: location of
+peak velocity may not give the maximimum velocity at that position
+From unresolved HI profiles, rotation characterized by line widths, e.g.
+$W_{50}$, $W_{20}$ (width at 50, 20 percent of peak line flux)
+Note that curves aren't always perfectly regular, can have features
+related, e.g., to structure in the disk: the nature of these can be clearer
+in 2D velocity data, e.g. NGC 5383. Note that there can also be motions of
+gas within the disk relative to rotation, and some internal velocity
+dispersion, e.g., UGC8508
+there can be large scale systematic deviations from rotation, e.g.,
+streaming motions in bars
+Milky Way rotation curve from Klypin et al 2002
+key kinematic quantity is maximum rotation velocity as a function of
+radius: the rotation curve. However, observed velocities need to be
+corrected for inclination of galaxy, usually inferred from observed axis
+ratio (but beware of non-axisymmetric disks!)
+spiral galaxy rotation curves (from (Persic, Salucci, \& Stel 1996)): on
+average, amplitude and shape of rotation curve is related to luminosity,
+but with significant scatter
+Extension of rotation curve to large radius primary indicator of dark
+matter!
+\begin{displaymath}v_{rot} \propto \sqrt{G M(r)\over r}\end{displaymath}
+
+    Flat rotation curves thus imply  $M(r) \propto r$, i.e. significantly
+    more than implied by exponentially declining stellar component
+    galaxy often characterized by $v_{max}$, i.e., maximum rotation
+    velocity (but sometimes hard to measure), or by velocity at some
+    specified radius, e.g. 2.2 $R_d$, the radius of maximum velocity for an
+    exponentially declining mass distribution
+
+    stars have "random" velocities, characterized by their velocity
+    ellipsoid, on top of the rotation field, e.g. in the solar neighborhood
+    (Binney \& Merrifield, from Dehnen \& Binney 1998)
+    note that velocity ellipsoid is not isotropic
+    velocity dispersion increases for redder (older, on average)
+    populations, leads to decreased rotation velocity for these
+    populations, called ``asymmetric drift''
+    Traditional interpretation is that velocity dispersion increases due to
+    gravitational interactions with substructure in disks, e.g. spiral
+    arms, molecular clouds
+    Alternate interpretation is that older stars are born with higher
+    vertical velocity dispersion, e.g., from a thicker disk: upside-down
+    galaxy formation (although heating would still occur subsequently)
+
+
+    Kinematics-luminosity relation: the Tully-Fisher relation (Courteau et
+    al 2007) between maximum rotation velocity and luminosity, roughly
+    $L\propto v^{3-4}$, but slope depends on wavelength, definitions of
+    where velocity is measured, etc.
+    Note relatively small scatter! Useful as a distance indicator
+    Scatter does not appear to be well-correlated with other parameters
+    (e.g. radius or surface brightness); different from ellipticals
+    Various ``explanations'' for the scaling relations have been proposed
+    (see e.g., appendices in Courteau et al 2007), along the lines of what
+    we discussed for fundamental plane, with same caveats and limitations
+    Scaling relations provide a strong constraint for galaxy formation
+    models
+    Typical spectra; see optical emission lines and generally blue
+    continuum
+    emission lines from HII regions -> current star formation.
+    Since young stars dominate light, more challenging to learn about older
+    stars
+    Most disks have color gradients
+    bulges: Peletier and Balcells observations suggest correlation of bulge
+    and disk colors
+    Star formation - mass relation: the main sequence
+    Gas and dust in disk galaxies: most gas in neutral hydrogen, observed
+    in HI. HI disks are very extended, often well past starlight. Gas and
+    dust strongly confined to plane of galaxy
+    gas mass fractions can be significant, ranging from 5 to 80%! Neutral
+    HI gas fractions (from Catinella et al 2010): higher gas fractions for
+    1) lower stellar mass, 2) lower stellar mass surface density, 3) lower
+    concentration, 4) bluer color
+    Since gas can be a significant component by mass, especially for lower
+    mass/luminosity galaxies, people have considered the baryonic
+    Tully-Fisher relation (from Gurovich et al 2010, left is stellar mass,
+    right includes gas mass), which seems to show even less scatter than
+    the stellar T-F relation; note that this requires estimate of stellar
+    mass from luminosity (more later!)
+    Gas composition in galaxies also varies from galaxy to galaxy and
+    within galaxies. Nonetheless one can consider ``mean'', or
+    alternatively present-day, metallicities of galaxies. Find that more
+    luminous galaxies generally are more metal-rich, as manifested by a
+    luminosity-metallicity relation, or a mass-metallicity relation
+
+\subsection{Galaxy parameter (scaling) relations}
 \begin{description}[labelindent=0.2in]
     \item [Structural] luminosity-SB
         \begin{itemize}
@@ -1379,7 +1897,7 @@ kinematics(maximum rotational velocity)-luminosity relation.
 \end{description}
 
 
-\section{Environments of galaxies: clusters and cluster galaxies}
+\subsection{Environments of galaxies: clusters and cluster galaxies}
     \begin{itemize}
       \item Galaxies are not homogeneously distributed in space...
       Correlation function
@@ -1408,7 +1926,7 @@ kinematics(maximum rotational velocity)-luminosity relation.
       in equilibrium
     \end{itemize}
 
-\section{Some galaxies to be familiar with}
+\subsection{Some galaxies to be familiar with}
 
 \newpage
 \begin{center}
