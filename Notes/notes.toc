@@ -58,15 +58,14 @@
 \contentsline {section}{\numberline {3}Overview of nearby galaxy population}{22}{section.3}
 \contentsline {subsection}{\numberline {3.1}Statistical properties of galaxies}{22}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Colors of galaxies}{22}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Luminosity Function}{22}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2}Luminosity function}{22}{subsubsection.3.1.2}
 \contentsline {paragraph}{Measuring the luminosity function}{23}{subsubsection.3.1.2}
-\contentsline {paragraph}{Observed luminosity function}{23}{subsubsection.3.1.2}
-\contentsline {paragraph}{Functional fits to the observed luminosity function}{23}{subsubsection.3.1.2}
+\contentsline {paragraph}{Observed luminosity function, functional fits, and parameters}{23}{subsubsection.3.1.2}
 \contentsline {paragraph}{Origin of the luminosity function}{24}{subsubsection.3.1.2}
 \contentsline {paragraph}{Evolution of the luminosity function}{24}{subsubsection.3.1.2}
 \contentsline {subsection}{\numberline {3.2}Elliptical/Spheriodal galaxies}{24}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Surface brightness profiles}{25}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Intrinsic (3D) shapes of ellipticals}{26}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Surface brightness profiles}{24}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Intrinsic (3D) shapes of ellipticals}{25}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}Non-axisymmetric features in galaxies}{26}{subsubsection.3.2.3}
 \contentsline {subsubsection}{\numberline {3.2.4}Kinematics}{26}{subsubsection.3.2.4}
 \contentsline {subsubsection}{\numberline {3.2.5}Relations between different parameters and different families of ellipticals}{27}{subsubsection.3.2.5}
@@ -153,4 +152,4 @@
 \contentsline {paragraph}{Dark matter in ellipticals}{63}{subsubsection.9.1.1}
 \contentsline {subsubsection}{\numberline {9.1.2}Gravitational lensing}{64}{subsubsection.9.1.2}
 \contentsline {subsection}{\numberline {9.2}Total masses of galaxies}{64}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Halo abundance matching}{65}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.3}Halo abundance matching}{64}{subsection.9.3}

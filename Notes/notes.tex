@@ -1179,8 +1179,11 @@ e.g.\ color or luminosity.
 
 \subsubsection{Colors of galaxies}
 Consider the distribution of SEDs of galaxies, to first order represented by
-their color. There is a striking bimodality in color\footnote{quantified from SDSS
-by (Strateva et al., AJ 122, 1861 (2001))}:
+their color. There is a striking bimodality
+\href{http://astronomy.nmsu.edu/holtz/a555/images/strateva.htm}
+{in color}\footnote{quantified from SDSS by
+\href{http://adsabs.harvard.edu/cgi-bin/bib_query?2001AJ....122.1861S}
+{Strateva et al., AJ 122, 1861 (2001)}}:
 \begin{itemize}
     \item Widley used terminology of red and blue sequences
         (with ``green valley'' in between).
@@ -1194,75 +1197,83 @@ ellipticals/early-type spirals without much current star formation (red)
 and later-type spirals with current star formation (blue), although
 dust, bulges, and metallicity all play a role.
 The correspondance with morphology is supported
-by correlation with structural parameters, e.g.\ multidimensional
-correlations\footnote{Blanton and Moustakis ARAA 2009}.
+by correlation with structural parameters, e.g.\
+\href{http://astronomy.nmsu.edu/holtz/a555/resources/blanton_araa_correlations.htm}
+{multidimensional correlations}.\footnote{
+    \href{http://adsabs.harvard.edu/abs/2009ARA\%26A..47..159B}
+    {Blanton and Moustakis ARAA 2009}
+}
 
 The key point is that color is easily observed and quantified. Given likely
 differences in stellar populations, the relation between luminosity and stellar
-mass is probably different for the two different sequences. At a rough level,
-the color allows one to estimate the stellar mass from the luminosity, though
-some colors certainly have more information about this than others, and some
-bandpasses for luminosity are more affected by differences in the stellar
-populations (more later).
+mass is probably different for the two different sequences (red and blue). At a
+rough level, the color allows the stellar mass to be estimated from the
+luminosity, though some colors have more information about this than others,
+and some bandpasses for luminosity are more affected by differences in the
+stellar populations (more later).
 
-Note that the relation shifts when expressed in terms of stellar
-mass\footnote{Baldry et al. 2006}, and that there appears to be a transistion
+Note that
+\href{http://astronomy.nmsu.edu/holtz/a555/images/mnr_11081_f7.htm}
+{the relation shifts when expressed in terms of stellar mass},\footnote{
+    \href{http://adsabs.harvard.edu/abs/2006MNRAS.373..469B}
+    {Baldry et al. 2006}
+}
+and that there appears to be a transistion
 mass around $10^{10}$ M$_{\odot}$ between the two sequences.
 
-\subsubsection{Luminosity Function}
+\subsubsection{Luminosity function}
 The luminosity function (LF) gives the number density of galaxies as a
-function of luminosity, which can be expressed either in luminosity or
+function of luminosity, and can be expressed in either luminosity or
 absolute magnitude units.
 \begin{description}[labelwidth=3em, labelindent=0.25in]
     \item [$\Phi(L)$] = number density of galaxies with
         luminosity between $L$ and $L$ + $\mathrm{d}L$
     \item [$\Phi(M)$] = number density of galaxies with absolute
-        mag between $M$ and $M$ + $\mathrm{d}M$
+        magnitude between $M$ and $M$ + $\mathrm{d}M$
 \end{description}
 The integral over the LF gives the total number density of galaxies (at all
 luminosities). The LF is the first step toward understanding a fundamental
 question of galaxy formation: What sets the \emph{range} of galaxy luminosities
-and the relative \emph{numbers} of objects at different luminosities (though
-mass may be a more fundamental characteristic). It is also an important
-cosmological probe for evolution of the galaxy population (more later).
+and the relative \emph{numbers} of objects at each luminosity? (though mass may
+be a more fundamental characteristic than luminosity\ldots) The LF is also an
+important cosmological probe for evolution of the galaxy population (more
+later).
 
 \paragraph{Measuring the luminosity function}
-Obviously, distance measurements are required to get luminosity.
-Measurement critically depends on knowledge of the \textbf{selection
+Measurement of the LF requires distance measurements (to get luminosity),
+and critically depends on knowledge of the \textbf{selection
 function}.
-Simplest idea for correction: weight counts by $V_{max}$, the largest
+The simplest idea for correction is to weight counts by $V_{max}$, the largest
 volume to which the galaxy could have been observed given the selection
-function. Issue: large scale structure.
-
-The simplest idea for correction is to weigh counts by $V_{max}$, the
-largest volume to which the galaxy could have been observed given the
-selection function. However, the issue here is large-scale structure.
-$\rightarrow \cfrac{V}{V_{max}}$ test for uniformity and understanding
-of selection function\footnote{Significantly more sophisticated
-methods have been developed; see, e.g.\ Binggelli et al (ARAA 26, 26,
-1988) for more details}.
-
-%------------------------------------------------------------------------
-For magnitude limited samples, more luminous objects will
-be overrepresented. This is called the Malmquist bias\footnote{Be
-aware that this name is sometimes used to refer to different things.}
-Also may need to be careful about systematic biases arising from
-uncertainties in measured magnitudes and distances, if population is
-not uniform in underlying distribution of absoluate mags and distances
-sampled (which it isn't). The LF rises toward fainter magnitudes, so
-more galaxies are scattered bright than are scattered faint
-\mynotes{(WTF??)}. In distance, more galaxies are located farther
-than nearer because of volume element \mynotes{(seriously, WTF)}, so
-more galaxies scattered into sample (with corresponding error in
-absolute magnitude) than scattered out of it.
-Note that many biases are possible aside from a simple magnitude cut, e.g.\
-color bias, SB bias, etc.
-%------------------------------------------------------------------------
-
+function. However, there is an issue with large scale structure, so
+$\cfrac{V}{V_{max}} \rightarrow$ test for uniformity and understanding
+of selection function\footnote{
+    Significantly more sophisticated methods have been developed; for more details, see
+    \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1988ARA\%26A..26..509}
+    {Binggelli et al (ARAA 26, 26, 1988).}
+}
 In general, need to be \emph{very} careful about
-understanding selection effects; model (and verify) them.
+understanding selection effects.
+\href{http://astronomy.nmsu.edu/holtz/a555/resources/lf_selection.gif}
+{Model (and verify) them}.
 
-\paragraph{Observed luminosity function}
+%------------------------------------------------------------------------
+\mynotes{For magnitude limited samples, more luminous objects will be overrepresented.
+This is called the Malmquist bias\footnote{Be aware that this name is sometimes
+used to refer to different things.} Also may need to be careful about
+systematic biases arising from uncertainties in measured magnitudes and
+distances, if population is not uniform in underlying distribution of absoluate
+mags and distances sampled (which it isn't). The LF rises toward fainter
+magnitudes, so more galaxies are scattered bright than are scattered faint
+(WTF??). In distance, more galaxies are located farther than nearer
+because of volume element (seriously, WTF), so more galaxies
+scattered into sample (with corresponding error in absolute magnitude) than
+scattered out of it. Note that many biases are possible aside from a simple
+magnitude cut, e.g.\ color bias, SB bias, etc.}
+%------------------------------------------------------------------------
+
+
+\paragraph{Observed luminosity function, functional fits, and parameters}
 \begin{itemize}
     \item Absolute magnitudes ($M_{V}$) range from -22 to -8.
     \item Nomenclature: ``dwarf'' galaxies vs.\ ``normal'' galaxies.
@@ -1273,8 +1284,6 @@ understanding selection effects; model (and verify) them.
         must the general LF.
 \end{itemize}
 
-\paragraph{Functional fits to the observed luminosity function}
-Funcional fits to the observed LF and parameters of the LF
 LFs are usually well characterized by a \textbf{Schecter Function}
 \[
     \phi(L) = \frac{\phi_{*}}{L_{*}} \left( \frac{L}{L_{*}} \right) ^{\alpha}
@@ -1287,37 +1296,52 @@ LFs are usually well characterized by a \textbf{Schecter Function}
     \]
 where $\phi(L)$ is the number of galxies with luminosity between
 $L$ and $L + dL$.  $\phi_{*}$, $L_{*}$, and $\alpha$ (the faint-end slope)
-are the three parameters. The Schecter function is only an approximation, and
+are the
+\href{http://astronomy.nmsu.edu/holtz/a555/resources/schechter.gif}
+{three parameters}. The Schecter function is only an approximation, and
 is purely empirical.
 
 A possibly useful feature of the Schecter function is that it can be
-integrated (for $\alpha > -2$) to get total luminosity density:
+integrated (for $\alpha > -2$) to get \textit{total luminosity density}:
 \[
     j = \phi_{*}L_{*}\Gamma\left(\alpha + 2\right)
     \]
-Typical ``local'' parameters (e.g. SDSS at $z\sim0.1$) are:
+\mynotes{WTF is $\Gamma$??}
+Typical ``local'' parameters\footnote{
+    \href{http://astronomy.nmsu.edu/holtz/a555/resources/monterotab2.gif}
+    {parameters for different bandpasses} from
+    \href{http://adsabs.harvard.edu/abs/2009MNRAS.399.1106M}
+    {Montero-Dorta \& Prada (2009)}
+}
+(e.g. SDSS at $z\sim0.1$) are:
 \begin{itemize}
     \item $\phi^{*}\sim0.015h^{3}$ Mpc$^{-3}$
     \item $M_{B}^{*}\sim-19.5$
     \item $M_{R}^{*}\sim-20.5$
     \item $\alpha=-1$ to $-1.5$
 \end{itemize}
-As noted above, there is a dependence on type. So what is the implied
-luminosity density? And (getting ahead of ourselves) the implied stellar
-mass density, c.f. cosmological.
+As noted above, there is a dependence on type.\footnote{
+    e.g.\ \href{http://astronomy.nmsu.edu/holtz/a555/resources/lf_environment.gif}
+    {Driver \& Propris},
+    \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/marzke3.htm}
+    {Marzke, figure 3}
+}
 
-There has been significant discussian over detailed shape and normalization of
+So what is the implied luminosity density? And (getting ahead of ourselves)
+what is the implied stellar mass density, c.f. cosmological?
+
+There has been significant
+\href{http://astronomy.nmsu.edu/holtz/a555/images/blantontab3.htm}
+{discussian} over detailed shape and normalization of
 LF\@.  There are probably both observational issues (e.g.\ selection functions)
 and astrophysical ones (e.g.\ large scale structure, ``cosmic variance'').
 
 \paragraph{Origin of the luminosity function}
-relative number of galaxies at different masses, if there is a
-correspondance between mass and luminosity. Related to primordial
-distribution?
-compare galaxy LF with dark halo LF, figure from Whittle
-cooling at highest masses
-galaxy ``efficiency" at higher and lower galaxy masses: feedback? affecting
-numbers or luminosities?
+relative number of galaxies at different masses, if there is a correlation
+between mass and luminosity. Related to primordial distribution? compare galaxy
+LF with dark halo LF, figure from Whittle cooling at highest masses galaxy
+``efficiency" at higher and lower galaxy masses: feedback? affecting numbers or
+luminosities?
 
 \paragraph{Evolution of the luminosity function}
 LF evolution contains a lot of information about galaxy evolution.
