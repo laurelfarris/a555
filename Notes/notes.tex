@@ -71,7 +71,7 @@
   {\fontsize{13}{14}\selectfont\bfseries\color{mypur}}
   {\color{myblue}\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
   {1em}{}
-  [\vspace{-2.5pt}{\color{mygray}\titlerule[3pt]}]
+  %[\vspace{-2.5pt}{\color{mygray}\titlerule[3pt]}]
 \titleformat{\paragraph}%
   {\fontsize{12}{13}\selectfont\bfseries\color{myblue}}
   {}
@@ -102,8 +102,12 @@
     \bfseries\textcolor{cadet}{#1}
 }
 \usepackage{hyperref}
-\hypersetup{colorlinks=true, urlcolor=myblue, linkcolor=black,}
-\urlstyle{same}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=myblue,
+    linkbordercolor=myblue,
+    linkcolor=black,}
+%\urlstyle{same}
 \newcommand{\myref}[1]{\textcolor{pinegreen}{\S{} \ref{#1}}}
 
 \begin{document}
@@ -547,7 +551,8 @@ The Sersic Profile is given by
 \end{itemize}
 
 \paragraph{SB profile for disk galaxies}
-Disks are usually well represented \emph{on average} by an exponential:
+Disks (and low luminosity ellipticals) are usually well represented \emph{on
+average} by an exponential:
 \[
     \Sigma(r) = \Sigma_{s}\exp\left(-\frac{r}{r_{s}}\right)
     \quad\mathrm{[flux\;units]}
@@ -699,7 +704,7 @@ component.
 \subsubsection{Velocities}
 Spectra allow the study of velocities via the Doppler shift:
 \[
-    \frac{\nabla\lambda}{\lambda} = \frac{v}{c}
+    \frac{\Delta\lambda}{\lambda} = \frac{v}{c}
     \]
 which measures both the bulk velocity of the galaxy and the distribution of
 stellar velocities within the galaxy. Note that the shift in wavelength is
@@ -1179,10 +1184,8 @@ e.g.\ color or luminosity.
 
 \subsubsection{Colors of galaxies}
 Consider the distribution of SEDs of galaxies, to first order represented by
-their color. There is a striking bimodality
-\href{http://astronomy.nmsu.edu/holtz/a555/images/strateva.htm}
-{in color}\footnote{quantified from SDSS by
-\href{http://adsabs.harvard.edu/cgi-bin/bib_query?2001AJ....122.1861S}
+their color. There is a striking bimodality \href{http://astronomy.nmsu.edu/holtz/a555/images/strateva.htm}
+{in color}\footnote{quantified from SDSS by \href{http://adsabs.harvard.edu/cgi-bin/bib_query?2001AJ....122.1861S}
 {Strateva et al., AJ 122, 1861 (2001)}}:
 \begin{itemize}
     \item Widley used terminology of red and blue sequences
@@ -1193,16 +1196,12 @@ their color. There is a striking bimodality
         luminosities, though there is significant overlap.
 \end{itemize}
 At some level, this bimodality is nothing more than the bimodality between
-ellipticals/early-type spirals without much current star formation (red)
-and later-type spirals with current star formation (blue), although
-dust, bulges, and metallicity all play a role.
-The correspondance with morphology is supported
-by correlation with structural parameters, e.g.\
-\href{http://astronomy.nmsu.edu/holtz/a555/resources/blanton_araa_correlations.htm}
-{multidimensional correlations}.\footnote{
-    \href{http://adsabs.harvard.edu/abs/2009ARA\%26A..47..159B}
-    {Blanton and Moustakis ARAA 2009}
-}
+ellipticals/early-type spirals without much current star formation (red) and
+later-type spirals with current star formation (blue), although dust, bulges,
+and metallicity all play a role. The correspondance with morphology is
+supported by correlation with structural parameters, e.g.\ \href{http://astronomy.nmsu.edu/holtz/a555/resources/blanton_araa_correlations.htm}
+{multidimensional correlations}.\footnote{\href{http://adsabs.harvard.edu/abs/2009ARA\%26A..47..159B}
+    {Blanton and Moustakis ARAA 2009}}
 
 The key point is that color is easily observed and quantified. Given likely
 differences in stellar populations, the relation between luminosity and stellar
@@ -1212,10 +1211,8 @@ luminosity, though some colors have more information about this than others,
 and some bandpasses for luminosity are more affected by differences in the
 stellar populations (more later).
 
-Note that
-\href{http://astronomy.nmsu.edu/holtz/a555/images/mnr_11081_f7.htm}
-{the relation shifts when expressed in terms of stellar mass},\footnote{
-    \href{http://adsabs.harvard.edu/abs/2006MNRAS.373..469B}
+Note that \href{http://astronomy.nmsu.edu/holtz/a555/images/mnr_11081_f7.htm}
+{the relation shifts when expressed in terms of stellar mass},\footnote{\href{http://adsabs.harvard.edu/abs/2006MNRAS.373..469B}
     {Baldry et al. 2006}
 }
 and that there appears to be a transistion
@@ -1240,9 +1237,8 @@ important cosmological probe for evolution of the galaxy population (more
 later).
 
 \paragraph{Measuring the luminosity function}
-Measurement of the LF requires distance measurements (to get luminosity),
-and critically depends on knowledge of the \textbf{selection
-function}.
+Measurement of the LF requires distance measurements (to get luminosity), and
+critically depends on knowledge of the \textbf{selection function}.
 The simplest idea for correction is to weight counts by $V_{max}$, the largest
 volume to which the galaxy could have been observed given the selection
 function. However, there is an issue with large scale structure, so
@@ -1252,8 +1248,7 @@ of selection function\footnote{
     \href{http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=1988ARA\%26A..26..509}
     {Binggelli et al (ARAA 26, 26, 1988).}
 }
-In general, need to be \emph{very} careful about
-understanding selection effects.
+In general, need to be \emph{very} careful about understanding selection effects.
 \href{http://astronomy.nmsu.edu/holtz/a555/resources/lf_selection.gif}
 {Model (and verify) them}.
 
@@ -1271,7 +1266,6 @@ scattered into sample (with corresponding error in absolute magnitude) than
 scattered out of it. Note that many biases are possible aside from a simple
 magnitude cut, e.g.\ color bias, SB bias, etc.}
 %------------------------------------------------------------------------
-
 
 \paragraph{Observed luminosity function, functional fits, and parameters}
 \begin{itemize}
@@ -1306,7 +1300,8 @@ integrated (for $\alpha > -2$) to get \textit{total luminosity density}:
 \[
     j = \phi_{*}L_{*}\Gamma\left(\alpha + 2\right)
     \]
-\mynotes{WTF is $\Gamma$??}
+\mynotes{$\Gamma$ = ?}
+
 Typical ``local'' parameters\footnote{
     \href{http://astronomy.nmsu.edu/holtz/a555/resources/monterotab2.gif}
     {parameters for different bandpasses} from
@@ -1330,10 +1325,9 @@ As noted above, there is a dependence on type.\footnote{
 So what is the implied luminosity density? And (getting ahead of ourselves)
 what is the implied stellar mass density, c.f. cosmological?
 
-There has been significant
-\href{http://astronomy.nmsu.edu/holtz/a555/images/blantontab3.htm}
+There has been significant \href{http://astronomy.nmsu.edu/holtz/a555/images/blantontab3.htm}
 {discussian} over detailed shape and normalization of
-LF\@.  There are probably both observational issues (e.g.\ selection functions)
+LF\@. There are probably both observational issues (e.g.\ selection functions)
 and astrophysical ones (e.g.\ large scale structure, ``cosmic variance'').
 
 \paragraph{Origin of the luminosity function}
@@ -1344,40 +1338,51 @@ LF with dark halo LF, figure from Whittle cooling at highest masses galaxy
 luminosities?
 
 \paragraph{Evolution of the luminosity function}
-LF evolution contains a lot of information about galaxy evolution.
+LF evolution contains a lot of information about galaxy evolution
+(understand galaxies by ``looking back in time'').
 Some possibilities:
 \begin{itemize}
-    \item No evolution: distribution of galaxiy luminosities is unchanging.
+    \item No evolution: distribution of galaxy luminosities is unchanging.
     \item Passive evolution: number and internal (stellar) makeup of
         galaxies is unchanging \mynotes{(no star formation)},
         but luminosity evolves as stars evolve.
     \item Luminosity evolution: stellar makeup of galaxies changes with
-        time (star \emph{formation}, leading to luminosity changes).
+        time (star formation), leading to luminosity changes.
     \item Number (density) evolution: number of galaxies changes with time.
         Galaxies may be either created (formed) or destroyed (e.g.\
         mergers) as a function of luminosity.
 \end{itemize}
-There is a large amount of work on this, but certainly the LF shows
+There is a large amount of work on this, but the LF definitely shows
 evolution\footnote{Faber et al. (2007)}. All samples show luminosity
-evolution, but red galaxies show number density evolution.
-Schecter parameters (link?)
+evolution, but red galaxies show number density evolution. \href{http://astronomy.nmsu.edu/holtz/a555/images/faberdeepf7.htm}
+{Schechter parameters}: ``quenching'' of galaxies: moving galaxies from blue
+to red sequence?
 
+Higher redshift results: the UV luminosity function: (links)
 
+\newpage
 \subsection{Elliptical/Spheriodal galaxies}
 \subsubsection{Surface brightness profiles}
 Ellipticals are probably better fit by Sersic profiles than by
 deVaucouleurs\footnote{Caon et al. 1993}.
+\mynotes{Previously, stated that \emph{sphericals} are characterized
+by deVaucouleurs, not ellipticals.}
 \begin{itemize}
     \item Correlation of Sersic indices with other parameters
         suggests that there is something physical going on, but be aware that
         there may be fit degeneracies.
-    \item Spiral bulges, low luminosity Es may be better
+    \item Low luminosity Es (and the bulges in spirals) may be better
         represented by exponentials.
+    \item \href{http://astronomy.nmsu.edu/holtz/a555/resources/caonfig3.gif}
+        {Correlation of Sersic indices with other parameters} suggests that
+        there is something physical going on (but be aware of fit degeneracies).
     \item Slope of SB profile (Sersic $n$) appears to be correlated with
         luminosity
     \item SB vs L turns over at intermediate luminosity:
-        two families of shperoidal systems? \mynotes{
-            $\rightarrow$ \textbf{Cuspy and Core}}
+        two families of shperoidal systems? Or continuous trend?\footnote{
+            See \href{http://adsabs.harvard.edu/abs/2009ApJS..182..216K}
+            {Kormendy et al. (2009)}}
+        \mynotes{$\rightarrow$ \textbf{Cuspy cores}}.
     \item Ellipticals exist over wide range of sizes, luminosities, and SBs.
 \end{itemize}
 Other profiles that have been used:
@@ -1395,15 +1400,16 @@ Other profiles that have been used:
 None are perfect matches to data over all scales\footnote{see Burkert 1993 for
 comparison with deVaucouleurs law}.
 
-Inner regions of spheroidal galaxies deviate from Sersic profiles fit to
-outer regions, (though outer regions can also deviate from Sersic profiles,
-especially notable in central cluster (cD) galaxies). Inner regions are of
-particular interest because they may reflect dissipational collapse of low
-angular momentum material\footnote{See, e.g.\ NGC 4472}. Initially, it
-seemed like galaxies had cores, but this is partly an effect of seeing.
-Higher spatial resolution (HST) shows that galaxies have both flat and
-steep (cuspy) inner profiles\footnote{e.g.\ NGC720 vs.\ NGC4621}. Inner
-profiles seem to be roughly bimodal (though this bimodality is currently
+Inner regions of spheroidal galaxies deviate from Sersic profiles fit to outer
+regions. (Outer regions can also deviate from Sersic profiles, especially
+notable in \href{http://astronomy.nmsu.edu/holtz/a555/resources/cDprof1.gif}
+{central cluster (cD) galaxies}.)
+Inner regions are of particular interest because they may reflect
+dissipational collapse of low angular momentum material\footnote{See, e.g.\ NGC
+4472}. Initially, it seemed like galaxies had cores, but this is partly an
+effect of seeing. Higher spatial resolution (HST) shows that galaxies have both
+flat and steep (cuspy) inner profiles\footnote{e.g.\ NGC720 vs.\ NGC4621}.
+Inner profiles seem to be roughly bimodal (though this bimodality is currently
 under debate).
 
 Parametric fits to account for these become more complex,
@@ -1418,13 +1424,16 @@ where $\gamma$ is the slope of the inner power law, $\beta$ is the slope of
 the outer power law, and $\alpha$ is the sharpness of the break between
 them.
 
-Profile type is correlated with luminosity. Luminous ellipticals ten to
+Profile type is \href{http://astronomy.nmsu.edu/holtz/a555/images/lauerfig5.htm}
+correlated with luminosity. Luminous ellipticals tend to
 have ``cuspy cores'' with a break radius and shallower central density
 profile. Lower luminosity ellipticals have power laws all the way in.
-
 Galaxies with cusps may have ``extra light'', perhaps related to an
 accretion event; note that at least some of these show distinct kinematic
 signature in their cores.
+
+The existence of cores may be indicative of a previous merging event, with
+merging black holes ``scouring'' the core.
 
 \subsubsection{Intrinsic (3D) shapes of ellipticals}
 \begin{itemize}
@@ -1447,24 +1456,35 @@ True shapes are determined by by looking at distribution of ellipticities.
 \end{itemize}
 
 \subsubsection{Non-axisymmetric features in galaxies}
-Often described by amplitudes of Fourier moments of
-intensity distribution as a function of radius, e.g.
-$\alpha_{1}$, $\alpha_{2}$, $\alpha_{4}$
+Often described by amplitudes of Fourier moments of intensity distribution as a
+function of radius, e.g. $\alpha_{1}$, $\alpha_{2}$, $\alpha_{4}$
+
+%\[
+%    I\left(r,\theta\right) = \sum{c_{m}\cos\left(m\theta\right)} +
+%    \sum{s_{m}\sin\left(m\theta\right)}
+%    \]
+%\[
+%    \alpha_{m} = \frac{\sqrt{c^{2}_{m} + s_{m}^{2}}}{I_{o}}
+%    \]
+
 \[
-    I\left(r,\theta\right) = \sum{c_{m}\cos\left(m\theta\right)} +
-    \sum{s_{m}\sin\left(m\theta\right)}
+    R_{iso}(\phi) - R_{ell}(\phi)
+    = a_{0}
+    + \sum{ a_{n} \cos{n\theta}  }
+    + \sum{ b_{n} \sin{n\theta}  }
     \]
-\[
-    \alpha_{m} = \frac{\sqrt{c^{2}_{m} + s_{m}^{2}}}{I_{o}}
-    \]
+($\phi$ measured from major axis?)
+
 ``First even term above ellipses is $\alpha_{4}$ term:'' \mynotes{(WTF???)}
 \begin{itemize}
-    \item ``boxy" isophotes: $\alpha_{4} < 0$;
+    \item ``boxy'' isophotes: $\alpha_{4} < 0$;
         bright, slow, central cores, strong radio and x-ray.
-    \item ``disky" isophotes: $\alpha_{4} > 0$;
+    \item ``disky'' isophotes: $\alpha_{4} > 0$;
         faint, significant rotation-flattening, little
         radio or x-ray emission, steep cusp.
 \end{itemize}
+Good diagram showing the difference: \url{http://astronomy.nmsu.edu/holtz/a555/resources/mofig2.15.gif}
+
 Deviations from elliptical fits are seen in elliptical/spheroidal systems,
 e.g.\ NGC 821 v.\ NGC 2300. It is possible that isophotal deviations form
 a continuous sequence\footnote{e.g.\ Kormendy and Bender classification}:
