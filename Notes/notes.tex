@@ -110,6 +110,8 @@
 %\urlstyle{same}
 \newcommand{\myref}[1]{\textcolor{pinegreen}{\S{} \ref{#1}}}
 
+
+%---------------------------------------------------------------------------%
 \begin{document}
 \setlength{\parskip}{0pt}
 \tableofcontents
@@ -1740,176 +1742,218 @@ mass.
 
 \subsection{Spiral/Disk galaxies}
 
-\paragraph{SB profiles}
+\subsubsection{SB profiles of disk galaxies}
+Most spiral galaxies are a combination of a disk plus a spheroid. For the SB
+profile, it is common to ``decompose'' spiral into two components: exponential
+disk + Sersic bulge.
+(e.g. MacArthur, Courteau, \& Holtzman, ApJ 582, 689 (2003)).
+\begin{description}
+    \item [disk] scale lengths are typically several kpc. Different families of
+        disk profiles exist, e.g., Freeman type I and type II profiles, may be
+        related to a bar or dust. Some spirals appear to have truncated disks,
+        easier to see when observing disks edge-on, with truncation around 4
+        disk scale lengths. Disks are not always perfectly flat, e.g. warps in
+        the outer regions.
+        More luminous galaxies may have thicker disks
+    \item [bulge] Bulges in spirals tend to be better fit with variable Sersic
+        indices, with lower index toward later type, smaller bulges; may be a
+        distinction between ``classical bulges'' and bulges that may be related
+        to bars and originating from the disk.
+\end{description}
+Issues with this decomposition:
+\begin{itemize}
+    \item covariance between parameters
+    \item 1D vs. 2D
+    \item validity of models (is there anything fundamental about an
+        exponential that guarantees extrapolating it into the center?)
+\end{itemize}
+There appears to be some correlation between bulge scale length and disk scale
+length (Macarthur, Courteau, Holtzman ApJ 582, 689 (2003)), so perhaps
+components are not independent.
 
-Most spiral galaxies are a combination of a disk plus a spheroid.
-
-Common to ``decompose'' spirals into two components: exponential + Sersic
-(e.g. MacArthur, Courteau, \& Holtzman, ApJ 582, 689 (2003)). Issues:
-covariance between parameters, 1D vs. 2D, validity of models (is there
-anything fundamental about an exponential that guarantees extrapolating it
-into the center?)
-Disk scale lengths typically several kpc
-Bulges in spirals tend to be better fit with variable Sersic indices, with
-lower index towards later type, smaller bulges
-Appears to be some correlation between bulge scale length and disk scale
-length (Macarthur, Courteau, Holtzman ApJ 582, 689 (2003)), : perhaps
-components are not independent?
-Different families of disk profiles exist, e.g., Freeman type I and type II
-profiles, may be related to a bar or dust
-Some spirals appear to have truncated disks
-Disks are not always perfectly flat, e.g. warps in the outer regions
-Spiral galaxies have stellar halos: in Milky Way  $\rho \propto r^{-3}$; in
-M31 stars have been found out to 200 kpc! Increasingly, stellar halos are
+Spiral galaxies have stellar halos: in Milky Way  $\rho \propto r^{-3}$
+\mynotes{(stellar mass density in halo?)};
+in M31 stars have been found out to 200 kpc. Increasingly, stellar halos are
 being recognized to have significant substructure, e.g., stellar streams in
-NGC 891 and M31, Milky Way ``field of streams'' and some models
-Size-luminosity / surface brightness-luminosity relations: more luminous
-spirals are larger, but still have higher surface brightness
-Vertical distributions in disk galaxies: disks are not always perfectly
-flat, e.g. warps , NGC 5907 (need to scan!) in the outer regions. Also,
-disks are not infinitely thin. To first order, disk thickness appears to be
-independent of radius. Typically, vertical luminosity distribution is
-characterized by an exponential  $I(z) \propto \exp{-\vert z\vert/z_s}$,
-although sometimes more general form used to allow for some flattening
-towards disk center, characterized by
-\begin{displaymath}I(z) = sech^{2/n} \left({n\vert z\vert\over
-2z_d}\right)\end{displaymath}
+NGC 891 and M31, Milky Way ``field of streams'' and some models.
 
-typical scale heights roughly 0.1 of disk scale length
-more luminous galaxies may have thicker disks
-in the Milky Way, and some other external galaxies, a single exponential is
+Size-luminosity and surface brightness-luminosity relations: more luminous
+spirals are larger, but still have higher surface brightness.
+
+Vertical distributions in disk galaxies: disks are not always perfectly flat,
+nor are they infinitely thin. To first order, disk thickness appears to be
+independent of radius. Typically, vertical luminosity distribution is
+characterized by an exponential:
+\[
+    I(z) \propto \exp{-\vert z \vert/z_{s}}
+    \]
+although sometimes a more general form is used to allow for some flattening
+toward disk center, characterized by
+\[
+    I(z) = \mathrm{sech}^{2/n} \left( \frac{n \vert z \vert} {2z_{d}} \right)
+    \]
+Typical scale heights are roughly 0.1 $\times$ disk scale length
+
+In the Milky Way, and some other external galaxies, a single exponential is
 not a good fit, and a sum of two exponentials has been used, leading to the
 idea of a thin plus thick disk. Thick disk also visible in velocity and
 chemical space. Much debate about whether these are distinct components or
 not, and origin of the thick disk, e.g. recent Bovy et al papers.
 
+\subsubsection{Non-axisymmetric features in disk galaxies}
+\paragraph{Bars}
+\begin{itemize}
+    \item (Milky way structure, Bland-Hawthorn and Gerhard, 2016 ARAA)
+    \item Many disk galaxies (1/3 to 1/2) have bars, with various morphologies
+        (rings, etc.).
+    \item Typical axis ratios $\sim$ 2.5 to 5.
+    \item Bars represent significant variations in mass density by factors of 2-3
+    \item Seen edge on, bars may look like bulges, e.g. peanut shaped bulges.
+    \item They likely form as result of dynamical instability in disk, though
+        it's not totally clear whether this instability is caused by an
+        internal or an external trigger.
+\end{itemize}
 
-\subsubsection{Non-axisymmetric features in disk galaxies: bars and spiral arms}
-(Milky way structure, Bland-Hawthorn and Gerhard, 2016 ARAA)
-Many disk galaxies (1/3 to 1/2) have bars, with various morphologies
-(rings, etc.). Typical axis ratios 2.5 to 5
-Bars represent significant variations in mass density, factors of 2-3
-Seen edge on, bars may look like bulges, e.g. peanut shaped bulges
-Likely form as result of dynamical instability in disk, not totally clear
-about internal vs external trigger
-Spiral arms come in a variety of morphologies: ``grand-design'' vs.
-multitarm vs. flocculent (from Elmegreen et al, ApJ 2011)
-Arms are more prevalent in blue light, but exist in red light and gas as
-well, so not entirely from young stars
-Overall mass contrast in spiral arms not so large
-Spiral arms are generally ``trailing", i.e. spiral winds behind the
-rotation
-instabilities and differential rotation likely play part in driving
-different types of spiral structure
+\paragraph{Spiral arms}
+\begin{itemize}
+    \item Spiral arms come in a variety of morphologies: ``grand-design'' vs.
+        multitarm vs. flocculent (from Elmegreen et al, ApJ 2011)
+    \item Arms are more prevalent in blue light, but exist in red light and gas
+        as well, so not entirely from young stars
+    \item Overall mass contrast in spiral arms not so large
+    \item Spiral arms are generally ``trailing"; spiral winds behind the
+        rotation
+\end{itemize}
 
 \subsubsection{Kinematics}
 Spiral galaxies are kinematically cold: the random motion of
-stars is generally small compared to the organized motion (rotation); this
-is not to say that there is no dispersion of velocities
+stars is generally small compared to the organized motion (rotation).
 
-Measuring galaxy rotation - optically and using HI (both spatially
-resolved, e.g. VLA, and unresolved data). While spirals are often just
+\paragraph{Measuring galaxy rotation}
+Rotation can be measured optically and using HI. HI data can be spatially
+resolved (e.g.\ VLA), or unresolved.
+
+While spirals are often
 characterized by rotation curves (from Vogt el al 2004), velocity fields
 are 2D:
-several different ways (from Swaters et al. 2002) to look at HI kinematic
-data
-velocity-coded color (from NRAO)
-Spider diagrams
-PV diagrams: note spread of velocity at any given position: location of
-peak velocity may not give the maximimum velocity at that position
-From unresolved HI profiles, rotation characterized by line widths, e.g.
-$W_{50}$, $W_{20}$ (width at 50, 20 percent of peak line flux)
-Note that curves aren't always perfectly regular, can have features
-related, e.g., to structure in the disk: the nature of these can be clearer
-in 2D velocity data, e.g. NGC 5383. Note that there can also be motions of
-gas within the disk relative to rotation, and some internal velocity
-dispersion, e.g., UGC8508
-there can be large scale systematic deviations from rotation, e.g.,
-streaming motions in bars
-Milky Way rotation curve from Klypin et al 2002
-key kinematic quantity is maximum rotation velocity as a function of
-radius: the rotation curve. However, observed velocities need to be
-corrected for inclination of galaxy, usually inferred from observed axis
-ratio (but beware of non-axisymmetric disks!)
-spiral galaxy rotation curves (from (Persic, Salucci, \& Stel 1996)): on
-average, amplitude and shape of rotation curve is related to luminosity,
-but with significant scatter
-Extension of rotation curve to large radius primary indicator of dark
-matter!
-\begin{displaymath}v_{rot} \propto \sqrt{G M(r)\over r}\end{displaymath}
+\begin{itemize}
+    \item several different ways (from Swaters et al. 2002) to look at HI
+        kinematic data
+    \item velocity-coded color (from NRAO)
+    \item Spider diagrams
+    \item PV diagrams: note spread of velocity at any given position: location
+        of peak velocity may not give the maximimum velocity at that position
+    \item From unresolved HI profiles, rotation characterized by line widths,
+        e.g. $W_{50}$, $W_{20}$ (width at 50, 20 percent of peak line flux)
+    \item Note that curves aren't always perfectly regular, can have features
+        related, e.g., to structure in the disk: the nature of these can be
+        clearer in 2D velocity data, e.g. NGC 5383. Note that there can also be
+        motions of gas within the disk relative to rotation, and some internal
+        velocity dispersion, e.g., UGC8508
+    \item there can be large scale systematic deviations from rotation, e.g.,
+        streaming motions in bars Milky Way rotation curve from Klypin et al
+        2002.
+\end{itemize}
+The key kinematic quantity is the \textit{rotation curve}, the \emph{maximum}
+rotation velocity as a function of radius. However, observed velocities need to
+be corrected for inclination of galaxy, usually inferred from the observed axis
+ratio (which can be harder to get for non-axisymmetric disks).
 
-    Flat rotation curves thus imply  $M(r) \propto r$, i.e. significantly
-    more than implied by exponentially declining stellar component
-    galaxy often characterized by $v_{max}$, i.e., maximum rotation
-    velocity (but sometimes hard to measure), or by velocity at some
-    specified radius, e.g. 2.2 $R_d$, the radius of maximum velocity for an
-    exponentially declining mass distribution
+On average, the amplitude and shape of a rotation curve is related to luminosity,
+but with significant scatter.
+See some spiral galaxy rotation curves (from (Persic, Salucci, \& Stel 1996)).
 
-    stars have "random" velocities, characterized by their velocity
-    ellipsoid, on top of the rotation field, e.g. in the solar neighborhood
-    (Binney \& Merrifield, from Dehnen \& Binney 1998)
-    note that velocity ellipsoid is not isotropic
-    velocity dispersion increases for redder (older, on average)
-    populations, leads to decreased rotation velocity for these
-    populations, called ``asymmetric drift''
-    Traditional interpretation is that velocity dispersion increases due to
-    gravitational interactions with substructure in disks, e.g. spiral
-    arms, molecular clouds
-    Alternate interpretation is that older stars are born with higher
-    vertical velocity dispersion, e.g., from a thicker disk: upside-down
-    galaxy formation (although heating would still occur subsequently)
+Extension of rotation curve to large radius is the primary indicator of dark
+matter.
+\[
+    v_{rot} \propto \sqrt{ \frac{G M(r)}{r}}
+    \]
+This is a proportionality because the geometry is not spherical. Flat rotation
+curves thus imply  $M(r) \propto r$, i.e. significantly more than implied by
+exponentially declining stellar component Galaxies are often characterized by
+the maximum rotational velocity, $v_{max}$, (which is sometimes hard to
+measure), or by the velocity at some specified radius, e.g. 2.2$R_{d}$, the
+radius of maximum velocity for an exponentially declining mass distribution.
 
+Stars have ``random'' velocities, characterized by their velocity ellipsoid, on
+top of the rotation field. This is generally small, so hard to observe in
+external galaxies, but it is known to exist, e.g. in the solar neighborhood
+(Binney \& Merrifield, from Dehnen \& Binney 1998). Note that velocity
+ellipsoid is not isotropic. Velocity dispersion increases for redder (older, on
+average) populations, leads to decreased rotation velocity for these
+populations, called ``asymmetric drift''. Traditional interpretation is that
+velocity dispersion increases due to gravitational interactions with
+substructure in disks, e.g. spiral arms, molecular clouds. Alternate
+interpretation is that older stars are born with higher vertical velocity
+dispersion, e.g., from a thicker disk: upside-down galaxy formation (although
+heating would still occur subsequently).
 
-    Kinematics-luminosity relation: the Tully-Fisher relation (Courteau et
-    al 2007) between maximum rotation velocity and luminosity, roughly
-    $L\propto v^{3-4}$, but slope depends on wavelength, definitions of
-    where velocity is measured, etc.
-    Note relatively small scatter! Useful as a distance indicator
-    Scatter does not appear to be well-correlated with other parameters
-    (e.g. radius or surface brightness); different from ellipticals
-    Various ``explanations'' for the scaling relations have been proposed
-    (see e.g., appendices in Courteau et al 2007), along the lines of what
-    we discussed for fundamental plane, with same caveats and limitations
-    Scaling relations provide a strong constraint for galaxy formation
-    models
-    Typical spectra; see optical emission lines and generally blue
-    continuum
-    emission lines from HII regions -> current star formation.
-    Since young stars dominate light, more challenging to learn about older
-    stars
-    Most disks have color gradients
-    bulges: Peletier and Balcells observations suggest correlation of bulge
-    and disk colors
-    Star formation - mass relation: the main sequence
-    Gas and dust in disk galaxies: most gas in neutral hydrogen, observed
-    in HI. HI disks are very extended, often well past starlight. Gas and
-    dust strongly confined to plane of galaxy
-    gas mass fractions can be significant, ranging from 5 to 80%! Neutral
-    HI gas fractions (from Catinella et al 2010): higher gas fractions for
-    1) lower stellar mass, 2) lower stellar mass surface density, 3) lower
-    concentration, 4) bluer color
-    Since gas can be a significant component by mass, especially for lower
-    mass/luminosity galaxies, people have considered the baryonic
-    Tully-Fisher relation (from Gurovich et al 2010, left is stellar mass,
-    right includes gas mass), which seems to show even less scatter than
-    the stellar T-F relation; note that this requires estimate of stellar
-    mass from luminosity (more later!)
-    Gas composition in galaxies also varies from galaxy to galaxy and
-    within galaxies. Nonetheless one can consider ``mean'', or
-    alternatively present-day, metallicities of galaxies. Find that more
-    luminous galaxies generally are more metal-rich, as manifested by a
-    luminosity-metallicity relation, or a mass-metallicity relation
+\paragraph{Tully-Fisher relation}
+Kinematics and luminosity are related by the \textit{Tully-Fisher relation} for
+spiral/disk galaxies (Courteau et al 2007). Luminosity is proportional to the
+maximum rotation velocity roughly by $ L \propto v^{n}$, where $n = 3 - 4$. The
+slope depends on wavelength, definitions of where velocity is measured, etc.
+There is relatively small scatter; useful as a distance indicator.
+Scatter does not appear to be well-correlated with other parameters
+(e.g. radius or surface brightness); different from ellipticals.
+Various ``explanations'' for the scaling relations have been proposed
+(see e.g., appendices in Courteau et al 2007), along the lines of what
+we discussed for fundamental plane, with same caveats and limitations.
+Scaling relations provide a strong constraint for galaxy formation models.
 
-\subsection{Galaxy parameter (scaling) relations}
-\begin{description}[labelindent=0.2in]
-    \item [Structural] luminosity-SB
+\paragraph{Typical spectra}
+Disk galaxies show optical emission lines and generally blue continuum emission
+lines from HII regions, indicating current star formation. Since young stars
+dominate light, it is more challenging to learn about older stars. Most disks
+have color gradients: age and/or metallicity gradients; emission lines suggest
+metallicity gradients. and disk colors. bulges: Peletier and Balcells
+observations suggest correlation of bulge and disk colors: bulges are not
+always red. Again, do bulges and disks share some common origin?
+
+\paragraph{Star formation - mass relation}
+The ``main sequence'' from Peng et al. (2010), independent of environment;
+specific SFR (SF per unit mass) nearly independent of stellar mass.
+Here, SFR from H$\alpha$.
+
+\paragraph{Gas and dust in disk galaxies}
+Most gas is neutral hydrogen, observed in HI.
+HI disks are very extended, often well past starlight.
+Gas and dust are strongly confined to the plane of the galaxy.
+
+Gas mass fractions can be significant, ranging from 5 to 80\%.
+Neutral HI gas fractions (from Catinella et al
+2010): higher gas fractions for
+\begin{enumerate}
+    \item lower stellar mass
+    \item lower stellar mass surface density
+    \item lower concentration
+    \item bluer color
+\end{enumerate}
+Since gas can be a significant component by mass, especially for lower
+mass/luminosity galaxies, the \emph{baryonic} Tully-Fisher relation (from
+Gurovich et al 2010, left is stellar mass, right includes gas mass), has been
+considered. This seems to show even less scatter than the stellar T-F relation;
+note that this requires estimate of stellar mass from luminosity (more later).
+
+Gas composition in galaxies also varies from galaxy to galaxy and within
+galaxies. Nonetheless one can consider ``mean'', or alternatively present-day,
+metallicities of galaxies. Find that more luminous galaxies generally are more
+metal-rich, as manifested by a luminosity-metallicity relation, or a
+mass-metallicity relation.
+
+\subsection{Summary: Galaxy parameter (scaling) relations}
+Galaxies exhibit some regularities, i.e., systematic correlations of different
+global properties, all of which need to be reproduced/understood in any model
+for galaxy formation and evolution.
+\begin{description}[style=nextline,labelindent=0.2in]
+    \item [Structural] luminosity-SB, or luminosity-size ($L-r_{e}$)
         \begin{itemize}
             \item isophotal shape-luminosity relation for Es
                 (boxy vs. disky).
         \end{itemize}
     \item [Kinematic] Faber-Jackson, Tully-Fisher
         \begin{itemize}
-            \item ellipticals luminosity-rotation relation.
+            \item luminosity-rotation relation for ellipticals
                 \mynotes{The Faber-Jackson relation also applies to
                 ellipticals, but this is the relation between luminosity
                 and velocity dispersion, not rotational velocity\ldots?}
@@ -1923,16 +1967,15 @@ matter!
                 appear to lie in a plane.
         \end{itemize}
     \item [Stellar populations] color-magnitude, Mg-$\sigma$ for Es
-        (stronger for more luminous Es)
-    \item [Gas] HI-SB, L-metallicity
-    \item [Black holes] M$_{\mathrm{BH}}$-$\sigma$
+    \item [Gas] HI-SB, Luminosity-metallicity
+    \item [Black holes] M$_{BH}-\sigma$
         \begin{itemize}
             \item Central black hold seems to be ubiquitious in galaxies
             \item BH masses can be estimated (with difficulty; see later).
                 More luminous (spheroid) galaxies appear to have more
                 massive black holes.
             \item Tighter relation exists with velocity
-                dispersion:M$_{\mathrm{BH}}$-$\sigma$ relation
+                dispersion:M$_{BH}-\sigma$ relation
                 (or M$_{\mathrm{spheroid}}$)\footnote{Kormendy and
                 Bender, 2001}. Note that black hole mass seems to be
                 more linked to spheroid than to total galaxy mass
@@ -1942,35 +1985,85 @@ matter!
 
 
 \subsection{Environments of galaxies: clusters and cluster galaxies}
-    \begin{itemize}
-      \item Galaxies are not homogeneously distributed in space...
-      Correlation function
-      \item Groups and Clusters
-      \item Abell cluster
-      \item Galaxies in galaxy clusters (Boselli and Gaazzi, PASP 118,
-      517, 2006)
-      \item Distributed hot gas in clusters, with mass comparable to
-      that found in galaxies (one individual galaxy?)
-      \begin{itemize}
-        \item X-ray observations
-        \item temperatures are 10$^7$ - 10$^8$ K
-        \item intracluster gas is enriched in heavy elements
-        \item X-ray observations useful for probing cluster masses,
-        under assumption of hydrostatic equilibrium.
+Galaxies are not homogeneously distributed in space, e.g. SDSS pie diagrams: to
+z=0.15, to z=0.6, to z=5. Clustering is often described by the \textit{two
+point correlation function}, which gives the excess number of galaxy pairs over
+a random distribution as a function of radius.
+\[
+    \mathrm{d}P = n \left( 1 + \xi(r) \right) \;\mathrm{d}V
+    \]
+Typically, the observed correlation function is well fit by a power law:
+\[
+    \xi(r) = \left( \frac{r}{r_{0}} \right)^{-\gamma}; \qquad
+    r_{0} \sim 5h^{-1}\; [\mathrm{Mpc}]
+    \]
+so at 5 Mpc separation, there are twice as many galaxies as there are for a
+random distribution. The amplitude of the correlation function depends on
+both the absolute magnitude and the color (see, e.g.\
+Zehavi et al 2005, Figs 6 and 15).
+
+Many galaxies reside in groups or clusters of galaxies, systems that are a few
+Mpc across.
+
+Groups:
+\begin{itemize}
+    \item Typically contain 3-30 relatively luminous galaxies (cf., the Local
+        Group). \mynotes{``cf.'' = ``to bring together''\ldots see wikipedia}
+    \item Typical sizes are $\sim$ 1-2 Mpc, but note the existence of compact
+        groups, which have several massive galaxies in close proximity (perhaps
+        interacting)
+\end{itemize}
+
+Clusters:
+\begin{itemize}
+    \item Contain dozens to hundreds of galaxies
+\end{itemize}
+
+Probably best known catalog of local galaxy clusters is Abell cluster, with richness classes 1 to 5, based on number of galaxies in cluster.
+
+Galaxies in galaxy clusters (see e.g.Boselli and Gavazzi, PASP 118, 517 (2006))
+\begin{itemize}
+    \item morphology-density relation. (related, color-density relation, Baldry
+        et al 2006) Note this applies to both high and low luminosity galaxies.
+        (See Peng et al, e.g. Fig 6 for more recent summary?)
+    \item S0 galaxies
+    \item Anemic spirals: spirals with significantly lower gas fractions
+        ($\sim$ 50\%) than comparable field spirals. Gas deficiency appears
+        largely in HI (not molecular), and preferentially in outer regions of
+        galaxies. However, SFR is also notably lower than in field.
+\end{itemize}
+
+Galaxy clusters contain distributed hot gas, with total mass comparable to that
+found in galaxies.
+\begin{itemize}
+    \item observed with X-ray observations;
+    \item observed with X-ray observations;
+    \item intracluster gas is enriched in heavy elements, so it is not primordial gas
+    \item X-ray observations useful for probing cluster masses, under assumption of hydrostatic equilibrium
         \begin{itemize}
-          \item Need measurement of density and temperature profiles
-          of X-ray gas
-          \item Estimates can be made from X-ray luminosity and/or
-          temperature (better): the $M - kT$ relation
-          \item typical masses are 10$^{14}$ - 10$^{15} M_{\odot}$; a
-          typical cluster mass function (Wen et al. 2010).
+            \item Most accurate determination requires measurement of density
+                and temperature profiles of X-ray gas
+            \item Mass estimates can be made from X-ray luminosity and/or
+                temperature (better): the $M-kT$ relation.
+            \item typical masses are $10^{14}$ to $10^{15}$ solar masses; a
+                typical cluster mass function (from Wen et al. 2010)
         \end{itemize}
-      \end{itemize}
-      \item Shapes of clusters, inhomogeneities: not all clusters are
-      in equilibrium
-    \end{itemize}
+\end{itemize}
+Galaxy clusters also have dark matter halos beyond those associated with the
+galaxies.
+
+Shapes of clusters, inhomogeneities: not all clusters are in equilibrium.
+
 
 \subsection{Some galaxies to be familiar with}
+\begin{itemize}
+    \item Local group, see census of dwarfs in Mateo annual review 1998. Spirals: MW, M31, M33 (note NGC 604). M32. LMC (note 30 Dor/R136) / SMC. dIrrs, dSphs. See some pictures here, also here; c.f. spheroidal companions of M31, e.g. here. Local morphology-density relation
+    \item Local neighborhood. See various pictures here, e.g., M81 group: M82 (dwarf starburst). Sculptor group: NGC 253 (nearest nuclear starburst). Centaurus group: Cen A (NGC 5128). Maffei group (Maffei 1). Leo group (NGC 3379/M105).
+    \item Some other famous active galaxies: NGC 1068, NGC 4151, 3C273
+    \item Nearest clusters. Virgo: M87, NGC 4472. Fornax. Coma.
+    \item Large scale structure: Shapley supercluster
+\end{itemize}
+
 
 \newpage
 \begin{center}
