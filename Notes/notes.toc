@@ -1,35 +1,35 @@
-\contentsline {section}{\numberline {1}Introduction}{4}{section.1}
-\contentsline {subsection}{\numberline {1.1}History}{4}{subsection.1.1}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}History}{3}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Approaches}{4}{subsection.1.2}
-\contentsline {subsubsection}{\numberline {1.2.1}Nearby galaxies}{5}{subsubsection.1.2.1}
-\contentsline {subsubsection}{\numberline {1.2.2}Distant galaxies}{5}{subsubsection.1.2.2}
-\contentsline {subsubsection}{\numberline {1.2.3}Physics of galaxy formation}{5}{subsubsection.1.2.3}
-\contentsline {subsection}{\numberline {1.3}Overview of galaxies and galaxy formation}{5}{subsection.1.3}
-\contentsline {paragraph}{Cosmological context of galaxy formation and evolution:}{5}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.2.1}Nearby galaxies}{4}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Distant galaxies}{4}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Physics of galaxy formation}{4}{subsubsection.1.2.3}
+\contentsline {subsection}{\numberline {1.3}Overview of galaxies and galaxy formation}{4}{subsection.1.3}
+\contentsline {paragraph}{Cosmological context of galaxy formation and evolution:}{4}{subsection.1.3}
 \contentsline {paragraph}{Main components:}{5}{subsection.1.3}
-\contentsline {paragraph}{Formation}{6}{subsection.1.3}
+\contentsline {paragraph}{Formation}{5}{subsection.1.3}
 \contentsline {paragraph}{Hubble time:}{6}{subsection.1.3}
-\contentsline {paragraph}{Critical density:}{7}{subsection.1.3}
-\contentsline {paragraph}{Gravitational timescales}{7}{subsection.1.3}
+\contentsline {paragraph}{Critical density:}{6}{subsection.1.3}
+\contentsline {paragraph}{Gravitational timescales}{6}{subsection.1.3}
 \contentsline {paragraph}{Cooling timescale}{7}{subsection.1.3}
 \contentsline {paragraph}{Star-formation/gas consumption time}{7}{subsection.1.3}
 \contentsline {paragraph}{Chemical enrichment time}{7}{subsection.1.3}
 \contentsline {paragraph}{Merging time}{7}{subsection.1.3}
-\contentsline {paragraph}{Dynamical friction time}{8}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Toy example}{8}{subsection.1.4}
+\contentsline {paragraph}{Dynamical friction time}{7}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Toy example}{7}{subsection.1.4}
 \contentsline {subsection}{\numberline {1.5}Questions}{8}{subsection.1.5}
-\contentsline {section}{\numberline {2}Observing galaxies}{10}{section.2}
-\contentsline {subsection}{\numberline {2.1}Imaging}{10}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}Surface brightness}{10}{subsubsection.2.1.1}
+\contentsline {section}{\numberline {2}Observing galaxies}{9}{section.2}
+\contentsline {subsection}{\numberline {2.1}Imaging}{9}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Surface brightness}{9}{subsubsection.2.1.1}
 \contentsline {paragraph}{SB profile for disk galaxies}{11}{subsubsection.2.1.1}
-\contentsline {paragraph}{SB profile for spheroids}{12}{subsubsection.2.1.1}
-\contentsline {subsubsection}{\numberline {2.1.2}Sizes of galaxies}{12}{subsubsection.2.1.2}
+\contentsline {paragraph}{SB profile for spheroids}{11}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Sizes of galaxies}{11}{subsubsection.2.1.2}
 \contentsline {subsubsection}{\numberline {2.1.3}Integrated brightness}{12}{subsubsection.2.1.3}
 \contentsline {subsection}{\numberline {2.2}Spectroscopy}{13}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Velocities}{14}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1}Velocities}{13}{subsubsection.2.2.1}
 \contentsline {paragraph}{Bulk velocities}{14}{subsubsection.2.2.1}
 \contentsline {paragraph}{Internal velocities}{14}{subsubsection.2.2.1}
-\contentsline {subsection}{\numberline {2.3}Distances to galaxies}{16}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Distances to galaxies}{15}{subsection.2.3}
 \contentsline {paragraph}{Variable stars}{16}{subsection.2.3}
 \contentsline {paragraph}{RGB tip}{16}{subsection.2.3}
 \contentsline {paragraph}{Geometric techniques}{16}{subsection.2.3}
@@ -37,7 +37,7 @@
 \contentsline {paragraph}{Planetary nebulae luminosity function}{16}{subsection.2.3}
 \contentsline {paragraph}{More luminous standard candles:}{16}{subsection.2.3}
 \contentsline {paragraph}{Scaling relations between velocity and luminosity}{16}{subsection.2.3}
-\contentsline {paragraph}{Redshift}{17}{subsection.2.3}
+\contentsline {paragraph}{Redshift}{16}{subsection.2.3}
 \contentsline {paragraph}{Peculiar velocities}{17}{subsection.2.3}
 \contentsline {paragraph}{Spectroscopic redshift}{17}{subsection.2.3}
 \contentsline {paragraph}{Photometric redshift}{17}{subsection.2.3}
@@ -49,11 +49,11 @@
 \contentsline {subsubsection}{\numberline {2.4.5}Non-symmetric galaxies}{20}{subsubsection.2.4.5}
 \contentsline {subsection}{\numberline {2.5}Galaxy catalogs/resources}{20}{subsection.2.5}
 \contentsline {subsubsection}{\numberline {2.5.1}Large area/all sky surveys}{20}{subsubsection.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.2}Smaller region surveys}{20}{subsubsection.2.5.2}
-\contentsline {subsubsection}{\numberline {2.5.3}Spectroscopic surveys}{20}{subsubsection.2.5.3}
-\contentsline {subsubsection}{\numberline {2.5.4}``Classic catalogs''}{20}{subsubsection.2.5.4}
-\contentsline {subsubsection}{\numberline {2.5.5}Modern digital catalogs}{20}{subsubsection.2.5.5}
-\contentsline {subsubsection}{\numberline {2.5.6}Web tools}{20}{subsubsection.2.5.6}
+\contentsline {subsubsection}{\numberline {2.5.2}Smaller region surveys}{21}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.3}Spectroscopic surveys}{21}{subsubsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.4}``Classic catalogs''}{21}{subsubsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.5}Modern digital catalogs}{21}{subsubsection.2.5.5}
+\contentsline {subsubsection}{\numberline {2.5.6}Web tools}{21}{subsubsection.2.5.6}
 \contentsline {subsubsection}{\numberline {2.5.7}Selection effects}{21}{subsubsection.2.5.7}
 \contentsline {section}{\numberline {3}Overview of nearby galaxy population}{22}{section.3}
 \contentsline {subsection}{\numberline {3.1}Statistical properties of galaxies}{22}{subsection.3.1}
@@ -63,100 +63,100 @@
 \contentsline {paragraph}{Observed luminosity function, functional fits, and parameters}{23}{subsubsection.3.1.2}
 \contentsline {paragraph}{Origin of the luminosity function}{24}{subsubsection.3.1.2}
 \contentsline {paragraph}{Evolution of the luminosity function}{24}{subsubsection.3.1.2}
-\contentsline {subsection}{\numberline {3.2}Elliptical/Spheriodal galaxies}{25}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Surface brightness profiles}{25}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Intrinsic (3D) shapes of ellipticals}{26}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Non-axisymmetric features in galaxies}{26}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Kinematics}{27}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}Relations between different parameters and different families of ellipticals}{27}{subsubsection.3.2.5}
-\contentsline {paragraph}{Photometric parameters}{27}{subsubsection.3.2.5}
-\contentsline {paragraph}{Kinematics vs.\ luminosity}{27}{subsubsection.3.2.5}
-\contentsline {paragraph}{The Fundamental Plane}{27}{subsubsection.3.2.5}
-\contentsline {subsubsection}{\numberline {3.2.6}Spectral energy distributions}{30}{subsubsection.3.2.6}
-\contentsline {subsubsection}{\numberline {3.2.7}Interstellar matter in ellipticals}{30}{subsubsection.3.2.7}
-\contentsline {subsection}{\numberline {3.3}Spiral/Disk galaxies}{30}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}SB profiles of disk galaxies}{30}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Non-axisymmetric features in disk galaxies}{31}{subsubsection.3.3.2}
-\contentsline {paragraph}{Bars}{31}{subsubsection.3.3.2}
-\contentsline {paragraph}{Spiral arms}{32}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Kinematics}{32}{subsubsection.3.3.3}
-\contentsline {paragraph}{Measuring galaxy rotation}{32}{subsubsection.3.3.3}
-\contentsline {paragraph}{Tully-Fisher relation}{33}{subsubsection.3.3.3}
-\contentsline {paragraph}{Typical spectra}{33}{subsubsection.3.3.3}
-\contentsline {paragraph}{Star formation - mass relation}{33}{subsubsection.3.3.3}
-\contentsline {paragraph}{Gas and dust in disk galaxies}{33}{subsubsection.3.3.3}
-\contentsline {subsection}{\numberline {3.4}Summary: Galaxy parameter (scaling) relations}{34}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Environments of galaxies: clusters and cluster galaxies}{35}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}Some galaxies to be familiar with}{36}{subsection.3.6}
-\contentsline {section}{\numberline {4}Stars and Stellar populations}{37}{section.4}
-\contentsline {subsection}{\numberline {4.1}Review: stellar evolution}{37}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Main stages of stellar evolution}{37}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}Isochrones}{38}{subsubsection.4.1.2}
-\contentsline {subsection}{\numberline {4.2}Simple Stellar Populations and the Initial Mass Function}{40}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Resolved stellar populations}{40}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Results}{41}{subsubsection.4.3.1}
-\contentsline {paragraph}{MW}{41}{subsubsection.4.3.1}
-\contentsline {paragraph}{Local Group (LG) dwarf galaxies}{41}{subsubsection.4.3.1}
-\contentsline {paragraph}{M33}{41}{subsubsection.4.3.1}
-\contentsline {paragraph}{M31 halo}{42}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}General conclusions}{42}{subsubsection.4.3.2}
-\contentsline {subsection}{\numberline {4.4}Unresolved stellar populations}{42}{subsection.4.4}
-\contentsline {subsubsection}{\numberline {4.4.1}What stars contribute the most light?}{42}{subsubsection.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.2}Integrated brightness}{42}{subsubsection.4.4.2}
-\contentsline {subsubsection}{\numberline {4.4.3}Integrated colors}{43}{subsubsection.4.4.3}
-\contentsline {subsubsection}{\numberline {4.4.4}Dependence of color and luminosity on time}{43}{subsubsection.4.4.4}
-\contentsline {subsubsection}{\numberline {4.4.5}What stars contribute the most \emph {mass}?}{43}{subsubsection.4.4.5}
-\contentsline {subsubsection}{\numberline {4.4.6}The mass-to-light ratio (M/L)}{44}{subsubsection.4.4.6}
-\contentsline {subsubsection}{\numberline {4.4.7}Star formation histories from integrated colors}{44}{subsubsection.4.4.7}
-\contentsline {subsubsection}{\numberline {4.4.8}Integrated spectra}{45}{subsubsection.4.4.8}
-\contentsline {subsection}{\numberline {4.5}Chemical evolution}{45}{subsection.4.5}
-\contentsline {subsubsection}{\numberline {4.5.1}Basic picture of chemical evolution}{45}{subsubsection.4.5.1}
-\contentsline {subsubsection}{\numberline {4.5.2}Basic equations of chemical evolution:}{46}{subsubsection.4.5.2}
-\contentsline {subsection}{\numberline {4.6}Measuring stellar abundances}{49}{subsection.4.6}
-\contentsline {subsubsection}{\numberline {4.6.1}Units for measuring abundances}{49}{subsubsection.4.6.1}
-\contentsline {subsubsection}{\numberline {4.6.2}Abundances as function of time}{50}{subsubsection.4.6.2}
-\contentsline {subsubsection}{\numberline {4.6.3}Relative abundances of different elements}{50}{subsubsection.4.6.3}
-\contentsline {section}{\numberline {5}Gas}{51}{section.5}
-\contentsline {subsection}{\numberline {5.1}Observing and characterizing the gas}{51}{subsection.5.1}
-\contentsline {paragraph}{1. Emission}{51}{subsection.5.1}
-\contentsline {subparagraph}{Atomic lines}{52}{subsection.5.1}
-\contentsline {subparagraph}{Molecular lines}{52}{subsection.5.1}
-\contentsline {paragraph}{2. Absorption}{52}{subsection.5.1}
-\contentsline {subparagraph}{Atomic lines}{52}{subsection.5.1}
-\contentsline {subparagraph}{Molecular lines}{52}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Heating and cooling}{52}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Heating}{53}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}Cooling}{53}{subsubsection.5.2.2}
-\contentsline {subsection}{\numberline {5.3}Cold gas: HI measurements with 21 cm line}{53}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Molecular gas}{54}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Warm ionized gas}{54}{subsection.5.5}
-\contentsline {subsection}{\numberline {5.6}Hot gas}{54}{subsection.5.6}
-\contentsline {subsection}{\numberline {5.7}Denser ionized gas}{54}{subsection.5.7}
-\contentsline {subsection}{\numberline {5.8}Chemical evolution and abundances from gas}{54}{subsection.5.8}
-\contentsline {subsection}{\numberline {5.9}Distribution of gas within spirals}{55}{subsection.5.9}
-\contentsline {subsection}{\numberline {5.10}Gas as a kinematic tracer}{55}{subsection.5.10}
-\contentsline {subsection}{\numberline {5.11}Interactions between gas and stars}{55}{subsection.5.11}
-\contentsline {subsubsection}{\numberline {5.11.1}Star formation}{55}{subsubsection.5.11.1}
-\contentsline {subsubsection}{\numberline {5.11.2}Supernovae and mass loss from stars}{57}{subsubsection.5.11.2}
-\contentsline {section}{\numberline {6}Dust}{58}{section.6}
-\contentsline {subsection}{\numberline {6.1}General importance of dust}{58}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Extinction}{58}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Amount of gas, dust-to-gas ratio, and transparency of galaxies}{58}{subsubsection.6.2.1}
-\contentsline {subsection}{\numberline {6.3}Emission from dust}{59}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Composition}{59}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Creation/destruction}{60}{subsection.6.5}
-\contentsline {section}{\numberline {7}Central black holes}{61}{section.7}
-\contentsline {subsection}{\numberline {7.1}AGN as indicators of central black holes}{61}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Black holes in non-active galaxies}{62}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Measuring black hole masses}{62}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Importance of central black holes}{63}{subsection.7.4}
-\contentsline {section}{\numberline {8}Galaxy spectral energy distributions}{64}{section.8}
-\contentsline {section}{\numberline {9}Dark matter and galaxy masses}{65}{section.9}
-\contentsline {subsection}{\numberline {9.1}Observations of dark matter in galaxies}{65}{subsection.9.1}
-\contentsline {subsubsection}{\numberline {9.1.1}Galaxy rotation curves}{65}{subsubsection.9.1.1}
-\contentsline {paragraph}{Dark matter in disk galaxies}{65}{subsubsection.9.1.1}
-\contentsline {paragraph}{Dark matter in LSB galaxies}{66}{subsubsection.9.1.1}
-\contentsline {paragraph}{Dark matter in ellipticals}{66}{subsubsection.9.1.1}
-\contentsline {subsubsection}{\numberline {9.1.2}Gravitational lensing}{67}{subsubsection.9.1.2}
-\contentsline {subsection}{\numberline {9.2}Total masses of galaxies}{67}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Halo abundance matching}{68}{subsection.9.3}
+\contentsline {subsection}{\numberline {3.2}Elliptical/Spheriodal galaxies}{26}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Surface brightness profiles}{26}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Intrinsic (3D) shapes of ellipticals}{27}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Non-axisymmetric features in galaxies}{27}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Kinematics}{28}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}Relations between different parameters and different families of ellipticals}{28}{subsubsection.3.2.5}
+\contentsline {paragraph}{Photometric parameters}{29}{subsubsection.3.2.5}
+\contentsline {paragraph}{Kinematics vs.\ luminosity}{29}{subsubsection.3.2.5}
+\contentsline {paragraph}{The Fundamental Plane}{29}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}Spectral energy distributions}{31}{subsubsection.3.2.6}
+\contentsline {subsubsection}{\numberline {3.2.7}Interstellar matter in ellipticals}{32}{subsubsection.3.2.7}
+\contentsline {subsection}{\numberline {3.3}Spiral/Disk galaxies}{32}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}SB profiles of disk galaxies}{32}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Non-axisymmetric features in disk galaxies}{33}{subsubsection.3.3.2}
+\contentsline {paragraph}{Bars}{33}{subsubsection.3.3.2}
+\contentsline {paragraph}{Spiral arms}{33}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Kinematics}{34}{subsubsection.3.3.3}
+\contentsline {paragraph}{Measuring galaxy rotation}{34}{subsubsection.3.3.3}
+\contentsline {paragraph}{Tully-Fisher relation}{35}{subsubsection.3.3.3}
+\contentsline {paragraph}{Typical spectra}{35}{subsubsection.3.3.3}
+\contentsline {paragraph}{Star formation - mass relation}{35}{subsubsection.3.3.3}
+\contentsline {paragraph}{Gas and dust in disk galaxies}{35}{subsubsection.3.3.3}
+\contentsline {subsection}{\numberline {3.4}Summary: Galaxy parameter (scaling) relations}{36}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Environments of galaxies: clusters and cluster galaxies}{37}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Some galaxies to be familiar with}{38}{subsection.3.6}
+\contentsline {section}{\numberline {4}Stars and Stellar populations}{39}{section.4}
+\contentsline {subsection}{\numberline {4.1}Review: stellar evolution}{39}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Main stages of stellar evolution}{39}{subsubsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.2}Isochrones}{40}{subsubsection.4.1.2}
+\contentsline {subsection}{\numberline {4.2}Simple Stellar Populations and the Initial Mass Function}{43}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Resolved stellar populations}{43}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {4.3.1}Results}{44}{subsubsection.4.3.1}
+\contentsline {paragraph}{MW}{44}{subsubsection.4.3.1}
+\contentsline {paragraph}{Local Group (LG) dwarf galaxies}{44}{subsubsection.4.3.1}
+\contentsline {paragraph}{M33}{44}{subsubsection.4.3.1}
+\contentsline {paragraph}{M31 halo}{45}{subsubsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.2}General conclusions}{45}{subsubsection.4.3.2}
+\contentsline {subsection}{\numberline {4.4}Unresolved stellar populations}{45}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}What stars contribute the most light?}{45}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.2}Integrated brightness}{45}{subsubsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.3}Integrated colors}{46}{subsubsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.4}Dependence of color and luminosity on time}{46}{subsubsection.4.4.4}
+\contentsline {subsubsection}{\numberline {4.4.5}What stars contribute the most \emph {mass}?}{47}{subsubsection.4.4.5}
+\contentsline {subsubsection}{\numberline {4.4.6}The mass-to-light ratio (M/L)}{47}{subsubsection.4.4.6}
+\contentsline {subsubsection}{\numberline {4.4.7}Star formation histories from integrated colors}{48}{subsubsection.4.4.7}
+\contentsline {subsubsection}{\numberline {4.4.8}Integrated spectra}{48}{subsubsection.4.4.8}
+\contentsline {subsection}{\numberline {4.5}Chemical evolution}{49}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {4.5.1}Basic picture of chemical evolution}{49}{subsubsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.2}Basic equations of chemical evolution:}{50}{subsubsection.4.5.2}
+\contentsline {subsection}{\numberline {4.6}Measuring stellar abundances}{53}{subsection.4.6}
+\contentsline {subsubsection}{\numberline {4.6.1}Units for measuring abundances}{53}{subsubsection.4.6.1}
+\contentsline {subsubsection}{\numberline {4.6.2}Abundances as function of time}{54}{subsubsection.4.6.2}
+\contentsline {subsubsection}{\numberline {4.6.3}Relative abundances of different elements}{54}{subsubsection.4.6.3}
+\contentsline {section}{\numberline {5}Gas}{55}{section.5}
+\contentsline {subsection}{\numberline {5.1}Observing and characterizing the gas}{55}{subsection.5.1}
+\contentsline {paragraph}{1. Emission}{56}{subsection.5.1}
+\contentsline {subparagraph}{Atomic lines}{56}{subsection.5.1}
+\contentsline {subparagraph}{Molecular lines}{56}{subsection.5.1}
+\contentsline {paragraph}{2. Absorption}{56}{subsection.5.1}
+\contentsline {subparagraph}{Atomic lines}{56}{subsection.5.1}
+\contentsline {subparagraph}{Molecular lines}{56}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Heating and cooling}{56}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Heating}{57}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Cooling}{57}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {5.3}Cold gas: HI measurements with 21 cm line}{57}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Molecular gas}{58}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Warm ionized gas}{58}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Hot gas}{58}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}Denser ionized gas}{59}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}Chemical evolution and abundances from gas}{59}{subsection.5.8}
+\contentsline {subsection}{\numberline {5.9}Distribution of gas within spirals}{59}{subsection.5.9}
+\contentsline {subsection}{\numberline {5.10}Gas as a kinematic tracer}{59}{subsection.5.10}
+\contentsline {subsection}{\numberline {5.11}Interactions between gas and stars}{60}{subsection.5.11}
+\contentsline {subsubsection}{\numberline {5.11.1}Star formation}{60}{subsubsection.5.11.1}
+\contentsline {subsubsection}{\numberline {5.11.2}Supernovae and mass loss from stars}{61}{subsubsection.5.11.2}
+\contentsline {section}{\numberline {6}Dust}{63}{section.6}
+\contentsline {subsection}{\numberline {6.1}General importance of dust}{63}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Extinction}{63}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Amount of gas, dust-to-gas ratio, and transparency of galaxies}{64}{subsubsection.6.2.1}
+\contentsline {subsection}{\numberline {6.3}Emission from dust}{64}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Composition}{64}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Creation/destruction}{65}{subsection.6.5}
+\contentsline {section}{\numberline {7}Central black holes}{66}{section.7}
+\contentsline {subsection}{\numberline {7.1}AGN as indicators of central black holes}{66}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Black holes in non-active galaxies}{67}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Measuring black hole masses}{68}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Importance of central black holes}{68}{subsection.7.4}
+\contentsline {section}{\numberline {8}Galaxy spectral energy distributions}{69}{section.8}
+\contentsline {section}{\numberline {9}Dark matter and galaxy masses}{70}{section.9}
+\contentsline {subsection}{\numberline {9.1}Observations of dark matter in galaxies}{70}{subsection.9.1}
+\contentsline {subsubsection}{\numberline {9.1.1}Galaxy rotation curves}{70}{subsubsection.9.1.1}
+\contentsline {paragraph}{Dark matter in disk galaxies}{70}{subsubsection.9.1.1}
+\contentsline {paragraph}{Dark matter in LSB galaxies}{71}{subsubsection.9.1.1}
+\contentsline {paragraph}{Dark matter in ellipticals}{71}{subsubsection.9.1.1}
+\contentsline {subsubsection}{\numberline {9.1.2}Gravitational lensing}{72}{subsubsection.9.1.2}
+\contentsline {subsection}{\numberline {9.2}Total masses of galaxies}{73}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Halo abundance matching}{73}{subsection.9.3}

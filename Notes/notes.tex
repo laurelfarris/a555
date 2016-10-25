@@ -430,10 +430,10 @@ through and add details, depending on how much time you have.}
 \section{Observing galaxies}
 \subsection{Imaging}
 \subsubsection{Surface brightness}
-\textbf{Surface Brightness (SB)} is the most fundamental observable for galaxies.
-It is the basic measured property for imaging of a \emph{resolved} object.
-\textcolor{bred}{SB is independent of distance until geometry of the
-universe becomes important:}
+\textbf{Surface Brightness (SB)} is the most fundamental observable for
+galaxies. It is the basic measured property for imaging of a \emph{resolved}
+object. SB is independent of distance \emph{until geometry of the universe
+becomes important}:
 \[
     SB \propto (1+z)^{-4}
     \]
@@ -442,9 +442,8 @@ Units:
     \item erg cm$^{-2}$ s$^{-1}$ sterradian$^{-1}$
     \item mag arcsec$^{-2}$
 \end{itemize}
-For adding multiple SBs, flux units must be used.
-\mynotes{(If you're adding and subtracting magnitude units, you're probably
-doing something wrong. \Smiley)}
+When summing SBs, flux units must be used (if you're adding and
+subtracting magnitude units, you're doing something wrong \Smiley).
 Differences in magnitudes correspond to \emph{ratios} in fluxes:
 \[
     m_{1} - m_{2} = -2.5\log\frac{F_{1}}{F_{2}}
@@ -455,14 +454,9 @@ object in different bandpasses gives an estimate of the \textbf{spectral slope}
 between bandpasses; often expressed as a \emph{color index}, the difference in
 magnitude between the two bandpasses, such as U-R.
 
-
-
-Relevance of SB distribution:
-\textcolor{bred}{How are stars distributed in galaxies?}
-There is not a direct correlation between stellar luminosities and stellar masses,
-nor is there one between stellar mass and mass in other components.
-
-
+Relevance of SB distribution: How are stars distributed in galaxies? There is
+not a direct correlation between stellar luminosities and stellar masses, nor
+is there one between stellar mass and mass in other components.
 
 Typical SB values in galactic \emph{centers} are:
 \begin{description}[align=right,labelwidth=5em]
@@ -471,16 +465,12 @@ Typical SB values in galactic \emph{centers} are:
     \item [Elliptical] $V \sim 16 - 17$ mag arcsec$^{-2}$
 \end{description}
 In principle, SB is measured directly from a 2D detector as an arbitrary
-function of location.
-Galaxies are relatively faint;
-more than half the light from galaxies comes from regions with
-$SB < SB_{\mathrm{sky}}$ so $S/N$ is difficult to obtain.
-It's challenging to observe anything fainter than 24-25 mag arcsec$^{-2}$
-in unresolved light
-(although note recent discovery of ``ultra-diffuse galaxies'',
-\href{https://arxiv.org/abs/1506.01712}
-{Subaru (Koda et al.)},
-\href{http://arxiv.org/abs/1410.8141}
+function of location. Galaxies are relatively faint; more than half the light
+from galaxies comes from regions with $SB < SB_{\mathrm{sky}}$ so $S/N$ is
+difficult to obtain. It's challenging to observe anything fainter than 24-25
+mag arcsec$^{-2}$ in unresolved light
+(although note recent discovery of ``ultra-diffuse galaxies'', \href{https://arxiv.org/abs/1506.01712}
+{Subaru (Koda et al.)}, \href{http://arxiv.org/abs/1410.8141}
 {Dragonfly (van Dokkum et al)}). \mynotes{eh?}
 Can observe to significantly lower surface
 brightness (30 mag arcsec$^{-2}$) for nearby objects in which you can resolve
@@ -557,11 +547,12 @@ Disks (and low luminosity ellipticals) are usually well represented \emph{on
 average} by an exponential:
 \[
     \Sigma(r) = \Sigma_{s}\exp\left(-\frac{r}{r_{s}}\right)
-    \quad\mathrm{[flux\;units]}
+    \quad \mathrm{[erg cm^{-2} s^{-1} sterradian^{-1}]}
     \]
 \[
     m(r) = m_{s} + kr
     \quad \mathrm{[magnitudes]}
+    (mag \; arcsec^{-2} ? )
     \]
 
 \paragraph{SB profile for spheroids}
@@ -573,7 +564,7 @@ Spheroids are historically characterized by
     \quad\mathrm{[flux\;units]}
     \]
 \[
-    m = m_{0} + kr^{1/4}
+    m(r) = m_{0} + kr^{1/4}
     \quad\mathrm{[magnitudes]}
     \]
 Many galaxies appear to have SB profiles that are well fit by a combination of multiple
@@ -895,7 +886,7 @@ Galaxies expand with everything else in the cosmic flow.
     z = \frac{\Delta\lambda}{\lambda}
     \]
 \[
-    1 + z = \frac{lambda_{obs}}{\lambda_{emit}}
+    1 + z = \frac{\lambda_{obs}}{\lambda_{emit}}
     \]
 \begin{itemize}
     \item At \emph{low} $z$, $z \approx v/c, v = H_{0}d$.
