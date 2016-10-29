@@ -45,10 +45,11 @@
 \definecolor{hl}{rgb}{0.61, 0.87, 1.0}
 \newcommand{\test}[1]{%
     \begin{center}
-        \colorbox{hl}{\parbox{0.9\textwidth}{\emph{\centering #1}}}
+        {\parbox{0.9\textwidth}{\emph{\centering #1}}}
+        %\colorbox{hl}{\parbox{0.9\textwidth}{\emph{\centering #1}}}
     \end{center}}
 
-\newcommand{\mynotes}[1]{\textcolor{cadmiumgreen}{#1}}
+\newcommand{\mynotes}[1]{\textcolor{cadet}{\textit{#1}}}
 \usepackage{tikz}\usetikzlibrary{backgrounds, shapes.misc}
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]
             \node[draw=black,shape=rounded rectangle,draw,inner sep=10pt] (char) {#1};}
@@ -73,11 +74,11 @@
   {1em}{}
   %[\vspace{-2.5pt}{\color{mygray}\titlerule[3pt]}]
 \titleformat{\paragraph}%
-  {\fontsize{12}{13}\selectfont\bfseries\color{myblue}}
+  {\fontsize{11}{12}\selectfont\bfseries\color{myblue}}
   {}
   {0.5em}{}
 \titleformat{\subparagraph}%
-  {\fontsize{11}{12}\selectfont\bfseries\color{black}}
+  {\fontsize{11}{12}\selectfont\itshape\color{myblue}}
   {}
   {0.5em}{}
 
@@ -95,7 +96,7 @@
 %\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 %\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
 \setlist[enumerate]{noitemsep}
-\setlist[description]{noitemsep}
+\setlist[description]{noitemsep, labelindent=0.5in}
 \definecolor{cadet}{rgb}{0.33, 0.41, 0.47}
 
 \renewcommand{\descriptionlabel}[1]{%
@@ -369,12 +370,11 @@ Understand and be able to describe some of the different timescales that may be
 important in galaxy formation.}
 
 \subsection{Toy example}
-Overly simple, but illustrates the consequences of this scenerio\footnote{
-Rees 1995}.
+Overly simple, but illustrates the consequences of this scenario.\footnote{
+    Rees (1995)}
 \begin{itemize}
-    \item Galaxies appear to have a maximum size of order
-        10$^{11}$ - 10$^{12} M_{\odot}$, even though there are larger
-        agglomerations of matter, e.g.\ clusters.
+    \item Individual galaxies appear to have a maximum size of order
+        10$^{11}$ - 10$^{12} M_{\odot}$.
     \item Can be crudely explained by understanding of dissipation
     \item Self-gravitating cloud has two timescales:
         \begin{enumerate}
@@ -388,31 +388,27 @@ Rees 1995}.
                 \]
                 where $\Lambda$ is the cooling function
         \end{enumerate}
-        If $t_{cool} > t_{dyn}$, then a cloud can be in quasi-static
-        equilibrium, i.e.\ cooling is unimportant. If $t_{cool} < t_{dyn}$
+    \item If $t_{cool} > t_{dyn}$, then a cloud can be in quasi-static
+        equilibrium, i.e.\ cooling is unimportant.
+    \item  If $t_{dyn} > t_{cool}$,
         the cloud cools, kinetic energy is converted to radiation, and
-        the cloud collapses. Given a cooling curve for primordial
-        composition, one can calculate the relevant timescales, and find
-        that collapse is unlikely to occur for $M>10^{12}M_{\odot}$.
-        This implies that dissipation is important, at least for
-        objects we observe as galaxies (e.g.\ luminous objects).
+        the cloud collapses.
 \end{itemize}
+Given a cooling curve for primordial composition, the relevant timescales can
+be calculated, and show that collapse is unlikely to occur for $ M >
+10^{12}M_{\odot}$. This implies that dissipation is important, at least for
+objects we observe as galaxies (e.g.\ luminous objects).
 
-This argument is really only a suggestion, for a number of reasons:
-halos are not uniform density, so there's no such thing as a single
-cooling time for the entire halo.
-
-\textcolor{red}{More Questions: Add these to the ones above, and keep them in mind
-while studying. Read with a question in mind, connect old
-information to new information. Add main bullets first, then go
-through and add details, depending on how much time you have.}
+This argument is only a suggestion for a number of reasons. One of these is
+that halos do not actually have uniform density, so there's no such thing as a
+single cooling time for the entire halo.
 
 \subsection{Questions}
 \begin{itemize}
     \item When do each of these steps happen and what are their
         relative importances?
     \item What sets the masses of galaxies? Sizes?
-        ($10^6-10^{12}M_\odot$) Luminosities?
+        ($10^{6} - 10^{12}M_{\odot}$) Luminosities?
     \item What sets the distributions of numbers of galaxies as a
         function of mass/luminosity?
     \item Does the ratio of baryonic mass/total mass change for
@@ -475,24 +471,22 @@ In principle, SB is measured directly from a 2D detector as an arbitrary
 function of location. Galaxies are relatively faint; more than half the light
 from galaxies comes from regions with $SB < SB_{\mathrm{sky}}$ so $S/N$ is
 difficult to obtain. It's challenging to observe anything fainter than 24-25
-mag arcsec$^{-2}$ in unresolved light
-(although note recent discovery of ``ultra-diffuse galaxies'', \href{https://arxiv.org/abs/1506.01712}
-{Subaru (Koda et al.)}, \href{http://arxiv.org/abs/1410.8141}
-{Dragonfly (van Dokkum et al)}). \mynotes{eh?}
-Can observe to significantly lower surface
-brightness (30 mag arcsec$^{-2}$) for nearby objects in which you can resolve
-stars, i.e. add up their individual brightnesses.
+mag arcsec$^{-2}$ in unresolved light (although note recent discovery of
+``ultra-diffuse galaxies'', \href{https://arxiv.org/abs/1506.01712} {Subaru
+(Koda et al.)}, \href{http://arxiv.org/abs/1410.8141} {Dragonfly (van Dokkum et
+al)}). Can observe to significantly lower SB (30 mag
+arcsec$^{-2}$) for nearby objects in which you can resolve stars, i.e. add up
+their individual brightnesses.
 
-Observational challenges:
-\begin{description}[labelindent=2em, labelwidth=5em]
-    \item [seeing:] affects SB distribution in \emph{center},
-        e.g., existence of cores?
-    \item [sky determination]: affects SB distribution in outer regions,
-        see \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/sky.htm}
-        {here}.
+\paragraph{Observational challenges:}
+\begin{description}[align=right, labelindent=2em, labelwidth=5em]
+    \item [seeing] affects SB distribution in center (see section on cores)
+    \item [sky determination] affects SB distribution in outer regions
+        (see \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/sky.htm}
+        {here}).
 \end{description}
 
-Since SB is the key observable, there can be strong \textbf{selection effects}
+Since SB is the key observable, there can be strong \textit{selection effects}
 against low SB objects. If all galaxies had the same SB profile (they don't)
 then low SB galaxies are \emph{strongly} biased against in either
 magnitude-limited or size-limited catalogs (if mag/size is determined isophotally).
@@ -501,9 +495,9 @@ The apparent ``size'' of a galaxy will depend on its SB.
 \textbf{Isophotes} are contours of constant SB.
 They are often well (though not perfectly) represented by ellipses since
 most galaxies are symmetric at a significant level.
-Elliptical contours fit spirals and ellipticals for different reasons:
+Elliptical contours fit spirals and ellipticals for different reasons
 \footnote{Some basics of techniques for ellipse fitting:
-Kent, ApJ 266, 562 (1983); Lauer, ApJ 311, 34}
+    Kent, ApJ 266, 562 (1983); Lauer, ApJ 311, 34}:
 \begin{description}[align=right, labelwidth=5em]
     \item [Spiral] viewing angle and disk thickness
     \item [Elliptical] intrinsic ellipticity (for example,
@@ -526,7 +520,7 @@ For a purely axisymmetric object, SB distribution reduces to a 1D
 SB profiles are often parameterized, with distributions in the form
 of a
 \href{http://astronomy.nmsu.edu/holtz/a555/html/diagrams/a616/sersic.htm}
-{\textbf{Sersic Profile}}\footnote{plot from
+{\textit{Sersic Profile}}\footnote{plot from
 \href{http://adsabs.harvard.edu/abs/2003ApJ...582..689M}
 {MacArthur et al. (2003)}}
 (though there are other forms that can be used as well).
@@ -536,15 +530,15 @@ The Sersic Profile is given by
     \frac{r}{r_{e}} \right) ^{1/n}-1 \right] \right)
     \]
 \begin{itemize}
-    \item $\Sigma_{r}$ = SB at radius $r$
+    \item $\Sigma(r)$ = SB at radius $r$
     \item $r_{e}$ = \textit{effective radius} (aka.\ half-light radius),
         the radius enclosing half the
         total light if the model is extrapolated to infinity.
     \item $\Sigma_{e}$ = SB at $r_{e}$
-        ($\Sigma_{0} \sim 2000\Sigma_{e}$) \mynotes{at galaxy center?}
+        ($\Sigma_{0} \sim 2000\Sigma_{e}$\ldots \mynotes{where $\Sigma_{0}$ =
+        SB at galaxy center?})
     \item $b_{n} \approx 2n - 0.324$ and is determined from the definition of
-        $r_{e}$ \mynotes{(I assume this is talking about where that particular
-        expression came from, including the constants.)}
+        $r_{e}$
     \item $n$ depends on the type of galaxy ($n=4$ for ellipticals and $n=1$
         for disks).
 \end{itemize}
@@ -554,12 +548,11 @@ Disks (and low luminosity ellipticals) are usually well represented \emph{on
 average} by an exponential:
 \[
     \Sigma(r) = \Sigma_{s}\exp\left(-\frac{r}{r_{s}}\right)
-    \quad \mathrm{[erg cm^{-2} s^{-1} sterradian^{-1}]}
+    \quad \left[ \mathrm{erg\; cm^{-2}\; s^{-1}\; sterradian^{-1}} \right]
     \]
 \[
     m(r) = m_{s} + kr
     \quad \mathrm{[magnitudes]}
-    (mag \; arcsec^{-2} ? )
     \]
 
 \paragraph{SB profile for spheroids}
@@ -690,12 +683,11 @@ Galaxy spectra are \textit{composite}:
                 stars (for each stellar type), times luminosity per star
         \end{itemize}
         Generally, individual stellar lines can't be isolated.
-    \item Gas emission \mynotes{(not absorption?)}
+    \item Gas emission
     \item Dust absorption/emission
 \end{itemize}
 
-The overall shape and features in
-\href{http://astronomy.nmsu.edu/holtz/a555/resources/galaxyspectra.gif}
+The overall shape and features in \href{http://astronomy.nmsu.edu/holtz/a555/resources/galaxyspectra.gif}
 {SEDs} (see also \href{http://astronomy.nmsu.edu/nicole/teaching/ASTR505/lectures/quickview.html}
 {here}) provide important information about the nature of the luminous
 components, i.e.\ physical properties of the stellar population and the gas
@@ -796,7 +788,7 @@ Extracting information about velocity distribution requires:
         impossible.
     \item sophisticated techniques exist for extracting velocity distribution
         information, e.g. penalized pixel fitting
-        (\href{}
+%        (\href{}
         {pPXF}).
 \end{itemize}
 
@@ -811,7 +803,6 @@ For a rotationally supported system:
 \[
     v(r) = \sqrt{\frac{GM(r)}{r}}
     \]
-\mynotes{$\rightarrow$ Keplerian velocities!}
 For a collisionless system of \mynotes{(independent)} particles,
 the distribution of velocities at
 any given location characterized by the velocity ellipsoid
@@ -831,69 +822,59 @@ though $\beta$ is not generally known. So mass modeling of kinematically
 ``hot'' systems is not so easy.
 
 Mean velocities of galaxies indicate that they are receding, with velocity
-proportional to distance $\rightarrow$ expansion of the universe.
-There is a dispersion of
-velocities around the mean relation; deviation is called the peculiar velocity.
-In the field, typical peculiar velocities are a few hundred km/s, in clusters,
-can be a thousand km/s.
+proportional to distance $\rightarrow$ expansion of the universe. There is a
+dispersion of velocities around the mean relation; deviation is called the
+peculiar velocity. In the field, typical peculiar velocities are a few hundred
+km/s, in clusters, can be a thousand km/s.
 
 \subsection{Distances to galaxies}
 Some properties of galaxies, such as luminosity and linear size,
 require knowledge of distances to galaxies:
 \[
-    m - M = 5\log{d_{L}} - 5
+    M - m = -5\log{d_{L}} + 5
     \]
 \begin{itemize}
-    \item $d_{L}$ = distance [pc] \mynotes{$L$ = ?}
+    \item $d_{L}$ = luminosity distance [pc]
     \item $M$ = absolute magnitude (or SB)
     \item $m$ = apparent magnitude
 \end{itemize}
 
-Various techniques for getting distances\footnote{see
-\href{http://adsabs.harvard.edu/abs/2010ARA\%26A..48..673F}
-{Freedman \& Madore, ARAA review}}:
-
-\paragraph{Variable stars}
-Cepheids/RR Lyrae stars through period-luminosity
-(period-luminosity-color/metallicity) relation.
-
-\paragraph{RGB tip}
-Nearby galaxies with old stellar populations where individual stars can
-be resolved.
-
-\paragraph{Geometric techniques}
+\paragraph{Various techniques for getting distances}
+%\footnote{see \href{http://adsabs.harvard.edu/abs/2010ARA\%26A..48..673F}
+%{Freedman \& Madore, ARAA review}}
 \begin{itemize}
-    \item masers (proper motion compared with radial velocity in central disks)
-    \item exclipsing binaries
+    \item Variable stars: Cepheids/RR Lyrae stars through period-luminosity
+        (period-luminosity-color/metallicity) relation.
+    \item RGB tip Nearby galaxies with old stellar populations where
+        individual stars can be resolved.
+    \item Geometric techniques
+        \begin{itemize}
+            \item masers (proper motion compared with radial velocity in central disks)
+            \item exclipsing binaries
+        \end{itemize}
+    \item SB fluctuations From imprint of Poisson statistics. Requires objects
+        with a ``standard'' population (i.e.\ stellar luminosity function).
+    \item Planetary nebulae luminosity function
+    \item More luminous standard candles: type-Ia supernova
+        (``standardizable'')
+    \item Scaling relations between velocity and luminosity
+        \mynotes{for relatively nearby galaxies}
+        \begin{itemize}
+            \item Spirals: \textbf{Tully-Fisher relation} between maximum rotational velocity and luminosity
+            \item Ellipticals: fundamental plane relation between velocity
+                dispersion, SB, and physical size
+                ($D_{n}-\sigma$) relation.
+        \end{itemize}
 \end{itemize}
-
-\paragraph{SB fluctuations}
-From imprint of Poisson statistics.
-Requires objects with a ``standard'' population (i.e.\ stellar
-luminosity function).
-
-\paragraph{Planetary nebulae luminosity function}
-
-\paragraph{More luminous standard candles:}
-type-Ia supernova (``standardizable'')
-
-\paragraph{Scaling relations between velocity and luminosity}
-\mynotes{for relatively nearby galaxies}
-\begin{itemize}
-    \item Spirals: \textbf{Tully-Fisher relation} between maximum rotational velocity and luminosity
-    \item Ellipticals: fundamental plane relation between velocity
-        dispersion, SB, and physical size
-        ($D_{n}-\sigma$) relation.
-\end{itemize}
-See %\S\ref{} for more details.
+%See \S\ref{} for more details.
 
 \paragraph{Redshift}
 Galaxies expand with everything else in the cosmic flow.
 \[
     z = \frac{\Delta\lambda}{\lambda}
-    \]
-\[
-    1 + z = \frac{\lambda_{obs}}{\lambda_{emit}}
+    = \frac{\lambda_{obs} - \lambda_{rest}}{\lambda_{rest}}
+    \qquad\qquad
+    \lambda_{obs} = \lambda_{rest} (1 + z)
     \]
 \begin{itemize}
     \item At \emph{low} $z$, $z \approx v/c, v = H_{0}d$.
@@ -909,20 +890,18 @@ Galaxies expand with everything else in the cosmic flow.
 \end{itemize}
 
 Note that observed velocity needs to be corrected for earth motion (to
-heliocentric or barycentric velocity), motion of the Sun ( to LSR), rotation of
+heliocentric or barycentric velocity), motion of the Sun (to LSR), rotation of
 Galaxy (to GSR), and motion of Galaxy within the Local Group.
 
-\paragraph{Peculiar velocities}
 Galaxies also move around relative to the uniform expansion because of local
-gravitational attraction from concentrations of mass.
-As mentioned above, the deviation of the
-velocity from the smooth flow is called the \textit{peculiar velocity}.
-Typical peculiar velocities are on the order of several hundred km s$^{-1}$,
-but depend on environment; c.f., \mynotes{??}
-Milky Way and galaxy clusters; if these are ignored, introduces spurious
-features in distance maps
-(\href{http://astronomy.nmsu.edu/holtz/a555/resources/cfa.html}
-{``fingers of God'', redshift space distortions}).
+gravitational attraction from concentrations of mass. The deviation of the
+velocity from the smooth flow is called the \textit{peculiar velocity} (as
+mentioned above). Typical peculiar velocities are on the order of several
+hundred km s$^{-1}$, but depend on environment; c.f.\ Milky Way and galaxy
+clusters; if these are ignored, introduces spurious features in distance maps
+(\href{http://astronomy.nmsu.edu/holtz/a555/resources/cfa.html} {``fingers of
+God'', redshift space distortions}). \mynotes{(``c.f.'' means roughly ``with
+the exception of'', at least in this context.)}
 
 Hubble's law and the smooth Hubble flow (at what velocity? what redshift?)
 
@@ -1315,12 +1294,12 @@ integrated (for $\alpha > -2$) to get \textit{total luminosity density}:
     \]
 \mynotes{$\Gamma$ = ?}
 
-Typical ``local'' parameters\footnote{
-    \href{http://astronomy.nmsu.edu/holtz/a555/resources/monterotab2.gif}
-    {parameters for different bandpasses} from
-    \href{http://adsabs.harvard.edu/abs/2009MNRAS.399.1106M}
-    {Montero-Dorta \& Prada (2009)}
-}
+%Typical ``local'' parameters\footnote{
+%    \href{http://astronomy.nmsu.edu/holtz/a555/resources/monterotab2.gif}
+%    {parameters for different bandpasses} from
+%    \href{http://adsabs.harvard.edu/abs/2009MNRAS.399.1106M}
+%    {Montero-Dorta \& Prada (2009)}
+%}
 (e.g. SDSS at $z\sim0.1$) are:
 \begin{itemize}
     \item $\phi^{*}\sim0.015h^{3}$ Mpc$^{-3}$

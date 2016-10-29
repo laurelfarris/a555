@@ -5,105 +5,108 @@
 \BOOKMARK [3][-]{subsubsection.1.2.2}{Distant galaxies}{subsection.1.2}% 5
 \BOOKMARK [3][-]{subsubsection.1.2.3}{Physics of galaxy formation}{subsection.1.2}% 6
 \BOOKMARK [2][-]{subsection.1.3}{Overview of galaxies and galaxy formation}{section.1}% 7
-\BOOKMARK [2][-]{subsection.1.4}{Toy example}{section.1}% 8
-\BOOKMARK [2][-]{subsection.1.5}{Questions}{section.1}% 9
-\BOOKMARK [1][-]{section.2}{Observing galaxies}{}% 10
-\BOOKMARK [2][-]{subsection.2.1}{Imaging}{section.2}% 11
-\BOOKMARK [3][-]{subsubsection.2.1.1}{Surface brightness}{subsection.2.1}% 12
-\BOOKMARK [3][-]{subsubsection.2.1.2}{Sizes of galaxies}{subsection.2.1}% 13
-\BOOKMARK [3][-]{subsubsection.2.1.3}{Integrated brightness}{subsection.2.1}% 14
-\BOOKMARK [2][-]{subsection.2.2}{Spectroscopy}{section.2}% 15
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Velocities}{subsection.2.2}% 16
-\BOOKMARK [2][-]{subsection.2.3}{Distances to galaxies}{section.2}% 17
-\BOOKMARK [2][-]{subsection.2.4}{Morphological classification}{section.2}% 18
-\BOOKMARK [3][-]{subsubsection.2.4.1}{Morphological systems}{subsection.2.4}% 19
-\BOOKMARK [3][-]{subsubsection.2.4.2}{Hubble classification}{subsection.2.4}% 20
-\BOOKMARK [3][-]{subsubsection.2.4.3}{deVaucouleurs/RC3 classification}{subsection.2.4}% 21
-\BOOKMARK [3][-]{subsubsection.2.4.4}{Quantitative classification schemes}{subsection.2.4}% 22
-\BOOKMARK [3][-]{subsubsection.2.4.5}{Non-symmetric galaxies}{subsection.2.4}% 23
-\BOOKMARK [2][-]{subsection.2.5}{Galaxy catalogs/resources}{section.2}% 24
-\BOOKMARK [3][-]{subsubsection.2.5.1}{Large area/all sky surveys}{subsection.2.5}% 25
-\BOOKMARK [3][-]{subsubsection.2.5.2}{Smaller region surveys}{subsection.2.5}% 26
-\BOOKMARK [3][-]{subsubsection.2.5.3}{Spectroscopic surveys}{subsection.2.5}% 27
-\BOOKMARK [3][-]{subsubsection.2.5.4}{``Classic catalogs''}{subsection.2.5}% 28
-\BOOKMARK [3][-]{subsubsection.2.5.5}{Modern digital catalogs}{subsection.2.5}% 29
-\BOOKMARK [3][-]{subsubsection.2.5.6}{Web tools}{subsection.2.5}% 30
-\BOOKMARK [3][-]{subsubsection.2.5.7}{Selection effects}{subsection.2.5}% 31
-\BOOKMARK [1][-]{section.3}{Overview of nearby galaxy population}{}% 32
-\BOOKMARK [2][-]{subsection.3.1}{Statistical properties of galaxies}{section.3}% 33
-\BOOKMARK [3][-]{subsubsection.3.1.1}{Colors of galaxies}{subsection.3.1}% 34
-\BOOKMARK [3][-]{subsubsection.3.1.2}{Luminosity function}{subsection.3.1}% 35
-\BOOKMARK [2][-]{subsection.3.2}{Elliptical/Spheriodal galaxies}{section.3}% 36
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Surface brightness profiles}{subsection.3.2}% 37
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Intrinsic \(3D\) shapes of ellipticals}{subsection.3.2}% 38
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Non-axisymmetric features in galaxies}{subsection.3.2}% 39
-\BOOKMARK [3][-]{subsubsection.3.2.4}{Kinematics}{subsection.3.2}% 40
-\BOOKMARK [3][-]{subsubsection.3.2.5}{Relations between different parameters and different families of ellipticals}{subsection.3.2}% 41
-\BOOKMARK [3][-]{subsubsection.3.2.6}{Spectral energy distributions}{subsection.3.2}% 42
-\BOOKMARK [3][-]{subsubsection.3.2.7}{Interstellar matter in ellipticals}{subsection.3.2}% 43
-\BOOKMARK [2][-]{subsection.3.3}{Spiral/Disk galaxies}{section.3}% 44
-\BOOKMARK [3][-]{subsubsection.3.3.1}{SB profiles of disk galaxies}{subsection.3.3}% 45
-\BOOKMARK [3][-]{subsubsection.3.3.2}{Non-axisymmetric features in disk galaxies}{subsection.3.3}% 46
-\BOOKMARK [3][-]{subsubsection.3.3.3}{Kinematics}{subsection.3.3}% 47
-\BOOKMARK [2][-]{subsection.3.4}{Summary: Galaxy parameter \(scaling\) relations}{section.3}% 48
-\BOOKMARK [2][-]{subsection.3.5}{Environments of galaxies: clusters and cluster galaxies}{section.3}% 49
-\BOOKMARK [2][-]{subsection.3.6}{Some galaxies to be familiar with}{section.3}% 50
-\BOOKMARK [1][-]{section.4}{Stars and Stellar populations}{}% 51
-\BOOKMARK [2][-]{subsection.4.1}{Review: stellar evolution}{section.4}% 52
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Main stages of stellar evolution}{subsection.4.1}% 53
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Isochrones}{subsection.4.1}% 54
-\BOOKMARK [2][-]{subsection.4.2}{Simple Stellar Populations and the Initial Mass Function}{section.4}% 55
-\BOOKMARK [2][-]{subsection.4.3}{Resolved stellar populations}{section.4}% 56
-\BOOKMARK [3][-]{subsubsection.4.3.1}{Results}{subsection.4.3}% 57
-\BOOKMARK [3][-]{subsubsection.4.3.2}{General conclusions}{subsection.4.3}% 58
-\BOOKMARK [2][-]{subsection.4.4}{Unresolved stellar populations}{section.4}% 59
-\BOOKMARK [3][-]{subsubsection.4.4.1}{What stars contribute the most light?}{subsection.4.4}% 60
-\BOOKMARK [3][-]{subsubsection.4.4.2}{Integrated brightness}{subsection.4.4}% 61
-\BOOKMARK [3][-]{subsubsection.4.4.3}{Integrated colors}{subsection.4.4}% 62
-\BOOKMARK [3][-]{subsubsection.4.4.4}{Dependence of color and luminosity on time}{subsection.4.4}% 63
-\BOOKMARK [3][-]{subsubsection.4.4.5}{What stars contribute the most mass?}{subsection.4.4}% 64
-\BOOKMARK [3][-]{subsubsection.4.4.6}{The mass-to-light ratio \(M/L\)}{subsection.4.4}% 65
-\BOOKMARK [3][-]{subsubsection.4.4.7}{Star formation histories from integrated colors}{subsection.4.4}% 66
-\BOOKMARK [3][-]{subsubsection.4.4.8}{Integrated spectra}{subsection.4.4}% 67
-\BOOKMARK [2][-]{subsection.4.5}{Chemical evolution}{section.4}% 68
-\BOOKMARK [3][-]{subsubsection.4.5.1}{Basic picture of chemical evolution}{subsection.4.5}% 69
-\BOOKMARK [3][-]{subsubsection.4.5.2}{Basic equations of chemical evolution:}{subsection.4.5}% 70
-\BOOKMARK [2][-]{subsection.4.6}{Measuring stellar abundances}{section.4}% 71
-\BOOKMARK [3][-]{subsubsection.4.6.1}{Units for measuring abundances}{subsection.4.6}% 72
-\BOOKMARK [3][-]{subsubsection.4.6.2}{Abundances as function of time}{subsection.4.6}% 73
-\BOOKMARK [3][-]{subsubsection.4.6.3}{Relative abundances of different elements}{subsection.4.6}% 74
-\BOOKMARK [1][-]{section.5}{Gas}{}% 75
-\BOOKMARK [2][-]{subsection.5.1}{Observing and characterizing the gas}{section.5}% 76
-\BOOKMARK [2][-]{subsection.5.2}{Heating and cooling}{section.5}% 77
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Heating}{subsection.5.2}% 78
-\BOOKMARK [3][-]{subsubsection.5.2.2}{Cooling}{subsection.5.2}% 79
-\BOOKMARK [2][-]{subsection.5.3}{Cold gas: HI measurements with 21 cm line}{section.5}% 80
-\BOOKMARK [2][-]{subsection.5.4}{Molecular gas}{section.5}% 81
-\BOOKMARK [2][-]{subsection.5.5}{Warm ionized gas}{section.5}% 82
-\BOOKMARK [2][-]{subsection.5.6}{Hot gas}{section.5}% 83
-\BOOKMARK [2][-]{subsection.5.7}{Denser ionized gas}{section.5}% 84
-\BOOKMARK [2][-]{subsection.5.8}{Chemical evolution and abundances from gas}{section.5}% 85
-\BOOKMARK [2][-]{subsection.5.9}{Distribution of gas within spirals}{section.5}% 86
-\BOOKMARK [2][-]{subsection.5.10}{Gas as a kinematic tracer}{section.5}% 87
-\BOOKMARK [2][-]{subsection.5.11}{Interactions between gas and stars}{section.5}% 88
-\BOOKMARK [3][-]{subsubsection.5.11.1}{Star formation}{subsection.5.11}% 89
-\BOOKMARK [3][-]{subsubsection.5.11.2}{Supernovae and mass loss from stars}{subsection.5.11}% 90
-\BOOKMARK [1][-]{section.6}{Dust}{}% 91
-\BOOKMARK [2][-]{subsection.6.1}{General importance of dust}{section.6}% 92
-\BOOKMARK [2][-]{subsection.6.2}{Extinction}{section.6}% 93
-\BOOKMARK [3][-]{subsubsection.6.2.1}{Amount of gas, dust-to-gas ratio, and transparency of galaxies}{subsection.6.2}% 94
-\BOOKMARK [2][-]{subsection.6.3}{Emission from dust}{section.6}% 95
-\BOOKMARK [2][-]{subsection.6.4}{Composition}{section.6}% 96
-\BOOKMARK [2][-]{subsection.6.5}{Creation/destruction}{section.6}% 97
-\BOOKMARK [1][-]{section.7}{Central black holes}{}% 98
-\BOOKMARK [2][-]{subsection.7.1}{AGN as indicators of central black holes}{section.7}% 99
-\BOOKMARK [2][-]{subsection.7.2}{Black holes in non-active galaxies}{section.7}% 100
-\BOOKMARK [2][-]{subsection.7.3}{Measuring black hole masses}{section.7}% 101
-\BOOKMARK [2][-]{subsection.7.4}{Importance of central black holes}{section.7}% 102
-\BOOKMARK [1][-]{section.8}{Galaxy spectral energy distributions}{}% 103
-\BOOKMARK [1][-]{section.9}{Dark matter and galaxy masses}{}% 104
-\BOOKMARK [2][-]{subsection.9.1}{Observations of dark matter in galaxies}{section.9}% 105
-\BOOKMARK [3][-]{subsubsection.9.1.1}{Galaxy rotation curves}{subsection.9.1}% 106
-\BOOKMARK [3][-]{subsubsection.9.1.2}{Gravitational lensing}{subsection.9.1}% 107
-\BOOKMARK [2][-]{subsection.9.2}{Total masses of galaxies}{section.9}% 108
-\BOOKMARK [2][-]{subsection.9.3}{Halo abundance matching}{section.9}% 109
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Main components:}{subsection.1.3}% 8
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Formation and evolution}{subsection.1.3}% 9
+\BOOKMARK [3][-]{subsubsection.1.3.3}{Timescales}{subsection.1.3}% 10
+\BOOKMARK [2][-]{subsection.1.4}{Toy example}{section.1}% 11
+\BOOKMARK [2][-]{subsection.1.5}{Questions}{section.1}% 12
+\BOOKMARK [1][-]{section.2}{Observing galaxies}{}% 13
+\BOOKMARK [2][-]{subsection.2.1}{Imaging}{section.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Surface brightness}{subsection.2.1}% 15
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Sizes of galaxies}{subsection.2.1}% 16
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Integrated brightness}{subsection.2.1}% 17
+\BOOKMARK [2][-]{subsection.2.2}{Spectroscopy}{section.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Velocities}{subsection.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.3}{Distances to galaxies}{section.2}% 20
+\BOOKMARK [2][-]{subsection.2.4}{Morphological classification}{section.2}% 21
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Morphological systems}{subsection.2.4}% 22
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Hubble classification}{subsection.2.4}% 23
+\BOOKMARK [3][-]{subsubsection.2.4.3}{deVaucouleurs/RC3 classification}{subsection.2.4}% 24
+\BOOKMARK [3][-]{subsubsection.2.4.4}{Quantitative classification schemes}{subsection.2.4}% 25
+\BOOKMARK [3][-]{subsubsection.2.4.5}{Non-symmetric galaxies}{subsection.2.4}% 26
+\BOOKMARK [2][-]{subsection.2.5}{Galaxy catalogs/resources}{section.2}% 27
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Large area/all sky surveys}{subsection.2.5}% 28
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Smaller region surveys}{subsection.2.5}% 29
+\BOOKMARK [3][-]{subsubsection.2.5.3}{Spectroscopic surveys}{subsection.2.5}% 30
+\BOOKMARK [3][-]{subsubsection.2.5.4}{``Classic catalogs''}{subsection.2.5}% 31
+\BOOKMARK [3][-]{subsubsection.2.5.5}{Modern digital catalogs}{subsection.2.5}% 32
+\BOOKMARK [3][-]{subsubsection.2.5.6}{Web tools}{subsection.2.5}% 33
+\BOOKMARK [3][-]{subsubsection.2.5.7}{Selection effects}{subsection.2.5}% 34
+\BOOKMARK [1][-]{section.3}{Overview of nearby galaxy population}{}% 35
+\BOOKMARK [2][-]{subsection.3.1}{Statistical properties of galaxies}{section.3}% 36
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Colors of galaxies}{subsection.3.1}% 37
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Luminosity function}{subsection.3.1}% 38
+\BOOKMARK [2][-]{subsection.3.2}{Elliptical/Spheriodal galaxies}{section.3}% 39
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Surface brightness profiles}{subsection.3.2}% 40
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Intrinsic \(3D\) shapes of ellipticals}{subsection.3.2}% 41
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Non-axisymmetric features in galaxies}{subsection.3.2}% 42
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Kinematics}{subsection.3.2}% 43
+\BOOKMARK [3][-]{subsubsection.3.2.5}{Relations between different parameters and different families of ellipticals}{subsection.3.2}% 44
+\BOOKMARK [3][-]{subsubsection.3.2.6}{Spectral energy distributions}{subsection.3.2}% 45
+\BOOKMARK [3][-]{subsubsection.3.2.7}{Interstellar matter in ellipticals}{subsection.3.2}% 46
+\BOOKMARK [2][-]{subsection.3.3}{Spiral/Disk galaxies}{section.3}% 47
+\BOOKMARK [3][-]{subsubsection.3.3.1}{SB profiles of disk galaxies}{subsection.3.3}% 48
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Non-axisymmetric features in disk galaxies}{subsection.3.3}% 49
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Kinematics}{subsection.3.3}% 50
+\BOOKMARK [2][-]{subsection.3.4}{Summary: Galaxy parameter \(scaling\) relations}{section.3}% 51
+\BOOKMARK [2][-]{subsection.3.5}{Environments of galaxies: clusters and cluster galaxies}{section.3}% 52
+\BOOKMARK [2][-]{subsection.3.6}{Some galaxies to be familiar with}{section.3}% 53
+\BOOKMARK [1][-]{section.4}{Stars and Stellar populations}{}% 54
+\BOOKMARK [2][-]{subsection.4.1}{Review: stellar evolution}{section.4}% 55
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Main stages of stellar evolution}{subsection.4.1}% 56
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Isochrones}{subsection.4.1}% 57
+\BOOKMARK [2][-]{subsection.4.2}{Simple Stellar Populations and the Initial Mass Function}{section.4}% 58
+\BOOKMARK [2][-]{subsection.4.3}{Resolved stellar populations}{section.4}% 59
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Results}{subsection.4.3}% 60
+\BOOKMARK [3][-]{subsubsection.4.3.2}{General conclusions}{subsection.4.3}% 61
+\BOOKMARK [2][-]{subsection.4.4}{Unresolved stellar populations}{section.4}% 62
+\BOOKMARK [3][-]{subsubsection.4.4.1}{What stars contribute the most light?}{subsection.4.4}% 63
+\BOOKMARK [3][-]{subsubsection.4.4.2}{Integrated brightness}{subsection.4.4}% 64
+\BOOKMARK [3][-]{subsubsection.4.4.3}{Integrated colors}{subsection.4.4}% 65
+\BOOKMARK [3][-]{subsubsection.4.4.4}{Dependence of color and luminosity on time}{subsection.4.4}% 66
+\BOOKMARK [3][-]{subsubsection.4.4.5}{What stars contribute the most mass?}{subsection.4.4}% 67
+\BOOKMARK [3][-]{subsubsection.4.4.6}{The mass-to-light ratio \(M/L\)}{subsection.4.4}% 68
+\BOOKMARK [3][-]{subsubsection.4.4.7}{Star formation histories from integrated colors}{subsection.4.4}% 69
+\BOOKMARK [3][-]{subsubsection.4.4.8}{Integrated spectra}{subsection.4.4}% 70
+\BOOKMARK [2][-]{subsection.4.5}{Chemical evolution}{section.4}% 71
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Basic picture of chemical evolution}{subsection.4.5}% 72
+\BOOKMARK [3][-]{subsubsection.4.5.2}{Basic equations of chemical evolution:}{subsection.4.5}% 73
+\BOOKMARK [2][-]{subsection.4.6}{Measuring stellar abundances}{section.4}% 74
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Units for measuring abundances}{subsection.4.6}% 75
+\BOOKMARK [3][-]{subsubsection.4.6.2}{Abundances as function of time}{subsection.4.6}% 76
+\BOOKMARK [3][-]{subsubsection.4.6.3}{Relative abundances of different elements}{subsection.4.6}% 77
+\BOOKMARK [1][-]{section.5}{Gas}{}% 78
+\BOOKMARK [2][-]{subsection.5.1}{Observing and characterizing the gas}{section.5}% 79
+\BOOKMARK [2][-]{subsection.5.2}{Heating and cooling}{section.5}% 80
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Heating}{subsection.5.2}% 81
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Cooling}{subsection.5.2}% 82
+\BOOKMARK [2][-]{subsection.5.3}{Cold gas: HI measurements with 21 cm line}{section.5}% 83
+\BOOKMARK [2][-]{subsection.5.4}{Molecular gas}{section.5}% 84
+\BOOKMARK [2][-]{subsection.5.5}{Warm ionized gas}{section.5}% 85
+\BOOKMARK [2][-]{subsection.5.6}{Hot gas}{section.5}% 86
+\BOOKMARK [2][-]{subsection.5.7}{Denser ionized gas}{section.5}% 87
+\BOOKMARK [2][-]{subsection.5.8}{Chemical evolution and abundances from gas}{section.5}% 88
+\BOOKMARK [2][-]{subsection.5.9}{Distribution of gas within spirals}{section.5}% 89
+\BOOKMARK [2][-]{subsection.5.10}{Gas as a kinematic tracer}{section.5}% 90
+\BOOKMARK [2][-]{subsection.5.11}{Interactions between gas and stars}{section.5}% 91
+\BOOKMARK [3][-]{subsubsection.5.11.1}{Star formation}{subsection.5.11}% 92
+\BOOKMARK [3][-]{subsubsection.5.11.2}{Supernovae and mass loss from stars}{subsection.5.11}% 93
+\BOOKMARK [1][-]{section.6}{Dust}{}% 94
+\BOOKMARK [2][-]{subsection.6.1}{General importance of dust}{section.6}% 95
+\BOOKMARK [2][-]{subsection.6.2}{Extinction}{section.6}% 96
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Amount of gas, dust-to-gas ratio, and transparency of galaxies}{subsection.6.2}% 97
+\BOOKMARK [2][-]{subsection.6.3}{Emission from dust}{section.6}% 98
+\BOOKMARK [2][-]{subsection.6.4}{Composition}{section.6}% 99
+\BOOKMARK [2][-]{subsection.6.5}{Creation/destruction}{section.6}% 100
+\BOOKMARK [1][-]{section.7}{Central black holes}{}% 101
+\BOOKMARK [2][-]{subsection.7.1}{AGN as indicators of central black holes}{section.7}% 102
+\BOOKMARK [2][-]{subsection.7.2}{Black holes in non-active galaxies}{section.7}% 103
+\BOOKMARK [2][-]{subsection.7.3}{Measuring black hole masses}{section.7}% 104
+\BOOKMARK [2][-]{subsection.7.4}{Importance of central black holes}{section.7}% 105
+\BOOKMARK [1][-]{section.8}{Galaxy spectral energy distributions}{}% 106
+\BOOKMARK [1][-]{section.9}{Dark matter and galaxy masses}{}% 107
+\BOOKMARK [2][-]{subsection.9.1}{Observations of dark matter in galaxies}{section.9}% 108
+\BOOKMARK [3][-]{subsubsection.9.1.1}{Galaxy rotation curves}{subsection.9.1}% 109
+\BOOKMARK [3][-]{subsubsection.9.1.2}{Gravitational lensing}{subsection.9.1}% 110
+\BOOKMARK [2][-]{subsection.9.2}{Total masses of galaxies}{section.9}% 111
+\BOOKMARK [2][-]{subsection.9.3}{Halo abundance matching}{section.9}% 112
